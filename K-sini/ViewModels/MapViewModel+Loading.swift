@@ -1,69 +1,78 @@
 //
-//  Untitled.swift
+//  MapViewModel+Loading.swift
 //  K-sini
 //
 //  Created by Tiko Aqsa Alif Nugroho on 06/07/26.
 //
 
+import MapKit
+import SwiftUI
+
 extension MapViewModel {
 
-	func navigate() {
+	func loadData() {
 
-		guard
+		buildings = repository.loadBuildings()
 
-			!selectedStartID.isEmpty,
+		levels = repository.loadLevels()
 
-			!selectedDestinationID.isEmpty
+		platforms = repository.loadPlatforms()
 
-		else {
+		units = repository.loadUnits()
 
-			routeSegments = []
+		endpoints = repository.loadEndpoints()
 
-			return
+		pathways = repository.loadPathways()
+
+		if let region =
+			BuildingRegionService.region(
+				from: buildings
+			)
+		{
+
+			position = .region(region)
 
 		}
 
-		guard
+		let sortedEndpoints =
 
-			let start = endpoints.first(
+			endpoints.sorted {
 
-				where: {
+				$0.name < $1.name
 
-					$0.id == selectedStartID
+			}
 
-				}
+		if selectedStartID.isEmpty {
 
-			),
+			selectedStartID =
 
-			let destination = endpoints.first(
+				sortedEndpoints.first?.id
 
-				where: {
-
-					$0.id == selectedDestinationID
-
-				}
-
-			)
-
-		else {
-
-			routeSegments = []
-
-			return
+				?? ""
 
 		}
 
-		routeSegments =
+		if selectedLevelID.isEmpty {
 
-			routeService.findRoute(
+			selectedLevelID =
 
-				from: start,
+				levels.first?.id
 
-				to: destination,
+				?? ""
 
-				pathways: pathways
+		}
 
-			)
+		if selectedDestinationID.isEmpty {
+
+			selectedDestinationID =
+
+				sortedEndpoints.last?.id
+
+				?? ""
+
+		}
+
+		navigate()
 
 	}
 
