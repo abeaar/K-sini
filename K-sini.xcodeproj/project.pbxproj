@@ -6,8 +6,13 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		64B7F4332FFCBC2600E73B8D /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 64B7F4322FFCBC2600E73B8D /* README.md */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		648CED6D2FF63164002D3D9F /* K-sini.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "K-sini.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		64B7F4322FFCBC2600E73B8D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -32,6 +37,7 @@
 		648CED642FF63164002D3D9F = {
 			isa = PBXGroup;
 			children = (
+				64B7F4322FFCBC2600E73B8D /* README.md */,
 				648CED6F2FF63164002D3D9F /* K-sini */,
 				648CED6E2FF63164002D3D9F /* Products */,
 			);
@@ -109,6 +115,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64B7F4332FFCBC2600E73B8D /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
