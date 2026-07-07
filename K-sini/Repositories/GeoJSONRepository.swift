@@ -27,6 +27,9 @@ final class GeoJSONRepository:
 	private let pathwayLoader =
 		PathwayLoader()
 
+	private let destinationLoader =
+		DestinationLoader()
+
 	func loadBuildings() -> [Building] {
 
 		buildingLoader.load()
@@ -60,6 +63,12 @@ final class GeoJSONRepository:
 	func loadPathways() -> [Pathway] {
 
 		pathwayLoader.load()
+
+	}
+
+	func loadDestinations() -> [Destination] {
+
+		destinationLoader.load()
 
 	}
 

@@ -13,13 +13,13 @@ enum AppScreen: Hashable {
 }
 
 struct ContentView: View {
-    
-    @StateObject private var points = NavigationState() // instance
+
+    @State private var points = NavigationState()
     @State private var path: [AppScreen] = []
-    
+
     var body: some View {
         NavigationStack(path: $path){
-            
+
             //pick a destination
             EndpointsPageView(
                 onSelect: { pickedDestination in //closure
@@ -27,27 +27,29 @@ struct ContentView: View {
                     path.append(.confirmPoints)
                 }
             )
-            .environmentObject(points)
+            .environment(points)
+            .task {
+                points.loadEndpoints()
+                points.loadPathways()
+                await points.detectStartingPoint()
+            }
             .navigationDestination(for: AppScreen.self) { screen in
                 switch screen {
                 case .confirmPoints:
                     ConfirmPointsView(
                         onStart: { path.append(.journey) }
                     )
-                    .environmentObject(points)
-                    .task {
-                        points.loadEndpoints()
-                        await points.detectStartingPoint()
-                    }
+                    .environment(points)
                 case .journey:
                     JourneyPage(
                         onFinished: { path = [] }
                     )
+                    .environment(points)
                 }
             }
-            
+
         }
-        
+
     }
 }
 

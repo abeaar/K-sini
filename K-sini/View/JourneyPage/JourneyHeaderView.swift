@@ -1,17 +1,27 @@
 import SwiftUI
 
 struct JourneyHeaderView: View {
+    let direction: PathDirection?
+    let stepIndex: Int
+    let totalSteps: Int
+
+    init(direction: PathDirection?, stepIndex: Int = 0, totalSteps: Int = 0) {
+        self.direction = direction
+        self.stepIndex = stepIndex
+        self.totalSteps = totalSteps
+    }
+
     var body: some View {
-        
+
         ZStack(alignment: .top) {
             HStack {
                 VStack(alignment: .leading, spacing: 4) {
-                    Text("Instruction 1")
+                    Text(direction?.instructionID ?? direction?.instructionEN ?? "—")
                         .font(.title)
                         .bold()
                         .foregroundStyle(.primary)
-                    
-                    Text("Line 2")
+
+                    Text(progressText)
                         .font(.title2)
                         .foregroundStyle(.primary)
                 }
@@ -21,7 +31,7 @@ struct JourneyHeaderView: View {
             .padding(.horizontal, 24)
             .padding(.bottom, 24)
             .background(Color(.systemBackground))
-            
+
             .overlay(alignment: .bottomTrailing) {
                 Image(systemName: "map")
                     .resizable()
@@ -36,8 +46,14 @@ struct JourneyHeaderView: View {
             }
         }
     }
+
+    private var progressText: String {
+        guard totalSteps > 0 else { return "" }
+        let shown = min(stepIndex + 1, totalSteps)
+        return "Langkah \(shown) dari \(totalSteps)"
+    }
 }
 
 #Preview {
-    JourneyHeaderView()
+    JourneyHeaderView(direction: nil, stepIndex: 0, totalSteps: 0)
 }

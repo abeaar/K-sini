@@ -14,7 +14,7 @@ struct EndpointsPageView: View {
     @State private var endpoints: [Endpoint] = []
     @State private var destinations: [Destination] = []
     
-    @EnvironmentObject var points: NavigationState
+    @Environment(NavigationState.self) var points: NavigationState
     
     let searchBG = Color(red: 0.071, green: 0.608, blue: 1) // #129bff
     let searchFont = Color(red: 0.511, green: 0.879, blue: 0.986)
