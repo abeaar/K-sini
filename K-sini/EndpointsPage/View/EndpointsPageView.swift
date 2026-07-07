@@ -10,7 +10,17 @@ import SwiftUI
 struct EndpointsPageView: View {
     @State private var showSheet = true   // starts true, never set to false
     @State private var searchText = ""
+    @State private var currentDetent: PresentationDetent = .height(600)
+    @State private var endpoints: [Endpoint] = []
+    @State private var destinations: [Destination] = []
+    
     @EnvironmentObject var points: NavigationState
+    
+    let searchBG = Color(red: 0.071, green: 0.608, blue: 1) // #129bff
+    let searchFont = Color(red: 0.511, green: 0.879, blue: 0.986)
+    let grayBG = Color(red: 0.949, green: 0.949, blue: 0.965) // #f2f2f6
+    
+    let onSelect: (Endpoint) -> Void
 
     var filteredEndpoints: [Endpoint] {
         guard !searchText.isEmpty else { return endpoints }
@@ -27,14 +37,6 @@ struct EndpointsPageView: View {
             dest.alts.contains { $0.localizedCaseInsensitiveContains(searchText) }
         }
     }
-    
-    let searchBG = Color(red: 0.071, green: 0.608, blue: 1) // #129bff
-    let searchFont = Color(red: 0.511, green: 0.879, blue: 0.986)
-    let grayBG = Color(red: 0.949, green: 0.949, blue: 0.965) // #f2f2f6
-    
-    @State private var endpoints: [Endpoint] = []
-    @State private var destinations: [Destination] = []
-    let onSelect: (Endpoint) -> Void
     
     var body: some View {
         ZStack {
@@ -111,9 +113,11 @@ struct EndpointsPageView: View {
                     if points.destination != nil {
                         onSelect(points.destination!)
                     }
-                }
+                },
+                currentDetent: $currentDetent,
+                searchText: $searchText
             )
-                .presentationDetents([.height(600), .large])
+                .presentationDetents([.height(600), .large], selection: $currentDetent)
                 .presentationDragIndicator(.hidden)
                 .interactiveDismissDisabled(true)
                 .presentationBackground(grayBG)
