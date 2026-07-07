@@ -1,21 +1,55 @@
 //
 //  ContentView.swift
-//  K-sini
+//  k-sini GPS point POC
 //
-//  Created by abr on 02/07/26.
+//  Created by on 05/07/26.
 //
 
 import SwiftUI
 
+enum AppScreen: Hashable {
+    case confirmPoints
+    case journey
+}
+
 struct ContentView: View {
+
+    @State private var points = NavigationState()
+    @State private var path: [AppScreen] = []
+
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack(path: $path){
+
+            //pick a destination
+            EndpointsPageView(
+                onSelect: { pickedDestination in //closure
+                    points.destination = pickedDestination
+                    path.append(.confirmPoints)
+                }
+            )
+            .environment(points)
+            .task {
+                points.loadEndpoints()
+                points.loadPathways()
+                await points.detectStartingPoint()
+            }
+            .navigationDestination(for: AppScreen.self) { screen in
+                switch screen {
+                case .confirmPoints:
+                    ConfirmPointsView(
+                        onStart: { path.append(.journey) }
+                    )
+                    .environment(points)
+                case .journey:
+                    JourneyPage(
+                        onFinished: { path = [] }
+                    )
+                    .environment(points)
+                }
+            }
+
         }
-        .padding()
+
     }
 }
 
