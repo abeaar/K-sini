@@ -12,4 +12,5 @@ protocol GeoJSONRepositoryProtocol {
 	func loadUnits() -> [Unit]
 	func loadEndpoints() -> [Endpoint]
 	func loadPathways() -> [Pathway]
+	func loadDestinations() -> [Destination]
 }

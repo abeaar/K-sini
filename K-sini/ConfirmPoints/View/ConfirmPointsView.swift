@@ -22,7 +22,7 @@ struct ConfirmPointsView: View {
     let placeholderColor = Color(red: 0.969, green: 0.949, blue: 0.898) // #f7f2e5
     
     @State private var showSheet = true
-    @EnvironmentObject var points: NavigationState
+    @Environment(NavigationState.self) var points: NavigationState
     @State private var editTarget: EditingTarget?
     
     var body: some View {
@@ -39,7 +39,9 @@ struct ConfirmPointsView: View {
             ConfirmPointsSheet(
                 editTarget: $editTarget,
                 onStart: onStart
-            ).sheet(item: $editTarget) {
+            )
+            .environment(points)
+            .sheet(item: $editTarget) {
                 target in
                 ChangePointsSheet(
                     onSelect: { picked in
@@ -52,6 +54,7 @@ struct ConfirmPointsView: View {
                         editTarget = nil
                     }
                 )
+                .environment(points)
             }
                 .presentationDetents([.height(325)])
                 .presentationDragIndicator(.hidden)
@@ -66,5 +69,5 @@ struct ConfirmPointsView: View {
 
 #Preview {
     ConfirmPointsView(onStart: {})
-        .environmentObject(NavigationState())
+        .environment(NavigationState())
 }

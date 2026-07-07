@@ -5,31 +5,40 @@
 //  Created by on 03/07/26.
 //
 
-// just for state
-
-import Combine
+import Foundation
 import SwiftUI
 
-class NavigationState: ObservableObject {
+@Observable
+final class NavigationState {
 
-    @Published var start: Endpoint?
-    @Published var destination: Endpoint?
-    
+    var start: Endpoint?
+    var destination: Endpoint?
+
     /// The external destination the user picked (e.g. AEON Mall).
     /// nil when the user picked a station endpoint directly.
-    @Published var selectedDestination: Destination?
-    
-    // new
-    private var locationManager = LocationManager()
+    var selectedDestination: Destination?
+
+    var pathways: [Pathway] = []
+    var destinations: [Destination] = []
+
+    private let repository: GeoJSONRepositoryProtocol
+    private let locationManager = LocationManager()
     private var endpoints: [Endpoint] = []
-    @Published var destinations: [Destination] = []
-    
-    func loadEndpoints() {
-        endpoints = EndpointLoader().load()
+
+    init(repository: GeoJSONRepositoryProtocol = GeoJSONRepository()) {
+        self.repository = repository
     }
-    
+
+    func loadEndpoints() {
+        endpoints = repository.loadEndpoints()
+    }
+
     func loadDestinations() {
-        destinations = DestinationLoader().load()
+        destinations = repository.loadDestinations()
+    }
+
+    func loadPathways() {
+        pathways = repository.loadPathways()
     }
 
     func detectStartingPoint() async{
@@ -37,7 +46,7 @@ class NavigationState: ObservableObject {
         let nearest = EndpointDetector.nearestEndpoints(current: location, endpoints: endpoints)
         start = nearest.first?.endpoint
     }
-    
+
     /// Resolves an external destination to the nearest station endpoint.
     func resolveDestination(_ destination: Destination) {
         selectedDestination = destination
@@ -46,6 +55,5 @@ class NavigationState: ObservableObject {
             from: endpoints
         )
     }
-    
-}
 
+}

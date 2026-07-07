@@ -12,8 +12,7 @@ import SwiftUI
 struct ConfirmPointsSheet: View {
     
     @Environment(\.dismiss) private var dismiss
-//    @StateObject var points = NavigationState() // -> declares new class
-    @EnvironmentObject var points: NavigationState // receiving declaration. just reading, not putting anything in the environment
+    @Environment(NavigationState.self) var points: NavigationState
     
     @Binding var editTarget: EditingTarget?
     let onStart: () -> Void  // triggers .journey navigation
@@ -115,6 +114,6 @@ struct ConfirmPointsSheet: View {
 
 #Preview {
     ConfirmPointsSheet(editTarget: .constant(nil), onStart: {})
-        .environmentObject(NavigationState())
+        .environment(NavigationState())
 }
 
