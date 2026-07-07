@@ -1,0 +1,63 @@
+{
+  "sourceLanguage" : "id",
+  "strings" : {
+    "" : {
+
+    },
+    "Destinasi" : {
+
+    },
+    "Destination" : {
+
+    },
+    "Dismiss" : {
+
+    },
+    "I'm arrived" : {
+
+    },
+    "Instruction 1" : {
+
+    },
+    "K-Sini" : {
+
+    },
+    "Line 2" : {
+
+    },
+    "Lokasi Saat Ini" : {
+
+    },
+    "Mau ke mana?" : {
+
+    },
+    "More options" : {
+
+    },
+    "Mulai Navigasi" : {
+
+    },
+    "Pilih Titik Awal" : {
+
+    },
+    "Pilih Tujuan" : {
+
+    },
+    "Pilih tujuanmu, kami tunjukkan pintu keluar yang tepat." : {
+
+    },
+    "Pratinjau Arah" : {
+
+    },
+    "Start" : {
+
+    },
+    "Tujuan Populer" : {
+
+    },
+    "via %@" : {
+
+    }
+  },
+  "version" : "1.2"
+}

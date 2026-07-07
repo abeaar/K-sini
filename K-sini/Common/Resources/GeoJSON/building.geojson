@@ -1,0 +1,40 @@
+{
+    "features": [
+        {
+            "feature_type": "building",
+            "geometry": null,
+            "properties": {
+                "name": {
+                    "en": "Cisauk Station",
+                    "id": "Stasiun Cisauk",
+                    "alts": [
+                        "Stasiun Cisauk",
+                        "Cisauk Station",
+                        "AEON BSD",
+                        "Tangerang Selatan",
+                        "BSD",
+                        "Intermoda"
+                    ],
+                    "key": "CSK"
+                },
+                "category": null,
+                "display_point": {
+                    "coordinates": [
+                        106.641597,
+                        -6.3244594
+                    ],
+                    "type": "Point"
+                },
+                "kind": "KRL",
+                "operator": {
+                    "operator_id": "CLI",
+                    "operator_name": "PT Kereta Commuter Indonesia"
+                },
+                "@id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42"
+            },
+            "type": "Feature"
+        }
+    ],
+    "name": "building",
+    "type": "FeatureCollection"
+}
