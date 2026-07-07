@@ -57,5 +57,5 @@ struct ChangePointsSheet: View {
 #Preview {
     ChangePointsSheet(
         onSelect: { _ in }
-    ).environmentObject(NavigationState())
+    ).environment(NavigationState())
 }

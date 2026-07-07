@@ -10,7 +10,7 @@ import SwiftUI
 struct EndpointsPageView: View {
     @State private var showSheet = true   // starts true, never set to false
     @State private var searchText = ""
-    @EnvironmentObject var points: NavigationState
+    @Environment(NavigationState.self) var points: NavigationState
 
     var filteredEndpoints: [Endpoint] {
         guard !searchText.isEmpty else { return endpoints }
