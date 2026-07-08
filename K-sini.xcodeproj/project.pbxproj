@@ -92,11 +92,11 @@
 				};
 			};
 			buildConfigurationList = 648CED682FF63164002D3D9F /* Build configuration list for PBXProject "K-sini" */;
-			developmentRegion = en;
+			developmentRegion = id;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
-				Base,
+				id,
 			);
 			mainGroup = 648CED642FF63164002D3D9F;
 			minimizedProjectReferenceProxies = 1;
@@ -255,7 +255,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = VMKDVWCB45;
+				DEVELOPMENT_TEAM = 9VM6TLFT55;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -299,7 +299,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = VMKDVWCB45;
+				DEVELOPMENT_TEAM = 9VM6TLFT55;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
