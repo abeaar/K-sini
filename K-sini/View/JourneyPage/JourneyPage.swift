@@ -1,10 +1,6 @@
 import MapKit
 import SwiftUI
 
-// ponytail: image cycle is the background placeholder; header now reads
-// JourneyViewModel.currentDirection. Map + GuidanceService polylines
-// are a follow-up (no map assets in the bundle yet).
-
 struct JourneyPage: View {
     /// Called when the user has tapped through all directions — signals return to root.
     let onFinished: () -> Void
@@ -45,9 +41,9 @@ struct JourneyPage: View {
     }
 
     private var backgroundImageName: String {
-        guard vm.totalSteps > 0 else { return "image1" }
-        let bucket = vm.currentStepIndex % 3
-        return ["image1", "image2", "image3"][bucket]
+        let i = vm.currentStepIndex
+        guard routeToPlatform1.steps.indices.contains(i) else { return "Cari Eskalator" }
+        return routeToPlatform1.steps[i].imageName
     }
 
     private var currentLevelPolygons: [MKPolygon] {
