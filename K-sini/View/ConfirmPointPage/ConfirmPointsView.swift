@@ -10,27 +10,36 @@ import SwiftUI
 enum EditingTarget : Identifiable {
     case start
     case destination
-    
+
     var id: Self { self }
 }
 
 struct ConfirmPointsView: View {
-    
+
     let onStart: () -> Void  // called when user taps "Mulai Navigasi"
-    
+
     let grayBG = Color(red: 0.949, green: 0.949, blue: 0.965) // #f2f2f6
-    let placeholderColor = Color(red: 0.969, green: 0.949, blue: 0.898) // #f7f2e5
-    
+
     @State private var showSheet = true
     @Environment(NavigationState.self) var points: NavigationState
     @State private var editTarget: EditingTarget?
-    
+    @State private var mapVM = MapViewModel()
+
     var body: some View {
-        
+
         ZStack{
-            //background (mapView)
-            placeholderColor.ignoresSafeArea()
-            
+            MapPreview(viewModel: mapVM)
+
+        }
+        .task {
+            mapVM.loadData()
+            seedRoute()
+        }
+        .onChange(of: points.start) { _, _ in
+            seedRoute()
+        }
+        .onChange(of: points.destination) { _, _ in
+            seedRoute()
         }
         .onAppear {
             showSheet = true
@@ -62,7 +71,13 @@ struct ConfirmPointsView: View {
                 .presentationBackground(grayBG)
                 .presentationBackgroundInteraction(.enabled)
         }
-        
+
+    }
+
+    private func seedRoute() {
+        mapVM.selectedStartID = points.start?.id ?? ""
+        mapVM.selectedDestinationID = points.destination?.id ?? ""
+        mapVM.navigate()
     }
 }
 

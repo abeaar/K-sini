@@ -12,14 +12,15 @@ struct EndpointLayer: MapContent {
 
     let endpoints: [Endpoint]
     let selectedLevelID: String
+    var showAllLevels: Bool = false
 
     var body: some MapContent {
 
-        ForEach(
-            endpoints.filter {
-                $0.levelID == selectedLevelID
-            }
-        ) { endpoint in
+        let visible = showAllLevels
+            ? endpoints
+            : endpoints.filter { $0.levelID == selectedLevelID }
+
+        ForEach(visible) { endpoint in
 
             Annotation(
                 endpoint.name,
