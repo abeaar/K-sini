@@ -9,11 +9,10 @@ import SwiftUI
 
 struct ChangePointsSheet: View {
     
-    @State private var endpoints: [Endpoint] = []
     let onSelect: (Endpoint) -> Void
+    var sheetTitle: String = ""
     
-    var sheetTitle: String = "Ganti Lokasi"
-    
+    @State private var endpoints: [Endpoint] = []
     @Environment(\.dismiss) private var dismiss
     
     // no need for enum?
@@ -26,7 +25,7 @@ struct ChangePointsSheet: View {
                 List {
                     EndpointList(
                         title: "",
-                        endpoints: endpoints, // change later
+                        endpoints: endpoints,
                         onSelect: onSelect
                     )
                 }.padding(.top, -30)

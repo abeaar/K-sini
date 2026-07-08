@@ -21,9 +21,11 @@ struct ConfirmPointsView: View {
     let grayBG = Color(red: 0.949, green: 0.949, blue: 0.965) // #f2f2f6
     let placeholderColor = Color(red: 0.969, green: 0.949, blue: 0.898) // #f7f2e5
     
-    @State private var showSheet = true
     @Environment(NavigationState.self) var points: NavigationState
+    
+    @State private var showSheet = true
     @State private var editTarget: EditingTarget?
+    @State private var currentDetent: PresentationDetent = .height(325)
     
     var body: some View {
         
@@ -37,8 +39,9 @@ struct ConfirmPointsView: View {
         }
         .sheet(isPresented: $showSheet) {
             ConfirmPointsSheet(
+                onStart: onStart,
                 editTarget: $editTarget,
-                onStart: onStart
+                currentDetent: $currentDetent
             )
             .environment(points)
             .sheet(item: $editTarget) {
@@ -52,20 +55,19 @@ struct ConfirmPointsView: View {
                             points.destination = picked
                         }
                         editTarget = nil
-                    }
+                    },
+                    sheetTitle: target == .start ? "Ganti Lokasi" : "Ganti Destinasi"
                 )
                 .environment(points)
             }
-                .presentationDetents([.height(325)])
-                .presentationDragIndicator(.hidden)
-                .interactiveDismissDisabled(true)
-                .presentationBackground(grayBG)
-                .presentationBackgroundInteraction(.enabled)
+            .presentationDetents([.height(325), .height(100)], selection: $currentDetent)
+            .interactiveDismissDisabled(true)
+            .presentationBackground(grayBG)
+            .presentationBackgroundInteraction(.enabled)
         }
         
     }
 }
-
 
 #Preview {
     ConfirmPointsView(onStart: {})
