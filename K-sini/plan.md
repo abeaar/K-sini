@@ -189,3 +189,171 @@ The five things to remember:
 3. **Load endpoints at app launch, not when `ConfirmPoints` appears.** Move the `.task` to the root of `ContentView`.
 4. **`JourneyPage` is a placeholder.** The `// ponytail:` comment is the signal to future-you.
 5. **Bundle the new `endpoint.geojson`.** If endpoints are empty at runtime, that's the first thing to check.
+
+---
+
+# Plan: Compass mini-map in `JourneyHeaderView`
+
+## Objective
+
+Replace the decorative `Image(systemName: "map")` SF Symbol in the bottom-trailing corner of `JourneyHeaderView` with a real, schematic, **compass-mode mini-map**: the full route rendered as straight segments between consecutive pathway coordinates, with the *current* segment highlighted in orange and the whole canvas rotated so the current segment always points "up". Bearing is per-step and snaps on `currentStepIndex` change.
+
+User-facing: the user is walking through a station. The mini-map shows them where they are, where they're going next, and the rest of the route for context — without them needing to leave the journey screen.
+
+---
+
+## Direction (locked in with the user)
+
+1. **Custom `Canvas` mini-map, not `Map`/`MKMapView`.** Schematic, fast at 120pt, no tile noise.
+2. **Snap per step.** Bearing comes from `route[currentPathwayIndex].coordinate → route[currentPathwayIndex + 1].coordinate`. No live GPS bearing, no animation between steps.
+3. **Static user position.** The "current" dot stays at the start of the current segment. No interpolation as the user walks.
+4. **Level polygons only, no building outline.** Confirmed earlier; the level polygons are the spatial context.
+5. **Two-color dots.** Current dot: red. All other waypoint dots: gray. No special treatment for the final destination.
+6. **Cross-floor segments drawn as straight lines.** Honest; the line "jumps floors" visually.
+
+---
+
+## What gets reused (no new logic)
+
+| Asset | Path | Used as |
+|---|---|---|
+| `JourneyViewModel` | `View/JourneyPage/JourneyViewModel.swift` | Source of `route` and `currentStepIndex` |
+| `RouteService` (via `vm.route`) | `Services/RouteService.swift` | Already produces the BFS-ordered pathway list |
+| `Level` polygons | `Models/Level.swift` + `LevelLoader` | Current level's polygons, drawn behind |
+| `MKPolygon+Coordinates` extension | `Extensions/MKPolygon+Coordinates.swift` | `.coordinates` for path construction |
+| `MapPreview` (sibling) | `View/ConfirmPointPage/MapPreview.swift` | Pattern reference for the transform stack |
+| `BuildingRegionService` (sibling) | `Services/BuildingRegionService.swift` | Pattern reference for bbox math |
+
+No new services. No model changes. No repository changes.
+
+## Data model: route → polyline segments
+
+The route is `[Pathway]`. Each `Pathway` has one `coordinate` (lat/lon). The mini-map's polyline is a series of straight segments between consecutive pathway coordinates:
+
+```
+segments[i] = (route[i].coordinate, route[i+1].coordinate, isCurrent: i == currentPathwayIndex)
+```
+
+`currentPathwayIndex` is the index in `route` of the pathway containing `currentStepIndex`. While the user is still navigating, `currentPathwayIndex < route.count - 1` always holds (the final "I'm arrived" tap fires `onFinished()` and pops the screen).
+
+A small `RouteSegment` struct is private to `JourneyMiniMap.swift` (one file, no separate model).
+
+## What the user sees
+
+```
+After rotation, current segment is vertical:
+
+              ● p_next  (red — current)
+             /
+            /  ← orange line (current segment)
+           /
+          ● p_curr  (current dot — but this is the same as above in a 2-pathway step)
+
+Plus p_prev (gray dot, dimmed line) and p_after (gray dot, dimmed line)
+arranged around the rotated coordinate space.
+```
+
+- All segments drawn.
+- Current segment: orange, width 6, round caps.
+- All other segments: gray opacity 0.4, width 4.
+- Current dot: red, ~7pt on screen.
+- All other dots: gray opacity 0.5, ~7pt.
+- Current level's polygons: faint blue fill, blue stroke, behind everything.
+- Whole canvas rotates so the current segment is vertical ("up" on screen).
+
+When the user advances a step, `currentPathwayIndex` changes, the orange segment shifts, and the canvas snaps to a new rotation. No animation.
+
+## Camera (Canvas transform stack)
+
+```
+context.translateBy(x: size.width / 2, y: size.height / 2)   // view center
+context.scaleBy(x: 1, y: -1)                                 // flip y for lat (iOS y is down)
+context.scaleBy(x: scale, y: scale)                          // fit-to-view
+context.rotate(by: CGFloat(theta))                            // current segment up
+context.translateBy(x: -mid.longitude, y: -mid.latitude)     // mid at origin
+```
+
+- `θ` = `bearingRadians(from: route[i].coordinate, to: route[i+1].coordinate)`. Standard `CLLocation` bearing formula (clockwise from north).
+- `mid` = midpoint of the current segment.
+- `scale` computed from the union bounding box of (a) all route pathway coordinates and (b) all level polygon coordinates. Fit into the 120×120 view with 15% margin.
+
+**Units note:** lat/lon are in degrees, not meters. Cisauk station is at lat ≈ -6.3° (cos ≈ 0.99), so 1° lat ≈ 1° lon in distance — uniform scale works. A `// ponytail:` comment flags the upgrade path (proper Mercator projection) for non-equatorial stations.
+
+**y-axis flip:** iOS's `GraphicsContext` has y-down, but lat is y-up. The `scaleBy(x: 1, y: -1)` corrects this. After the flip, the canvas rotation sign is `+θ` (not `-θ`) to keep "next above current" on screen.
+
+## Files
+
+### Edit: `ViewModel/NavigationState.swift`
+- Add `var levels: [Level] = []`.
+- Add `func loadLevels() { levels = repository.loadLevels() }`. `loadLevels()` is already declared in `GeoJSONRepositoryProtocol`.
+
+### Edit: `ContentView.swift`
+- One new line in the root `.task`: `points.loadLevels()`.
+
+### Edit: `View/JourneyPage/JourneyViewModel.swift`
+- Add `var currentPathwayIndex: Int?` — index in `route` of the pathway containing `currentStepIndex`. Walk the same flatten as `direction(at:)` to find which pathway owns the step.
+- Add `var currentCheckpoint: (coordinate: CLLocationCoordinate2D, levelID: String)?` — `(route[i].coordinate, route[i].levelID)` when `currentPathwayIndex` is non-nil.
+- Add `var nextCheckpoint: CLLocationCoordinate2D?` — `pathways.first { $0.id == route[i].directions[stepIndexWithinPathway].to }?.coordinate`. Returns nil on the last step.
+
+### New: `View/JourneyPage/JourneyMiniMap.swift` (~120 lines)
+
+`struct JourneyMiniMap: View` taking `route: [Pathway]`, `currentPathwayIndex: Int`, `levelPolygons: [MKPolygon]`.
+
+Renders a `Canvas { context, size in ... }` that:
+1. Returns early if `route.count < 2` or `currentPathwayIndex >= route.count - 1`.
+2. Computes `θ`, `mid`, bbox, `scale`.
+3. Applies the transform stack.
+4. Draws in order: level polygons → polyline segments (orange if current, gray otherwise) → dots (red if current, gray otherwise).
+
+Private helpers in the same file: `bearingRadians`, `midpoint`, `unionBbox`, `fitScale`, `routeCoordinates`, `polygonCoordinates`, `drawLevelPolygons`, `drawSegments`, `drawDots`. No separate utility file.
+
+`// ponytail:` comment at the top: *"compass-mode mini-map; whole route as straight segments between pathway coordinates. Current step's segment is orange. To interpolate the user's progress along the current segment, drive the current dot's position from `route[i].coordinate` toward `route[i+1].coordinate` based on GPS distance covered."*
+
+### Edit: `View/JourneyPage/JourneyHeaderView.swift`
+- Add parameters: `route: [Pathway]`, `currentPathwayIndex: Int`, `levelPolygons: [MKPolygon]`.
+- In `.overlay(alignment: .bottomTrailing)`: when `route.count >= 2 && currentPathwayIndex < route.count - 1`, render `JourneyMiniMap(route: route, currentPathwayIndex: currentPathwayIndex, levelPolygons: levelPolygons)`. Otherwise, keep the existing `Image(systemName: "map")` placeholder.
+
+### Edit: `View/JourneyPage/JourneyPage.swift`
+- Compute `currentLevelPolygons: [MKPolygon]` from `points.levels` + `vm.currentCheckpoint?.levelID`.
+- Pass `route: vm.route`, `currentPathwayIndex: vm.currentPathwayIndex ?? 0`, `levelPolygons: currentLevelPolygons` to `JourneyHeaderView`.
+
+## Order of operations (one build per phase)
+
+1. **Phase 1 — Add `currentPathwayIndex` / `currentCheckpoint` / `nextCheckpoint` to `JourneyViewModel`.** Build. No behavior change.
+2. **Phase 2 — Add `levels` to `NavigationState` + `loadLevels()` + call from `ContentView.task`.** Build. No behavior change.
+3. **Phase 3 — New `JourneyMiniMap.swift`.** Build. New file, unused.
+4. **Phase 4 — Edit `JourneyHeaderView` + `JourneyPage` to pass `route`/`currentPathwayIndex`/`levelPolygons` and render `JourneyMiniMap` when present.** Build.
+
+Each phase compiles independently.
+
+## Risks
+
+1. **y-axis flip in `Canvas`.** Discussed above. The `scaleBy(x: 1, y: -1)` handles it. Will be visually verified after build.
+2. **Bbox scale in degrees, not meters.** The station is at lat ≈ -6.3° (cos ≈ 0.99), so 1° lat ≈ 1° lon in distance. Uniform scale works for Cisauk. Ponytail comment flags the upgrade path for non-equatorial stations.
+3. **Empty route.** When `route.count < 2` or `currentPathwayIndex >= route.count - 1`, the header falls back to the SF Symbol. Same graceful degradation.
+4. **Cross-floor segments** are drawn as straight orange lines. The line "jumps floors" in the visual. Honest. Per your call: just draw the line.
+5. **Past vs future dot distinction.** Both are gray. The user said no special treatment for the final destination. The current step's dot is red — that's the only differentiated dot.
+6. **Performance.** `Canvas` redraws on every body change (every step advance). Level polygons have ~10 coordinates each, route has 5–15 pathways typically. Sub-millisecond redraw. No concern.
+7. **iOS deployment target.** Already iOS 26+. `Canvas` is iOS 15+.
+
+## What is deliberately *not* in scope (and why)
+
+- **No GPS-driven user-position interpolation along the current segment.** The current dot stays at the start of the segment. The `// ponytail:` comment in `JourneyMiniMap.swift` names the upgrade path.
+- **No live bearing from `CLLocation.course`.** Per-step, snaps.
+- **No animation between steps.** Snap.
+- **No building outline inside the circle.** Level polygons only (per your earlier call).
+- **No real map tiles.** Custom `Canvas` (per your earlier call).
+- **No `LocationManager` refactor.** Out of scope; would couple to the deferred GPS streaming work.
+- **No `JourneyImageCycle.swift` deletion.** Cleanup-pass candidate.
+- **No `MKMapView` representable.** Custom `Canvas` is the right tool for a 120pt schematic.
+
+## Memory aid
+
+The five things to remember:
+
+1. **The polyline is the whole route, not just the current step.** Draw `route.indices.dropLast()` straight segments; color the current one orange, the rest gray.
+2. **Bearing is per step, snapped.** From `route[currentPathwayIndex].coordinate` to `route[currentPathwayIndex + 1].coordinate`. No live GPS.
+3. **Two color dots, two color segments.** Current = red/orange. Everything else = gray. No blue for the final destination.
+4. **y-axis flip is mandatory.** iOS `Canvas` is y-down; lat is y-up. `scaleBy(x: 1, y: -1)` in the transform stack.
+5. **Levels come from `NavigationState` now.** Both the confirm screen's `MapPreview` and the journey's mini-map read from `points.levels`, loaded once at app launch.
+
