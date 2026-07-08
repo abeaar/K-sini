@@ -15,8 +15,6 @@ struct ChangePointsSheet: View {
     @State private var endpoints: [Endpoint] = []
     @Environment(\.dismiss) private var dismiss
     
-    // no need for enum?
-    
     var body: some View {
         
         NavigationStack{
@@ -49,6 +47,7 @@ struct ChangePointsSheet: View {
         .task {
             endpoints = EndpointLoader().load()
             print("Loaded \(endpoints.count) endpoints")
+            
         }
     }
 }

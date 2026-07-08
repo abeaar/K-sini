@@ -22,6 +22,7 @@ struct EndpointsPageView: View {
     
     let onSelect: (Endpoint) -> Void
 
+    //harusnya viewmodel i think
     var filteredEndpoints: [Endpoint] {
         guard !searchText.isEmpty else { return endpoints }
         return endpoints.filter { endpoint in
@@ -37,6 +38,7 @@ struct EndpointsPageView: View {
             dest.alts.contains { $0.localizedCaseInsensitiveContains(searchText) }
         }
     }
+    //viewmodel end i think
     
     var body: some View {
         ZStack {
@@ -73,23 +75,23 @@ struct EndpointsPageView: View {
                 }.padding(.horizontal, 15)
                 
                 // search bar
-                HStack(spacing: 8) {
-                    Image(systemName: "magnifyingglass")
-                        .foregroundStyle(.white)
-                    
-                    TextField(
-                        "",
-                        text: $searchText,
-                        prompt: Text("Mau ke mana?")
+                Button{
+                    currentDetent = .large
+                } label: {
+                    HStack(spacing: 8) {
+                        Image(systemName: "magnifyingglass")
+                            .foregroundStyle(.white)
+                        
+                        Text("Mau ke mana?")
                             .foregroundStyle(searchFont)
-                    )
-                    .foregroundStyle(.white)
-                    
+                            
+                        Spacer()
+                    }
+                    .padding(10)
+                    .background(RoundedRectangle(cornerRadius: 20).fill(searchBG))
+                    .padding(.horizontal, 15)
+                    .padding(.top, 10)
                 }
-                .padding(10)
-                .background(RoundedRectangle(cornerRadius: 20).fill(searchBG))
-                .padding(.horizontal, 15)
-                .padding(.top, 10)
                 
                 
             }
@@ -126,7 +128,6 @@ struct EndpointsPageView: View {
         .task {
             endpoints = EndpointLoader().load()
             destinations = DestinationLoader().load()
-            print("Loaded \(endpoints.count) endpoints, \(destinations.count) destinations")
         }
         .onAppear {
             showSheet = true
@@ -137,6 +138,5 @@ struct EndpointsPageView: View {
 #Preview {
     EndpointsPageView(
         onSelect: { _ in }
-        
-    )
+    ).environment(NavigationState())
 }

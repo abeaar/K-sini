@@ -44,88 +44,124 @@ struct EndpointsPageSheet: View {
                     }
                     .padding(10)
                     .background(RoundedRectangle(cornerRadius: 20).fill(searchBG))
-                    .padding(.horizontal, 15)
+                    .padding(.leading, 15)
                     .padding(.top, 10)
                     
-                }
-                    .navigationBarTitleDisplayMode(.inline)
-                    .toolbar {
-                        ToolbarItem(placement: .topBarTrailing) {
-                            Button(action: {
-                                currentDetent = .height(600)
-                            }) {
-                                Label("Dismiss", systemImage: "xmark")
-                            }
-                            .buttonStyle(.borderedProminent)
-                            .tint(.blue)
-                        }
-                        
+                    // button xmark
+                    Button(action: {
+                        currentDetent = .height(600)
+                        searchText = ""
+                    }) {
+                        Label("", systemImage: "xmark")
+                            .padding(7)
                     }
+                    .foregroundStyle(.primary)
+                    .labelStyle(.iconOnly)
+                    .buttonStyle(.glassProminent)
+                    .tint(searchBG)
+                    .buttonBorderShape(.circle)
+                    .padding(.top, 8)
+                    
+                }
+                .padding(.trailing, 10)
+                                
                 
             }
             
             // list
-            List {
-                // destinations section
-                if !destinations.isEmpty {
-                    Section {
-                        ForEach(destinations) { destination in
-                            Button {
-                                onSelectDestination(destination)
-                            } label: {
-                                HStack(spacing: 10) {
-                                    Image(systemName: destination.icon)
-                                        .font(.title)
-                                        .foregroundStyle(.blue)
-
-                                    VStack(alignment: .leading, spacing: 2) {
-                                        Text(destination.name)
-                                            .foregroundStyle(.primary)
-
-                                        Text(destination.alts.first ?? "")
-                                            .font(.callout)
-                                            .foregroundStyle(.secondary)
+            if searchText == "" {
+                List {
+                    // destinations section
+                    if !destinations.isEmpty {
+                        Section {
+                            ForEach(destinations) { destination in
+                                Button {
+                                    onSelectDestination(destination)
+                                } label: {
+                                    HStack(spacing: 10) {
+                                        Image(systemName: destination.icon)
+                                            .font(.title)
+                                            .foregroundStyle(.blue)
+                                        
+                                        VStack(alignment: .leading, spacing: 2) {
+                                            Text(destination.name)
+                                                .foregroundStyle(.primary)
+                                            
+                                            Text(destination.alts.first ?? "")
+                                                .font(.callout)
+                                                .foregroundStyle(.secondary)
+                                        }
+                                        
+                                        Spacer()
+                                        
+                                        Image(systemName: "chevron.right")
+                                            .foregroundStyle(.tertiary)
                                     }
-
-                                    Spacer()
-
-                                    Image(systemName: "chevron.right")
-                                        .foregroundStyle(.tertiary)
+                                    .padding(.vertical, 4)
                                 }
-                                .padding(.vertical, 4)
+                                .buttonStyle(.plain)
                             }
-                            .buttonStyle(.plain)
+                        } header: {
+                            Text("Terdekat dari Lokasimu")
+                                .font(.title3)
+                                .fontWeight(.bold)
+                                .foregroundStyle(.primary)
                         }
-                    } header: {
-                        Text("Tujuan Populer")
-                            .font(.title3)
-                            .fontWeight(.bold)
-                            .foregroundStyle(.primary)
                     }
+                    
+                    
                 }
+            } else {
+                //how to use endpoints list
+//                List {
+//                    EndpointList(
+//                        title: "",
+//                        endpoints: endpoints,
+//                        onSelect: onSelect
+//                    )
+//                }
                 
-                // station endpoints sections
-                EndpointList(
-                    title: "Terbaru",
-                    endpoints: endpoints,
-                    onSelect: onSelect,
-                    headerFont: .title3,
-                    headerFontWeight: .bold,
-                    headerColor: .primary
-                )
+                List {
+                    // destinations section
+                    if !destinations.isEmpty {
+                        Section {
+                            ForEach(destinations) { destination in
+                                Button {
+                                    onSelectDestination(destination)
+                                } label: {
+                                    HStack(spacing: 10) {
+                                        Image(systemName: destination.icon)
+                                            .font(.title)
+                                            .foregroundStyle(.blue)
+                                        
+                                        VStack(alignment: .leading, spacing: 2) {
+                                            Text(destination.name)
+                                                .foregroundStyle(.primary)
+                                            
+                                            Text(destination.alts.first ?? "")
+                                                .font(.callout)
+                                                .foregroundStyle(.secondary)
+                                        }
+                                        
+                                        Spacer()
+                                        
+                                        Image(systemName: "chevron.right")
+                                            .foregroundStyle(.tertiary)
+                                    }
+                                    .padding(.vertical, 4)
+                                }
+                                .buttonStyle(.plain)
+                            }
+                        }
+                    }
+                    
+                    
+                }.contentMargins(.top, 0)
                 
-                EndpointList(
-                    title: "Terdekat Dari Lokasimu",
-                    endpoints: endpoints,
-                    onSelect: onSelect,
-                    headerFont: .title3,
-                    headerFontWeight: .bold,
-                    headerColor: .primary
-                )
             }
             
+            
         }.padding(.top, 15)
-        
     }
 }
 
