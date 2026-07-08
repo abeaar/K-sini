@@ -54,16 +54,16 @@ struct JourneyHeaderView: View {
             .background(Color(.systemBackground))
 
             .overlay(alignment: .bottomTrailing) {
-                if canShowMiniMap {
-                    JourneyMiniMap(
-                        route: route,
-                        currentPathwayIndex: currentPathwayIndex,
-                        levelPolygons: levelPolygons
-                    )
-                    .offset(x: -24, y: 50)
-                    .contentShape(Circle())
-                    .onTapGesture { onMiniMapTap?() }
-                } else {
+//                if canShowMiniMap {
+//                    JourneyMiniMap(
+//                        route: route,
+//                        currentPathwayIndex: currentPathwayIndex,
+//                        levelPolygons: levelPolygons
+//                    )
+//                    .offset(x: -24, y: 50)
+//                    .contentShape(Circle())
+//                    .onTapGesture { onMiniMapTap?() }
+//                } else {
                     Image(systemName: "map")
                         .resizable()
                         .aspectRatio(contentMode: .fill)
@@ -76,7 +76,7 @@ struct JourneyHeaderView: View {
                         .offset(x: -24, y: 50)
                         .contentShape(Circle())
                         .onTapGesture { onMiniMapTap?() }
-                }
+//                }
             }
         }
     }
