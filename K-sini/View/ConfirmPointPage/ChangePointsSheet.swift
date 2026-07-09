@@ -7,27 +7,43 @@
 
 import SwiftUI
 
+enum ChangeMode {
+    case start
+    case destination
+}
+
 struct ChangePointsSheet: View {
-    
+
+    let mode: ChangeMode
     let onSelect: (Endpoint) -> Void
+    let onSelectDestination: (Destination) -> Void
     var sheetTitle: String = ""
-    
+
     @State private var endpoints: [Endpoint] = []
+    @State private var destinations: [Destination] = []
     @Environment(\.dismiss) private var dismiss
-    
+
     var body: some View {
-        
+
         NavigationStack{
             VStack {
-                
                 List {
-                    EndpointList(
-                        title: "",
-                        endpoints: endpoints,
-                        onSelect: onSelect
-                    )
+                    switch mode {
+                    case .start:
+                        EndpointList(
+                            title: "",
+                            endpoints: endpoints,
+                            onSelect: onSelect
+                        )
+                    case .destination:
+                        DestinationList(
+                            title: "",
+                            destinations: destinations,
+                            onSelect: onSelectDestination
+                        )
+                    }
                 }.padding(.top, -30)
-                
+
             }
             .navigationTitle(sheetTitle)
             .navigationBarTitleDisplayMode(.inline)
@@ -41,19 +57,24 @@ struct ChangePointsSheet: View {
                     .buttonStyle(.borderedProminent)
                     .tint(.blue)
                 }
-                
+
             }
         }
         .task {
-            endpoints = EndpointLoader().load()
-            print("Loaded \(endpoints.count) endpoints")
-            
+            switch mode {
+            case .start:
+                endpoints = EndpointLoader().load()
+            case .destination:
+                destinations = DestinationLoader().load()
+            }
         }
     }
 }
 
 #Preview {
     ChangePointsSheet(
-        onSelect: { _ in }
+        mode: .destination,
+        onSelect: { _ in },
+        onSelectDestination: { _ in }
     ).environment(NavigationState())
 }

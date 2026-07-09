@@ -69,96 +69,16 @@ struct EndpointsPageSheet: View {
             }
             
             // list
-            if searchText == "" {
-                List {
-                    // destinations section
-                    if !destinations.isEmpty {
-                        Section {
-                            ForEach(destinations) { destination in
-                                Button {
-                                    onSelectDestination(destination)
-                                } label: {
-                                    HStack(spacing: 10) {
-                                        Image(systemName: destination.icon)
-                                            .font(.title)
-                                            .foregroundStyle(.blue)
-                                        
-                                        VStack(alignment: .leading, spacing: 2) {
-                                            Text(destination.name)
-                                                .foregroundStyle(.primary)
-                                            
-                                            Text(destination.alts.first ?? "")
-                                                .font(.callout)
-                                                .foregroundStyle(.secondary)
-                                        }
-                                        
-                                        Spacer()
-                                        
-                                        Image(systemName: "chevron.right")
-                                            .foregroundStyle(.tertiary)
-                                    }
-                                    .padding(.vertical, 4)
-                                }
-                                .buttonStyle(.plain)
-                            }
-                        } header: {
-                            Text("Terdekat dari Lokasimu")
-                                .font(.title3)
-                                .fontWeight(.bold)
-                                .foregroundStyle(.primary)
-                        }
-                    }
-                    
-                    
+            List {
+                if !destinations.isEmpty {
+                    DestinationList(
+                        title: "Terdekat dari Lokasimu",
+                        destinations: destinations,
+                        onSelect: onSelectDestination
+                    )
                 }
-            } else {
-                //how to use endpoints list
-//                List {
-//                    EndpointList(
-//                        title: "",
-//                        endpoints: endpoints,
-//                        onSelect: onSelect
-//                    )
-//                }
-                
-                List {
-                    // destinations section
-                    if !destinations.isEmpty {
-                        Section {
-                            ForEach(destinations) { destination in
-                                Button {
-                                    onSelectDestination(destination)
-                                } label: {
-                                    HStack(spacing: 10) {
-                                        Image(systemName: destination.icon)
-                                            .font(.title)
-                                            .foregroundStyle(.blue)
-                                        
-                                        VStack(alignment: .leading, spacing: 2) {
-                                            Text(destination.name)
-                                                .foregroundStyle(.primary)
-                                            
-                                            Text(destination.alts.first ?? "")
-                                                .font(.callout)
-                                                .foregroundStyle(.secondary)
-                                        }
-                                        
-                                        Spacer()
-                                        
-                                        Image(systemName: "chevron.right")
-                                            .foregroundStyle(.tertiary)
-                                    }
-                                    .padding(.vertical, 4)
-                                }
-                                .buttonStyle(.plain)
-                            }
-                        }
-                    }
-                    
-                    
-                }.contentMargins(.top, 0)
-                
             }
+            .contentMargins(.top, 0)
             
             
         }.padding(.top, 15)

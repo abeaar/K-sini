@@ -47,13 +47,13 @@ struct ConfirmPointsView: View {
             .sheet(item: $editTarget) {
                 target in
                 ChangePointsSheet(
+                    mode: target == .start ? .start : .destination,
                     onSelect: { picked in
-                        switch target {
-                        case .start:
-                            points.start = picked
-                        case .destination:
-                            points.destination = picked
-                        }
+                        points.start = picked
+                        editTarget = nil
+                    },
+                    onSelectDestination: { picked in
+                        points.resolveDestination(picked)
                         editTarget = nil
                     },
                     sheetTitle: target == .start ? "Ganti Lokasi" : "Ganti Destinasi"
