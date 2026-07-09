@@ -16,8 +16,6 @@ struct EndpointsPageSheet: View {
     let onSelect: (Endpoint) -> Void
     let onSelectDestination: (Destination) -> Void
     
-    let searchBG = Color(red: 0.863, green: 0.863, blue: 0.882) // #dcdce1
-    
     @Binding var currentDetent: PresentationDetent
     @Binding var searchText : String
     
@@ -43,7 +41,7 @@ struct EndpointsPageSheet: View {
                         
                     }
                     .padding(10)
-                    .background(RoundedRectangle(cornerRadius: 20).fill(searchBG))
+                    .background(RoundedRectangle(cornerRadius: 20).fill(Color(.systemGray4)))
                     .padding(.leading, 15)
                     .padding(.top, 10)
                     
@@ -58,14 +56,12 @@ struct EndpointsPageSheet: View {
                     .foregroundStyle(.primary)
                     .labelStyle(.iconOnly)
                     .buttonStyle(.glassProminent)
-                    .tint(searchBG)
+                    .tint(Color(.systemGray4))
                     .buttonBorderShape(.circle)
                     .padding(.top, 8)
                     
                 }
-                .padding(.trailing, 10)
-                                
-                
+                .padding(.trailing, 10) 
             }
             
             // list

@@ -18,7 +18,6 @@ struct ConfirmPointsView: View {
     
     let onStart: () -> Void  // called when user taps "Mulai Navigasi"
     
-    let grayBG = Color(red: 0.949, green: 0.949, blue: 0.965) // #f2f2f6
     let placeholderColor = Color(red: 0.969, green: 0.949, blue: 0.898) // #f7f2e5
     
     @Environment(NavigationState.self) var points: NavigationState
@@ -62,7 +61,7 @@ struct ConfirmPointsView: View {
             }
             .presentationDetents([.height(325), .height(100)], selection: $currentDetent)
             .interactiveDismissDisabled(true)
-            .presentationBackground(grayBG)
+            .presentationBackground(Color(.systemGroupedBackground))
             .presentationBackgroundInteraction(.enabled)
         }
         

@@ -18,7 +18,6 @@ struct EndpointsPageView: View {
     
     let searchBG = Color(red: 0.071, green: 0.608, blue: 1) // #129bff
     let searchFont = Color(red: 0.511, green: 0.879, blue: 0.986)
-    let grayBG = Color(red: 0.949, green: 0.949, blue: 0.965) // #f2f2f6
     
     let onSelect: (Endpoint) -> Void
 
@@ -52,7 +51,7 @@ struct EndpointsPageView: View {
                     
                     VStack(alignment: .leading, spacing: 4){
                         // top content
-                        Text("K-Sini")
+                        Text("K-SINI")
                             .font(.title)
                             .fontWeight(.bold)
                             .foregroundStyle(Color.white)
@@ -122,7 +121,7 @@ struct EndpointsPageView: View {
                 .presentationDetents([.height(600), .large], selection: $currentDetent)
                 .presentationDragIndicator(.hidden)
                 .interactiveDismissDisabled(true)
-                .presentationBackground(grayBG)
+                .presentationBackground(Color(.systemGroupedBackground))
                 .presentationBackgroundInteraction(.enabled)
         }
         .task {
