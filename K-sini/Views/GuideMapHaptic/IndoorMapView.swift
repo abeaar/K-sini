@@ -11,34 +11,22 @@ import MapKit
 struct IndoorMapView: View {
 	@Bindable var mapVM: MapViewModel
 	let allowsInteraction: Bool
+	private var allLevelIDs: [String] { mapVM.levels.map(\.id) }
+	
 	
 	var body: some View {
 		Map(position: $mapVM.position) {
-			
-			// Level Polygon
 			ForEach(GeoJSONLoader.polygons(named: "level"), id: \.self) { polygon in
 				MapPolygon(polygon)
-					.foregroundStyle(.gray.opacity(0.2))
-					.stroke(.gray, lineWidth: 1)
+					.foregroundStyle(.blue.opacity(0.08))
+					.stroke(.blue, lineWidth: 2)
 			}
-
-			// Room Polygon
 			ForEach(GeoJSONLoader.polygons(named: "unit"), id: \.self) { polygon in
 				MapPolygon(polygon)
-					.foregroundStyle(.gray.opacity(0.2))
-					.stroke(.gray, lineWidth: 1)
+					.foregroundStyle(.blue.opacity(0.08))
+					.stroke(.blue, lineWidth: 2)
 			}
 			
-			
-
-			// Route Polyline
-
-			// Door Annotation
-
-			// User Annotation
-
-			// Destination Annotation
-
 		}
 		.mapStyle(.standard(elevation: .flat))
 		.allowsHitTesting(allowsInteraction)

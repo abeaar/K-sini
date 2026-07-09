@@ -7,9 +7,9 @@ struct JourneyPage: View {
 
     @Environment(NavigationState.self) var points: NavigationState
     @State private var journeyVM = JourneyViewModel()
-	@State private var showFullMap = false
 	@Bindable private var hapticVM = DirectionalHapticViewModel()
 	@Bindable private var mapVM = MapViewModel()
+	@State private var showFullMap = false
 
 
     var body: some View {
@@ -18,12 +18,9 @@ struct JourneyPage: View {
 				direction: journeyVM.currentDirection,
 				stepIndex: journeyVM.currentStepIndex,
 				totalSteps: journeyVM.totalSteps,
+				onMiniMapTap: {showFullMap = true},
 				mapVM: mapVM,
-				hapticVM: hapticVM,
-				route: journeyVM.route,
-                currentPathwayIndex: journeyVM.currentPathwayIndex ?? 0,
-                levelPolygons: currentLevelPolygons,
-                onMiniMapTap: { showFullMap = true }
+				hapticVM: hapticVM
             )
             Spacer()
             JourneyTabBarView(onArrived: handleArrived)
@@ -56,13 +53,13 @@ struct JourneyPage: View {
     }
 
     private var backgroundImageName: String {
-        let i = vm.currentStepIndex
+        let i = journeyVM.currentStepIndex
         guard routeToPlatform1.steps.indices.contains(i) else { return "Cari Eskalator" }
         return routeToPlatform1.steps[i].imageName
     }
 
     private var currentLevelPolygons: [MKPolygon] {
-        guard let levelID = vm.currentCheckpoint?.levelID else { return [] }
+        guard let levelID = journeyVM.currentCheckpoint?.levelID else { return [] }
         return points.levels.first(where: { $0.id == levelID })?.polygons ?? []
     }
 

@@ -47,7 +47,7 @@ final class MapViewModel {
 	var endpoints: [Endpoint] = []
 	var pathways: [Pathway] = []
 	var routeSegments: [Pathway] = []
-	var selectedLevelID = ""
+	var selectedLevelID = "1"
 	var selectedStartID = ""
 	var selectedDestinationID = ""
 

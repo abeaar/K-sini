@@ -6,6 +6,7 @@ struct JourneyHeaderView: View {
 	let direction: PathDirection?
 	let stepIndex: Int
 	let totalSteps: Int
+	var onMiniMapTap: (() -> Void)?
 
 	@Bindable var mapVM: MapViewModel
 	@Bindable var hapticVM: DirectionalHapticViewModel
@@ -36,6 +37,9 @@ struct JourneyHeaderView: View {
 					mapVM: mapVM,
 					hapticVM: hapticVM
 				)
+				.onTapGesture {
+					onMiniMapTap?()
+				}
 				.offset(x: -24, y: 50)
 			}
 		}

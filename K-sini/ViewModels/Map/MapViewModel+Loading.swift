@@ -30,8 +30,14 @@ extension MapViewModel {
 			)
 		{
 
-			position = .region(region)
-
+			position = .camera(
+				MapCamera(
+				centerCoordinate: region.center,
+				distance: MapZoom.overview,
+				heading: 0,
+				pitch: 0
+				)
+			)
 		}
 
 		let sortedEndpoints =

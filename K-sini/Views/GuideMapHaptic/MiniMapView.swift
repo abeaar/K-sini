@@ -26,12 +26,6 @@ struct MiniMapView: View {
 				heading: hapticVM.heading,
 				targetBearing: hapticVM.targetBearing
 			)
-			
-//			VStack {
-//                Spacer()
-//				IntensityIndicator(intensity: hapticVM.intensity)
-//			}
-
 			.padding(.bottom, 12)
 
 			if hapticVM.isAligned {
