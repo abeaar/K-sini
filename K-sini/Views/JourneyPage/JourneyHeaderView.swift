@@ -1,14 +1,35 @@
+import MapKit
 import SwiftUI
 
 struct JourneyHeaderView: View {
     let direction: PathDirection?
     let stepIndex: Int
     let totalSteps: Int
+    let route: [Pathway]
+    let currentPathwayIndex: Int
+    let levelPolygons: [MKPolygon]
+    var onMiniMapTap: (() -> Void)? = nil
 
-    init(direction: PathDirection?, stepIndex: Int = 0, totalSteps: Int = 0) {
+    init(
+        direction: PathDirection?,
+        stepIndex: Int = 0,
+        totalSteps: Int = 0,
+        route: [Pathway] = [],
+        currentPathwayIndex: Int = 0,
+        levelPolygons: [MKPolygon] = [],
+        onMiniMapTap: (() -> Void)? = nil
+    ) {
         self.direction = direction
         self.stepIndex = stepIndex
         self.totalSteps = totalSteps
+        self.route = route
+        self.currentPathwayIndex = currentPathwayIndex
+        self.levelPolygons = levelPolygons
+        self.onMiniMapTap = onMiniMapTap
+    }
+
+    private var canShowMiniMap: Bool {
+        route.count >= 2 && currentPathwayIndex < route.count - 1
     }
 
     var body: some View {
@@ -33,16 +54,29 @@ struct JourneyHeaderView: View {
             .background(Color(.systemBackground))
 
             .overlay(alignment: .bottomTrailing) {
-                Image(systemName: "map")
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: 120, height: 120)
-                    .clipShape(Circle())
-                    .overlay(
-                        Circle()
-                            .stroke(Color(.systemBackground), lineWidth: 6)
-                    )
-                    .offset(x: -24, y: 50)
+//                if canShowMiniMap {
+//                    JourneyMiniMap(
+//                        route: route,
+//                        currentPathwayIndex: currentPathwayIndex,
+//                        levelPolygons: levelPolygons
+//                    )
+//                    .offset(x: -24, y: 50)
+//                    .contentShape(Circle())
+//                    .onTapGesture { onMiniMapTap?() }
+//                } else {
+                    Image(systemName: "map")
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 120, height: 120)
+                        .clipShape(Circle())
+                        .overlay(
+                            Circle()
+                                .stroke(Color(.systemBackground), lineWidth: 6)
+                        )
+                        .offset(x: -24, y: 50)
+                        .contentShape(Circle())
+                        .onTapGesture { onMiniMapTap?() }
+//                }
             }
         }
     }
@@ -55,5 +89,5 @@ struct JourneyHeaderView: View {
 }
 
 #Preview {
-    JourneyHeaderView(direction: nil, stepIndex: 0, totalSteps: 0)
+    JourneyHeaderView(direction: nil as PathDirection?, stepIndex: 0, totalSteps: 0)
 }

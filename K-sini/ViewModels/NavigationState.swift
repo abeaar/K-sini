@@ -20,6 +20,7 @@ final class NavigationState {
 
     var pathways: [Pathway] = []
     var destinations: [Destination] = []
+    var levels: [Level] = []
 
     private let repository: GeoJSONRepositoryProtocol
     private let locationManager = LocationManager()
@@ -39,6 +40,10 @@ final class NavigationState {
 
     func loadPathways() {
         pathways = repository.loadPathways()
+    }
+
+    func loadLevels() {
+        levels = repository.loadLevels()
     }
 
     func detectStartingPoint() async{
