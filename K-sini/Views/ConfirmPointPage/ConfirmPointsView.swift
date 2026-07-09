@@ -20,8 +20,6 @@ struct ConfirmPointsView: View {
     let placeholderColor = Color(red: 0.969, green: 0.949, blue: 0.898) // #f7f2e5
     @State private var showSheet = true
     @Environment(NavigationState.self) var points: NavigationState
-    
-    @State private var showSheet = true
     @State private var editTarget: EditingTarget?
     @State private var mapVM = MapViewModel()
     @State private var currentDetent: PresentationDetent = .height(325)
