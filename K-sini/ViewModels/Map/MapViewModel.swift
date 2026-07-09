@@ -33,6 +33,8 @@ final class MapViewModel {
 	var platforms: [Platform] = []
 
 	var endpoints: [Endpoint] = []
+    
+    var destination : [Destination] = []
 
 	var pathways: [Pathway] = []
 

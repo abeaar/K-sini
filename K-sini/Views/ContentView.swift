@@ -19,8 +19,6 @@ struct ContentView: View {
 
     var body: some View {
         NavigationStack(path: $path){
-
-            //pick a destination
             EndpointsPageView(
                 onSelect: { pickedDestination in //closure
                     points.destination = pickedDestination
