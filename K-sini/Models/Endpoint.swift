@@ -7,7 +7,7 @@
 
 import CoreLocation
 
-struct Endpoint: Identifiable {
+struct Endpoint: Identifiable, Equatable {
 	let id: String
 	let name: String
 	let icon: String
@@ -15,4 +15,8 @@ struct Endpoint: Identifiable {
 	let levelID: String
 	let coordinate: CLLocationCoordinate2D
 	let checkpoints: [String]
+
+	static func == (lhs: Endpoint, rhs: Endpoint) -> Bool {
+		lhs.id == rhs.id
+	}
 }

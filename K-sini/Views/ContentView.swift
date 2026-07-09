@@ -19,8 +19,6 @@ struct ContentView: View {
 
     var body: some View {
         NavigationStack(path: $path){
-
-            //pick a destination
             EndpointsPageView(
                 onSelect: { pickedDestination in //closure
                     points.destination = pickedDestination
@@ -31,6 +29,7 @@ struct ContentView: View {
             .task {
                 points.loadEndpoints()
                 points.loadPathways()
+                points.loadLevels()
                 await points.detectStartingPoint()
             }
             .navigationDestination(for: AppScreen.self) { screen in

@@ -9,7 +9,3 @@ struct JourneyBackgroundView: View {
             .scaledToFill()
     }
 }
-
-#Preview {
-    JourneyBackgroundView(imageName: "image1")
-}

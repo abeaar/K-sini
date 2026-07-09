@@ -1,3 +1,4 @@
+import MapKit
 import SwiftUI
 import MapKit
 
@@ -30,7 +31,6 @@ struct JourneyHeaderView: View {
 			.padding(.horizontal, 24)
 			.padding(.bottom, 24)
 			.background(Color(.systemBackground))
-
 			.overlay(alignment: .bottomTrailing) {
 				MiniMapView(
 					mapVM: mapVM,
