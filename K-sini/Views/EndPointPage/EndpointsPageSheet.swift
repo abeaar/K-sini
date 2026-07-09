@@ -16,75 +16,68 @@ struct EndpointsPageSheet: View {
     let onSelect: (Endpoint) -> Void
     let onSelectDestination: (Destination) -> Void
     
+    @Binding var currentDetent: PresentationDetent
+    @Binding var searchText : String
+    
     var body: some View {
         
         VStack(spacing: 16){
             
             // search bar
-            
+            if currentDetent == .large {
+                HStack{
+                    // search bar
+                    HStack(spacing: 8) {
+                        Image(systemName: "magnifyingglass")
+                            .foregroundStyle(.secondary)
+                        
+                        TextField(
+                            "",
+                            text: $searchText,
+                            prompt: Text("Mau ke mana?")
+                                .foregroundStyle(.secondary)
+                        )
+                        .foregroundStyle(.secondary)
+                        
+                    }
+                    .padding(10)
+                    .background(RoundedRectangle(cornerRadius: 20).fill(Color(.systemGray4)))
+                    .padding(.leading, 15)
+                    .padding(.top, 10)
+                    
+                    // button xmark
+                    Button(action: {
+                        currentDetent = .height(600)
+                        searchText = ""
+                    }) {
+                        Label("", systemImage: "xmark")
+                            .padding(7)
+                    }
+                    .foregroundStyle(.primary)
+                    .labelStyle(.iconOnly)
+                    .buttonStyle(.glassProminent)
+                    .tint(Color(.systemGray4))
+                    .buttonBorderShape(.circle)
+                    .padding(.top, 8)
+                    
+                }
+                .padding(.trailing, 10) 
+            }
             
             // list
             List {
-                // destinations section
                 if !destinations.isEmpty {
-                    Section {
-                        ForEach(destinations) { destination in
-                            Button {
-                                onSelectDestination(destination)
-                            } label: {
-                                HStack(spacing: 10) {
-                                    Image(systemName: destination.icon)
-                                        .font(.title)
-                                        .foregroundStyle(.blue)
-
-                                    VStack(alignment: .leading, spacing: 2) {
-                                        Text(destination.name)
-                                            .foregroundStyle(.primary)
-
-                                        Text(destination.alts.first ?? "")
-                                            .font(.callout)
-                                            .foregroundStyle(.secondary)
-                                    }
-
-                                    Spacer()
-
-                                    Image(systemName: "chevron.right")
-                                        .foregroundStyle(.tertiary)
-                                }
-                                .padding(.vertical, 4)
-                            }
-                            .buttonStyle(.plain)
-                        }
-                    } header: {
-                        Text("Tujuan Populer")
-                            .font(.title3)
-                            .fontWeight(.bold)
-                            .foregroundStyle(.primary)
-                    }
+                    DestinationList(
+                        title: "Terdekat dari Lokasimu",
+                        destinations: destinations,
+                        onSelect: onSelectDestination
+                    )
                 }
-                
-                // station endpoints sections
-                EndpointList(
-                    title: "Terbaru",
-                    endpoints: endpoints,
-                    onSelect: onSelect,
-                    headerFont: .title3,
-                    headerFontWeight: .bold,
-                    headerColor: .primary
-                )
-                
-                EndpointList(
-                    title: "Terdekat Dari Lokasimu",
-                    endpoints: endpoints,
-                    onSelect: onSelect,
-                    headerFont: .title3,
-                    headerFontWeight: .bold,
-                    headerColor: .primary
-                )
             }
+            .contentMargins(.top, 0)
+            
             
         }.padding(.top, 15)
-        
     }
 }
 
@@ -97,7 +90,7 @@ struct EndpointsPageSheet: View {
                 icon: "arrowshape.left",
                 alts: [],
                 levelID: "",
-                coordinate: CLLocationCoordinate2D(latitude: -6.30222222, longitude: 106.65222222),
+                coordinate: CLLocationCoordinate2D(latitude: 0.0, longitude: 0.0),
                 checkpoints: [])
         ],
         destinations: [
@@ -106,9 +99,11 @@ struct EndpointsPageSheet: View {
                 name: "AEON Mall BSD",
                 icon: "cart.fill",
                 alts: ["AEON"],
-                coordinate: CLLocationCoordinate2D(latitude: -6.3047067, longitude: 106.6437751))
+                coordinate: CLLocationCoordinate2D(latitude: 0.0, longitude: 0.0))
         ],
         onSelect: { _ in },
-        onSelectDestination: { _ in }
+        onSelectDestination: { _ in },
+        currentDetent: .constant(.height(600)),
+        searchText: .constant("")
     )
 }

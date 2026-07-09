@@ -10,8 +10,18 @@ import SwiftUI
 struct EndpointsPageView: View {
     @State private var showSheet = true   // starts true, never set to false
     @State private var searchText = ""
+    @State private var currentDetent: PresentationDetent = .height(600)
+    @State private var endpoints: [Endpoint] = []
+    @State private var destinations: [Destination] = []
+    
     @Environment(NavigationState.self) var points: NavigationState
+    
+    let searchBG = Color(red: 0.071, green: 0.608, blue: 1) // #129bff
+    let searchFont = Color(red: 0.511, green: 0.879, blue: 0.986)
+    
+    let onSelect: (Endpoint) -> Void
 
+    //harusnya viewmodel i think
     var filteredEndpoints: [Endpoint] {
         guard !searchText.isEmpty else { return endpoints }
         return endpoints.filter { endpoint in
@@ -27,14 +37,7 @@ struct EndpointsPageView: View {
             dest.alts.contains { $0.localizedCaseInsensitiveContains(searchText) }
         }
     }
-    
-    let searchBG = Color(red: 0.071, green: 0.608, blue: 1) // #129bff
-    let searchFont = Color(red: 0.511, green: 0.879, blue: 0.986)
-    let grayBG = Color(red: 0.949, green: 0.949, blue: 0.965) // #f2f2f6
-    
-    @State private var endpoints: [Endpoint] = []
-    @State private var destinations: [Destination] = []
-    let onSelect: (Endpoint) -> Void
+    //viewmodel end i think
     
     var body: some View {
         ZStack {
@@ -48,7 +51,7 @@ struct EndpointsPageView: View {
                     
                     VStack(alignment: .leading, spacing: 4){
                         // top content
-                        Text("K-Sini")
+                        Text("K-SINI")
                             .font(.title)
                             .fontWeight(.bold)
                             .foregroundStyle(Color.white)
@@ -71,23 +74,23 @@ struct EndpointsPageView: View {
                 }.padding(.horizontal, 15)
                 
                 // search bar
-                HStack(spacing: 8) {
-                    Image(systemName: "magnifyingglass")
-                        .foregroundStyle(.white)
-                    
-                    TextField(
-                        "",
-                        text: $searchText,
-                        prompt: Text("Mau ke mana?")
+                Button{
+                    currentDetent = .large
+                } label: {
+                    HStack(spacing: 8) {
+                        Image(systemName: "magnifyingglass")
+                            .foregroundStyle(.white)
+                        
+                        Text("Mau ke mana?")
                             .foregroundStyle(searchFont)
-                    )
-                    .foregroundStyle(.white)
-                    
+                            
+                        Spacer()
+                    }
+                    .padding(10)
+                    .background(RoundedRectangle(cornerRadius: 20).fill(searchBG))
+                    .padding(.horizontal, 15)
+                    .padding(.top, 10)
                 }
-                .padding(10)
-                .background(RoundedRectangle(cornerRadius: 20).fill(searchBG))
-                .padding(.horizontal, 15)
-                .padding(.top, 10)
                 
                 
             }
@@ -111,18 +114,19 @@ struct EndpointsPageView: View {
                     if points.destination != nil {
                         onSelect(points.destination!)
                     }
-                }
+                },
+                currentDetent: $currentDetent,
+                searchText: $searchText
             )
-                .presentationDetents([.height(600), .large])
+                .presentationDetents([.height(600), .large], selection: $currentDetent)
                 .presentationDragIndicator(.hidden)
                 .interactiveDismissDisabled(true)
-                .presentationBackground(grayBG)
+                .presentationBackground(Color(.systemGroupedBackground))
                 .presentationBackgroundInteraction(.enabled)
         }
         .task {
             endpoints = EndpointLoader().load()
             destinations = DestinationLoader().load()
-            print("Loaded \(endpoints.count) endpoints, \(destinations.count) destinations")
         }
         .onAppear {
             showSheet = true
@@ -133,6 +137,5 @@ struct EndpointsPageView: View {
 #Preview {
     EndpointsPageView(
         onSelect: { _ in }
-        
-    )
+    ).environment(NavigationState())
 }

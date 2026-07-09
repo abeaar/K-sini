@@ -39,7 +39,7 @@ struct EndpointSelectorView: View {
 				Text("Pilih Tujuan")
 				.tag("")
 				ForEach(
-					viewModel.endpoints.sorted {
+					viewModel.destination.sorted {
 						$0.name < $1.name
 					}
 				) {
