@@ -14,7 +14,6 @@ struct SuccessIndicatorView: View {
 	@State private var opacity: Double = 0
 
 	var body: some View {
-
 		ZStack {
 			Circle()
 				.fill(.green.opacity(0.15))

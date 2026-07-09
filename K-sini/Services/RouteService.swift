@@ -25,9 +25,8 @@ final class RouteService {
 		)
 
 		var queue: [([Pathway], Pathway)] = []
-
 		var visited = Set<String>()
-
+		
 		for checkpointID in start.checkpoints {
 
 			guard let pathway = pathwayByID[checkpointID]
@@ -49,9 +48,7 @@ final class RouteService {
 
 			let (route, node) = queue.removeFirst()
 
-			if destinationSet.contains(
-				node.id
-			) {
+			if destinationSet.contains(node.id) {
 				return route
 			}
 
@@ -63,9 +60,7 @@ final class RouteService {
 					continue
 				}
 
-				guard
-					let next =
-					pathwayByID[direction.to]
+				guard let next = pathwayByID[direction.to]
 				else {
 					continue
 				}

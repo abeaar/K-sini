@@ -9,8 +9,7 @@ import SwiftUI
 
 struct EndpointSelectorView: View {
 
-	@Bindable
-	var viewModel: MapViewModel
+	@Bindable var viewModel: MapViewModel
 	var body: some View {
 		VStack(
 			spacing: 8
