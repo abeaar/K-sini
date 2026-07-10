@@ -53,14 +53,12 @@ struct JourneyHeaderView: View {
 						}
 						.padding(.vertical, 8)
 						.padding(.horizontal, 12)
-						.background(.ultraThinMaterial)
 						.clipShape(Capsule())
-						.overlay(
-							Capsule().stroke(.white.opacity(0.2), lineWidth: 1)
-						)
 					}
+                    .glassEffect(.regular.tint(.white).interactive())
 					.foregroundStyle(hapticVM.isVibrationEnabled ? .blue : .secondary)
-				}
+                }
+//                .glassEffect(.regular.tint(.white).interactive())
 				.offset(x: -24, y: 95)
 			}
 		}
