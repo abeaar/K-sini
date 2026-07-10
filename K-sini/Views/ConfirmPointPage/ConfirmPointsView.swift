@@ -24,14 +24,13 @@ struct ConfirmPointsView: View {
     
     @State private var showSheet = true
     @State private var editTarget: EditingTarget?
+    
     @State private var currentDetent: PresentationDetent = .height(325)
     
     var body: some View {
         
         ZStack{
-            //background (mapView)
             placeholderColor.ignoresSafeArea()
-            
         }
         .onAppear {
             showSheet = true
