@@ -111,7 +111,6 @@ struct ConfirmPointsSheet: View {
                 .padding(.horizontal, 15)
             }
             
-            
         }
         .padding(.horizontal, 5)
     }
