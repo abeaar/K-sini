@@ -48,6 +48,10 @@ struct EndpointLoader {
 				json?["level"] as? String
 				?? ""
 				
+				let buildingID =
+				json?["building_id"] as? String
+				?? ""
+				
 				let checkpoints =
 				json?["checkpoints"] as? [String]
 				?? []
@@ -115,6 +119,8 @@ struct EndpointLoader {
 						alts: alts,
 
 						levelID: levelID,
+
+						buildingID: buildingID,
 
 						coordinate: coordinate,
 

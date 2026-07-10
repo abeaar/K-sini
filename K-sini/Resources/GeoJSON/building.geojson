@@ -33,38 +33,6 @@
                 "@id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42"
             },
             "type": "Feature"
-        },
-        {
-            "feature_type": "building",
-            "geometry": null,
-            "properties": {
-                "name": {
-                    "en": "Green Office Park 9 BSD",
-                    "id": "Green Office Park 9 BSD",
-                    "alts": [
-                        "Green Office Park",
-                        "Green Office Park 9",
-                        "GOP",
-                        "GOP 9"
-                    ],
-                    "key": "GOP9"
-                },
-                "category": null,
-                "display_point": {
-                    "coordinates": [
-                        106.65219798,
-                        -6.302283432
-                    ],
-                    "type": "Point"
-                },
-                "kind": "OFC",
-                "operator": {
-                    "operator_id": "SML",
-                    "operator_name": "Sinarmas Land"
-                },
-                "@id": "d5daf030-7a25-11f1-842d-e1ddea629893"
-            },
-            "type": "Feature"
         }
     ],
     "name": "building",

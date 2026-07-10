@@ -13,6 +13,7 @@ struct Endpoint: Identifiable, Equatable {
 	let icon: String
 	let alts: [String]
 	let levelID: String
+	let buildingID: String
 	let coordinate: CLLocationCoordinate2D
 	let checkpoints: [String]
 

@@ -11,6 +11,7 @@ import MapKit
 struct Platform: Identifiable {
 	let id: String
 	let levelID: String
+	let buildingID: String
 	let name: String
 	let polygon: MKPolygon
 	let fillColor: String

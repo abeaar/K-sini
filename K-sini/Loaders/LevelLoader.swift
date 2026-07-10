@@ -45,6 +45,7 @@ struct LevelLoader {
 					.uuidString
 				var level = 0
 				var name = ""
+				var buildingID = ""
 				if let properties = feature.properties {
 					let json = try JSONSerialization
 						.jsonObject(
@@ -54,6 +55,8 @@ struct LevelLoader {
 					id = (json?["@id"] as? String)
 					?? (json?["id"] as? String)
 					?? id
+					
+					buildingID = json?["building_id"] as? String ?? ""
 					
 					if let intLevel = json?["level"] as? Int {
 						level = intLevel
@@ -74,6 +77,7 @@ struct LevelLoader {
 				result.append(
 					Level(
 						id: id,
+						buildingID: buildingID,
 						number: level,
 						name: name,
 						polygons: polygons

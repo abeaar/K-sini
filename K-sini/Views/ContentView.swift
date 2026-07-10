@@ -28,6 +28,7 @@ struct ContentView: View {
             .environment(points)
             .task {
                 points.loadEndpoints()
+                points.loadDestinations()
                 points.loadPathways()
                 points.loadLevels()
                 await points.detectStartingPoint()

@@ -22,6 +22,7 @@ struct ChangePointsSheet: View {
     @State private var endpoints: [Endpoint] = []
     @State private var destinations: [Destination] = []
     @Environment(\.dismiss) private var dismiss
+    @Environment(NavigationState.self) var points: NavigationState
 
     var body: some View {
 
@@ -63,7 +64,7 @@ struct ChangePointsSheet: View {
         .task {
             switch mode {
             case .start:
-                endpoints = EndpointLoader().load()
+                endpoints = points.endpoints
             case .destination:
                 destinations = DestinationLoader().load()
             }

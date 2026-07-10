@@ -11,6 +11,7 @@ import MapKit
 struct Unit: Identifiable {
 	let id: String
 	let levelID: String
+	let buildingID: String
 	let category: String
 	let name: String
 	let polygon: MKPolygon

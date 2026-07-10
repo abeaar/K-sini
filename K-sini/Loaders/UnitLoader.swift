@@ -123,6 +123,8 @@ struct UnitLoader {
 					
 					?? ""
 					
+					let buildingID = json?["building_id"] as? String ?? ""
+					
 					if let display = json?["display_point"] as? [String:Any],
 					   let coords = display["coordinates"] as? [Double],
 					   coords.count == 2 {
@@ -150,30 +152,29 @@ struct UnitLoader {
 						
 					}
 					
-				}
-				
-				result.append(
-					
-					Unit(
+					result.append(
 						
-						id: id,
-						
-						levelID: levelID,
-						
-						category: category,
-						
-						name: name,
-						
-						polygon: polygon,
-						
-						displayPoint: displayPoint,
-						fillColor: fillColor,
-						strokeColor: strokeColor
-						
+						Unit(
+							
+							id: id,
+							
+							levelID: levelID,
+							
+							buildingID: buildingID,
+							
+							category: category,
+							
+							name: name,
+							
+							polygon: polygon,
+							
+							displayPoint: displayPoint,
+							fillColor: fillColor,
+							strokeColor: strokeColor
 					)
+						)
 					
-				)
-				
+				}
 			}
 			
 			return result

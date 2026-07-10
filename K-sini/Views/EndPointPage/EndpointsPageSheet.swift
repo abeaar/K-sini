@@ -73,14 +73,6 @@ struct EndpointsPageSheet: View {
                         onSelect: onSelectDestination
                     )
                 }
-                
-                if !endpoints.isEmpty {
-                    EndpointList(
-                        title: "Pintu Keluar & Peron Stasiun",
-                        endpoints: endpoints,
-                        onSelect: onSelect
-                    )
-                }
             }
             .contentMargins(.top, 0)
             
@@ -98,6 +90,7 @@ struct EndpointsPageSheet: View {
                 icon: "arrowshape.left",
                 alts: [],
                 levelID: "",
+				buildingID: "",
                 coordinate: CLLocationCoordinate2D(latitude: 0.0, longitude: 0.0),
                 checkpoints: [])
         ],

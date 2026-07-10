@@ -64,6 +64,14 @@ struct PlatformLoader {
 
 					?? ""
 
+				let buildingID =
+
+					json?["building_id"]
+
+					as? String
+
+					?? ""
+
 				var name = ""
 
 				if let names =
@@ -153,6 +161,8 @@ struct PlatformLoader {
 						id: id,
 
 						levelID: levelID,
+
+						buildingID: buildingID,
 
 						name: name,
 
