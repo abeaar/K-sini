@@ -47,7 +47,7 @@ struct JourneyHeaderView: View {
 					} label: {
 						HStack(spacing: 6) {
 							Image(systemName: hapticVM.isVibrationEnabled ? "iphone.radiowaves.left.and.right" : "iphone.slash")
-							Text(hapticVM.isVibrationEnabled ? "Vibrasi On" : "Vibrasi Off")
+//							Text(hapticVM.isVibrationEnabled ? "Vibrasi On" : "Vibrasi Off")
 								.font(.caption)
 								.bold()
 						}

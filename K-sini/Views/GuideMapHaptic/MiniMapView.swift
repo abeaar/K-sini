@@ -30,7 +30,7 @@ struct MiniMapView: View {
 
 			SuccessIndicatorView(isCompleted: $hapticVM.isAligned)
 		}
-		.frame(width: 220, height: 220)
+		.frame(width: 110, height: 110)
 		.background(.ultraThinMaterial)
 		.clipShape(Circle())
 		.overlay(
