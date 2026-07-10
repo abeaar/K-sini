@@ -15,3 +15,7 @@ struct JourneyBackgroundView: View {
         }
     }
 }
+
+#Preview {
+    JourneyBackgroundView(imageName: "Cari gate")
+}
