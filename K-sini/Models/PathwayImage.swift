@@ -33,5 +33,3 @@ let routeToPlatform1 = GuidedRoute(
         JourneyStep(id: "step_10", instruction: "Sampai di Gate A", imageName: "Gate keluar")   
     ]
 )
-
-

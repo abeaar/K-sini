@@ -4,12 +4,18 @@ struct JourneyBackgroundView: View {
     let imageName: String
 
     var body: some View {
-        Image(imageName)
-            .resizable()
-            .scaledToFill()
+        GeometryReader { geometry in
+            ScrollView(.horizontal, showsIndicators: false) {
+                Image(imageName)
+                    .resizable()
+                    .scaledToFill()
+                    .frame(height: geometry.size.height)
+            }
+            .defaultScrollAnchor(.center)
+        }
     }
 }
 
 #Preview {
-    JourneyBackgroundView(imageName: "image1")
+    JourneyBackgroundView(imageName: "Cari gate")
 }
