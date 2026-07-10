@@ -122,7 +122,6 @@ struct PathwayLoader {
 								item["key"]
 							
 							as? String
-							
 							?? "",
 							
 							instructionID:
@@ -142,7 +141,6 @@ struct PathwayLoader {
 								item["to"]
 							
 							as? String
-							
 							?? "",
 							
 							endpoints:
@@ -150,8 +148,14 @@ struct PathwayLoader {
 								item["endpoints"]
 							
 							as? [String]
+							?? [],
 							
-							?? []
+							image:
+								
+								item["image"]
+							
+							as? String
+							?? ""
 							
 						)
 						

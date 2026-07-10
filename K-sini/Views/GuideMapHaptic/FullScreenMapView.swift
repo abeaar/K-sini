@@ -18,11 +18,30 @@ struct FullScreenMapView: View {
 
 		NavigationStack {
 
-			IndoorMapView(
-				mapVM: mapVM,
-				allowsInteraction: true
-			)
-			.ignoresSafeArea()
+			ZStack(alignment: .bottomTrailing) {
+				IndoorMapView(
+					mapVM: mapVM,
+					allowsInteraction: true
+				)
+				.ignoresSafeArea()
+				
+				// Re-center button
+				Button {
+					withAnimation {
+						mapVM.shouldFollowUser = true
+						mapVM.centerOnUser()
+					}
+				} label: {
+					Image(systemName: mapVM.shouldFollowUser ? "location.fill" : "location")
+						.font(.title2)
+						.foregroundStyle(.white)
+						.frame(width: 50, height: 50)
+						.background(Color.blue)
+						.clipShape(Circle())
+						.shadow(radius: 4)
+				}
+				.padding(16)
+			}
 			.onAppear {
 				mapVM.zoomDistance = MapZoom.fullscreen
 				mapVM.centerOnUser()

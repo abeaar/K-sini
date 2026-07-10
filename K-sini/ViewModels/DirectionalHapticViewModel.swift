@@ -26,6 +26,7 @@ final class DirectionalHapticViewModel {
 	var intensity: Float = 0
 	var isAligned = false
 	var isEnabled = false
+	var isVibrationEnabled = true
 
 	init(
 		headingService: HeadingService = HeadingService(),
@@ -41,7 +42,9 @@ final class DirectionalHapticViewModel {
 	func start() {
 		isEnabled = true
 		headingService.start()
-		hapticService.start()
+		if isVibrationEnabled {
+			hapticService.start()
+		}
 		update()
 	}
 
@@ -73,10 +76,16 @@ final class DirectionalHapticViewModel {
 		intensity = max(0, min(1, Float(abs(delta) / 180)))
 		isAligned = abs(delta) <= 10
 
-		hapticService.update(
-			heading: heading,
-			targetBearing: bearing
-		)
+		if isVibrationEnabled {
+			hapticService.isEnabled = true
+			hapticService.start()
+			hapticService.update(
+				heading: heading,
+				targetBearing: bearing
+			)
+		} else {
+			hapticService.stop()
+		}
 	}
 
 	// MARK: - Callbacks

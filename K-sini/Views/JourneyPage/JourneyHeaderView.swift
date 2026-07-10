@@ -33,14 +33,35 @@ struct JourneyHeaderView: View {
 			.padding(.bottom, 24)
 			.background(Color(.systemBackground))
 			.overlay(alignment: .bottomTrailing) {
-				MiniMapView(
-					mapVM: mapVM,
-					hapticVM: hapticVM
-				)
-				.onTapGesture {
-					onMiniMapTap?()
+				VStack(spacing: 8) {
+					MiniMapView(
+						mapVM: mapVM,
+						hapticVM: hapticVM
+					)
+					.onTapGesture {
+						onMiniMapTap?()
+					}
+					
+					Button {
+						hapticVM.isVibrationEnabled.toggle()
+					} label: {
+						HStack(spacing: 6) {
+							Image(systemName: hapticVM.isVibrationEnabled ? "iphone.radiowaves.left.and.right" : "iphone.slash")
+							Text(hapticVM.isVibrationEnabled ? "Vibrasi On" : "Vibrasi Off")
+								.font(.caption)
+								.bold()
+						}
+						.padding(.vertical, 8)
+						.padding(.horizontal, 12)
+						.background(.ultraThinMaterial)
+						.clipShape(Capsule())
+						.overlay(
+							Capsule().stroke(.white.opacity(0.2), lineWidth: 1)
+						)
+					}
+					.foregroundStyle(hapticVM.isVibrationEnabled ? .blue : .secondary)
 				}
-				.offset(x: -24, y: 50)
+				.offset(x: -24, y: 95)
 			}
 		}
 	}

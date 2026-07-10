@@ -14,7 +14,7 @@ import SwiftUI
 
 struct JourneyFullMapView: View {
 
-    @State private var mapVM = MapViewModel()
+    @Bindable var mapVM: MapViewModel
     @State private var hasInitiallyFitted = false
     @Environment(\.dismiss) private var dismiss
     @Environment(NavigationState.self) var points: NavigationState
@@ -42,6 +42,15 @@ struct JourneyFullMapView: View {
                 )
 
                 GuidanceLayer(segments: mapVM.currentSegments())
+                
+                if let userLoc = mapVM.userLocation {
+                    Annotation("Lokasi Anda", coordinate: userLoc) {
+                        Image(systemName: "location.north.fill")
+                            .font(.title2)
+                            .foregroundStyle(.blue)
+                            .rotationEffect(.degrees(mapVM.heading))
+                    }
+                }
             }
             .mapStyle(.standard(elevation: .flat))
             .ignoresSafeArea()
@@ -49,6 +58,29 @@ struct JourneyFullMapView: View {
             .onChange(of: mapVM.routeSegments.count) { _, _ in
                 fitToRouteIfReady()
             }
+            .onMapCameraChange {
+                if mapVM.position.positionedByUser {
+                    mapVM.shouldFollowUser = false
+                }
+            }
+
+            // Re-center button
+            Button {
+                withAnimation {
+                    mapVM.shouldFollowUser = true
+                    mapVM.centerOnUser()
+                }
+            } label: {
+                Image(systemName: mapVM.shouldFollowUser ? "location.fill" : "location")
+                    .font(.title2)
+                    .foregroundStyle(.white)
+                    .frame(width: 50, height: 50)
+                    .background(Color.blue)
+                    .clipShape(Circle())
+                    .shadow(radius: 4)
+            }
+            .padding(.bottom, 24)
+            .padding(.trailing, 24)
 
             Button { dismiss() } label: {
                 Text("Tutup")
@@ -61,22 +93,6 @@ struct JourneyFullMapView: View {
             .padding(.top, 8)
             .padding(.trailing, 16)
         }
-        .task {
-            mapVM.loadData()
-            seedRoute()
-        }
-        .onChange(of: points.start) { _, _ in
-            seedRoute()
-        }
-        .onChange(of: points.destination) { _, _ in
-            seedRoute()
-        }
-    }
-
-    private func seedRoute() {
-        mapVM.selectedStartID = points.start?.id ?? ""
-        mapVM.selectedDestinationID = points.destination?.id ?? ""
-        mapVM.navigate()
     }
 
     private func fitWideShotIfNeeded() {
@@ -123,6 +139,6 @@ struct JourneyFullMapView: View {
 }
 
 #Preview {
-    JourneyFullMapView()
+    JourneyFullMapView(mapVM: MapViewModel())
         .environment(NavigationState())
 }

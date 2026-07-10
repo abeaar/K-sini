@@ -27,7 +27,7 @@ struct JourneyPage: View {
                 .padding(.horizontal)
         }
 		.fullScreenCover(isPresented: $showFullMap) {
-            JourneyFullMapView()
+            JourneyFullMapView(mapVM: mapVM)
                 .environment(points)
         }
         .background {
@@ -46,22 +46,39 @@ struct JourneyPage: View {
 				mapVM.updateHeading(heading)
 			}
 			hapticVM.start()
+			updateTargetCheckpoint()
         }
+		.onChange(of: journeyVM.currentStepIndex) { _, _ in
+			updateTargetCheckpoint()
+		}
 		.onDisappear{
 			hapticVM.stop()
 		}
     }
 
     private var backgroundImageName: String {
-        let i = journeyVM.currentStepIndex
-        guard routeToPlatform1.steps.indices.contains(i) else { return "Cari Eskalator" }
-        return routeToPlatform1.steps[i].imageName
+        journeyVM.currentDirection?.displayImageName ?? "Cari Eskalator"
     }
 
     private var currentLevelPolygons: [MKPolygon] {
         guard let levelID = journeyVM.currentCheckpoint?.levelID else { return [] }
         return points.levels.first(where: { $0.id == levelID })?.polygons ?? []
     }
+
+	private func updateTargetCheckpoint() {
+		if let currentCheckpoint = journeyVM.currentCheckpoint {
+			mapVM.simulatedLocation = currentCheckpoint.coordinate
+			if let userLoc = mapVM.userLocation {
+				mapVM.updateUserLocation(userLoc)
+			}
+		}
+		
+		if let nextCoords = journeyVM.nextCheckpoint {
+			hapticVM.headingService.setTargetCoordinate(nextCoords)
+		} else if let destCoords = points.destination?.coordinate {
+			hapticVM.headingService.setTargetCoordinate(destCoords)
+		}
+	}
 
 	private func handleArrived() {
 		if journeyVM.isFinished {

@@ -73,6 +73,14 @@ struct EndpointsPageSheet: View {
                         onSelect: onSelectDestination
                     )
                 }
+                
+                if !endpoints.isEmpty {
+                    EndpointList(
+                        title: "Pintu Keluar & Peron Stasiun",
+                        endpoints: endpoints,
+                        onSelect: onSelect
+                    )
+                }
             }
             .contentMargins(.top, 0)
             

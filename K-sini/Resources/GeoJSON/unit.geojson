@@ -31,6 +31,7 @@
 					"marker-color": "#0080ff"
 				},
 				"level": "88736200-7778-11f1-9f7e-255798ecef5a",
+				"building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
 				"@id": "2e6e757d-784a-11f1-8699-4f6680c2446b"
 			},
 			"geometry": {
@@ -91,6 +92,7 @@
 					"stroke-opacity": 1
 				},
 				"level": "88736209-7778-11f1-9f7e-255798ecef5a",
+				"building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
 				"@id": "2e6e7584-784a-11f1-8699-4f6680c2446b"
 			},
 			"geometry": {
@@ -150,6 +152,7 @@
 					"marker-color": "#0080ff"
 				},
 				"level": "88736200-7778-11f1-9f7e-255798ecef5a",
+				"building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
 				"@id": "2e6e756f-784a-11f1-8699-4f6680c2446b"
 			},
 			"geometry": {
@@ -206,6 +209,7 @@
 					"stroke-opacity": 1
 				},
 				"level": "88736200-7778-11f1-9f7e-255798ecef5a",
+				"building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
 				"@id": "23e95b00-7818-11f1-8699-4f6680c2446b"
 			},
 			"geometry": {
@@ -262,6 +266,7 @@
 					"stroke-opacity": 1
 				},
 				"level": "88736209-7778-11f1-9f7e-255798ecef5a",
+				"building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
 				"@id": "0d4b05b9-69c8-4baf-b006-845cd2b3d415"
 			},
 			"geometry": {
@@ -321,6 +326,7 @@
 					"marker-color": "#0080ff"
 				},
 				"level": "88736200-7778-11f1-9f7e-255798ecef5a",
+				"building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
 				"@id": "728e5791-781a-11f1-8699-4f6680c2446b"
 			},
 			"geometry": {
@@ -380,6 +386,7 @@
 					"marker-color": "#0080ff"
 				},
 				"level": "88736209-7778-11f1-9f7e-255798ecef5a",
+				"building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
 				"@id": "551a2d00-c624-4673-a492-b4041a95464e"
 			},
 			"geometry": {
@@ -439,6 +446,7 @@
 					"marker-color": "#0080ff"
 				},
 				"level": "88736209-7778-11f1-9f7e-255798ecef5a",
+				"building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
 				"@id": "796933dd-6e73-4ab0-a11b-e5be13dd1c4e"
 			},
 			"geometry": {
@@ -498,6 +506,7 @@
 					"marker-color": "#0080ff"
 				},
 				"level": "88736200-7778-11f1-9f7e-255798ecef5a",
+				"building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
 				"@id": "bd78febb-5570-4840-b14a-c054ca6dadf0"
 			},
 			"geometry": {
@@ -557,6 +566,7 @@
 					"marker-color": "#0080ff"
 				},
 				"level": "88736200-7778-11f1-9f7e-255798ecef5a",
+				"building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
 				"@id": "8277ca24-77c4-11f1-9f7e-255798ecef5a"
 			},
 			"geometry": {
@@ -616,6 +626,7 @@
 					"marker-color": "#0080ff"
 				},
 				"level": "88736200-7778-11f1-9f7e-255798ecef5a",
+				"building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
 				"@id": "728e5796-781a-11f1-8699-4f6680c2446b"
 			},
 			"geometry": {
@@ -721,6 +732,7 @@
 					"marker-color": "#0080ff"
 				},
 				"level": "88736200-7778-11f1-9f7e-255798ecef5a",
+				"building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
 				"@id": "728e5790-781a-11f1-8699-4f6680c2446b"
 			},
 			"geometry": {
@@ -784,6 +796,7 @@
 					"marker-color": "#0080ff"
 				},
 				"level": "88736209-7778-11f1-9f7e-255798ecef5a",
+				"building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
 				"@id": "c96b623a-f2db-4612-ba0f-a998509c03cd"
 			},
 			"geometry": {
@@ -847,6 +860,7 @@
 					"marker-color": "#0080ff"
 				},
 				"level": "88736200-7778-11f1-9f7e-255798ecef5a",
+				"building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
 				"@id": "55118e86-93c3-4905-8009-ac9ffec6c766"
 			},
 			"geometry": {
@@ -906,6 +920,7 @@
 					"marker-color": "#0080ff"
 				},
 				"level": "88736209-7778-11f1-9f7e-255798ecef5a",
+				"building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
 				"@id": "7f50a229-68f6-4e61-be50-256bebb3e9d7"
 			},
 			"geometry": {
@@ -962,6 +977,7 @@
 					"stroke-opacity": 1
 				},
 				"level": "88736200-7778-11f1-9f7e-255798ecef5a",
+				"building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
 				"@id": "1d3b4aa4-f76d-427c-a8cc-ebe085fe1141"
 			},
 			"geometry": {
@@ -1021,6 +1037,7 @@
 					"marker-color": "#0080ff"
 				},
 				"level": "88736200-7778-11f1-9f7e-255798ecef5a",
+				"building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
 				"@id": "41199318-0b13-4eb4-9a3d-de9bf45fe184"
 			},
 			"geometry": {
@@ -1077,6 +1094,7 @@
 					"stroke-opacity": 1
 				},
 				"level": "88736209-7778-11f1-9f7e-255798ecef5a",
+				"building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
 				"@id": "422fbac9-7a95-4bd9-a3c4-8251654a1406"
 			},
 			"geometry": {
@@ -1133,6 +1151,7 @@
 					"stroke-opacity": 1
 				},
 				"level": "88736200-7778-11f1-9f7e-255798ecef5a",
+				"building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
 				"@id": "05642d66-4896-4ecd-acc4-50a5d704af39"
 			},
 			"geometry": {
@@ -1189,6 +1208,7 @@
 					"stroke-opacity": 1
 				},
 				"level": "88736200-7778-11f1-9f7e-255798ecef5a",
+				"building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
 				"@id": "20580c7c-a3d5-46b5-8fe1-1ba63c80a646"
 			},
 			"geometry": {
@@ -1356,6 +1376,7 @@
 					"marker-color": "#0080ff"
 				},
 				"level": "88736200-7778-11f1-9f7e-255798ecef5a",
+				"building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
 				"@id": "8f1c130b-504c-4985-96e2-dd1ac19aabc0"
 			},
 			"geometry": {
@@ -1441,6 +1462,7 @@
 					"marker-color": "#0080ff"
 				},
 				"level": "88736200-7778-11f1-9f7e-255798ecef5a",
+				"building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
 				"@id": "c43dfb1c-e72e-4d32-b39c-0009a2dcea0d"
 			},
 			"geometry": {
@@ -1508,6 +1530,7 @@
 					"marker-color": "#0080ff"
 				},
 				"level": "88736200-7778-11f1-9f7e-255798ecef5a",
+				"building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
 				"@id": "3e330e64-2b0d-4754-a15c-7f05380cca33"
 			},
 			"geometry": {
@@ -1567,6 +1590,7 @@
 					"marker-color": "#0080ff"
 				},
 				"level": "88736209-7778-11f1-9f7e-255798ecef5a",
+				"building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
 				"@id": "1d023e34-79df-4282-a1d5-4bef2586cfaa"
 			},
 			"geometry": {
@@ -1626,6 +1650,7 @@
 					"marker-color": "#0080ff"
 				},
 				"level": "88736209-7778-11f1-9f7e-255798ecef5a",
+				"building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
 				"@id": "033e8b81-1bcd-45b9-bfe9-726382173db2"
 			},
 			"geometry": {
@@ -1685,6 +1710,7 @@
 					"marker-color": "#0080ff"
 				},
 				"level": "88736200-7778-11f1-9f7e-255798ecef5a",
+				"building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
 				"@id": "07bad151-54de-4a47-a1f4-b1dce5943a13"
 			},
 			"geometry": {
@@ -1744,6 +1770,7 @@
 					"marker-color": "#0080ff"
 				},
 				"level": "88736209-7778-11f1-9f7e-255798ecef5a",
+				"building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
 				"@id": "615689af-1b90-4908-8d4d-183f957b08e8"
 			},
 			"geometry": {
@@ -1803,6 +1830,7 @@
 					"marker-color": "#0080ff"
 				},
 				"level": "88736200-7778-11f1-9f7e-255798ecef5a",
+				"building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
 				"@id": "3180c6d2-2455-40b2-b933-bdb1bdee1402"
 			},
 			"geometry": {
@@ -1862,6 +1890,7 @@
 					"marker-color": "#0080ff"
 				},
 				"level": "88736200-7778-11f1-9f7e-255798ecef5a",
+				"building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
 				"@id": "7c316adb-71d3-4191-957d-ddd537570d59"
 			},
 			"geometry": {
@@ -1921,6 +1950,7 @@
 					"marker-color": "#0080ff"
 				},
 				"level": "88736209-7778-11f1-9f7e-255798ecef5a",
+				"building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
 				"@id": "7ff9a6e1-a035-4646-bffa-63b389ca5e6d"
 			},
 			"geometry": {
@@ -1980,6 +2010,7 @@
 					"marker-color": "#0080ff"
 				},
 				"level": "88736200-7778-11f1-9f7e-255798ecef5a",
+				"building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
 				"@id": "5040edc1-dcb8-419a-a112-df89df098605"
 			},
 			"geometry": {
@@ -2039,6 +2070,7 @@
 					"marker-color": "#0080ff"
 				},
 				"level": "88736209-7778-11f1-9f7e-255798ecef5a",
+				"building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
 				"@id": "cb464a13-5479-407c-a602-4c5b855a83fb"
 			},
 			"geometry": {
@@ -2098,6 +2130,7 @@
 					"marker-color": "#0080ff"
 				},
 				"level": "88736209-7778-11f1-9f7e-255798ecef5a",
+				"building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
 				"@id": "1fc9bf3a-9db8-408f-b82b-d4bdabab24e0"
 			},
 			"geometry": {
@@ -2157,6 +2190,7 @@
 					"marker-color": "#0080ff"
 				},
 				"level": "88736200-7778-11f1-9f7e-255798ecef5a",
+				"building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
 				"@id": "cd9675b0-e0b6-40c5-8c66-a32d292adc25"
 			},
 			"geometry": {
@@ -2216,6 +2250,7 @@
 					"marker-color": "#0080ff"
 				},
 				"level": "88736209-7778-11f1-9f7e-255798ecef5a",
+				"building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
 				"@id": "a2e56556-da71-4388-ad01-1d9b9f91efeb"
 			},
 			"geometry": {
@@ -2275,6 +2310,7 @@
 					"marker-color": "#0080ff"
 				},
 				"level": "88736200-7778-11f1-9f7e-255798ecef5a",
+				"building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
 				"@id": "9a689807-00e2-40a8-bfff-d9b684d40c78"
 			},
 			"geometry": {
@@ -2334,6 +2370,7 @@
 					"marker-color": "#0080ff"
 				},
 				"level": "88736209-7778-11f1-9f7e-255798ecef5a",
+				"building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
 				"@id": "929a5aae-2045-4398-824c-223c7644fa09"
 			},
 			"geometry": {
@@ -2393,6 +2430,7 @@
 					"marker-color": "#0080ff"
 				},
 				"level": "88736200-7778-11f1-9f7e-255798ecef5a",
+				"building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
 				"@id": "bd940067-04e2-4f03-8e3a-b4e2ca128747"
 			},
 			"geometry": {
@@ -2452,6 +2490,7 @@
 					"marker-color": "#0080ff"
 				},
 				"level": "88736209-7778-11f1-9f7e-255798ecef5a",
+				"building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
 				"@id": "e03c7ea0-433b-464a-8c98-497db45dcf1b"
 			},
 			"geometry": {
@@ -2511,6 +2550,7 @@
 					"marker-color": "#0080ff"
 				},
 				"level": "88736200-7778-11f1-9f7e-255798ecef5a",
+				"building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
 				"@id": "87dcaa8c-1404-40c4-89cc-bdf37cd90d46"
 			},
 			"geometry": {
@@ -2570,6 +2610,7 @@
 					"marker-color": "#0080ff"
 				},
 				"level": "88736200-7778-11f1-9f7e-255798ecef5a",
+				"building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
 				"@id": "8023d76d-db4e-4635-9718-7d50003986da"
 			},
 			"geometry": {
@@ -2629,6 +2670,7 @@
 					"marker-color": "#0080ff"
 				},
 				"level": "88736209-7778-11f1-9f7e-255798ecef5a",
+				"building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
 				"@id": "845383f7-97ee-411b-ab67-4af8b75593ee"
 			},
 			"geometry": {
@@ -2688,6 +2730,7 @@
 					"marker-color": "#0080ff"
 				},
 				"level": "88736209-7778-11f1-9f7e-255798ecef5a",
+				"building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
 				"@id": "63d57dc0-7818-11f1-8699-4f6680c2446b"
 			},
 			"geometry": {
@@ -2747,6 +2790,7 @@
 					"marker-color": "#0080ff"
 				},
 				"level": "88736200-7778-11f1-9f7e-255798ecef5a",
+				"building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
 				"@id": "eaa955b6-a62c-47d6-95a0-c8ada16a74ad"
 			},
 			"geometry": {

@@ -16,6 +16,7 @@
 					]
 				},
 				"level": "88736209-7778-11f1-9f7e-255798ecef5a",
+				"building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
 				"category": null,
 				"@id": "f3e7c8d0-7778-11f1-9f7e-255798ecef5a",
 				"checkpoints": [],
@@ -49,9 +50,12 @@
 					]
 				},
 				"level": "88736200-7778-11f1-9f7e-255798ecef5a",
+				"building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
 				"category": null,
 				"@id": "093318d0-790f-11f1-8064-b5d569ec4cf5",
-				"checkpoints": ["093318d0-790f-11f1-8064-b5d569ec4cf5"],
+				"checkpoints": [
+					"093318d0-790f-11f1-8064-b5d569ec4cf5"
+				],
 				"display_point": {
 					"coordinates": [
 						106.6435744,
@@ -82,6 +86,7 @@
 					]
 				},
 				"level": "88736209-7778-11f1-9f7e-255798ecef5a",
+				"building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
 				"category": null,
 				"@id": "f9a7a3a0-7886-11f1-90a1-7d7918fdf504",
 				"checkpoints": [
@@ -119,6 +124,7 @@
 					]
 				},
 				"level": "88736209-7778-11f1-9f7e-255798ecef5a",
+				"building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
 				"category": null,
 				"@id": "122b37ae-3477-41b1-a269-54f68fa34942",
 				"checkpoints": [
@@ -160,6 +166,7 @@
 					]
 				},
 				"level": "88736209-7778-11f1-9f7e-255798ecef5a",
+				"building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
 				"category": null,
 				"@id": "3ad2672d-35ac-478a-a6a2-aa5472096744",
 				"checkpoints": [],
@@ -182,6 +189,41 @@
 						106.64169193973297,
 						-6.324456050771742
 					]
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"feature_type": "endpoint",
+			"properties": {
+				"name": {
+					"en": "Main Lobby",
+					"id": "Lobi Utama",
+					"key": "A",
+					"alts": [
+						"Lobi utama",
+						"Main Lobby",
+						"Lobby"
+					]
+				},
+				"level": "384f4da3-390b-4a54-ba1b-2cf8e971808d",
+				"building_id": "d5daf030-7a25-11f1-842d-e1ddea629893",
+				"category": null,
+				"@id": "43d9ea38-b3cc-43af-b581-20a57b02e73e",
+				"checkpoints": [],
+				"display_point": {
+					"coordinates": [
+						106.6521897,
+						-6.3024237
+					],
+					"type": "Point"
+				}
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					106.6521897,
+					-6.3024237
 				]
 			}
 		}

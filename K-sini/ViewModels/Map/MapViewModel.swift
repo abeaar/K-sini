@@ -57,21 +57,28 @@ final class MapViewModel {
 
 	// MARK: - User Location
 
+	var simulatedLocation: CLLocationCoordinate2D?
+
 	func updateUserLocation(_ coordinate: CLLocationCoordinate2D) {
-		self.heading = heading
-//		userLocation = coordinate
-//		guard shouldFollowUser else {
-//			return
-//		}
-//		region.center = coordinate
-//		position = .camera(
-//			MapCamera(
-//				centerCoordinate: coordinate,
-//				distance: zoomDistance,
-//				heading: heading,
-//				pitch: 0
-//			)
-//		)
+		let stationCenter = CLLocation(latitude: -6.324, longitude: 106.641)
+		let userLoc = CLLocation(latitude: coordinate.latitude, longitude: coordinate.longitude)
+		
+		if userLoc.distance(from: stationCenter) < 10000 {
+			userLocation = coordinate
+		} else {
+			userLocation = simulatedLocation ?? coordinate
+		}
+		
+		guard shouldFollowUser, let loc = userLocation else { return }
+		region.center = loc
+		position = .camera(
+			MapCamera(
+				centerCoordinate: loc,
+				distance: zoomDistance,
+				heading: heading,
+				pitch: 0
+			)
+		)
 	}
 	
 	func updateHeading(_ heading: CLLocationDirection) {

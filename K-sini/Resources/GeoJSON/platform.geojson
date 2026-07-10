@@ -1,134 +1,136 @@
 {
-  "features": [
-	{
-		"type": "Feature",
-		"feature_type": "unit",
-		"properties": {
-			"category": "platform",
-			"access": "paid",
-			"name": {
-				"id": "Peron 1",
-				"en": "Platform 1",
-				"alts": []
+	"features": [
+		{
+			"type": "Feature",
+			"feature_type": "unit",
+			"properties": {
+				"category": "platform",
+				"access": "paid",
+				"name": {
+					"id": "Peron 1",
+					"en": "Platform 1",
+					"alts": []
+				},
+				"direction": null,
+				"display_point": {
+					"coordinates": [
+						106.6415362,
+						-6.3244214
+					],
+					"type": "Point"
+				},
+				"style": {
+					"fill": "#ffeeee",
+					"stroke": "#cf3030",
+					"fill-opacity": 1,
+					"stroke-opacity": 1
+				},
+				"level": "88736209-7778-11f1-9f7e-255798ecef5a",
+				"building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
+				"@id": "262958ec-44bc-4b38-8314-ad55746df805"
 			},
-			"direction": null,
-			"display_point": {
+			"geometry": {
+				"type": "Polygon",
 				"coordinates": [
-					106.6415362,
-					-6.3244214
-				],
-				"type": "Point"
-			},
-			"style": {
-				"fill": "#ffeeee",
-				"stroke": "#cf3030",
-				"fill-opacity": 1,
-				"stroke-opacity": 1
-			},
-			"level": "88736209-7778-11f1-9f7e-255798ecef5a",
-			"@id": "262958ec-44bc-4b38-8314-ad55746df805"
-		},
-		"geometry": {
-			"type": "Polygon",
-			"coordinates": [
-				[
 					[
-						106.642075,
-						-6.324106
-					],
-					[
-						106.640646,
-						-6.324846
-					],
-					[
-						106.64067,
-						-6.324891
-					],
-					[
-						106.642454,
-						-6.323978
-					],
-					[
-						106.642444,
-						-6.323952
-					],
-					[
-						106.642089,
-						-6.324131
-					],
-					[
-						106.642075,
-						-6.324106
+						[
+							106.642075,
+							-6.324106
+						],
+						[
+							106.640646,
+							-6.324846
+						],
+						[
+							106.64067,
+							-6.324891
+						],
+						[
+							106.642454,
+							-6.323978
+						],
+						[
+							106.642444,
+							-6.323952
+						],
+						[
+							106.642089,
+							-6.324131
+						],
+						[
+							106.642075,
+							-6.324106
+						]
 					]
 				]
-			]
-		}
-	},
-	{
-		"type": "Feature",
-		"feature_type": "unit",
-		"properties": {
-			"category": "platform",
-			"access": "paid",
-			"name": {
-				"id": "Peron 2",
-				"en": "Platform 2",
-				"alts": []
-			},
-			"direction": null,
-			"display_point": {
-				"coordinates": [
-					106.6415814,
-					-6.3245143
-				],
-				"type": "Point"
-			},
-			"style": {
-				"fill": "#ffeeee",
-				"stroke": "#cf3030",
-				"fill-opacity": 1,
-				"stroke-opacity": 1
-			},
-			"level": "88736209-7778-11f1-9f7e-255798ecef5a",
-			"@id": "6e7206a0-781c-11f1-8699-4f6680c2446b"
+			}
 		},
-		"geometry": {
-			"type": "Polygon",
-			"coordinates": [
-				[
-					[
-						106.640702,
-						-6.324949
+		{
+			"type": "Feature",
+			"feature_type": "unit",
+			"properties": {
+				"category": "platform",
+				"access": "paid",
+				"name": {
+					"id": "Peron 2",
+					"en": "Platform 2",
+					"alts": []
+				},
+				"direction": null,
+				"display_point": {
+					"coordinates": [
+						106.6415814,
+						-6.3245143
 					],
+					"type": "Point"
+				},
+				"style": {
+					"fill": "#ffeeee",
+					"stroke": "#cf3030",
+					"fill-opacity": 1,
+					"stroke-opacity": 1
+				},
+				"level": "88736209-7778-11f1-9f7e-255798ecef5a",
+				"building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
+				"@id": "6e7206a0-781c-11f1-8699-4f6680c2446b"
+			},
+			"geometry": {
+				"type": "Polygon",
+				"coordinates": [
 					[
-						106.640726,
-						-6.324995
-					],
-					[
-						106.642156,
-						-6.324269
-					],
-					[
-						106.642143,
-						-6.324246
-					],
-					[
-						106.642495,
-						-6.324063
-					],
-					[
-						106.642484,
-						-6.32404
-					],
-					[
-						106.640702,
-						-6.324949
+						[
+							106.640702,
+							-6.324949
+						],
+						[
+							106.640726,
+							-6.324995
+						],
+						[
+							106.642156,
+							-6.324269
+						],
+						[
+							106.642143,
+							-6.324246
+						],
+						[
+							106.642495,
+							-6.324063
+						],
+						[
+							106.642484,
+							-6.32404
+						],
+						[
+							106.640702,
+							-6.324949
+						]
 					]
 				]
-			]
+			}
 		}
-	}
-  ],
-  "name": "platform",
-  "type": "FeatureCollection"
+	],
+	"name": "platform",
+	"type": "FeatureCollection"
 }

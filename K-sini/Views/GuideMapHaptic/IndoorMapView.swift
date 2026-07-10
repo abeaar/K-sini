@@ -27,8 +27,23 @@ struct IndoorMapView: View {
 					.stroke(.blue, lineWidth: 2)
 			}
 			
+			GuidanceLayer(segments: mapVM.currentSegments())
+			
+			if let userLoc = mapVM.userLocation {
+				Annotation("Lokasi Anda", coordinate: userLoc) {
+					Image(systemName: "location.north.fill")
+						.font(.title2)
+						.foregroundStyle(.blue)
+						.rotationEffect(.degrees(mapVM.heading))
+				}
+			}
 		}
 		.mapStyle(.standard(elevation: .flat))
 		.allowsHitTesting(allowsInteraction)
+		.onMapCameraChange {
+			if mapVM.position.positionedByUser {
+				mapVM.shouldFollowUser = false
+			}
+		}
 	}
 }
