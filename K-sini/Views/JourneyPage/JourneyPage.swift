@@ -8,6 +8,7 @@ struct JourneyPage: View {
     @Environment(NavigationState.self) var points: NavigationState
     @State private var journeyVM = JourneyViewModel()
     @Bindable private var mapVM = MapViewModel()
+    @Bindable private var hapticVM = DirectionalHapticViewModel()
 
     var body: some View {
         VStack(spacing: 0) {
@@ -15,11 +16,11 @@ struct JourneyPage: View {
                 direction: journeyVM.currentDirection,
                 stepIndex: journeyVM.currentStepIndex,
                 totalSteps: journeyVM.totalSteps,
-
 //                route: journeyVM.route,
 //                currentPathwayIndex: journeyVM.currentPathwayIndex ?? 0,
 //                levelPolygons: currentLevelPolygons,
-                mapVM: mapVM
+                mapVM: mapVM,
+                hapticVM: hapticVM
             )
             Spacer()
             JourneyTabBarView(onArrived: handleArrived)
