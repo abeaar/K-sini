@@ -1,196 +1,196 @@
 {
-    "type": "FeatureCollection",
-    "name": "navigation",
-    "features": [
-        {
-            "type": "Feature",
-            "feature_type": "endpoint",
-            "properties": {
-                "name": {
-                    "en": "Exit C - Cisauk Point",
-                    "id": "Pintu C - Cisauk Point",
-                    "key": "C",
-                    "alts": [
-                        "Exit C",
-                        "Cisauk Point Exit"
-                    ]
-                },
-                "level": "88736209-7778-11f1-9f7e-255798ecef5a",
-                "building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
-                "category": null,
-                "@id": "f3e7c8d0-7778-11f1-9f7e-255798ecef5a",
-                "checkpoints": [],
-                "display_point": {
-                    "coordinates": [
-                        106.640216,
-                        -6.3255126
-                    ],
-                    "type": "Point"
-                }
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    106.640216,
-                    -6.3255126
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "feature_type": "endpoint",
-            "properties": {
-                "name": {
-                    "en": "Exit B - Terminal Intermoda BSD",
-                    "id": "Pintu B - Terminal Intermoda BSD",
-                    "key": "B",
-                    "alts": [
-                        "Exit B",
-                        "Terminal Intermoda BSD Exit"
-                    ]
-                },
-                "level": "88736200-7778-11f1-9f7e-255798ecef5a",
-                "building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
-                "category": null,
-                "@id": "093318d0-790f-11f1-8064-b5d569ec4cf5",
-                "checkpoints": [
-                    "093318d0-790f-11f1-8064-b5d569ec4cf5"
-                ],
-                "display_point": {
-                    "coordinates": [
-                        106.6435744,
-                        -6.3223673
-                    ],
-                    "type": "Point"
-                }
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    106.6435744,
-                    -6.3223673
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "feature_type": "endpoint",
-            "properties": {
-                "name": {
-                    "en": "Exit A - Akses Parkir Kendaraan",
-                    "id": "Pintu A - Akses Parkir Kendaraan",
-                    "key": "A",
-                    "alts": [
-                        "Exit A",
-                        "Akses Parkir Kendaraan Exit"
-                    ]
-                },
-                "level": "88736209-7778-11f1-9f7e-255798ecef5a",
-                "building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
-                "category": null,
-                "@id": "f9a7a3a0-7886-11f1-90a1-7d7918fdf504",
-                "checkpoints": [
-                    "f9a7a3a0-7886-11f1-90a1-7d7918fdf504"
-                ],
-                "display_point": {
-                    "coordinates": [
-                        106.6413982,
-                        -6.324342
-                    ],
-                    "type": "Point"
-                }
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    106.6413982,
-                    -6.324342
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "feature_type": "endpoint",
-            "properties": {
-                "name": {
-                    "en": "Platform 1 - to Rangkas Bitung",
-                    "id": "Peron 1 - ke Rangkas Bitung",
-                    "key": "1",
-                    "alts": [
-                        "Rangkas bitung",
-                        "Tigaraksa",
-                        "Parungpanjang",
-                        "Maja"
-                    ]
-                },
-                "level": "88736209-7778-11f1-9f7e-255798ecef5a",
-                "building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
-                "category": null,
-                "@id": "122b37ae-3477-41b1-a269-54f68fa34942",
-                "checkpoints": [
-                    "57b4aca1-b3a7-4005-872f-11b3681f1f5c"
-                ],
-                "display_point": {
-                    "coordinates": [
-                        106.6415086,
-                        -6.3244423
-                    ],
-                    "type": "Point"
-                }
-            },
-            "geometry": {
-                "type": "MultiPoint",
-                "coordinates": [
-                    [
-                        106.641349151605,
-                        -6.324528058641414
-                    ],
-                    [
-                        106.6416514,
-                        -6.3243692
-                    ]
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "feature_type": "endpoint",
-            "properties": {
-                "name": {
-                    "en": "Platform 2 - to Tanah Abang",
-                    "id": "Peron 2 - ke Tanah Abang",
-                    "key": "2",
-                    "alts": [
-                        "Tanah Abang",
-                        "Serpong"
-                    ]
-                },
-                "level": "88736209-7778-11f1-9f7e-255798ecef5a",
-                "building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
-                "category": null,
-                "@id": "3ad2672d-35ac-478a-a6a2-aa5472096744",
-                "checkpoints": [],
-                "display_point": {
-                    "coordinates": [
-                        106.6415515,
-                        -6.3245243
-                    ],
-                    "type": "Point"
-                }
-            },
-            "geometry": {
-                "type": "MultiPoint",
-                "coordinates": [
-                    [
-                        106.64139515546076,
-                        -6.324610001455758
-                    ],
-                    [
-                        106.64169193973297,
-                        -6.324456050771742
-                    ]
-                ]
-            }
-        },
-    ]
+	"type": "FeatureCollection",
+	"name": "navigation",
+	"features": [
+		{
+			"type": "Feature",
+			"feature_type": "endpoint",
+			"properties": {
+				"name": {
+					"en": "Exit C - Cisauk Point",
+					"id": "Pintu C - Cisauk Point",
+					"key": "C",
+					"alts": [
+						"Exit C",
+						"Cisauk Point Exit"
+					]
+				},
+				"level": "88736209-7778-11f1-9f7e-255798ecef5a",
+				"building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
+				"category": null,
+				"@id": "f3e7c8d0-7778-11f1-9f7e-255798ecef5a",
+				"checkpoints": [],
+				"display_point": {
+					"coordinates": [
+						106.640216,
+						-6.3255126
+					],
+					"type": "Point"
+				}
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					106.640216,
+					-6.3255126
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"feature_type": "endpoint",
+			"properties": {
+				"name": {
+					"en": "Exit B - Terminal Intermoda BSD",
+					"id": "Pintu B - Terminal Intermoda BSD",
+					"key": "B",
+					"alts": [
+						"Exit B",
+						"Terminal Intermoda BSD Exit"
+					]
+				},
+				"level": "88736200-7778-11f1-9f7e-255798ecef5a",
+				"building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
+				"category": null,
+				"@id": "093318d0-790f-11f1-8064-b5d569ec4cf5",
+				"checkpoints": [
+					"093318d0-790f-11f1-8064-b5d569ec4cf5"
+				],
+				"display_point": {
+					"coordinates": [
+						106.6435744,
+						-6.3223673
+					],
+					"type": "Point"
+				}
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					106.6435744,
+					-6.3223673
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"feature_type": "endpoint",
+			"properties": {
+				"name": {
+					"en": "Exit A - Akses Parkir Kendaraan",
+					"id": "Pintu A - Akses Parkir Kendaraan",
+					"key": "A",
+					"alts": [
+						"Exit A",
+						"Akses Parkir Kendaraan Exit"
+					]
+				},
+				"level": "88736209-7778-11f1-9f7e-255798ecef5a",
+				"building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
+				"category": null,
+				"@id": "f9a7a3a0-7886-11f1-90a1-7d7918fdf504",
+				"checkpoints": [
+					"f9a7a3a0-7886-11f1-90a1-7d7918fdf504"
+				],
+				"display_point": {
+					"coordinates": [
+						106.6413982,
+						-6.324342
+					],
+					"type": "Point"
+				}
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					106.6413982,
+					-6.324342
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"feature_type": "endpoint",
+			"properties": {
+				"name": {
+					"en": "Platform 1 - to Rangkas Bitung",
+					"id": "Peron 1 - ke Rangkas Bitung",
+					"key": "1",
+					"alts": [
+						"Rangkas bitung",
+						"Tigaraksa",
+						"Parungpanjang",
+						"Maja"
+					]
+				},
+				"level": "88736209-7778-11f1-9f7e-255798ecef5a",
+				"building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
+				"category": null,
+				"@id": "122b37ae-3477-41b1-a269-54f68fa34942",
+				"checkpoints": [
+					"57b4aca1-b3a7-4005-872f-11b3681f1f5c"
+				],
+				"display_point": {
+					"coordinates": [
+						106.6415086,
+						-6.3244423
+					],
+					"type": "Point"
+				}
+			},
+			"geometry": {
+				"type": "MultiPoint",
+				"coordinates": [
+					[
+						106.641349151605,
+						-6.324528058641414
+					],
+					[
+						106.6416514,
+						-6.3243692
+					]
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"feature_type": "endpoint",
+			"properties": {
+				"name": {
+					"en": "Platform 2 - to Tanah Abang",
+					"id": "Peron 2 - ke Tanah Abang",
+					"key": "2",
+					"alts": [
+						"Tanah Abang",
+						"Serpong"
+					]
+				},
+				"level": "88736209-7778-11f1-9f7e-255798ecef5a",
+				"building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
+				"category": null,
+				"@id": "3ad2672d-35ac-478a-a6a2-aa5472096744",
+				"checkpoints": [],
+				"display_point": {
+					"coordinates": [
+						106.6415515,
+						-6.3245243
+					],
+					"type": "Point"
+				}
+			},
+			"geometry": {
+				"type": "MultiPoint",
+				"coordinates": [
+					[
+						106.64139515546076,
+						-6.324610001455758
+					],
+					[
+						106.64169193973297,
+						-6.324456050771742
+					]
+				]
+			}
+		}
+	]
 }
