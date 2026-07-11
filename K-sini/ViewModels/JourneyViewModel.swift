@@ -1,10 +1,4 @@
-//
-//  JourneyViewModel.swift
-//  k-sini GPS point POC
-//
-//  ponytail: data plumbing for the wired journey; JourneyPage rewire to
-//  render currentDirection + segments is the next pass.
-//
+
 
 import Foundation
 import CoreLocation

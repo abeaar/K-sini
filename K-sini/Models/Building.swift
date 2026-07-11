@@ -8,8 +8,8 @@
 import MapKit
 
 struct Building: Identifiable {
-	let id: String
-	let name: String
-	let coordinate: CLLocationCoordinate2D
-	let polygon: MKPolygon
+    let id: String
+    let name: String
+    let coordinate: CLLocationCoordinate2D
+    let polygon: MKPolygon
 }

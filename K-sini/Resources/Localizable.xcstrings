@@ -4,13 +4,16 @@
     "" : {
 
     },
-    "Close" : {
+    "Akhiri Perjalanan" : {
 
     },
     "Destinasi" : {
 
     },
     "Destination" : {
+
+    },
+    "Detail Perjalanan" : {
 
     },
     "Dismiss" : {
@@ -22,7 +25,13 @@
     "K-SINI" : {
 
     },
+    "Lanjut" : {
+
+    },
     "Lokasi Saat Ini" : {
+
+    },
+    "lorem ipsum" : {
 
     },
     "Mau ke mana?" : {
@@ -46,13 +55,16 @@
     "Pilih tujuanmu, kami tunjukkan pintu keluar yang tepat." : {
 
     },
+    "placeholder" : {
+
+    },
     "Pratinjau Arah" : {
 
     },
     "Start" : {
 
     },
-    "Tutup" : {
+    "Titik Berikutnya" : {
 
     },
     "via %@" : {

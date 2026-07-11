@@ -31,6 +31,7 @@ struct ContentView: View {
                 points.loadDestinations()
                 points.loadPathways()
                 points.loadLevels()
+                points.loadDestinations()
                 await points.detectStartingPoint()
             }
             .navigationDestination(for: AppScreen.self) { screen in

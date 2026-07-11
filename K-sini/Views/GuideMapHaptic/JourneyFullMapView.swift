@@ -1,11 +1,10 @@
-
-
 import MapKit
 import SwiftUI
 
-struct MapPreview: View {
+struct JourneyFullMapView: View {
 
     @Bindable var viewModel: MapViewModel
+    @State private var coverPosition: MapCameraPosition = .automatic
     @State private var hasInitiallyFitted = false
 
     private var allLevelIDs: [String] {
@@ -13,7 +12,7 @@ struct MapPreview: View {
     }
 
     var body: some View {
-        Map(position: $viewModel.position) {
+        Map(position: $coverPosition) {
             BuildingLayer(buildings: viewModel.buildings)
 
             ForEach(allLevelIDs, id: \.self) { levelID in
@@ -43,9 +42,16 @@ struct MapPreview: View {
     }
 
     private func fitWideShotIfNeeded() {
-        guard !hasInitiallyFitted, !viewModel.buildings.isEmpty else { return }
-        guard let region = BuildingRegionService.region(from: viewModel.buildings) else { return }
-        viewModel.position = .region(region)
+        guard !hasInitiallyFitted else { return }
+        if !viewModel.routeSegments.isEmpty,
+           let region = region(for: viewModel.routeSegments) {
+            coverPosition = .region(region)
+            hasInitiallyFitted = true
+            return
+        }
+        guard !viewModel.buildings.isEmpty,
+              let region = BuildingRegionService.region(from: viewModel.buildings) else { return }
+        coverPosition = .region(region)
         hasInitiallyFitted = true
     }
 
@@ -53,7 +59,7 @@ struct MapPreview: View {
         guard hasInitiallyFitted else { return }
         guard !viewModel.routeSegments.isEmpty else { return }
         guard let region = region(for: viewModel.routeSegments) else { return }
-        viewModel.position = .region(region)
+        coverPosition = .region(region)
     }
 
     private func region(for route: [Pathway]) -> MKCoordinateRegion? {

@@ -1,858 +1,858 @@
 {
-	"type": "FeatureCollection",
-	"features": [
-		{
-			"type": "Feature",
-			"feature_type": "checkpoint",
-			"properties": {
-				"name": {
-					"en": null,
-					"id": null,
-					"key": "continues",
-					"alts": [],
-					"image": null
-				},
-				"level": "88736209-7778-11f1-9f7e-255798ecef5a",
-				"building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
-				"category": "continues",
-				"directions": [
-					{
-						"en": "Turn left after disembark from the train",
-						"id": "Belok kiri setelah turun dari kereta",
-						"key": "go-straight",
-						"alts": [],
-						"image": null,
-						"to": "7f696e10-7887-11f1-90a1-7d7918fdf504",
-						"endpoints": [
-							"97ce32e8-ff79-43b0-8c24-d60f127a974c",
-							"56d44900-743b-4d78-847f-230737548776"
-						]
-					},
-					{
-						"en": "You have arrived at your destination",
-						"id": "Kamu sudah sampai di tujuan",
-						"key": "go-straight",
-						"alts": [],
-						"image": null,
-						"to": null,
-						"endpoints": [
-							"122b37ae-3477-41b1-a269-54f68fa34942"
-						]
-					}
-				],
-				"@id": "57b4aca1-b3a7-4005-872f-11b3681f1f5c",
-				"display_point": {
-					"coordinates": [
-						106.6416434,
-						-6.3243528
-					],
-					"type": "Point"
-				}
-			},
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					106.6416434,
-					-6.3243528
-				]
-			}
-		},
-		{
-			"type": "Feature",
-			"feature_type": "checkpoint",
-			"properties": {
-				"name": {
-					"en": null,
-					"id": null,
-					"key": "change-level",
-					"alts": [],
-					"image": null
-				},
-				"level": "88736209-7778-11f1-9f7e-255798ecef5a",
-				"building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
-				"category": "change-level",
-				"directions": [
-					{
-						"en": "Turn left and find the stairs to go up to level 2",
-						"id": "Belok kiri dan temukan tangga untuk naik ke lantai 2",
-						"key": "level-up",
-						"alts": [],
-						"image": null,
-						"to": "9a857948-a0e3-4632-beb0-f33dd650272b",
-						"endpoints": [
-							"97ce32e8-ff79-43b0-8c24-d60f127a974c",
-							"56d44900-743b-4d78-847f-230737548776"
-						]
-					},
-					{
-						"en": "Go straight a bit",
-						"id": "Jalan lurus sedikit",
-						"key": "go-straight",
-						"alts": [],
-						"image": null,
-						"to": "57b4aca1-b3a7-4005-872f-11b3681f1f5c",
-						"endpoints": [
-							"122b37ae-3477-41b1-a269-54f68fa34942"
-						]
-					}
-				],
-				"@id": "7f696e10-7887-11f1-90a1-7d7918fdf504",
-				"display_point": {
-					"coordinates": [
-						106.641584,
-						-6.32438
-					],
-					"type": "Point"
-				}
-			},
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					106.641584,
-					-6.32438
-				]
-			}
-		},
-		{
-			"type": "Feature",
-			"feature_type": "checkpoint",
-			"properties": {
-				"name": {
-					"en": null,
-					"id": null,
-					"key": "change-level",
-					"alts": [],
-					"image": null
-				},
-				"level": "88736200-7778-11f1-9f7e-255798ecef5a",
-				"building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
-				"category": "change-level",
-				"directions": [
-					{
-						"en": "Turn left and go straight",
-						"id": "Belok kiri dan lurus",
-						"key": "turn-left",
-						"alts": [],
-						"image": null,
-						"to": "86688dfd-877c-4de2-8f0f-6c20af460439",
-						"endpoints": [
-							"97ce32e8-ff79-43b0-8c24-d60f127a974c",
-							"56d44900-743b-4d78-847f-230737548776"
-						]
-					},
-					{
-						"en": "Go down the stairs to level 1",
-						"id": "Turun tangga ke lantai 1",
-						"key": "level-down",
-						"alts": [],
-						"image": null,
-						"to": "7f696e10-7887-11f1-90a1-7d7918fdf504",
-						"endpoints": [
-							"122b37ae-3477-41b1-a269-54f68fa34942"
-						]
-					}
-				],
-				"@id": "9a857948-a0e3-4632-beb0-f33dd650272b",
-				"display_point": {
-					"coordinates": [
-						106.64152,
-						-6.324411
-					],
-					"type": "Point"
-				}
-			},
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					106.64152,
-					-6.324411
-				]
-			}
-		},
-		{
-			"type": "Feature",
-			"feature_type": "checkpoint",
-			"properties": {
-				"name": {
-					"en": null,
-					"id": null,
-					"key": "continues",
-					"alts": [],
-					"image": null
-				},
-				"level": "88736200-7778-11f1-9f7e-255798ecef5a",
-				"building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
-				"category": "continues",
-				"directions": [
-					{
-						"en": "Turn left and find the ticket gate",
-						"id": "Belok kiri dan temukan mesin tiket",
-						"key": "turn-left",
-						"alts": [],
-						"image": null,
-						"to": "32475db6-0a56-4445-9316-05f2355bce4e",
-						"endpoints": [
-							"97ce32e8-ff79-43b0-8c24-d60f127a974c",
-							"56d44900-743b-4d78-847f-230737548776"
-						]
-					},
-					{
-						"en": "Turn right and find the stairs",
-						"id": "Belok kanan dan temukan tangga",
-						"key": "turn-right",
-						"alts": [],
-						"image": null,
-						"to": "9a857948-a0e3-4632-beb0-f33dd650272b",
-						"endpoints": [
-							"122b37ae-3477-41b1-a269-54f68fa34942"
-						]
-					}
-				],
-				"@id": "86688dfd-877c-4de2-8f0f-6c20af460439",
-				"display_point": {
-					"coordinates": [
-						106.6415306,
-						-6.3244738
-					],
-					"type": "Point"
-				}
-			},
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					106.6415306,
-					-6.3244738
-				]
-			}
-		},
-		{
-			"type": "Feature",
-			"feature_type": "checkpoint",
-			"properties": {
-				"name": {
-					"en": null,
-					"id": null,
-					"key": "ticket-gate",
-					"alts": [],
-					"image": null
-				},
-				"level": "88736200-7778-11f1-9f7e-255798ecef5a",
-				"building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
-				"category": "ticket-gate",
-				"directions": [
-					{
-						"en": "Tap out your ticket",
-						"id": "Tap out tiket Anda",
-						"key": "tap-out",
-						"alts": [],
-						"image": null,
-						"to": "04087fe0-7887-11f1-90a1-7d7918fdf504",
-						"endpoints": [
-							"97ce32e8-ff79-43b0-8c24-d60f127a974c",
-							"56d44900-743b-4d78-847f-230737548776"
-						]
-					},
-					{
-						"en": "Tap in your ticket",
-						"id": "Tap in tiket Anda",
-						"key": "tap-in",
-						"alts": [],
-						"image": null,
-						"to": "86688dfd-877c-4de2-8f0f-6c20af460439",
-						"endpoints": [
-							"122b37ae-3477-41b1-a269-54f68fa34942"
-						]
-					}
-				],
-				"@id": "32475db6-0a56-4445-9316-05f2355bce4e",
-				"display_point": {
-					"coordinates": [
-						106.64163,
-						-6.3244242
-					],
-					"type": "Point"
-				}
-			},
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					106.64163,
-					-6.3244242
-				]
-			}
-		},
-		{
-			"type": "Feature",
-			"feature_type": "checkpoint",
-			"properties": {
-				"name": {
-					"en": null,
-					"id": null,
-					"key": "continues",
-					"alts": [],
-					"image": null
-				},
-				"level": "88736200-7778-11f1-9f7e-255798ecef5a",
-				"building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
-				"category": "continues",
-				"directions": [
-					{
-						"en": "Turn left and walk straight",
-						"id": "Belok kiri dan jalan lurus",
-						"key": "turn-left",
-						"alts": [],
-						"image": null,
-						"to": "01d9b900-7887-11f1-90a1-7d7918fdf504",
-						"endpoints": [
-							"97ce32e8-ff79-43b0-8c24-d60f127a974c",
-							"56d44900-743b-4d78-847f-230737548776"
-						]
-					},
-					{
-						"en": "Turn right and find the ticket gate",
-						"id": "Belok kanan dan temukan gerbang tiket",
-						"key": "turn-right",
-						"alts": [],
-						"image": null,
-						"to": "32475db6-0a56-4445-9316-05f2355bce4e",
-						"endpoints": [
-							"122b37ae-3477-41b1-a269-54f68fa34942"
-						]
-					}
-				],
-				"@id": "04087fe0-7887-11f1-90a1-7d7918fdf504",
-				"display_point": {
-					"coordinates": [
-						106.641671,
-						-6.324405
-					],
-					"type": "Point"
-				}
-			},
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					106.641671,
-					-6.324405
-				]
-			}
-		},
-		{
-			"type": "Feature",
-			"feature_type": "checkpoint",
-			"properties": {
-				"name": {
-					"en": null,
-					"id": null,
-					"key": "continues",
-					"alts": [],
-					"image": null
-				},
-				"level": "88736200-7778-11f1-9f7e-255798ecef5a",
-				"building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
-				"category": "continues",
-				"directions": [
-					{
-						"en": "Turn left and walk straight",
-						"id": "Belok kiri dan jalan lurus",
-						"key": "turn-left",
-						"alts": [],
-						"image": null,
-						"to": "0f41bac0-7887-11f1-90a1-7d7918fdf504",
-						"endpoints": [
-							"97ce32e8-ff79-43b0-8c24-d60f127a974c"
-						]
-					},
-					{
-						"en": "Turn right and walk straight",
-						"id": "Belok kanan dan jalan lurus",
-						"key": "turn-right",
-						"alts": [],
-						"image": null,
-						"to": "04087fe0-7887-11f1-90a1-7d7918fdf504",
-						"endpoints": [
-							"122b37ae-3477-41b1-a269-54f68fa34942"
-						]
-					},
-					{
-						"en": "Turn right and walk straight follow the path",
-						"id": "Belok kanan dan terus berjalan ikuti jalan",
-						"key": "turn-right",
-						"alts": [],
-						"image": null,
-						"to": "014b7090-7928-11f1-8064-b5d569ec4cf5",
-						"endpoints": [
-							"56d44900-743b-4d78-847f-230737548776"
-						]
-					},
-					{
-						"en": "Turn left and walk straight",
-						"id": "Belok kiri dan jalan lurus",
-						"key": "turn-left",
-						"alts": [],
-						"image": null,
-						"to": "04087fe0-7887-11f1-90a1-7d7918fdf504",
-						"endpoints": [
-							"122b37ae-3477-41b1-a269-54f68fa34942"
-						]
-					}
-				],
-				"@id": "01d9b900-7887-11f1-90a1-7d7918fdf504",
-				"display_point": {
-					"coordinates": [
-						106.641583,
-						-6.324291
-					],
-					"type": "Point"
-				}
-			},
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					106.641583,
-					-6.324291
-				]
-			}
-		},
-		{
-			"type": "Feature",
-			"feature_type": "checkpoint",
-			"properties": {
-				"name": {
-					"en": null,
-					"id": null,
-					"key": "continues",
-					"alts": [],
-					"image": null
-				},
-				"level": "88736200-7778-11f1-9f7e-255798ecef5a",
-				"building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
-				"category": "continues",
-				"directions": [
-					{
-						"en": "Turn right and find the stairs",
-						"id": "Belok kanan dan cari tangga",
-						"key": "turn-right",
-						"alts": [],
-						"image": null,
-						"to": "fd8727c0-7886-11f1-90a1-7d7918fdf504",
-						"endpoints": [
-							"97ce32e8-ff79-43b0-8c24-d60f127a974c"
-						]
-					},
-					{
-						"en": "Turn left",
-						"id": "Belok kiri",
-						"key": "turn-left",
-						"alts": [],
-						"image": null,
-						"to": "01d9b900-7887-11f1-90a1-7d7918fdf504",
-						"endpoints": [
-							"122b37ae-3477-41b1-a269-54f68fa34942"
-						]
-					}
-				],
-				"@id": "0f41bac0-7887-11f1-90a1-7d7918fdf504",
-				"display_point": {
-					"coordinates": [
-						106.641527,
-						-6.324318
-					],
-					"type": "Point"
-				}
-			},
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					106.641527,
-					-6.324318
-				]
-			}
-		},
-		{
-			"type": "Feature",
-			"feature_type": "checkpoint",
-			"properties": {
-				"name": {
-					"en": null,
-					"id": null,
-					"key": "change-level",
-					"alts": [],
-					"image": null
-				},
-				"level": "88736200-7778-11f1-9f7e-255798ecef5a",
-				"building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
-				"category": "change-level",
-				"directions": [
-					{
-						"en": "Stairs down to level 1",
-						"id": "Turun tangga ke lantai 1",
-						"key": "level-down",
-						"alts": [],
-						"image": null,
-						"to": "fbfc1af0-7886-11f1-90a1-7d7918fdf504",
-						"endpoints": [
-							"97ce32e8-ff79-43b0-8c24-d60f127a974c"
-						]
-					},
-					{
-						"en": "Turn right",
-						"id": "Belok kanan",
-						"key": "turn-right",
-						"alts": [],
-						"image": null,
-						"to": "0f41bac0-7887-11f1-90a1-7d7918fdf504",
-						"endpoints": [
-							"122b37ae-3477-41b1-a269-54f68fa34942"
-						]
-					}
-				],
-				"@id": "fd8727c0-7886-11f1-90a1-7d7918fdf504",
-				"display_point": {
-					"coordinates": [
-						106.6415,
-						-6.324289
-					],
-					"type": "Point"
-				}
-			},
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					106.6415,
-					-6.324289
-				]
-			}
-		},
-		{
-			"type": "Feature",
-			"feature_type": "checkpoint",
-			"properties": {
-				"name": {
-					"en": null,
-					"id": null,
-					"key": "change-level",
-					"alts": [],
-					"image": null
-				},
-				"level": "88736209-7778-11f1-9f7e-255798ecef5a",
-				"building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
-				"category": "change-level",
-				"directions": [
-					{
-						"en": "Exit building and turn right",
-						"id": "Keluar dan belok kanan",
-						"key": "turn-right",
-						"alts": [],
-						"image": null,
-						"to": "f9a7a3a0-7886-11f1-90a1-7d7918fdf504",
-						"endpoints": [
-							"97ce32e8-ff79-43b0-8c24-d60f127a974c"
-						]
-					},
-					{
-						"en": "Stairs up to level 2",
-						"id": "Turun tangga ke lantai 2",
-						"key": "level-up",
-						"alts": [],
-						"image": null,
-						"to": "fd8727c0-7886-11f1-90a1-7d7918fdf504",
-						"endpoints": [
-							"122b37ae-3477-41b1-a269-54f68fa34942"
-						]
-					}
-				],
-				"@id": "fbfc1af0-7886-11f1-90a1-7d7918fdf504",
-				"display_point": {
-					"coordinates": [
-						106.641425,
-						-6.324324
-					],
-					"type": "Point"
-				}
-			},
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					106.641425,
-					-6.324324
-				]
-			}
-		},
-		{
-			"type": "Feature",
-			"feature_type": "checkpoint",
-			"properties": {
-				"name": {
-					"en": null,
-					"id": null,
-					"key": "continues",
-					"alts": [],
-					"image": null
-				},
-				"level": "88736209-7778-11f1-9f7e-255798ecef5a",
-				"building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
-				"category": "continues",
-				"directions": [
-					{
-						"en": "You have arrived at your destination",
-						"id": "Kamu sudah sampai di tujuan",
-						"key": "go-straight",
-						"alts": [],
-						"image": null,
-						"to": null,
-						"endpoints": [
-							"97ce32e8-ff79-43b0-8c24-d60f127a974c"
-						]
-					},
-					{
-						"en": "Enter station and find the stairs",
-						"id": "Masuk stasiun dan cari tangga",
-						"key": "go-straight",
-						"alts": [],
-						"image": null,
-						"to": "fbfc1af0-7886-11f1-90a1-7d7918fdf504",
-						"endpoints": [
-							"122b37ae-3477-41b1-a269-54f68fa34942"
-						]
-					}
-				],
-				"@id": "f9a7a3a0-7886-11f1-90a1-7d7918fdf504",
-				"display_point": {
-					"coordinates": [
-						106.641372,
-						-6.324311
-					],
-					"type": "Point"
-				}
-			},
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					106.641372,
-					-6.324311
-				]
-			}
-		},
-		{
-			"type": "Feature",
-			"feature_type": "checkpoint",
-			"properties": {
-				"name": {
-					"en": null,
-					"id": null,
-					"key": "continues",
-					"alts": [],
-					"image": null
-				},
-				"level": "88736200-7778-11f1-9f7e-255798ecef5a",
-				"building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
-				"category": "continues",
-				"directions": [
-					{
-						"en": "You have arrived at your destination",
-						"id": "Kamu sudah sampai di tujuan",
-						"key": "go-straight",
-						"alts": [],
-						"image": null,
-						"to": null,
-						"endpoints": [
-							"56d44900-743b-4d78-847f-230737548776"
-						]
-					},
-					{
-						"en": "Go straigt",
-						"id": "Jalan lurus",
-						"key": "go-straight",
-						"alts": [],
-						"image": null,
-						"to": "04687160-790f-11f1-8064-b5d569ec4cf5",
-						"endpoints": [
-							"122b37ae-3477-41b1-a269-54f68fa34942"
-						]
-					}
-				],
-				"@id": "093318d0-790f-11f1-8064-b5d569ec4cf5",
-				"display_point": {
-					"coordinates": [
-						106.6435257,
-						-6.3225012
-					],
-					"type": "Point"
-				}
-			},
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					106.6435257,
-					-6.3225012
-				]
-			}
-		},
-		{
-			"type": "Feature",
-			"feature_type": "checkpoint",
-			"properties": {
-				"name": {
-					"en": null,
-					"id": null,
-					"key": "continues",
-					"alts": [],
-					"image": null
-				},
-				"level": "88736200-7778-11f1-9f7e-255798ecef5a",
-				"building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
-				"category": "continues",
-				"directions": [
-					{
-						"en": "Turn left and keep walking follow the path",
-						"id": "Belok kanan dan terus berjalan ikuti jalan",
-						"key": "turn-left",
-						"alts": [],
-						"image": null,
-						"to": "093318d0-790f-11f1-8064-b5d569ec4cf5",
-						"endpoints": [
-							"56d44900-743b-4d78-847f-230737548776"
-						]
-					},
-					{
-						"en": "Turn right and keep walking follow the path",
-						"id": "Belok kanan dan ikuti jalan",
-						"key": "turn-right",
-						"alts": [],
-						"image": null,
-						"to": "ff144540-7927-11f1-8064-b5d569ec4cf5",
-						"endpoints": [
-							"122b37ae-3477-41b1-a269-54f68fa34942"
-						]
-					}
-				],
-				"@id": "04687160-790f-11f1-8064-b5d569ec4cf5",
-				"display_point": {
-					"coordinates": [
-						106.643408,
-						-6.3230469
-					],
-					"type": "Point"
-				}
-			},
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					106.643408,
-					-6.3230469
-				]
-			}
-		},
-		{
-			"type": "Feature",
-			"feature_type": "checkpoint",
-			"properties": {
-				"name": {
-					"en": null,
-					"id": null,
-					"key": "continues",
-					"alts": [],
-					"image": null
-				},
-				"level": "88736200-7778-11f1-9f7e-255798ecef5a",
-				"building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
-				"category": "continues",
-				"directions": [
-					{
-						"en": "Slightly turn right and follow the hallway",
-						"id": "Sedikit belok kanan dan ikuti lorong",
-						"key": "turn-right",
-						"alts": [],
-						"image": null,
-						"to": "04687160-790f-11f1-8064-b5d569ec4cf5",
-						"endpoints": [
-							"56d44900-743b-4d78-847f-230737548776"
-						]
-					},
-					{
-						"en": "Slightly turn left and follow the hallway",
-						"id": "Sedikit belok kiri dan ikuti lorong",
-						"key": "turn-left",
-						"alts": [],
-						"image": null,
-						"to": "014b7090-7928-11f1-8064-b5d569ec4cf5",
-						"endpoints": [
-							"122b37ae-3477-41b1-a269-54f68fa34942"
-						]
-					}
-				],
-				"@id": "ff144540-7927-11f1-8064-b5d569ec4cf5",
-				"display_point": {
-					"coordinates": [
-						106.6427113,
-						-6.3235702
-					],
-					"type": "Point"
-				}
-			},
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					106.6427113,
-					-6.3235702
-				]
-			}
-		},
-		{
-			"type": "Feature",
-			"feature_type": "checkpoint",
-			"properties": {
-				"name": {
-					"en": null,
-					"id": null,
-					"key": "continues",
-					"alts": [],
-					"image": null
-				},
-				"level": "88736200-7778-11f1-9f7e-255798ecef5a",
-				"building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
-				"category": "continues",
-				"directions": [
-					{
-						"en": "Slightly turn left and follow the hallway",
-						"id": "Sedikit belok kiri dan ikuti lorong",
-						"key": "turn-left",
-						"alts": [],
-						"image": null,
-						"to": "ff144540-7927-11f1-8064-b5d569ec4cf5",
-						"endpoints": [
-							"56d44900-743b-4d78-847f-230737548776"
-						]
-					},
-					{
-						"en": "Slightly turn right and follow the hallway",
-						"id": "Sedikit belok kanan dan ikuti lorong",
-						"key": "turn-right",
-						"alts": [],
-						"image": null,
-						"to": "01d9b900-7887-11f1-90a1-7d7918fdf504",
-						"endpoints": [
-							"122b37ae-3477-41b1-a269-54f68fa34942"
-						]
-					}
-				],
-				"@id": "014b7090-7928-11f1-8064-b5d569ec4cf5",
-				"display_point": {
-					"coordinates": [
-						106.6424927,
-						-6.3238052
-					],
-					"type": "Point"
-				}
-			},
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					106.6424927,
-					-6.3238052
-				]
-			}
-		}
-	]
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "feature_type": "checkpoint",
+            "properties": {
+                "name": {
+                    "en": null,
+                    "id": null,
+                    "key": "continues",
+                    "alts": [],
+                    "image": null
+                },
+                "level": "88736209-7778-11f1-9f7e-255798ecef5a",
+                "building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
+                "category": "continues",
+                "directions": [
+                    {
+                        "en": "Turn left after disembark from the train",
+                        "id": "Belok kiri setelah turun dari kereta",
+                        "key": "go-straight",
+                        "alts": [],
+                        "image": null,
+                        "to": "7f696e10-7887-11f1-90a1-7d7918fdf504",
+                        "endpoints": [
+                            "97ce32e8-ff79-43b0-8c24-d60f127a974c",
+                            "56d44900-743b-4d78-847f-230737548776"
+                        ]
+                    },
+                    {
+                        "en": "You have arrived at your destination",
+                        "id": "Kamu sudah sampai di tujuan",
+                        "key": "go-straight",
+                        "alts": [],
+                        "image": null,
+                        "to": null,
+                        "endpoints": [
+                            "122b37ae-3477-41b1-a269-54f68fa34942"
+                        ]
+                    }
+                ],
+                "@id": "57b4aca1-b3a7-4005-872f-11b3681f1f5c",
+                "display_point": {
+                    "coordinates": [
+                        106.6416434,
+                        -6.3243528
+                    ],
+                    "type": "Point"
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    106.6416434,
+                    -6.3243528
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "feature_type": "checkpoint",
+            "properties": {
+                "name": {
+                    "en": null,
+                    "id": null,
+                    "key": "change-level",
+                    "alts": [],
+                    "image": null
+                },
+                "level": "88736209-7778-11f1-9f7e-255798ecef5a",
+                "building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
+                "category": "change-level",
+                "directions": [
+                    {
+                        "en": "Turn left and find the stairs to go up to level 2",
+                        "id": "Belok kiri dan temukan tangga untuk naik ke lantai 2",
+                        "key": "level-up",
+                        "alts": [],
+                        "image": null,
+                        "to": "9a857948-a0e3-4632-beb0-f33dd650272b",
+                        "endpoints": [
+                            "97ce32e8-ff79-43b0-8c24-d60f127a974c",
+                            "56d44900-743b-4d78-847f-230737548776"
+                        ]
+                    },
+                    {
+                        "en": "Go straight a bit",
+                        "id": "Jalan lurus sedikit",
+                        "key": "go-straight",
+                        "alts": [],
+                        "image": null,
+                        "to": "57b4aca1-b3a7-4005-872f-11b3681f1f5c",
+                        "endpoints": [
+                            "122b37ae-3477-41b1-a269-54f68fa34942"
+                        ]
+                    }
+                ],
+                "@id": "7f696e10-7887-11f1-90a1-7d7918fdf504",
+                "display_point": {
+                    "coordinates": [
+                        106.641584,
+                        -6.32438
+                    ],
+                    "type": "Point"
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    106.641584,
+                    -6.32438
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "feature_type": "checkpoint",
+            "properties": {
+                "name": {
+                    "en": null,
+                    "id": null,
+                    "key": "change-level",
+                    "alts": [],
+                    "image": null
+                },
+                "level": "88736200-7778-11f1-9f7e-255798ecef5a",
+                "building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
+                "category": "change-level",
+                "directions": [
+                    {
+                        "en": "Turn left and go straight",
+                        "id": "Belok kiri dan lurus",
+                        "key": "turn-left",
+                        "alts": [],
+                        "image": null,
+                        "to": "86688dfd-877c-4de2-8f0f-6c20af460439",
+                        "endpoints": [
+                            "97ce32e8-ff79-43b0-8c24-d60f127a974c",
+                            "56d44900-743b-4d78-847f-230737548776"
+                        ]
+                    },
+                    {
+                        "en": "Go down the stairs to level 1",
+                        "id": "Turun tangga ke lantai 1",
+                        "key": "level-down",
+                        "alts": [],
+                        "image": null,
+                        "to": "7f696e10-7887-11f1-90a1-7d7918fdf504",
+                        "endpoints": [
+                            "122b37ae-3477-41b1-a269-54f68fa34942"
+                        ]
+                    }
+                ],
+                "@id": "9a857948-a0e3-4632-beb0-f33dd650272b",
+                "display_point": {
+                    "coordinates": [
+                        106.64152,
+                        -6.324411
+                    ],
+                    "type": "Point"
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    106.64152,
+                    -6.324411
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "feature_type": "checkpoint",
+            "properties": {
+                "name": {
+                    "en": null,
+                    "id": null,
+                    "key": "continues",
+                    "alts": [],
+                    "image": null
+                },
+                "level": "88736200-7778-11f1-9f7e-255798ecef5a",
+                "building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
+                "category": "continues",
+                "directions": [
+                    {
+                        "en": "Turn left and find the ticket gate",
+                        "id": "Belok kiri dan temukan mesin tiket",
+                        "key": "turn-left",
+                        "alts": [],
+                        "image": null,
+                        "to": "32475db6-0a56-4445-9316-05f2355bce4e",
+                        "endpoints": [
+                            "97ce32e8-ff79-43b0-8c24-d60f127a974c",
+                            "56d44900-743b-4d78-847f-230737548776"
+                        ]
+                    },
+                    {
+                        "en": "Turn right and find the stairs",
+                        "id": "Belok kanan dan temukan tangga",
+                        "key": "turn-right",
+                        "alts": [],
+                        "image": null,
+                        "to": "9a857948-a0e3-4632-beb0-f33dd650272b",
+                        "endpoints": [
+                            "122b37ae-3477-41b1-a269-54f68fa34942"
+                        ]
+                    }
+                ],
+                "@id": "86688dfd-877c-4de2-8f0f-6c20af460439",
+                "display_point": {
+                    "coordinates": [
+                        106.6415306,
+                        -6.3244738
+                    ],
+                    "type": "Point"
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    106.6415306,
+                    -6.3244738
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "feature_type": "checkpoint",
+            "properties": {
+                "name": {
+                    "en": null,
+                    "id": null,
+                    "key": "ticket-gate",
+                    "alts": [],
+                    "image": null
+                },
+                "level": "88736200-7778-11f1-9f7e-255798ecef5a",
+                "building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
+                "category": "ticket-gate",
+                "directions": [
+                    {
+                        "en": "Tap out your ticket",
+                        "id": "Tap out tiket Anda",
+                        "key": "tap-out",
+                        "alts": [],
+                        "image": null,
+                        "to": "04087fe0-7887-11f1-90a1-7d7918fdf504",
+                        "endpoints": [
+                            "97ce32e8-ff79-43b0-8c24-d60f127a974c",
+                            "56d44900-743b-4d78-847f-230737548776"
+                        ]
+                    },
+                    {
+                        "en": "Tap in your ticket",
+                        "id": "Tap in tiket Anda",
+                        "key": "tap-in",
+                        "alts": [],
+                        "image": null,
+                        "to": "86688dfd-877c-4de2-8f0f-6c20af460439",
+                        "endpoints": [
+                            "122b37ae-3477-41b1-a269-54f68fa34942"
+                        ]
+                    }
+                ],
+                "@id": "32475db6-0a56-4445-9316-05f2355bce4e",
+                "display_point": {
+                    "coordinates": [
+                        106.64163,
+                        -6.3244242
+                    ],
+                    "type": "Point"
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    106.64163,
+                    -6.3244242
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "feature_type": "checkpoint",
+            "properties": {
+                "name": {
+                    "en": null,
+                    "id": null,
+                    "key": "continues",
+                    "alts": [],
+                    "image": null
+                },
+                "level": "88736200-7778-11f1-9f7e-255798ecef5a",
+                "building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
+                "category": "continues",
+                "directions": [
+                    {
+                        "en": "Turn left and walk straight",
+                        "id": "Belok kiri dan jalan lurus",
+                        "key": "turn-left",
+                        "alts": [],
+                        "image": null,
+                        "to": "01d9b900-7887-11f1-90a1-7d7918fdf504",
+                        "endpoints": [
+                            "97ce32e8-ff79-43b0-8c24-d60f127a974c",
+                            "56d44900-743b-4d78-847f-230737548776"
+                        ]
+                    },
+                    {
+                        "en": "Turn right and find the ticket gate",
+                        "id": "Belok kanan dan temukan gerbang tiket",
+                        "key": "turn-right",
+                        "alts": [],
+                        "image": null,
+                        "to": "32475db6-0a56-4445-9316-05f2355bce4e",
+                        "endpoints": [
+                            "122b37ae-3477-41b1-a269-54f68fa34942"
+                        ]
+                    }
+                ],
+                "@id": "04087fe0-7887-11f1-90a1-7d7918fdf504",
+                "display_point": {
+                    "coordinates": [
+                        106.641671,
+                        -6.324405
+                    ],
+                    "type": "Point"
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    106.641671,
+                    -6.324405
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "feature_type": "checkpoint",
+            "properties": {
+                "name": {
+                    "en": null,
+                    "id": null,
+                    "key": "continues",
+                    "alts": [],
+                    "image": null
+                },
+                "level": "88736200-7778-11f1-9f7e-255798ecef5a",
+                "building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
+                "category": "continues",
+                "directions": [
+                    {
+                        "en": "Turn left and walk straight",
+                        "id": "Belok kiri dan jalan lurus",
+                        "key": "turn-left",
+                        "alts": [],
+                        "image": null,
+                        "to": "0f41bac0-7887-11f1-90a1-7d7918fdf504",
+                        "endpoints": [
+                            "97ce32e8-ff79-43b0-8c24-d60f127a974c"
+                        ]
+                    },
+                    {
+                        "en": "Turn right and walk straight",
+                        "id": "Belok kanan dan jalan lurus",
+                        "key": "turn-right",
+                        "alts": [],
+                        "image": null,
+                        "to": "04087fe0-7887-11f1-90a1-7d7918fdf504",
+                        "endpoints": [
+                            "122b37ae-3477-41b1-a269-54f68fa34942"
+                        ]
+                    },
+                    {
+                        "en": "Turn right and walk straight follow the path",
+                        "id": "Belok kanan dan terus berjalan ikuti jalan",
+                        "key": "turn-right",
+                        "alts": [],
+                        "image": null,
+                        "to": "014b7090-7928-11f1-8064-b5d569ec4cf5",
+                        "endpoints": [
+                            "56d44900-743b-4d78-847f-230737548776"
+                        ]
+                    },
+                    {
+                        "en": "Turn left and walk straight",
+                        "id": "Belok kiri dan jalan lurus",
+                        "key": "turn-left",
+                        "alts": [],
+                        "image": null,
+                        "to": "04087fe0-7887-11f1-90a1-7d7918fdf504",
+                        "endpoints": [
+                            "122b37ae-3477-41b1-a269-54f68fa34942"
+                        ]
+                    }
+                ],
+                "@id": "01d9b900-7887-11f1-90a1-7d7918fdf504",
+                "display_point": {
+                    "coordinates": [
+                        106.641583,
+                        -6.324291
+                    ],
+                    "type": "Point"
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    106.641583,
+                    -6.324291
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "feature_type": "checkpoint",
+            "properties": {
+                "name": {
+                    "en": null,
+                    "id": null,
+                    "key": "continues",
+                    "alts": [],
+                    "image": null
+                },
+                "level": "88736200-7778-11f1-9f7e-255798ecef5a",
+                "building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
+                "category": "continues",
+                "directions": [
+                    {
+                        "en": "Turn right and find the stairs",
+                        "id": "Belok kanan dan cari tangga",
+                        "key": "turn-right",
+                        "alts": [],
+                        "image": null,
+                        "to": "fd8727c0-7886-11f1-90a1-7d7918fdf504",
+                        "endpoints": [
+                            "97ce32e8-ff79-43b0-8c24-d60f127a974c"
+                        ]
+                    },
+                    {
+                        "en": "Turn left",
+                        "id": "Belok kiri",
+                        "key": "turn-left",
+                        "alts": [],
+                        "image": null,
+                        "to": "01d9b900-7887-11f1-90a1-7d7918fdf504",
+                        "endpoints": [
+                            "122b37ae-3477-41b1-a269-54f68fa34942"
+                        ]
+                    }
+                ],
+                "@id": "0f41bac0-7887-11f1-90a1-7d7918fdf504",
+                "display_point": {
+                    "coordinates": [
+                        106.641527,
+                        -6.324318
+                    ],
+                    "type": "Point"
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    106.641527,
+                    -6.324318
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "feature_type": "checkpoint",
+            "properties": {
+                "name": {
+                    "en": null,
+                    "id": null,
+                    "key": "change-level",
+                    "alts": [],
+                    "image": null
+                },
+                "level": "88736200-7778-11f1-9f7e-255798ecef5a",
+                "building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
+                "category": "change-level",
+                "directions": [
+                    {
+                        "en": "Stairs down to level 1",
+                        "id": "Turun tangga ke lantai 1",
+                        "key": "level-down",
+                        "alts": [],
+                        "image": null,
+                        "to": "fbfc1af0-7886-11f1-90a1-7d7918fdf504",
+                        "endpoints": [
+                            "97ce32e8-ff79-43b0-8c24-d60f127a974c"
+                        ]
+                    },
+                    {
+                        "en": "Turn right",
+                        "id": "Belok kanan",
+                        "key": "turn-right",
+                        "alts": [],
+                        "image": null,
+                        "to": "0f41bac0-7887-11f1-90a1-7d7918fdf504",
+                        "endpoints": [
+                            "122b37ae-3477-41b1-a269-54f68fa34942"
+                        ]
+                    }
+                ],
+                "@id": "fd8727c0-7886-11f1-90a1-7d7918fdf504",
+                "display_point": {
+                    "coordinates": [
+                        106.6415,
+                        -6.324289
+                    ],
+                    "type": "Point"
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    106.6415,
+                    -6.324289
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "feature_type": "checkpoint",
+            "properties": {
+                "name": {
+                    "en": null,
+                    "id": null,
+                    "key": "change-level",
+                    "alts": [],
+                    "image": null
+                },
+                "level": "88736209-7778-11f1-9f7e-255798ecef5a",
+                "building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
+                "category": "change-level",
+                "directions": [
+                    {
+                        "en": "Exit building and turn right",
+                        "id": "Keluar dan belok kanan",
+                        "key": "turn-right",
+                        "alts": [],
+                        "image": null,
+                        "to": "f9a7a3a0-7886-11f1-90a1-7d7918fdf504",
+                        "endpoints": [
+                            "97ce32e8-ff79-43b0-8c24-d60f127a974c"
+                        ]
+                    },
+                    {
+                        "en": "Stairs up to level 2",
+                        "id": "Turun tangga ke lantai 2",
+                        "key": "level-up",
+                        "alts": [],
+                        "image": null,
+                        "to": "fd8727c0-7886-11f1-90a1-7d7918fdf504",
+                        "endpoints": [
+                            "122b37ae-3477-41b1-a269-54f68fa34942"
+                        ]
+                    }
+                ],
+                "@id": "fbfc1af0-7886-11f1-90a1-7d7918fdf504",
+                "display_point": {
+                    "coordinates": [
+                        106.641425,
+                        -6.324324
+                    ],
+                    "type": "Point"
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    106.641425,
+                    -6.324324
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "feature_type": "checkpoint",
+            "properties": {
+                "name": {
+                    "en": null,
+                    "id": null,
+                    "key": "continues",
+                    "alts": [],
+                    "image": null
+                },
+                "level": "88736209-7778-11f1-9f7e-255798ecef5a",
+                "building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
+                "category": "continues",
+                "directions": [
+                    {
+                        "en": "You have arrived at your destination",
+                        "id": "Kamu sudah sampai di tujuan",
+                        "key": "go-straight",
+                        "alts": [],
+                        "image": null,
+                        "to": null,
+                        "endpoints": [
+                            "97ce32e8-ff79-43b0-8c24-d60f127a974c"
+                        ]
+                    },
+                    {
+                        "en": "Enter station and find the stairs",
+                        "id": "Masuk stasiun dan cari tangga",
+                        "key": "go-straight",
+                        "alts": [],
+                        "image": null,
+                        "to": "fbfc1af0-7886-11f1-90a1-7d7918fdf504",
+                        "endpoints": [
+                            "122b37ae-3477-41b1-a269-54f68fa34942"
+                        ]
+                    }
+                ],
+                "@id": "f9a7a3a0-7886-11f1-90a1-7d7918fdf504",
+                "display_point": {
+                    "coordinates": [
+                        106.641372,
+                        -6.324311
+                    ],
+                    "type": "Point"
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    106.641372,
+                    -6.324311
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "feature_type": "checkpoint",
+            "properties": {
+                "name": {
+                    "en": null,
+                    "id": null,
+                    "key": "continues",
+                    "alts": [],
+                    "image": null
+                },
+                "level": "88736200-7778-11f1-9f7e-255798ecef5a",
+                "building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
+                "category": "continues",
+                "directions": [
+                    {
+                        "en": "You have arrived at your destination",
+                        "id": "Kamu sudah sampai di tujuan",
+                        "key": "go-straight",
+                        "alts": [],
+                        "image": null,
+                        "to": null,
+                        "endpoints": [
+                            "56d44900-743b-4d78-847f-230737548776"
+                        ]
+                    },
+                    {
+                        "en": "Go straigt",
+                        "id": "Jalan lurus",
+                        "key": "go-straight",
+                        "alts": [],
+                        "image": null,
+                        "to": "04687160-790f-11f1-8064-b5d569ec4cf5",
+                        "endpoints": [
+                            "122b37ae-3477-41b1-a269-54f68fa34942"
+                        ]
+                    }
+                ],
+                "@id": "093318d0-790f-11f1-8064-b5d569ec4cf5",
+                "display_point": {
+                    "coordinates": [
+                        106.6435257,
+                        -6.3225012
+                    ],
+                    "type": "Point"
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    106.6435257,
+                    -6.3225012
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "feature_type": "checkpoint",
+            "properties": {
+                "name": {
+                    "en": null,
+                    "id": null,
+                    "key": "continues",
+                    "alts": [],
+                    "image": null
+                },
+                "level": "88736200-7778-11f1-9f7e-255798ecef5a",
+                "building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
+                "category": "continues",
+                "directions": [
+                    {
+                        "en": "Turn left and keep walking follow the path",
+                        "id": "Belok kanan dan terus berjalan ikuti jalan",
+                        "key": "turn-left",
+                        "alts": [],
+                        "image": null,
+                        "to": "093318d0-790f-11f1-8064-b5d569ec4cf5",
+                        "endpoints": [
+                            "56d44900-743b-4d78-847f-230737548776"
+                        ]
+                    },
+                    {
+                        "en": "Turn right and keep walking follow the path",
+                        "id": "Belok kanan dan ikuti jalan",
+                        "key": "turn-right",
+                        "alts": [],
+                        "image": null,
+                        "to": "ff144540-7927-11f1-8064-b5d569ec4cf5",
+                        "endpoints": [
+                            "122b37ae-3477-41b1-a269-54f68fa34942"
+                        ]
+                    }
+                ],
+                "@id": "04687160-790f-11f1-8064-b5d569ec4cf5",
+                "display_point": {
+                    "coordinates": [
+                        106.643408,
+                        -6.3230469
+                    ],
+                    "type": "Point"
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    106.643408,
+                    -6.3230469
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "feature_type": "checkpoint",
+            "properties": {
+                "name": {
+                    "en": null,
+                    "id": null,
+                    "key": "continues",
+                    "alts": [],
+                    "image": null
+                },
+                "level": "88736200-7778-11f1-9f7e-255798ecef5a",
+                "building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
+                "category": "continues",
+                "directions": [
+                    {
+                        "en": "Slightly turn right and follow the hallway",
+                        "id": "Sedikit belok kanan dan ikuti lorong",
+                        "key": "turn-right",
+                        "alts": [],
+                        "image": null,
+                        "to": "04687160-790f-11f1-8064-b5d569ec4cf5",
+                        "endpoints": [
+                            "56d44900-743b-4d78-847f-230737548776"
+                        ]
+                    },
+                    {
+                        "en": "Slightly turn left and follow the hallway",
+                        "id": "Sedikit belok kiri dan ikuti lorong",
+                        "key": "turn-left",
+                        "alts": [],
+                        "image": null,
+                        "to": "014b7090-7928-11f1-8064-b5d569ec4cf5",
+                        "endpoints": [
+                            "122b37ae-3477-41b1-a269-54f68fa34942"
+                        ]
+                    }
+                ],
+                "@id": "ff144540-7927-11f1-8064-b5d569ec4cf5",
+                "display_point": {
+                    "coordinates": [
+                        106.6427113,
+                        -6.3235702
+                    ],
+                    "type": "Point"
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    106.6427113,
+                    -6.3235702
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "feature_type": "checkpoint",
+            "properties": {
+                "name": {
+                    "en": null,
+                    "id": null,
+                    "key": "continues",
+                    "alts": [],
+                    "image": null
+                },
+                "level": "88736200-7778-11f1-9f7e-255798ecef5a",
+                "building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
+                "category": "continues",
+                "directions": [
+                    {
+                        "en": "Slightly turn left and follow the hallway",
+                        "id": "Sedikit belok kiri dan ikuti lorong",
+                        "key": "turn-left",
+                        "alts": [],
+                        "image": null,
+                        "to": "ff144540-7927-11f1-8064-b5d569ec4cf5",
+                        "endpoints": [
+                            "56d44900-743b-4d78-847f-230737548776"
+                        ]
+                    },
+                    {
+                        "en": "Slightly turn right and follow the hallway",
+                        "id": "Sedikit belok kanan dan ikuti lorong",
+                        "key": "turn-right",
+                        "alts": [],
+                        "image": null,
+                        "to": "01d9b900-7887-11f1-90a1-7d7918fdf504",
+                        "endpoints": [
+                            "122b37ae-3477-41b1-a269-54f68fa34942"
+                        ]
+                    }
+                ],
+                "@id": "014b7090-7928-11f1-8064-b5d569ec4cf5",
+                "display_point": {
+                    "coordinates": [
+                        106.6424927,
+                        -6.3238052
+                    ],
+                    "type": "Point"
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    106.6424927,
+                    -6.3238052
+                ]
+            }
+        }
+    ]
 }

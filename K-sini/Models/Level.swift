@@ -8,9 +8,9 @@
 import MapKit
 
 struct Level: Identifiable {
-	let id: String
-	let buildingID: String
-	let number: Int
-	let name: String
-	let polygons: [MKPolygon]
+    let id: String
+    let buildingID: String
+    let number: Int
+    let name: String
+    let polygons: [MKPolygon]
 }

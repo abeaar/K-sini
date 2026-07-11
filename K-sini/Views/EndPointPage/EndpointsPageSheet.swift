@@ -80,31 +80,3 @@ struct EndpointsPageSheet: View {
         }.padding(.top, 15)
     }
 }
-
-#Preview {
-    EndpointsPageSheet(
-        endpoints: [
-            Endpoint(
-                id: "preview-1",
-                name: "Hallway (Start)",
-                icon: "arrowshape.left",
-                alts: [],
-                levelID: "",
-				buildingID: "",
-                coordinate: CLLocationCoordinate2D(latitude: 0.0, longitude: 0.0),
-                checkpoints: [])
-        ],
-        destinations: [
-            Destination(
-                id: "preview-dest-1",
-                name: "AEON Mall BSD",
-                icon: "cart.fill",
-                alts: ["AEON"],
-                coordinate: CLLocationCoordinate2D(latitude: 0.0, longitude: 0.0))
-        ],
-        onSelect: { _ in },
-        onSelectDestination: { _ in },
-        currentDetent: .constant(.height(600)),
-        searchText: .constant("")
-    )
-}
