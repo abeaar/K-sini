@@ -1,2781 +1,2825 @@
 {
-	"type": "FeatureCollection",
-	"name": "unit",
-	"features": [
-		{
-			"type": "Feature",
-			"feature_type": "unit",
-			"properties": {
-				"category": "stairs",
-				"access": "public",
-				"name": {
-					"id": "Tangga",
-					"en": "Stairs",
-					"alts": []
-				},
-				"direction": null,
-				"display_point": {
-					"coordinates": [
-						106.6415572,
-						-6.3243949
-					],
-					"type": "Point"
-				},
-				"style": {
-					"fill": "#00ffe1",
-					"stroke": "#24c2b5",
-					"fill-opacity": 1,
-					"stroke-opacity": 1,
-					"marker-symbol": "elevator",
-					"marker-size": "small",
-					"marker-color": "#0080ff"
-				},
-				"level": "88736200-7778-11f1-9f7e-255798ecef5a",
-				"@id": "2e6e757d-784a-11f1-8699-4f6680c2446b"
-			},
-			"geometry": {
-				"type": "Polygon",
-				"coordinates": [
-					[
-						[
-							106.641573,
-							-6.324367
-						],
-						[
-							106.641521,
-							-6.324394
-						],
-						[
-							106.641521,
-							-6.324394
-						],
-						[
-							106.641537,
-							-6.324425
-						],
-						[
-							106.641589,
-							-6.324397
-						],
-						[
-							106.641573,
-							-6.324367
-						]
-					]
-				]
-			}
-		},
-		{
-			"type": "Feature",
-			"feature_type": "unit",
-			"properties": {
-				"category": "stairs",
-				"access": "public",
-				"name": {
-					"id": "Tangga",
-					"en": "Stairs",
-					"alts": []
-				},
-				"direction": null,
-				"display_point": {
-					"coordinates": [
-						106.64156175,
-						-6.324392249999999
-					],
-					"type": "Point"
-				},
-				"style": {
-					"fill": "#00ffe1",
-					"stroke": "#24c2b5",
-					"fill-opacity": 1,
-					"stroke-opacity": 1
-				},
-				"level": "88736209-7778-11f1-9f7e-255798ecef5a",
-				"@id": "2e6e7584-784a-11f1-8699-4f6680c2446b"
-			},
-			"geometry": {
-				"type": "Polygon",
-				"coordinates": [
-					[
-						[
-							106.641521,
-							-6.324394
-						],
-						[
-							106.641537,
-							-6.3244249
-						],
-						[
-							106.641589,
-							-6.3243969
-						],
-						[
-							106.641573,
-							-6.324367
-						],
-						[
-							106.6415218,
-							-6.3243937
-						]
-					]
-				]
-			}
-		},
-		{
-			"type": "Feature",
-			"feature_type": "unit",
-			"properties": {
-				"category": "ticketchecker",
-				"access": "public",
-				"name": {
-					"id": "Mesin Tiket Masuk/Keluar",
-					"en": "Ticket Machine In/Out",
-					"alts": []
-				},
-				"direction": null,
-				"display_point": {
-					"coordinates": [
-						106.6416325,
-						-6.3244305
-					],
-					"type": "Point"
-				},
-				"style": {
-					"fill": "#faeecd",
-					"fill-opacity": 1,
-					"stroke": "#eabf11",
-					"stroke-opacity": 1,
-					"marker-symbol": "ticket",
-					"marker-size": "small",
-					"marker-color": "#0080ff"
-				},
-				"level": "88736200-7778-11f1-9f7e-255798ecef5a",
-				"@id": "2e6e756f-784a-11f1-8699-4f6680c2446b"
-			},
-			"geometry": {
-				"type": "Polygon",
-				"coordinates": [
-					[
-						[
-							106.641604,
-							-6.324395
-						],
-						[
-							106.641646,
-							-6.324474
-						],
-						[
-							106.641662,
-							-6.324466
-						],
-						[
-							106.641618,
-							-6.324387
-						],
-						[
-							106.641604,
-							-6.324395
-						]
-					]
-				]
-			}
-		},
-		{
-			"type": "Feature",
-			"feature_type": "unit",
-			"properties": {
-				"category": "stairs",
-				"access": "paid",
-				"name": {
-					"id": "Tangga",
-					"en": "Stairs",
-					"alts": []
-				},
-				"direction": null,
-				"display_point": {
-					"coordinates": [
-						106.643602,
-						-6.32232
-					],
-					"type": "Point"
-				},
-				"style": {
-					"fill": "#00ffe1",
-					"stroke": "#24c2b5",
-					"fill-opacity": 1,
-					"stroke-opacity": 1
-				},
-				"level": "88736200-7778-11f1-9f7e-255798ecef5a",
-				"@id": "23e95b00-7818-11f1-8699-4f6680c2446b"
-			},
-			"geometry": {
-				"type": "Polygon",
-				"coordinates": [
-					[
-						[
-							106.643623,
-							-6.322273
-						],
-						[
-							106.643603,
-							-6.322268
-						],
-						[
-							106.643582,
-							-6.322367
-						],
-						[
-							106.643601,
-							-6.322372
-						],
-						[
-							106.643623,
-							-6.322273
-						]
-					]
-				]
-			}
-		},
-		{
-			"type": "Feature",
-			"feature_type": "unit",
-			"properties": {
-				"category": "stairs",
-				"access": "paid",
-				"name": {
-					"id": "Tangga",
-					"en": "Stairs",
-					"alts": []
-				},
-				"direction": null,
-				"display_point": {
-					"coordinates": [
-						106.643602,
-						-6.32232
-					],
-					"type": "Point"
-				},
-				"style": {
-					"fill": "#00ffe1",
-					"stroke": "#24c2b5",
-					"fill-opacity": 1,
-					"stroke-opacity": 1
-				},
-				"level": "88736209-7778-11f1-9f7e-255798ecef5a",
-				"@id": "0d4b05b9-69c8-4baf-b006-845cd2b3d415"
-			},
-			"geometry": {
-				"type": "Polygon",
-				"coordinates": [
-					[
-						[
-							106.643623,
-							-6.322273
-						],
-						[
-							106.643603,
-							-6.322268
-						],
-						[
-							106.643582,
-							-6.322367
-						],
-						[
-							106.643601,
-							-6.322372
-						],
-						[
-							106.643623,
-							-6.322273
-						]
-					]
-				]
-			}
-		},
-		{
-			"type": "Feature",
-			"feature_type": "unit",
-			"properties": {
-				"category": "escalator",
-				"access": "paid",
-				"name": {
-					"id": "Eskalator",
-					"en": "Escalator",
-					"alts": []
-				},
-				"direction": null,
-				"display_point": {
-					"coordinates": [
-						106.64139675,
-						-6.324472500000001
-					],
-					"type": "Point"
-				},
-				"style": {
-					"fill": "#00ffe1",
-					"stroke": "#24c2b5",
-					"fill-opacity": 1,
-					"stroke-opacity": 1,
-					"marker-symbol": "elevator",
-					"marker-size": "small",
-					"marker-color": "#0080ff"
-				},
-				"level": "88736200-7778-11f1-9f7e-255798ecef5a",
-				"@id": "728e5791-781a-11f1-8699-4f6680c2446b"
-			},
-			"geometry": {
-				"type": "Polygon",
-				"coordinates": [
-					[
-						[
-							106.641421,
-							-6.324446
-						],
-						[
-							106.641361,
-							-6.324478
-						],
-						[
-							106.641372,
-							-6.324499
-						],
-						[
-							106.641433,
-							-6.324467
-						],
-						[
-							106.641421,
-							-6.324446
-						]
-					]
-				]
-			}
-		},
-		{
-			"type": "Feature",
-			"feature_type": "unit",
-			"properties": {
-				"category": "escalator",
-				"access": "paid",
-				"name": {
-					"id": "Eskalator",
-					"en": "Escalator",
-					"alts": []
-				},
-				"direction": null,
-				"display_point": {
-					"coordinates": [
-						106.64139675,
-						-6.324472500000001
-					],
-					"type": "Point"
-				},
-				"style": {
-					"fill": "#00ffe1",
-					"stroke": "#24c2b5",
-					"fill-opacity": 1,
-					"stroke-opacity": 1,
-					"marker-symbol": "elevator",
-					"marker-size": "small",
-					"marker-color": "#0080ff"
-				},
-				"level": "88736209-7778-11f1-9f7e-255798ecef5a",
-				"@id": "551a2d00-c624-4673-a492-b4041a95464e"
-			},
-			"geometry": {
-				"type": "Polygon",
-				"coordinates": [
-					[
-						[
-							106.641421,
-							-6.324446
-						],
-						[
-							106.641361,
-							-6.324478
-						],
-						[
-							106.641372,
-							-6.324499
-						],
-						[
-							106.641433,
-							-6.324467
-						],
-						[
-							106.641421,
-							-6.324446
-						]
-					]
-				]
-			}
-		},
-		{
-			"type": "Feature",
-			"feature_type": "unit",
-			"properties": {
-				"category": "lift",
-				"access": "paid",
-				"name": {
-					"id": "Lift",
-					"en": "Lift",
-					"alts": []
-				},
-				"direction": null,
-				"display_point": {
-					"coordinates": [
-						106.641484,
-						-6.324426
-					],
-					"type": "Point"
-				},
-				"style": {
-					"fill": "#00ffe1",
-					"stroke": "#24c2b5",
-					"fill-opacity": 1,
-					"stroke-opacity": 1,
-					"marker-symbol": "elevator",
-					"marker-size": "small",
-					"marker-color": "#0080ff"
-				},
-				"level": "88736209-7778-11f1-9f7e-255798ecef5a",
-				"@id": "796933dd-6e73-4ab0-a11b-e5be13dd1c4e"
-			},
-			"geometry": {
-				"type": "Polygon",
-				"coordinates": [
-					[
-						[
-							106.6414989,
-							-6.3244317
-						],
-						[
-							106.6414791,
-							-6.3244418
-						],
-						[
-							106.6414679,
-							-6.3244208
-						],
-						[
-							106.6414878,
-							-6.3244106
-						],
-						[
-							106.6414989,
-							-6.3244317
-						]
-					]
-				]
-			}
-		},
-		{
-			"type": "Feature",
-			"feature_type": "unit",
-			"properties": {
-				"category": "lift",
-				"access": "paid",
-				"name": {
-					"id": "Lift",
-					"en": "Lift",
-					"alts": []
-				},
-				"direction": null,
-				"display_point": {
-					"coordinates": [
-						106.641484,
-						-6.324426
-					],
-					"type": "Point"
-				},
-				"style": {
-					"fill": "#00ffe1",
-					"stroke": "#24c2b5",
-					"fill-opacity": 1,
-					"stroke-opacity": 1,
-					"marker-symbol": "elevator",
-					"marker-size": "small",
-					"marker-color": "#0080ff"
-				},
-				"level": "88736200-7778-11f1-9f7e-255798ecef5a",
-				"@id": "bd78febb-5570-4840-b14a-c054ca6dadf0"
-			},
-			"geometry": {
-				"type": "Polygon",
-				"coordinates": [
-					[
-						[
-							106.6414989,
-							-6.3244317
-						],
-						[
-							106.6414791,
-							-6.3244418
-						],
-						[
-							106.6414679,
-							-6.3244208
-						],
-						[
-							106.6414878,
-							-6.3244106
-						],
-						[
-							106.6414989,
-							-6.3244317
-						]
-					]
-				]
-			}
-		},
-		{
-			"type": "Feature",
-			"feature_type": "unit",
-			"properties": {
-				"category": "staffroom",
-				"access": "private",
-				"name": {
-					"id": "Ruangan Petugas",
-					"en": "Staff Room",
-					"alts": []
-				},
-				"direction": null,
-				"display_point": {
-					"coordinates": [
-						106.64143238461541,
-						-6.3244145384615384
-					],
-					"type": "Point"
-				},
-				"style": {
-					"fill": "#faeecd",
-					"fill-opacity": 1,
-					"stroke": "#eabf11",
-					"stroke-opacity": 1,
-					"marker-symbol": "staff",
-					"marker-size": "small",
-					"marker-color": "#0080ff"
-				},
-				"level": "88736200-7778-11f1-9f7e-255798ecef5a",
-				"@id": "8277ca24-77c4-11f1-9f7e-255798ecef5a"
-			},
-			"geometry": {
-				"type": "Polygon",
-				"coordinates": [
-					[
-						[
-							106.64156,
-							-6.324342
-						],
-						[
-							106.641592,
-							-6.324402
-						],
-						[
-							106.64163,
-							-6.324381
-						],
-						[
-							106.641598,
-							-6.324322
-						],
-						[
-							106.64156,
-							-6.324342
-						]
-					]
-				]
-			}
-		},
-		{
-			"type": "Feature",
-			"feature_type": "unit",
-			"properties": {
-				"category": "restroom",
-				"access": "paid",
-				"name": {
-					"id": "Toilet",
-					"en": "Restroom",
-					"alts": []
-				},
-				"direction": null,
-				"display_point": {
-					"coordinates": [
-						106.64143238461541,
-						-6.3244145384615384
-					],
-					"type": "Point"
-				},
-				"style": {
-					"stroke": "#00ffe1",
-					"fill": "#00ff16",
-					"fill-opacity": 1,
-					"stroke-opacity": 1,
-					"marker-symbol": "restroom",
-					"marker-size": "small",
-					"marker-color": "#0080ff"
-				},
-				"level": "88736200-7778-11f1-9f7e-255798ecef5a",
-				"@id": "728e5796-781a-11f1-8699-4f6680c2446b"
-			},
-			"geometry": {
-				"type": "MultiPolygon",
-				"coordinates": [
-					[
-						[
-							[
-								106.641412,
-								-6.324379
-							],
-							[
-								106.641329,
-								-6.32442
-							],
-							[
-								106.641361,
-								-6.324478
-							],
-							[
-								106.641427,
-								-6.324443
-							],
-							[
-								106.641422,
-								-6.324435
-							],
-							[
-								106.641438,
-								-6.324426
-							],
-							[
-								106.641412,
-								-6.324379
-							]
-						]
-					],
-					[
-						[
-							[
-								106.641458,
-								-6.324426
-							],
-							[
-								106.641485,
-								-6.324412
-							],
-							[
-								106.641507,
-								-6.324401
-							],
-							[
-								106.641478,
-								-6.324346
-							],
-							[
-								106.641412,
-								-6.324379
-							],
-							[
-								106.641438,
-								-6.324426
-							],
-							[
-								106.641454,
-								-6.324418
-							],
-							[
-								106.641458,
-								-6.324426
-							]
-						]
-					]
-				]
-			}
-		},
-		{
-			"type": "Feature",
-			"feature_type": "unit",
-			"properties": {
-				"category": "escalator",
-				"access": "paid",
-				"name": {
-					"id": "Eskalator",
-					"en": "Escalator",
-					"alts": []
-				},
-				"direction": null,
-				"display_point": {
-					"coordinates": [
-						106.641469,
-						-6.3246007
-					],
-					"type": "Point"
-				},
-				"style": {
-					"fill": "#00ffe1",
-					"stroke": "#24c2b5",
-					"fill-opacity": 1,
-					"stroke-opacity": 1,
-					"marker-symbol": "elevator",
-					"marker-size": "small",
-					"marker-color": "#0080ff"
-				},
-				"level": "88736200-7778-11f1-9f7e-255798ecef5a",
-				"@id": "728e5790-781a-11f1-8699-4f6680c2446b"
-			},
-			"geometry": {
-				"type": "Polygon",
-				"coordinates": [
-					[
-						[
-							106.641443,
-							-6.324628
-						],
-						[
-							106.641505,
-							-6.324596
-						],
-						[
-							106.641505,
-							-6.324596
-						],
-						[
-							106.641493,
-							-6.324575
-						],
-						[
-							106.641431,
-							-6.324607
-						],
-						[
-							106.641443,
-							-6.324628
-						]
-					]
-				]
-			}
-		},
-		{
-			"type": "Feature",
-			"feature_type": "unit",
-			"properties": {
-				"category": "escalator",
-				"access": "paid",
-				"name": {
-					"id": "Eskalator",
-					"en": "Escalator",
-					"alts": []
-				},
-				"direction": null,
-				"display_point": {
-					"coordinates": [
-						106.641469,
-						-6.3246007
-					],
-					"type": "Point"
-				},
-				"style": {
-					"fill": "#00ffe1",
-					"stroke": "#24c2b5",
-					"fill-opacity": 1,
-					"stroke-opacity": 1,
-					"marker-symbol": "elevator",
-					"marker-size": "small",
-					"marker-color": "#0080ff"
-				},
-				"level": "88736209-7778-11f1-9f7e-255798ecef5a",
-				"@id": "c96b623a-f2db-4612-ba0f-a998509c03cd"
-			},
-			"geometry": {
-				"type": "Polygon",
-				"coordinates": [
-					[
-						[
-							106.641443,
-							-6.324628
-						],
-						[
-							106.641505,
-							-6.324596
-						],
-						[
-							106.641505,
-							-6.324596
-						],
-						[
-							106.641493,
-							-6.324575
-						],
-						[
-							106.641431,
-							-6.324607
-						],
-						[
-							106.641443,
-							-6.324628
-						]
-					]
-				]
-			}
-		},
-		{
-			"type": "Feature",
-			"feature_type": "unit",
-			"properties": {
-				"category": "lift",
-				"access": "public",
-				"name": {
-					"id": "Lift",
-					"en": "Lift",
-					"alts": []
-				},
-				"direction": null,
-				"display_point": {
-					"coordinates": [
-						106.641557575,
-						-6.32455675
-					],
-					"type": "Point"
-				},
-				"style": {
-					"fill": "#00ffe1",
-					"stroke": "#24c2b5",
-					"fill-opacity": 1,
-					"stroke-opacity": 1,
-					"marker-symbol": "elevator",
-					"marker-size": "small",
-					"marker-color": "#0080ff"
-				},
-				"level": "88736200-7778-11f1-9f7e-255798ecef5a",
-				"@id": "55118e86-93c3-4905-8009-ac9ffec6c766"
-			},
-			"geometry": {
-				"type": "Polygon",
-				"coordinates": [
-					[
-						[
-							106.6415724,
-							-6.3245614
-						],
-						[
-							106.6415529,
-							-6.3245712
-						],
-						[
-							106.6415429,
-							-6.3245522
-						],
-						[
-							106.6415621,
-							-6.3245422
-						],
-						[
-							106.6415724,
-							-6.3245614
-						]
-					]
-				]
-			}
-		},
-		{
-			"type": "Feature",
-			"feature_type": "unit",
-			"properties": {
-				"category": "lift",
-				"access": "public",
-				"name": {
-					"id": "Lift",
-					"en": "Lift",
-					"alts": []
-				},
-				"direction": null,
-				"display_point": {
-					"coordinates": [
-						106.641557575,
-						-6.32455675
-					],
-					"type": "Point"
-				},
-				"style": {
-					"fill": "#00ffe1",
-					"stroke": "#24c2b5",
-					"fill-opacity": 1,
-					"stroke-opacity": 1,
-					"marker-symbol": "elevator",
-					"marker-size": "small",
-					"marker-color": "#0080ff"
-				},
-				"level": "88736209-7778-11f1-9f7e-255798ecef5a",
-				"@id": "7f50a229-68f6-4e61-be50-256bebb3e9d7"
-			},
-			"geometry": {
-				"type": "Polygon",
-				"coordinates": [
-					[
-						[
-							106.6415724,
-							-6.3245614
-						],
-						[
-							106.6415529,
-							-6.3245712
-						],
-						[
-							106.6415429,
-							-6.3245522
-						],
-						[
-							106.6415621,
-							-6.3245422
-						],
-						[
-							106.6415724,
-							-6.3245614
-						]
-					]
-				]
-			}
-		},
-		{
-			"type": "Feature",
-			"feature_type": "unit",
-			"properties": {
-				"category": "prayerroom",
-				"access": "public",
-				"name": {
-					"id": "Musholla",
-					"en": "Prayer Room",
-					"alts": []
-				},
-				"direction": null,
-				"display_point": {
-					"coordinates": [
-						106.64153044999999,
-						-6.32436615
-					],
-					"type": "Point"
-				},
-				"style": {
-					"fill": "#00ffe1",
-					"stroke": "#24c2b5",
-					"fill-opacity": 1,
-					"stroke-opacity": 1
-				},
-				"level": "88736200-7778-11f1-9f7e-255798ecef5a",
-				"@id": "1d3b4aa4-f76d-427c-a8cc-ebe085fe1141"
-			},
-			"geometry": {
-				"type": "Polygon",
-				"coordinates": [
-					[
-						[
-							106.641488,
-							-6.324366
-						],
-						[
-							106.641507,
-							-6.324401
-						],
-						[
-							106.6415728,
-							-6.3243666
-						],
-						[
-							106.641554,
-							-6.324331
-						],
-						[
-							106.641488,
-							-6.324366
-						]
-					]
-				]
-			}
-		},
-		{
-			"type": "Feature",
-			"feature_type": "unit",
-			"properties": {
-				"category": "staffroom",
-				"access": "private",
-				"name": {
-					"id": "Ruangan Petugas",
-					"en": "Staff Room",
-					"alts": []
-				},
-				"direction": null,
-				"display_point": {
-					"coordinates": [
-						106.6416665,
-						-6.3244935
-					],
-					"type": "Point"
-				},
-				"style": {
-					"fill": "#faeecd",
-					"fill-opacity": 1,
-					"stroke": "#eabf11",
-					"stroke-opacity": 1,
-					"marker-symbol": "staff",
-					"marker-size": "small",
-					"marker-color": "#0080ff"
-				},
-				"level": "88736200-7778-11f1-9f7e-255798ecef5a",
-				"@id": "41199318-0b13-4eb4-9a3d-de9bf45fe184"
-			},
-			"geometry": {
-				"type": "Polygon",
-				"coordinates": [
-					[
-						[
-							106.641674,
-							-6.32446
-						],
-						[
-							106.641634,
-							-6.32448
-						],
-						[
-							106.641659,
-							-6.324527
-						],
-						[
-							106.641699,
-							-6.324507
-						],
-						[
-							106.641674,
-							-6.32446
-						]
-					]
-				]
-			}
-		},
-		{
-			"type": "Feature",
-			"feature_type": "unit",
-			"properties": {
-				"category": "stairs",
-				"access": "paid",
-				"name": {
-					"id": "Tangga",
-					"en": "Stairs",
-					"alts": []
-				},
-				"direction": null,
-				"display_point": {
-					"coordinates": [
-						106.64162212500001,
-						-6.32451655
-					],
-					"type": "Point"
-				},
-				"style": {
-					"fill": "#00ffe1",
-					"stroke": "#24c2b5",
-					"fill-opacity": 1,
-					"stroke-opacity": 1
-				},
-				"level": "88736209-7778-11f1-9f7e-255798ecef5a",
-				"@id": "422fbac9-7a95-4bd9-a3c4-8251654a1406"
-			},
-			"geometry": {
-				"type": "Polygon",
-				"coordinates": [
-					[
-						[
-							106.641638,
-							-6.324488
-						],
-						[
-							106.6415893,
-							-6.3245131
-						],
-						[
-							106.641606,
-							-6.324545
-						],
-						[
-							106.6416552,
-							-6.3245201
-						],
-						[
-							106.641638,
-							-6.324488
-						]
-					]
-				]
-			}
-		},
-		{
-			"type": "Feature",
-			"feature_type": "unit",
-			"properties": {
-				"category": "stairs",
-				"access": "paid",
-				"name": {
-					"id": "Tangga",
-					"en": "Stairs",
-					"alts": []
-				},
-				"direction": null,
-				"display_point": {
-					"coordinates": [
-						106.64162212500001,
-						-6.32451655
-					],
-					"type": "Point"
-				},
-				"style": {
-					"fill": "#00ffe1",
-					"stroke": "#24c2b5",
-					"fill-opacity": 1,
-					"stroke-opacity": 1
-				},
-				"level": "88736200-7778-11f1-9f7e-255798ecef5a",
-				"@id": "05642d66-4896-4ecd-acc4-50a5d704af39"
-			},
-			"geometry": {
-				"type": "Polygon",
-				"coordinates": [
-					[
-						[
-							106.641638,
-							-6.324488
-						],
-						[
-							106.6415893,
-							-6.3245131
-						],
-						[
-							106.641606,
-							-6.324545
-						],
-						[
-							106.6416552,
-							-6.3245201
-						],
-						[
-							106.641638,
-							-6.324488
-						]
-					]
-				]
-			}
-		},
-		{
-			"type": "Feature",
-			"feature_type": "unit",
-			"properties": {
-				"category": "concourse",
-				"access": "paid",
-				"name": {
-					"id": "Concourse",
-					"en": "Concourse",
-					"alts": []
-				},
-				"direction": null,
-				"display_point": {
-					"coordinates": [
-						106.64155710782735,
-						-6.324475370601625
-					],
-					"type": "Point"
-				},
-				"style": {
-					"fill": "#00ffe1",
-					"stroke": "#24c2b5",
-					"fill-opacity": 1,
-					"stroke-opacity": 1
-				},
-				"level": "88736200-7778-11f1-9f7e-255798ecef5a",
-				"@id": "20580c7c-a3d5-46b5-8fe1-1ba63c80a646"
-			},
-			"geometry": {
-				"type": "Polygon",
-				"coordinates": [
-					[
-						[
-							106.6415371,
-							-6.3244247
-						],
-						[
-							106.6415892,
-							-6.3243968
-						],
-						[
-							106.641592,
-							-6.3244019
-						],
-						[
-							106.6416042,
-							-6.3243953
-						],
-						[
-							106.641646,
-							-6.324474
-						],
-						[
-							106.641634,
-							-6.3244799
-						],
-						[
-							106.6416382,
-							-6.3244878
-						],
-						[
-							106.6415892,
-							-6.3245131
-						],
-						[
-							106.6416061,
-							-6.3245452
-						],
-						[
-							106.6415724,
-							-6.3245614
-						],
-						[
-							106.6415622,
-							-6.3245422
-						],
-						[
-							106.6415428,
-							-6.3245522
-						],
-						[
-							106.641553,
-							-6.3245712
-						],
-						[
-							106.641505,
-							-6.3245961
-						],
-						[
-							106.6414929,
-							-6.324575
-						],
-						[
-							106.6414854,
-							-6.3245789
-						],
-						[
-							106.6414254,
-							-6.3244709
-						],
-						[
-							106.6414331,
-							-6.324467
-						],
-						[
-							106.6414212,
-							-6.3244464
-						],
-						[
-							106.641427,
-							-6.3244433
-						],
-						[
-							106.6414221,
-							-6.3244353
-						],
-						[
-							106.6414381,
-							-6.3244264
-						],
-						[
-							106.6414541,
-							-6.3244183
-						],
-						[
-							106.641458,
-							-6.3244263
-						],
-						[
-							106.6414681,
-							-6.3244211
-						],
-						[
-							106.6414791,
-							-6.3244418
-						],
-						[
-							106.641499,
-							-6.3244317
-						],
-						[
-							106.6414879,
-							-6.3244109
-						],
-						[
-							106.641507,
-							-6.3244013
-						],
-						[
-							106.641507,
-							-6.3244009
-						],
-						[
-							106.641521,
-							-6.3243937
-						],
-						[
-							106.641537,
-							-6.3244248
-						]
-					]
-				]
-			}
-		},
-		{
-			"type": "Feature",
-			"feature_type": "unit",
-			"properties": {
-				"category": "restroom",
-				"access": "public",
-				"name": {
-					"id": "Toilet",
-					"en": "Restroom",
-					"alts": []
-				},
-				"direction": null,
-				"display_point": {
-					"coordinates": [
-						106.64143238461541,
-						-6.3244145384615384
-					],
-					"type": "Point"
-				},
-				"style": {
-					"stroke": "#00ffe1",
-					"fill": "#00ff16",
-					"fill-opacity": 1,
-					"stroke-opacity": 1,
-					"marker-symbol": "restroom",
-					"marker-size": "small",
-					"marker-color": "#0080ff"
-				},
-				"level": "88736200-7778-11f1-9f7e-255798ecef5a",
-				"@id": "8f1c130b-504c-4985-96e2-dd1ac19aabc0"
-			},
-			"geometry": {
-				"type": "MultiPolygon",
-				"coordinates": [
-					[
-						[
-							[
-								106.64177,
-								-6.324464
-							],
-							[
-								106.641791,
-								-6.324503
-							],
-							[
-								106.641875,
-								-6.32446
-							],
-							[
-								106.641853,
-								-6.324422
-							],
-							[
-								106.64177,
-								-6.324464
-							]
-						]
-					],
-					[
-						[
-							[
-								106.641875,
-								-6.32446
-							],
-							[
-								106.641919,
-								-6.324542
-							],
-							[
-								106.641963,
-								-6.324519
-							],
-							[
-								106.641919,
-								-6.324437
-							],
-							[
-								106.641875,
-								-6.32446
-							]
-						]
-					]
-				]
-			}
-		},
-		{
-			"type": "Feature",
-			"feature_type": "unit",
-			"properties": {
-				"category": "ticketcounter",
-				"access": "public",
-				"name": {
-					"id": "Loket Tiket",
-					"en": "Ticket Counter",
-					"alts": []
-				},
-				"direction": null,
-				"display_point": {
-					"coordinates": [
-						106.6416058,
-						-6.3243306
-					],
-					"type": "Point"
-				},
-				"style": {
-					"stroke": "#00ffe1",
-					"fill": "#00ff16",
-					"fill-opacity": 1,
-					"stroke-opacity": 1,
-					"marker-symbol": "ticket",
-					"marker-size": "small",
-					"marker-color": "#0080ff"
-				},
-				"level": "88736200-7778-11f1-9f7e-255798ecef5a",
-				"@id": "c43dfb1c-e72e-4d32-b39c-0009a2dcea0d"
-			},
-			"geometry": {
-				"type": "Polygon",
-				"coordinates": [
-					[
-						[
-							106.6415579,
-							-6.3243385
-						],
-						[
-							106.6415598,
-							-6.3243419
-						],
-						[
-							106.6415981,
-							-6.3243219
-						],
-						[
-							106.6416302,
-							-6.3243814
-						],
-						[
-							106.6416342,
-							-6.3243792
-						],
-						[
-							106.6415999,
-							-6.3243163
-						],
-						[
-							106.6415579,
-							-6.3243385
-						]
-					]
-				]
-			}
-		},
-		{
-			"type": "Feature",
-			"feature_type": "unit",
-			"properties": {
-				"category": "stairs",
-				"access": "public",
-				"name": {
-					"id": "Tangga",
-					"en": "Stairs",
-					"alts": []
-				},
-				"direction": null,
-				"display_point": {
-					"coordinates": [
-						106.641466575,
-						-6.324309475
-					],
-					"type": "Point"
-				},
-				"style": {
-					"fill": "#00ffe1",
-					"stroke": "#24c2b5",
-					"fill-opacity": 1,
-					"stroke-opacity": 1,
-					"marker-symbol": "elevator",
-					"marker-size": "small",
-					"marker-color": "#0080ff"
-				},
-				"level": "88736200-7778-11f1-9f7e-255798ecef5a",
-				"@id": "3e330e64-2b0d-4754-a15c-7f05380cca33"
-			},
-			"geometry": {
-				"type": "Polygon",
-				"coordinates": [
-					[
-						[
-							106.6415042,
-							-6.3243111
-						],
-						[
-							106.6414881,
-							-6.3242787
-						],
-						[
-							106.6414287,
-							-6.324308
-						],
-						[
-							106.6414453,
-							-6.3243401
-						],
-						[
-							106.6415042,
-							-6.3243111
-						]
-					]
-				]
-			}
-		},
-		{
-			"type": "Feature",
-			"feature_type": "unit",
-			"properties": {
-				"category": "stairs",
-				"access": "public",
-				"name": {
-					"id": "Tangga",
-					"en": "Stairs",
-					"alts": []
-				},
-				"direction": null,
-				"display_point": {
-					"coordinates": [
-						106.641466575,
-						-6.324309475
-					],
-					"type": "Point"
-				},
-				"style": {
-					"fill": "#00ffe1",
-					"stroke": "#24c2b5",
-					"fill-opacity": 1,
-					"stroke-opacity": 1,
-					"marker-symbol": "elevator",
-					"marker-size": "small",
-					"marker-color": "#0080ff"
-				},
-				"level": "88736209-7778-11f1-9f7e-255798ecef5a",
-				"@id": "1d023e34-79df-4282-a1d5-4bef2586cfaa"
-			},
-			"geometry": {
-				"type": "Polygon",
-				"coordinates": [
-					[
-						[
-							106.6415042,
-							-6.3243111
-						],
-						[
-							106.6414881,
-							-6.3242787
-						],
-						[
-							106.6414287,
-							-6.324308
-						],
-						[
-							106.6414453,
-							-6.3243401
-						],
-						[
-							106.6415042,
-							-6.3243111
-						]
-					]
-				]
-			}
-		},
-		{
-			"type": "Feature",
-			"feature_type": "unit",
-			"properties": {
-				"category": "lift",
-				"access": "public",
-				"name": {
-					"id": "Lift",
-					"en": "Lift",
-					"alts": []
-				},
-				"direction": null,
-				"display_point": {
-					"coordinates": [
-						106.641541,
-						-6.324284
-					],
-					"type": "Point"
-				},
-				"style": {
-					"fill": "#00ffe1",
-					"stroke": "#24c2b5",
-					"fill-opacity": 1,
-					"stroke-opacity": 1,
-					"marker-symbol": "elevator",
-					"marker-size": "small",
-					"marker-color": "#0080ff"
-				},
-				"level": "88736209-7778-11f1-9f7e-255798ecef5a",
-				"@id": "033e8b81-1bcd-45b9-bfe9-726382173db2"
-			},
-			"geometry": {
-				"type": "Polygon",
-				"coordinates": [
-					[
-						[
-							106.641546,
-							-6.324269
-						],
-						[
-							106.641526,
-							-6.324279
-						],
-						[
-							106.6415359,
-							-6.324298
-						],
-						[
-							106.641556,
-							-6.324288
-						],
-						[
-							106.641546,
-							-6.324269
-						]
-					]
-				]
-			}
-		},
-		{
-			"type": "Feature",
-			"feature_type": "unit",
-			"properties": {
-				"category": "lift",
-				"access": "public",
-				"name": {
-					"id": "Lift",
-					"en": "Lift",
-					"alts": []
-				},
-				"direction": null,
-				"display_point": {
-					"coordinates": [
-						106.641541,
-						-6.324284
-					],
-					"type": "Point"
-				},
-				"style": {
-					"fill": "#00ffe1",
-					"stroke": "#24c2b5",
-					"fill-opacity": 1,
-					"stroke-opacity": 1,
-					"marker-symbol": "elevator",
-					"marker-size": "small",
-					"marker-color": "#0080ff"
-				},
-				"level": "88736200-7778-11f1-9f7e-255798ecef5a",
-				"@id": "07bad151-54de-4a47-a1f4-b1dce5943a13"
-			},
-			"geometry": {
-				"type": "Polygon",
-				"coordinates": [
-					[
-						[
-							106.641546,
-							-6.324269
-						],
-						[
-							106.641526,
-							-6.324279
-						],
-						[
-							106.6415359,
-							-6.324298
-						],
-						[
-							106.641556,
-							-6.324288
-						],
-						[
-							106.641546,
-							-6.324269
-						]
-					]
-				]
-			}
-		},
-		{
-			"type": "Feature",
-			"feature_type": "unit",
-			"properties": {
-				"category": "escalator",
-				"access": "public",
-				"name": {
-					"id": "Eskalator",
-					"en": "Escalator",
-					"alts": []
-				},
-				"direction": null,
-				"display_point": {
-					"coordinates": [
-						106.6416049,
-						-6.3242325
-					],
-					"type": "Point"
-				},
-				"style": {
-					"fill": "#00ffe1",
-					"stroke": "#24c2b5",
-					"fill-opacity": 1,
-					"stroke-opacity": 1,
-					"marker-symbol": "elevator",
-					"marker-size": "small",
-					"marker-color": "#0080ff"
-				},
-				"level": "88736209-7778-11f1-9f7e-255798ecef5a",
-				"@id": "615689af-1b90-4908-8d4d-183f957b08e8"
-			},
-			"geometry": {
-				"type": "Polygon",
-				"coordinates": [
-					[
-						[
-							106.6415759,
-							-6.32426
-						],
-						[
-							106.6415656,
-							-6.3242399
-						],
-						[
-							106.6416341,
-							-6.3242054
-						],
-						[
-							106.6416436,
-							-6.3242254
-						],
-						[
-							106.6415759,
-							-6.32426
-						]
-					]
-				]
-			}
-		},
-		{
-			"type": "Feature",
-			"feature_type": "unit",
-			"properties": {
-				"category": "escalator",
-				"access": "public",
-				"name": {
-					"id": "Eskalator",
-					"en": "Escalator",
-					"alts": []
-				},
-				"direction": null,
-				"display_point": {
-					"coordinates": [
-						106.6416049,
-						-6.3242325
-					],
-					"type": "Point"
-				},
-				"style": {
-					"fill": "#00ffe1",
-					"stroke": "#24c2b5",
-					"fill-opacity": 1,
-					"stroke-opacity": 1,
-					"marker-symbol": "elevator",
-					"marker-size": "small",
-					"marker-color": "#0080ff"
-				},
-				"level": "88736200-7778-11f1-9f7e-255798ecef5a",
-				"@id": "3180c6d2-2455-40b2-b933-bdb1bdee1402"
-			},
-			"geometry": {
-				"type": "Polygon",
-				"coordinates": [
-					[
-						[
-							106.6415759,
-							-6.32426
-						],
-						[
-							106.6415656,
-							-6.3242399
-						],
-						[
-							106.6416341,
-							-6.3242054
-						],
-						[
-							106.6416436,
-							-6.3242254
-						],
-						[
-							106.6415759,
-							-6.32426
-						]
-					]
-				]
-			}
-		},
-		{
-			"type": "Feature",
-			"feature_type": "unit",
-			"properties": {
-				"category": "stairs",
-				"access": "public",
-				"name": {
-					"id": "Tangga",
-					"en": "Stairs",
-					"alts": []
-				},
-				"direction": null,
-				"display_point": {
-					"coordinates": [
-						106.643118,
-						-6.323398
-					],
-					"type": "Point"
-				},
-				"style": {
-					"fill": "#00ffe1",
-					"stroke": "#24c2b5",
-					"fill-opacity": 1,
-					"stroke-opacity": 1,
-					"marker-symbol": "elevator",
-					"marker-size": "small",
-					"marker-color": "#0080ff"
-				},
-				"level": "88736200-7778-11f1-9f7e-255798ecef5a",
-				"@id": "7c316adb-71d3-4191-957d-ddd537570d59"
-			},
-			"geometry": {
-				"type": "Polygon",
-				"coordinates": [
-					[
-						[
-							106.6431637,
-							-6.3233487
-						],
-						[
-							106.643144,
-							-6.323336
-						],
-						[
-							106.6430705,
-							-6.323447
-						],
-						[
-							106.643091,
-							-6.32346
-						],
-						[
-							106.6431637,
-							-6.3233487
-						]
-					]
-				]
-			}
-		},
-		{
-			"type": "Feature",
-			"feature_type": "unit",
-			"properties": {
-				"category": "stairs",
-				"access": "public",
-				"name": {
-					"id": "Tangga",
-					"en": "Stairs",
-					"alts": []
-				},
-				"direction": null,
-				"display_point": {
-					"coordinates": [
-						106.643118,
-						-6.323398
-					],
-					"type": "Point"
-				},
-				"style": {
-					"fill": "#00ffe1",
-					"stroke": "#24c2b5",
-					"fill-opacity": 1,
-					"stroke-opacity": 1,
-					"marker-symbol": "elevator",
-					"marker-size": "small",
-					"marker-color": "#0080ff"
-				},
-				"level": "88736209-7778-11f1-9f7e-255798ecef5a",
-				"@id": "7ff9a6e1-a035-4646-bffa-63b389ca5e6d"
-			},
-			"geometry": {
-				"type": "Polygon",
-				"coordinates": [
-					[
-						[
-							106.6431637,
-							-6.3233487
-						],
-						[
-							106.643144,
-							-6.323336
-						],
-						[
-							106.6430705,
-							-6.323447
-						],
-						[
-							106.643091,
-							-6.32346
-						],
-						[
-							106.6431637,
-							-6.3233487
-						]
-					]
-				]
-			}
-		},
-		{
-			"type": "Feature",
-			"feature_type": "unit",
-			"properties": {
-				"category": "stairs",
-				"access": "public",
-				"name": {
-					"id": "Tangga",
-					"en": "Stairs",
-					"alts": []
-				},
-				"direction": null,
-				"display_point": {
-					"coordinates": [
-						106.643546,
-						-6.322924
-					],
-					"type": "Point"
-				},
-				"style": {
-					"fill": "#00ffe1",
-					"stroke": "#24c2b5",
-					"fill-opacity": 1,
-					"stroke-opacity": 1,
-					"marker-symbol": "elevator",
-					"marker-size": "small",
-					"marker-color": "#0080ff"
-				},
-				"level": "88736200-7778-11f1-9f7e-255798ecef5a",
-				"@id": "5040edc1-dcb8-419a-a112-df89df098605"
-			},
-			"geometry": {
-				"type": "Polygon",
-				"coordinates": [
-					[
-						[
-							106.643547,
-							-6.322875
-						],
-						[
-							106.6435266,
-							-6.3228797
-						],
-						[
-							106.643545,
-							-6.322971
-						],
-						[
-							106.643565,
-							-6.322967
-						],
-						[
-							106.643547,
-							-6.322875
-						]
-					]
-				]
-			}
-		},
-		{
-			"type": "Feature",
-			"feature_type": "unit",
-			"properties": {
-				"category": "stairs",
-				"access": "public",
-				"name": {
-					"id": "Tangga",
-					"en": "Stairs",
-					"alts": []
-				},
-				"direction": null,
-				"display_point": {
-					"coordinates": [
-						106.643546,
-						-6.322924
-					],
-					"type": "Point"
-				},
-				"style": {
-					"fill": "#00ffe1",
-					"stroke": "#24c2b5",
-					"fill-opacity": 1,
-					"stroke-opacity": 1,
-					"marker-symbol": "elevator",
-					"marker-size": "small",
-					"marker-color": "#0080ff"
-				},
-				"level": "88736209-7778-11f1-9f7e-255798ecef5a",
-				"@id": "cb464a13-5479-407c-a602-4c5b855a83fb"
-			},
-			"geometry": {
-				"type": "Polygon",
-				"coordinates": [
-					[
-						[
-							106.643547,
-							-6.322875
-						],
-						[
-							106.6435266,
-							-6.3228797
-						],
-						[
-							106.643545,
-							-6.322971
-						],
-						[
-							106.643565,
-							-6.322967
-						],
-						[
-							106.643547,
-							-6.322875
-						]
-					]
-				]
-			}
-		},
-		{
-			"type": "Feature",
-			"feature_type": "unit",
-			"properties": {
-				"category": "stairs",
-				"access": "public",
-				"name": {
-					"id": "Tangga",
-					"en": "Stairs",
-					"alts": []
-				},
-				"direction": null,
-				"display_point": {
-					"coordinates": [
-						106.640342475,
-						-6.325450125
-					],
-					"type": "Point"
-				},
-				"style": {
-					"fill": "#00ffe1",
-					"stroke": "#24c2b5",
-					"fill-opacity": 1,
-					"stroke-opacity": 1,
-					"marker-symbol": "elevator",
-					"marker-size": "small",
-					"marker-color": "#0080ff"
-				},
-				"level": "88736209-7778-11f1-9f7e-255798ecef5a",
-				"@id": "1fc9bf3a-9db8-408f-b82b-d4bdabab24e0"
-			},
-			"geometry": {
-				"type": "Polygon",
-				"coordinates": [
-					[
-						[
-							106.6403763,
-							-6.3254166
-						],
-						[
-							106.6402944,
-							-6.325455
-						],
-						[
-							106.6403086,
-							-6.3254843
-						],
-						[
-							106.6403906,
-							-6.3254446
-						],
-						[
-							106.6403763,
-							-6.3254166
-						]
-					]
-				]
-			}
-		},
-		{
-			"type": "Feature",
-			"feature_type": "unit",
-			"properties": {
-				"category": "stairs",
-				"access": "public",
-				"name": {
-					"id": "Tangga",
-					"en": "Stairs",
-					"alts": []
-				},
-				"direction": null,
-				"display_point": {
-					"coordinates": [
-						106.640342475,
-						-6.325450125
-					],
-					"type": "Point"
-				},
-				"style": {
-					"fill": "#00ffe1",
-					"stroke": "#24c2b5",
-					"fill-opacity": 1,
-					"stroke-opacity": 1,
-					"marker-symbol": "elevator",
-					"marker-size": "small",
-					"marker-color": "#0080ff"
-				},
-				"level": "88736200-7778-11f1-9f7e-255798ecef5a",
-				"@id": "cd9675b0-e0b6-40c5-8c66-a32d292adc25"
-			},
-			"geometry": {
-				"type": "Polygon",
-				"coordinates": [
-					[
-						[
-							106.6403763,
-							-6.3254166
-						],
-						[
-							106.6402944,
-							-6.325455
-						],
-						[
-							106.6403086,
-							-6.3254843
-						],
-						[
-							106.6403906,
-							-6.3254446
-						],
-						[
-							106.6403763,
-							-6.3254166
-						]
-					]
-				]
-			}
-		},
-		{
-			"type": "Feature",
-			"feature_type": "unit",
-			"properties": {
-				"category": "escalator",
-				"access": "public",
-				"name": {
-					"id": "Eskalator",
-					"en": "Escalator",
-					"alts": []
-				},
-				"direction": null,
-				"display_point": {
-					"coordinates": [
-						106.640332075,
-						-6.325428924999999
-					],
-					"type": "Point"
-				},
-				"style": {
-					"fill": "#00ffe1",
-					"stroke": "#24c2b5",
-					"fill-opacity": 1,
-					"stroke-opacity": 1,
-					"marker-symbol": "elevator",
-					"marker-size": "small",
-					"marker-color": "#0080ff"
-				},
-				"level": "88736209-7778-11f1-9f7e-255798ecef5a",
-				"@id": "a2e56556-da71-4388-ad01-1d9b9f91efeb"
-			},
-			"geometry": {
-				"type": "Polygon",
-				"coordinates": [
-					[
-						[
-							106.6403763,
-							-6.3254169
-						],
-						[
-							106.6403695,
-							-6.3254027
-						],
-						[
-							106.640288,
-							-6.3254411
-						],
-						[
-							106.6402945,
-							-6.325455
-						],
-						[
-							106.6403763,
-							-6.3254169
-						]
-					]
-				]
-			}
-		},
-		{
-			"type": "Feature",
-			"feature_type": "unit",
-			"properties": {
-				"category": "escalator",
-				"access": "public",
-				"name": {
-					"id": "Eskalator",
-					"en": "Escalator",
-					"alts": []
-				},
-				"direction": null,
-				"display_point": {
-					"coordinates": [
-						106.640332075,
-						-6.325428924999999
-					],
-					"type": "Point"
-				},
-				"style": {
-					"fill": "#00ffe1",
-					"stroke": "#24c2b5",
-					"fill-opacity": 1,
-					"stroke-opacity": 1,
-					"marker-symbol": "elevator",
-					"marker-size": "small",
-					"marker-color": "#0080ff"
-				},
-				"level": "88736200-7778-11f1-9f7e-255798ecef5a",
-				"@id": "9a689807-00e2-40a8-bfff-d9b684d40c78"
-			},
-			"geometry": {
-				"type": "Polygon",
-				"coordinates": [
-					[
-						[
-							106.6403763,
-							-6.3254169
-						],
-						[
-							106.6403695,
-							-6.3254027
-						],
-						[
-							106.640288,
-							-6.3254411
-						],
-						[
-							106.6402945,
-							-6.325455
-						],
-						[
-							106.6403763,
-							-6.3254169
-						]
-					]
-				]
-			}
-		},
-		{
-			"type": "Feature",
-			"feature_type": "unit",
-			"properties": {
-				"category": "escalator",
-				"access": "public",
-				"name": {
-					"id": "Eskalator",
-					"en": "Escalator",
-					"alts": []
-				},
-				"direction": null,
-				"display_point": {
-					"coordinates": [
-						106.6403526,
-						-6.325470475
-					],
-					"type": "Point"
-				},
-				"style": {
-					"fill": "#00ffe1",
-					"stroke": "#24c2b5",
-					"fill-opacity": 1,
-					"stroke-opacity": 1,
-					"marker-symbol": "elevator",
-					"marker-size": "small",
-					"marker-color": "#0080ff"
-				},
-				"level": "88736209-7778-11f1-9f7e-255798ecef5a",
-				"@id": "929a5aae-2045-4398-824c-223c7644fa09"
-			},
-			"geometry": {
-				"type": "Polygon",
-				"coordinates": [
-					[
-						[
-							106.6403903,
-							-6.3254446
-						],
-						[
-							106.6403088,
-							-6.3254843
-						],
-						[
-							106.6403143,
-							-6.325496
-						],
-						[
-							106.640397,
-							-6.325457
-						],
-						[
-							106.6403903,
-							-6.3254446
-						]
-					]
-				]
-			}
-		},
-		{
-			"type": "Feature",
-			"feature_type": "unit",
-			"properties": {
-				"category": "escalator",
-				"access": "public",
-				"name": {
-					"id": "Eskalator",
-					"en": "Escalator",
-					"alts": []
-				},
-				"direction": null,
-				"display_point": {
-					"coordinates": [
-						106.6403526,
-						-6.325470475
-					],
-					"type": "Point"
-				},
-				"style": {
-					"fill": "#00ffe1",
-					"stroke": "#24c2b5",
-					"fill-opacity": 1,
-					"stroke-opacity": 1,
-					"marker-symbol": "elevator",
-					"marker-size": "small",
-					"marker-color": "#0080ff"
-				},
-				"level": "88736200-7778-11f1-9f7e-255798ecef5a",
-				"@id": "bd940067-04e2-4f03-8e3a-b4e2ca128747"
-			},
-			"geometry": {
-				"type": "Polygon",
-				"coordinates": [
-					[
-						[
-							106.6403903,
-							-6.3254446
-						],
-						[
-							106.6403088,
-							-6.3254843
-						],
-						[
-							106.6403143,
-							-6.325496
-						],
-						[
-							106.640397,
-							-6.325457
-						],
-						[
-							106.6403903,
-							-6.3254446
-						]
-					]
-				]
-			}
-		},
-		{
-			"type": "Feature",
-			"feature_type": "unit",
-			"properties": {
-				"category": "lift",
-				"access": "public",
-				"name": {
-					"id": "Lift",
-					"en": "Lift",
-					"alts": []
-				},
-				"direction": null,
-				"display_point": {
-					"coordinates": [
-						106.640334,
-						-6.3255
-					],
-					"type": "Point"
-				},
-				"style": {
-					"fill": "#00ffe1",
-					"stroke": "#24c2b5",
-					"fill-opacity": 1,
-					"stroke-opacity": 1,
-					"marker-symbol": "elevator",
-					"marker-size": "small",
-					"marker-color": "#0080ff"
-				},
-				"level": "88736209-7778-11f1-9f7e-255798ecef5a",
-				"@id": "e03c7ea0-433b-464a-8c98-497db45dcf1b"
-			},
-			"geometry": {
-				"type": "Polygon",
-				"coordinates": [
-					[
-						[
-							106.6403385,
-							-6.3254848
-						],
-						[
-							106.6403202,
-							-6.3254934
-						],
-						[
-							106.64033,
-							-6.325513
-						],
-						[
-							106.6403479,
-							-6.3255042
-						],
-						[
-							106.6403385,
-							-6.3254848
-						]
-					]
-				]
-			}
-		},
-		{
-			"type": "Feature",
-			"feature_type": "unit",
-			"properties": {
-				"category": "lift",
-				"access": "public",
-				"name": {
-					"id": "Lift",
-					"en": "Lift",
-					"alts": []
-				},
-				"direction": null,
-				"display_point": {
-					"coordinates": [
-						106.640334,
-						-6.3255
-					],
-					"type": "Point"
-				},
-				"style": {
-					"fill": "#00ffe1",
-					"stroke": "#24c2b5",
-					"fill-opacity": 1,
-					"stroke-opacity": 1,
-					"marker-symbol": "elevator",
-					"marker-size": "small",
-					"marker-color": "#0080ff"
-				},
-				"level": "88736200-7778-11f1-9f7e-255798ecef5a",
-				"@id": "87dcaa8c-1404-40c4-89cc-bdf37cd90d46"
-			},
-			"geometry": {
-				"type": "Polygon",
-				"coordinates": [
-					[
-						[
-							106.6403385,
-							-6.3254848
-						],
-						[
-							106.6403202,
-							-6.3254934
-						],
-						[
-							106.64033,
-							-6.325513
-						],
-						[
-							106.6403479,
-							-6.3255042
-						],
-						[
-							106.6403385,
-							-6.3254848
-						]
-					]
-				]
-			}
-		},
-		{
-			"type": "Feature",
-			"feature_type": "unit",
-			"properties": {
-				"category": "lift",
-				"access": "public",
-				"name": {
-					"id": "Lift",
-					"en": "Lift",
-					"alts": []
-				},
-				"direction": null,
-				"display_point": {
-					"coordinates": [
-						106.643574,
-						-6.321616
-					],
-					"type": "Point"
-				},
-				"style": {
-					"fill": "#00ffe1",
-					"stroke": "#24c2b5",
-					"fill-opacity": 1,
-					"stroke-opacity": 1,
-					"marker-symbol": "elevator",
-					"marker-size": "small",
-					"marker-color": "#0080ff"
-				},
-				"level": "88736200-7778-11f1-9f7e-255798ecef5a",
-				"@id": "8023d76d-db4e-4635-9718-7d50003986da"
-			},
-			"geometry": {
-				"type": "Polygon",
-				"coordinates": [
-					[
-						[
-							106.643588,
-							-6.321605
-						],
-						[
-							106.643565,
-							-6.321599
-						],
-						[
-							106.643559,
-							-6.321627
-						],
-						[
-							106.643582,
-							-6.321633
-						],
-						[
-							106.643588,
-							-6.321605
-						]
-					]
-				]
-			}
-		},
-		{
-			"type": "Feature",
-			"feature_type": "unit",
-			"properties": {
-				"category": "lift",
-				"access": "public",
-				"name": {
-					"id": "Lift",
-					"en": "Lift",
-					"alts": []
-				},
-				"direction": null,
-				"display_point": {
-					"coordinates": [
-						106.643574,
-						-6.321616
-					],
-					"type": "Point"
-				},
-				"style": {
-					"fill": "#00ffe1",
-					"stroke": "#24c2b5",
-					"fill-opacity": 1,
-					"stroke-opacity": 1,
-					"marker-symbol": "elevator",
-					"marker-size": "small",
-					"marker-color": "#0080ff"
-				},
-				"level": "88736209-7778-11f1-9f7e-255798ecef5a",
-				"@id": "845383f7-97ee-411b-ab67-4af8b75593ee"
-			},
-			"geometry": {
-				"type": "Polygon",
-				"coordinates": [
-					[
-						[
-							106.643588,
-							-6.321605
-						],
-						[
-							106.643565,
-							-6.321599
-						],
-						[
-							106.643559,
-							-6.321627
-						],
-						[
-							106.643582,
-							-6.321633
-						],
-						[
-							106.643588,
-							-6.321605
-						]
-					]
-				]
-			}
-		},
-		{
-			"type": "Feature",
-			"feature_type": "unit",
-			"properties": {
-				"category": "stairs",
-				"access": "public",
-				"name": {
-					"id": "Tangga",
-					"en": "Stairs",
-					"alts": []
-				},
-				"direction": null,
-				"display_point": {
-					"coordinates": [
-						106.64359400000001,
-						-6.32152
-					],
-					"type": "Point"
-				},
-				"style": {
-					"fill": "#00ffe1",
-					"stroke": "#24c2b5",
-					"fill-opacity": 1,
-					"stroke-opacity": 1,
-					"marker-symbol": "elevator",
-					"marker-size": "small",
-					"marker-color": "#0080ff"
-				},
-				"level": "88736209-7778-11f1-9f7e-255798ecef5a",
-				"@id": "63d57dc0-7818-11f1-8699-4f6680c2446b"
-			},
-			"geometry": {
-				"type": "Polygon",
-				"coordinates": [
-					[
-						[
-							106.643592,
-							-6.321472
-						],
-						[
-							106.643575,
-							-6.321563
-						],
-						[
-							106.643595,
-							-6.321568
-						],
-						[
-							106.643614,
-							-6.321477
-						],
-						[
-							106.643592,
-							-6.321472
-						]
-					]
-				]
-			}
-		},
-		{
-			"type": "Feature",
-			"feature_type": "unit",
-			"properties": {
-				"category": "stairs",
-				"access": "public",
-				"name": {
-					"id": "Tangga",
-					"en": "Stairs",
-					"alts": []
-				},
-				"direction": null,
-				"display_point": {
-					"coordinates": [
-						106.64359400000001,
-						-6.32152
-					],
-					"type": "Point"
-				},
-				"style": {
-					"fill": "#00ffe1",
-					"stroke": "#24c2b5",
-					"fill-opacity": 1,
-					"stroke-opacity": 1,
-					"marker-symbol": "elevator",
-					"marker-size": "small",
-					"marker-color": "#0080ff"
-				},
-				"level": "88736200-7778-11f1-9f7e-255798ecef5a",
-				"@id": "eaa955b6-a62c-47d6-95a0-c8ada16a74ad"
-			},
-			"geometry": {
-				"type": "Polygon",
-				"coordinates": [
-					[
-						[
-							106.643592,
-							-6.321472
-						],
-						[
-							106.643575,
-							-6.321563
-						],
-						[
-							106.643595,
-							-6.321568
-						],
-						[
-							106.643614,
-							-6.321477
-						],
-						[
-							106.643592,
-							-6.321472
-						]
-					]
-				]
-			}
-		}
-	]
+    "type": "FeatureCollection",
+    "name": "unit",
+    "features": [
+        {
+            "type": "Feature",
+            "feature_type": "unit",
+            "properties": {
+                "category": "stairs",
+                "access": "public",
+                "name": {
+                    "id": "Tangga",
+                    "en": "Stairs",
+                    "alts": []
+                },
+                "direction": null,
+                "display_point": {
+                    "coordinates": [
+                        106.6415572,
+                        -6.3243949
+                    ],
+                    "type": "Point"
+                },
+                "style": {
+                    "fill": "#00ffe1",
+                    "stroke": "#24c2b5",
+                    "fill-opacity": 1,
+                    "stroke-opacity": 1,
+                    "marker-symbol": "elevator",
+                    "marker-size": "small",
+                    "marker-color": "#0080ff"
+                },
+                "level": "88736200-7778-11f1-9f7e-255798ecef5a",
+                "building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
+                "@id": "2e6e757d-784a-11f1-8699-4f6680c2446b"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            106.641573,
+                            -6.324367
+                        ],
+                        [
+                            106.641521,
+                            -6.324394
+                        ],
+                        [
+                            106.641521,
+                            -6.324394
+                        ],
+                        [
+                            106.641537,
+                            -6.324425
+                        ],
+                        [
+                            106.641589,
+                            -6.324397
+                        ],
+                        [
+                            106.641573,
+                            -6.324367
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "feature_type": "unit",
+            "properties": {
+                "category": "stairs",
+                "access": "public",
+                "name": {
+                    "id": "Tangga",
+                    "en": "Stairs",
+                    "alts": []
+                },
+                "direction": null,
+                "display_point": {
+                    "coordinates": [
+                        106.64156175,
+                        -6.324392249999999
+                    ],
+                    "type": "Point"
+                },
+                "style": {
+                    "fill": "#00ffe1",
+                    "stroke": "#24c2b5",
+                    "fill-opacity": 1,
+                    "stroke-opacity": 1
+                },
+                "level": "88736209-7778-11f1-9f7e-255798ecef5a",
+                "building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
+                "@id": "2e6e7584-784a-11f1-8699-4f6680c2446b"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            106.641521,
+                            -6.324394
+                        ],
+                        [
+                            106.641537,
+                            -6.3244249
+                        ],
+                        [
+                            106.641589,
+                            -6.3243969
+                        ],
+                        [
+                            106.641573,
+                            -6.324367
+                        ],
+                        [
+                            106.6415218,
+                            -6.3243937
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "feature_type": "unit",
+            "properties": {
+                "category": "ticketchecker",
+                "access": "public",
+                "name": {
+                    "id": "Mesin Tiket Masuk/Keluar",
+                    "en": "Ticket Machine In/Out",
+                    "alts": []
+                },
+                "direction": null,
+                "display_point": {
+                    "coordinates": [
+                        106.6416325,
+                        -6.3244305
+                    ],
+                    "type": "Point"
+                },
+                "style": {
+                    "fill": "#faeecd",
+                    "fill-opacity": 1,
+                    "stroke": "#eabf11",
+                    "stroke-opacity": 1,
+                    "marker-symbol": "ticket",
+                    "marker-size": "small",
+                    "marker-color": "#0080ff"
+                },
+                "level": "88736200-7778-11f1-9f7e-255798ecef5a",
+                "building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
+                "@id": "2e6e756f-784a-11f1-8699-4f6680c2446b"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            106.641604,
+                            -6.324395
+                        ],
+                        [
+                            106.641646,
+                            -6.324474
+                        ],
+                        [
+                            106.641662,
+                            -6.324466
+                        ],
+                        [
+                            106.641618,
+                            -6.324387
+                        ],
+                        [
+                            106.641604,
+                            -6.324395
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "feature_type": "unit",
+            "properties": {
+                "category": "stairs",
+                "access": "paid",
+                "name": {
+                    "id": "Tangga",
+                    "en": "Stairs",
+                    "alts": []
+                },
+                "direction": null,
+                "display_point": {
+                    "coordinates": [
+                        106.643602,
+                        -6.32232
+                    ],
+                    "type": "Point"
+                },
+                "style": {
+                    "fill": "#00ffe1",
+                    "stroke": "#24c2b5",
+                    "fill-opacity": 1,
+                    "stroke-opacity": 1
+                },
+                "level": "88736200-7778-11f1-9f7e-255798ecef5a",
+                "building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
+                "@id": "23e95b00-7818-11f1-8699-4f6680c2446b"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            106.643623,
+                            -6.322273
+                        ],
+                        [
+                            106.643603,
+                            -6.322268
+                        ],
+                        [
+                            106.643582,
+                            -6.322367
+                        ],
+                        [
+                            106.643601,
+                            -6.322372
+                        ],
+                        [
+                            106.643623,
+                            -6.322273
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "feature_type": "unit",
+            "properties": {
+                "category": "stairs",
+                "access": "paid",
+                "name": {
+                    "id": "Tangga",
+                    "en": "Stairs",
+                    "alts": []
+                },
+                "direction": null,
+                "display_point": {
+                    "coordinates": [
+                        106.643602,
+                        -6.32232
+                    ],
+                    "type": "Point"
+                },
+                "style": {
+                    "fill": "#00ffe1",
+                    "stroke": "#24c2b5",
+                    "fill-opacity": 1,
+                    "stroke-opacity": 1
+                },
+                "level": "88736209-7778-11f1-9f7e-255798ecef5a",
+                "building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
+                "@id": "0d4b05b9-69c8-4baf-b006-845cd2b3d415"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            106.643623,
+                            -6.322273
+                        ],
+                        [
+                            106.643603,
+                            -6.322268
+                        ],
+                        [
+                            106.643582,
+                            -6.322367
+                        ],
+                        [
+                            106.643601,
+                            -6.322372
+                        ],
+                        [
+                            106.643623,
+                            -6.322273
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "feature_type": "unit",
+            "properties": {
+                "category": "escalator",
+                "access": "paid",
+                "name": {
+                    "id": "Eskalator",
+                    "en": "Escalator",
+                    "alts": []
+                },
+                "direction": null,
+                "display_point": {
+                    "coordinates": [
+                        106.64139675,
+                        -6.324472500000001
+                    ],
+                    "type": "Point"
+                },
+                "style": {
+                    "fill": "#00ffe1",
+                    "stroke": "#24c2b5",
+                    "fill-opacity": 1,
+                    "stroke-opacity": 1,
+                    "marker-symbol": "elevator",
+                    "marker-size": "small",
+                    "marker-color": "#0080ff"
+                },
+                "level": "88736200-7778-11f1-9f7e-255798ecef5a",
+                "building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
+                "@id": "728e5791-781a-11f1-8699-4f6680c2446b"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            106.641421,
+                            -6.324446
+                        ],
+                        [
+                            106.641361,
+                            -6.324478
+                        ],
+                        [
+                            106.641372,
+                            -6.324499
+                        ],
+                        [
+                            106.641433,
+                            -6.324467
+                        ],
+                        [
+                            106.641421,
+                            -6.324446
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "feature_type": "unit",
+            "properties": {
+                "category": "escalator",
+                "access": "paid",
+                "name": {
+                    "id": "Eskalator",
+                    "en": "Escalator",
+                    "alts": []
+                },
+                "direction": null,
+                "display_point": {
+                    "coordinates": [
+                        106.64139675,
+                        -6.324472500000001
+                    ],
+                    "type": "Point"
+                },
+                "style": {
+                    "fill": "#00ffe1",
+                    "stroke": "#24c2b5",
+                    "fill-opacity": 1,
+                    "stroke-opacity": 1,
+                    "marker-symbol": "elevator",
+                    "marker-size": "small",
+                    "marker-color": "#0080ff"
+                },
+                "level": "88736209-7778-11f1-9f7e-255798ecef5a",
+                "building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
+                "@id": "551a2d00-c624-4673-a492-b4041a95464e"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            106.641421,
+                            -6.324446
+                        ],
+                        [
+                            106.641361,
+                            -6.324478
+                        ],
+                        [
+                            106.641372,
+                            -6.324499
+                        ],
+                        [
+                            106.641433,
+                            -6.324467
+                        ],
+                        [
+                            106.641421,
+                            -6.324446
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "feature_type": "unit",
+            "properties": {
+                "category": "lift",
+                "access": "paid",
+                "name": {
+                    "id": "Lift",
+                    "en": "Lift",
+                    "alts": []
+                },
+                "direction": null,
+                "display_point": {
+                    "coordinates": [
+                        106.641484,
+                        -6.324426
+                    ],
+                    "type": "Point"
+                },
+                "style": {
+                    "fill": "#00ffe1",
+                    "stroke": "#24c2b5",
+                    "fill-opacity": 1,
+                    "stroke-opacity": 1,
+                    "marker-symbol": "elevator",
+                    "marker-size": "small",
+                    "marker-color": "#0080ff"
+                },
+                "level": "88736209-7778-11f1-9f7e-255798ecef5a",
+                "building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
+                "@id": "796933dd-6e73-4ab0-a11b-e5be13dd1c4e"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            106.6414989,
+                            -6.3244317
+                        ],
+                        [
+                            106.6414791,
+                            -6.3244418
+                        ],
+                        [
+                            106.6414679,
+                            -6.3244208
+                        ],
+                        [
+                            106.6414878,
+                            -6.3244106
+                        ],
+                        [
+                            106.6414989,
+                            -6.3244317
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "feature_type": "unit",
+            "properties": {
+                "category": "lift",
+                "access": "paid",
+                "name": {
+                    "id": "Lift",
+                    "en": "Lift",
+                    "alts": []
+                },
+                "direction": null,
+                "display_point": {
+                    "coordinates": [
+                        106.641484,
+                        -6.324426
+                    ],
+                    "type": "Point"
+                },
+                "style": {
+                    "fill": "#00ffe1",
+                    "stroke": "#24c2b5",
+                    "fill-opacity": 1,
+                    "stroke-opacity": 1,
+                    "marker-symbol": "elevator",
+                    "marker-size": "small",
+                    "marker-color": "#0080ff"
+                },
+                "level": "88736200-7778-11f1-9f7e-255798ecef5a",
+                "building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
+                "@id": "bd78febb-5570-4840-b14a-c054ca6dadf0"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            106.6414989,
+                            -6.3244317
+                        ],
+                        [
+                            106.6414791,
+                            -6.3244418
+                        ],
+                        [
+                            106.6414679,
+                            -6.3244208
+                        ],
+                        [
+                            106.6414878,
+                            -6.3244106
+                        ],
+                        [
+                            106.6414989,
+                            -6.3244317
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "feature_type": "unit",
+            "properties": {
+                "category": "staffroom",
+                "access": "private",
+                "name": {
+                    "id": "Ruangan Petugas",
+                    "en": "Staff Room",
+                    "alts": []
+                },
+                "direction": null,
+                "display_point": {
+                    "coordinates": [
+                        106.64143238461541,
+                        -6.3244145384615384
+                    ],
+                    "type": "Point"
+                },
+                "style": {
+                    "fill": "#faeecd",
+                    "fill-opacity": 1,
+                    "stroke": "#eabf11",
+                    "stroke-opacity": 1,
+                    "marker-symbol": "staff",
+                    "marker-size": "small",
+                    "marker-color": "#0080ff"
+                },
+                "level": "88736200-7778-11f1-9f7e-255798ecef5a",
+                "building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
+                "@id": "8277ca24-77c4-11f1-9f7e-255798ecef5a"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            106.64156,
+                            -6.324342
+                        ],
+                        [
+                            106.641592,
+                            -6.324402
+                        ],
+                        [
+                            106.64163,
+                            -6.324381
+                        ],
+                        [
+                            106.641598,
+                            -6.324322
+                        ],
+                        [
+                            106.64156,
+                            -6.324342
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "feature_type": "unit",
+            "properties": {
+                "category": "restroom",
+                "access": "paid",
+                "name": {
+                    "id": "Toilet",
+                    "en": "Restroom",
+                    "alts": []
+                },
+                "direction": null,
+                "display_point": {
+                    "coordinates": [
+                        106.64143238461541,
+                        -6.3244145384615384
+                    ],
+                    "type": "Point"
+                },
+                "style": {
+                    "stroke": "#00ffe1",
+                    "fill": "#00ff16",
+                    "fill-opacity": 1,
+                    "stroke-opacity": 1,
+                    "marker-symbol": "restroom",
+                    "marker-size": "small",
+                    "marker-color": "#0080ff"
+                },
+                "level": "88736200-7778-11f1-9f7e-255798ecef5a",
+                "building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
+                "@id": "728e5796-781a-11f1-8699-4f6680c2446b"
+            },
+            "geometry": {
+                "type": "MultiPolygon",
+                "coordinates": [
+                    [
+                        [
+                            [
+                                106.641412,
+                                -6.324379
+                            ],
+                            [
+                                106.641329,
+                                -6.32442
+                            ],
+                            [
+                                106.641361,
+                                -6.324478
+                            ],
+                            [
+                                106.641427,
+                                -6.324443
+                            ],
+                            [
+                                106.641422,
+                                -6.324435
+                            ],
+                            [
+                                106.641438,
+                                -6.324426
+                            ],
+                            [
+                                106.641412,
+                                -6.324379
+                            ]
+                        ]
+                    ],
+                    [
+                        [
+                            [
+                                106.641458,
+                                -6.324426
+                            ],
+                            [
+                                106.641485,
+                                -6.324412
+                            ],
+                            [
+                                106.641507,
+                                -6.324401
+                            ],
+                            [
+                                106.641478,
+                                -6.324346
+                            ],
+                            [
+                                106.641412,
+                                -6.324379
+                            ],
+                            [
+                                106.641438,
+                                -6.324426
+                            ],
+                            [
+                                106.641454,
+                                -6.324418
+                            ],
+                            [
+                                106.641458,
+                                -6.324426
+                            ]
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "feature_type": "unit",
+            "properties": {
+                "category": "escalator",
+                "access": "paid",
+                "name": {
+                    "id": "Eskalator",
+                    "en": "Escalator",
+                    "alts": []
+                },
+                "direction": null,
+                "display_point": {
+                    "coordinates": [
+                        106.641469,
+                        -6.3246007
+                    ],
+                    "type": "Point"
+                },
+                "style": {
+                    "fill": "#00ffe1",
+                    "stroke": "#24c2b5",
+                    "fill-opacity": 1,
+                    "stroke-opacity": 1,
+                    "marker-symbol": "elevator",
+                    "marker-size": "small",
+                    "marker-color": "#0080ff"
+                },
+                "level": "88736200-7778-11f1-9f7e-255798ecef5a",
+                "building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
+                "@id": "728e5790-781a-11f1-8699-4f6680c2446b"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            106.641443,
+                            -6.324628
+                        ],
+                        [
+                            106.641505,
+                            -6.324596
+                        ],
+                        [
+                            106.641505,
+                            -6.324596
+                        ],
+                        [
+                            106.641493,
+                            -6.324575
+                        ],
+                        [
+                            106.641431,
+                            -6.324607
+                        ],
+                        [
+                            106.641443,
+                            -6.324628
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "feature_type": "unit",
+            "properties": {
+                "category": "escalator",
+                "access": "paid",
+                "name": {
+                    "id": "Eskalator",
+                    "en": "Escalator",
+                    "alts": []
+                },
+                "direction": null,
+                "display_point": {
+                    "coordinates": [
+                        106.641469,
+                        -6.3246007
+                    ],
+                    "type": "Point"
+                },
+                "style": {
+                    "fill": "#00ffe1",
+                    "stroke": "#24c2b5",
+                    "fill-opacity": 1,
+                    "stroke-opacity": 1,
+                    "marker-symbol": "elevator",
+                    "marker-size": "small",
+                    "marker-color": "#0080ff"
+                },
+                "level": "88736209-7778-11f1-9f7e-255798ecef5a",
+                "building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
+                "@id": "c96b623a-f2db-4612-ba0f-a998509c03cd"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            106.641443,
+                            -6.324628
+                        ],
+                        [
+                            106.641505,
+                            -6.324596
+                        ],
+                        [
+                            106.641505,
+                            -6.324596
+                        ],
+                        [
+                            106.641493,
+                            -6.324575
+                        ],
+                        [
+                            106.641431,
+                            -6.324607
+                        ],
+                        [
+                            106.641443,
+                            -6.324628
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "feature_type": "unit",
+            "properties": {
+                "category": "lift",
+                "access": "public",
+                "name": {
+                    "id": "Lift",
+                    "en": "Lift",
+                    "alts": []
+                },
+                "direction": null,
+                "display_point": {
+                    "coordinates": [
+                        106.641557575,
+                        -6.32455675
+                    ],
+                    "type": "Point"
+                },
+                "style": {
+                    "fill": "#00ffe1",
+                    "stroke": "#24c2b5",
+                    "fill-opacity": 1,
+                    "stroke-opacity": 1,
+                    "marker-symbol": "elevator",
+                    "marker-size": "small",
+                    "marker-color": "#0080ff"
+                },
+                "level": "88736200-7778-11f1-9f7e-255798ecef5a",
+                "building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
+                "@id": "55118e86-93c3-4905-8009-ac9ffec6c766"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            106.6415724,
+                            -6.3245614
+                        ],
+                        [
+                            106.6415529,
+                            -6.3245712
+                        ],
+                        [
+                            106.6415429,
+                            -6.3245522
+                        ],
+                        [
+                            106.6415621,
+                            -6.3245422
+                        ],
+                        [
+                            106.6415724,
+                            -6.3245614
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "feature_type": "unit",
+            "properties": {
+                "category": "lift",
+                "access": "public",
+                "name": {
+                    "id": "Lift",
+                    "en": "Lift",
+                    "alts": []
+                },
+                "direction": null,
+                "display_point": {
+                    "coordinates": [
+                        106.641557575,
+                        -6.32455675
+                    ],
+                    "type": "Point"
+                },
+                "style": {
+                    "fill": "#00ffe1",
+                    "stroke": "#24c2b5",
+                    "fill-opacity": 1,
+                    "stroke-opacity": 1,
+                    "marker-symbol": "elevator",
+                    "marker-size": "small",
+                    "marker-color": "#0080ff"
+                },
+                "level": "88736209-7778-11f1-9f7e-255798ecef5a",
+                "building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
+                "@id": "7f50a229-68f6-4e61-be50-256bebb3e9d7"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            106.6415724,
+                            -6.3245614
+                        ],
+                        [
+                            106.6415529,
+                            -6.3245712
+                        ],
+                        [
+                            106.6415429,
+                            -6.3245522
+                        ],
+                        [
+                            106.6415621,
+                            -6.3245422
+                        ],
+                        [
+                            106.6415724,
+                            -6.3245614
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "feature_type": "unit",
+            "properties": {
+                "category": "prayerroom",
+                "access": "public",
+                "name": {
+                    "id": "Musholla",
+                    "en": "Prayer Room",
+                    "alts": []
+                },
+                "direction": null,
+                "display_point": {
+                    "coordinates": [
+                        106.64153044999999,
+                        -6.32436615
+                    ],
+                    "type": "Point"
+                },
+                "style": {
+                    "fill": "#00ffe1",
+                    "stroke": "#24c2b5",
+                    "fill-opacity": 1,
+                    "stroke-opacity": 1
+                },
+                "level": "88736200-7778-11f1-9f7e-255798ecef5a",
+                "building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
+                "@id": "1d3b4aa4-f76d-427c-a8cc-ebe085fe1141"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            106.641488,
+                            -6.324366
+                        ],
+                        [
+                            106.641507,
+                            -6.324401
+                        ],
+                        [
+                            106.6415728,
+                            -6.3243666
+                        ],
+                        [
+                            106.641554,
+                            -6.324331
+                        ],
+                        [
+                            106.641488,
+                            -6.324366
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "feature_type": "unit",
+            "properties": {
+                "category": "staffroom",
+                "access": "private",
+                "name": {
+                    "id": "Ruangan Petugas",
+                    "en": "Staff Room",
+                    "alts": []
+                },
+                "direction": null,
+                "display_point": {
+                    "coordinates": [
+                        106.6416665,
+                        -6.3244935
+                    ],
+                    "type": "Point"
+                },
+                "style": {
+                    "fill": "#faeecd",
+                    "fill-opacity": 1,
+                    "stroke": "#eabf11",
+                    "stroke-opacity": 1,
+                    "marker-symbol": "staff",
+                    "marker-size": "small",
+                    "marker-color": "#0080ff"
+                },
+                "level": "88736200-7778-11f1-9f7e-255798ecef5a",
+                "building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
+                "@id": "41199318-0b13-4eb4-9a3d-de9bf45fe184"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            106.641674,
+                            -6.32446
+                        ],
+                        [
+                            106.641634,
+                            -6.32448
+                        ],
+                        [
+                            106.641659,
+                            -6.324527
+                        ],
+                        [
+                            106.641699,
+                            -6.324507
+                        ],
+                        [
+                            106.641674,
+                            -6.32446
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "feature_type": "unit",
+            "properties": {
+                "category": "stairs",
+                "access": "paid",
+                "name": {
+                    "id": "Tangga",
+                    "en": "Stairs",
+                    "alts": []
+                },
+                "direction": null,
+                "display_point": {
+                    "coordinates": [
+                        106.64162212500001,
+                        -6.32451655
+                    ],
+                    "type": "Point"
+                },
+                "style": {
+                    "fill": "#00ffe1",
+                    "stroke": "#24c2b5",
+                    "fill-opacity": 1,
+                    "stroke-opacity": 1
+                },
+                "level": "88736209-7778-11f1-9f7e-255798ecef5a",
+                "building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
+                "@id": "422fbac9-7a95-4bd9-a3c4-8251654a1406"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            106.641638,
+                            -6.324488
+                        ],
+                        [
+                            106.6415893,
+                            -6.3245131
+                        ],
+                        [
+                            106.641606,
+                            -6.324545
+                        ],
+                        [
+                            106.6416552,
+                            -6.3245201
+                        ],
+                        [
+                            106.641638,
+                            -6.324488
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "feature_type": "unit",
+            "properties": {
+                "category": "stairs",
+                "access": "paid",
+                "name": {
+                    "id": "Tangga",
+                    "en": "Stairs",
+                    "alts": []
+                },
+                "direction": null,
+                "display_point": {
+                    "coordinates": [
+                        106.64162212500001,
+                        -6.32451655
+                    ],
+                    "type": "Point"
+                },
+                "style": {
+                    "fill": "#00ffe1",
+                    "stroke": "#24c2b5",
+                    "fill-opacity": 1,
+                    "stroke-opacity": 1
+                },
+                "level": "88736200-7778-11f1-9f7e-255798ecef5a",
+                "building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
+                "@id": "05642d66-4896-4ecd-acc4-50a5d704af39"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            106.641638,
+                            -6.324488
+                        ],
+                        [
+                            106.6415893,
+                            -6.3245131
+                        ],
+                        [
+                            106.641606,
+                            -6.324545
+                        ],
+                        [
+                            106.6416552,
+                            -6.3245201
+                        ],
+                        [
+                            106.641638,
+                            -6.324488
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "feature_type": "unit",
+            "properties": {
+                "category": "concourse",
+                "access": "paid",
+                "name": {
+                    "id": "Concourse",
+                    "en": "Concourse",
+                    "alts": []
+                },
+                "direction": null,
+                "display_point": {
+                    "coordinates": [
+                        106.64155710782735,
+                        -6.324475370601625
+                    ],
+                    "type": "Point"
+                },
+                "style": {
+                    "fill": "#00ffe1",
+                    "stroke": "#24c2b5",
+                    "fill-opacity": 1,
+                    "stroke-opacity": 1
+                },
+                "level": "88736200-7778-11f1-9f7e-255798ecef5a",
+                "building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
+                "@id": "20580c7c-a3d5-46b5-8fe1-1ba63c80a646"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            106.6415371,
+                            -6.3244247
+                        ],
+                        [
+                            106.6415892,
+                            -6.3243968
+                        ],
+                        [
+                            106.641592,
+                            -6.3244019
+                        ],
+                        [
+                            106.6416042,
+                            -6.3243953
+                        ],
+                        [
+                            106.641646,
+                            -6.324474
+                        ],
+                        [
+                            106.641634,
+                            -6.3244799
+                        ],
+                        [
+                            106.6416382,
+                            -6.3244878
+                        ],
+                        [
+                            106.6415892,
+                            -6.3245131
+                        ],
+                        [
+                            106.6416061,
+                            -6.3245452
+                        ],
+                        [
+                            106.6415724,
+                            -6.3245614
+                        ],
+                        [
+                            106.6415622,
+                            -6.3245422
+                        ],
+                        [
+                            106.6415428,
+                            -6.3245522
+                        ],
+                        [
+                            106.641553,
+                            -6.3245712
+                        ],
+                        [
+                            106.641505,
+                            -6.3245961
+                        ],
+                        [
+                            106.6414929,
+                            -6.324575
+                        ],
+                        [
+                            106.6414854,
+                            -6.3245789
+                        ],
+                        [
+                            106.6414254,
+                            -6.3244709
+                        ],
+                        [
+                            106.6414331,
+                            -6.324467
+                        ],
+                        [
+                            106.6414212,
+                            -6.3244464
+                        ],
+                        [
+                            106.641427,
+                            -6.3244433
+                        ],
+                        [
+                            106.6414221,
+                            -6.3244353
+                        ],
+                        [
+                            106.6414381,
+                            -6.3244264
+                        ],
+                        [
+                            106.6414541,
+                            -6.3244183
+                        ],
+                        [
+                            106.641458,
+                            -6.3244263
+                        ],
+                        [
+                            106.6414681,
+                            -6.3244211
+                        ],
+                        [
+                            106.6414791,
+                            -6.3244418
+                        ],
+                        [
+                            106.641499,
+                            -6.3244317
+                        ],
+                        [
+                            106.6414879,
+                            -6.3244109
+                        ],
+                        [
+                            106.641507,
+                            -6.3244013
+                        ],
+                        [
+                            106.641507,
+                            -6.3244009
+                        ],
+                        [
+                            106.641521,
+                            -6.3243937
+                        ],
+                        [
+                            106.641537,
+                            -6.3244248
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "feature_type": "unit",
+            "properties": {
+                "category": "restroom",
+                "access": "public",
+                "name": {
+                    "id": "Toilet",
+                    "en": "Restroom",
+                    "alts": []
+                },
+                "direction": null,
+                "display_point": {
+                    "coordinates": [
+                        106.64143238461541,
+                        -6.3244145384615384
+                    ],
+                    "type": "Point"
+                },
+                "style": {
+                    "stroke": "#00ffe1",
+                    "fill": "#00ff16",
+                    "fill-opacity": 1,
+                    "stroke-opacity": 1,
+                    "marker-symbol": "restroom",
+                    "marker-size": "small",
+                    "marker-color": "#0080ff"
+                },
+                "level": "88736200-7778-11f1-9f7e-255798ecef5a",
+                "building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
+                "@id": "8f1c130b-504c-4985-96e2-dd1ac19aabc0"
+            },
+            "geometry": {
+                "type": "MultiPolygon",
+                "coordinates": [
+                    [
+                        [
+                            [
+                                106.64177,
+                                -6.324464
+                            ],
+                            [
+                                106.641791,
+                                -6.324503
+                            ],
+                            [
+                                106.641875,
+                                -6.32446
+                            ],
+                            [
+                                106.641853,
+                                -6.324422
+                            ],
+                            [
+                                106.64177,
+                                -6.324464
+                            ]
+                        ]
+                    ],
+                    [
+                        [
+                            [
+                                106.641875,
+                                -6.32446
+                            ],
+                            [
+                                106.641919,
+                                -6.324542
+                            ],
+                            [
+                                106.641963,
+                                -6.324519
+                            ],
+                            [
+                                106.641919,
+                                -6.324437
+                            ],
+                            [
+                                106.641875,
+                                -6.32446
+                            ]
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "feature_type": "unit",
+            "properties": {
+                "category": "ticketcounter",
+                "access": "public",
+                "name": {
+                    "id": "Loket Tiket",
+                    "en": "Ticket Counter",
+                    "alts": []
+                },
+                "direction": null,
+                "display_point": {
+                    "coordinates": [
+                        106.6416058,
+                        -6.3243306
+                    ],
+                    "type": "Point"
+                },
+                "style": {
+                    "stroke": "#00ffe1",
+                    "fill": "#00ff16",
+                    "fill-opacity": 1,
+                    "stroke-opacity": 1,
+                    "marker-symbol": "ticket",
+                    "marker-size": "small",
+                    "marker-color": "#0080ff"
+                },
+                "level": "88736200-7778-11f1-9f7e-255798ecef5a",
+                "building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
+                "@id": "c43dfb1c-e72e-4d32-b39c-0009a2dcea0d"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            106.6415579,
+                            -6.3243385
+                        ],
+                        [
+                            106.6415598,
+                            -6.3243419
+                        ],
+                        [
+                            106.6415981,
+                            -6.3243219
+                        ],
+                        [
+                            106.6416302,
+                            -6.3243814
+                        ],
+                        [
+                            106.6416342,
+                            -6.3243792
+                        ],
+                        [
+                            106.6415999,
+                            -6.3243163
+                        ],
+                        [
+                            106.6415579,
+                            -6.3243385
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "feature_type": "unit",
+            "properties": {
+                "category": "stairs",
+                "access": "public",
+                "name": {
+                    "id": "Tangga",
+                    "en": "Stairs",
+                    "alts": []
+                },
+                "direction": null,
+                "display_point": {
+                    "coordinates": [
+                        106.641466575,
+                        -6.324309475
+                    ],
+                    "type": "Point"
+                },
+                "style": {
+                    "fill": "#00ffe1",
+                    "stroke": "#24c2b5",
+                    "fill-opacity": 1,
+                    "stroke-opacity": 1,
+                    "marker-symbol": "elevator",
+                    "marker-size": "small",
+                    "marker-color": "#0080ff"
+                },
+                "level": "88736200-7778-11f1-9f7e-255798ecef5a",
+                "building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
+                "@id": "3e330e64-2b0d-4754-a15c-7f05380cca33"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            106.6415042,
+                            -6.3243111
+                        ],
+                        [
+                            106.6414881,
+                            -6.3242787
+                        ],
+                        [
+                            106.6414287,
+                            -6.324308
+                        ],
+                        [
+                            106.6414453,
+                            -6.3243401
+                        ],
+                        [
+                            106.6415042,
+                            -6.3243111
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "feature_type": "unit",
+            "properties": {
+                "category": "stairs",
+                "access": "public",
+                "name": {
+                    "id": "Tangga",
+                    "en": "Stairs",
+                    "alts": []
+                },
+                "direction": null,
+                "display_point": {
+                    "coordinates": [
+                        106.641466575,
+                        -6.324309475
+                    ],
+                    "type": "Point"
+                },
+                "style": {
+                    "fill": "#00ffe1",
+                    "stroke": "#24c2b5",
+                    "fill-opacity": 1,
+                    "stroke-opacity": 1,
+                    "marker-symbol": "elevator",
+                    "marker-size": "small",
+                    "marker-color": "#0080ff"
+                },
+                "level": "88736209-7778-11f1-9f7e-255798ecef5a",
+                "building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
+                "@id": "1d023e34-79df-4282-a1d5-4bef2586cfaa"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            106.6415042,
+                            -6.3243111
+                        ],
+                        [
+                            106.6414881,
+                            -6.3242787
+                        ],
+                        [
+                            106.6414287,
+                            -6.324308
+                        ],
+                        [
+                            106.6414453,
+                            -6.3243401
+                        ],
+                        [
+                            106.6415042,
+                            -6.3243111
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "feature_type": "unit",
+            "properties": {
+                "category": "lift",
+                "access": "public",
+                "name": {
+                    "id": "Lift",
+                    "en": "Lift",
+                    "alts": []
+                },
+                "direction": null,
+                "display_point": {
+                    "coordinates": [
+                        106.641541,
+                        -6.324284
+                    ],
+                    "type": "Point"
+                },
+                "style": {
+                    "fill": "#00ffe1",
+                    "stroke": "#24c2b5",
+                    "fill-opacity": 1,
+                    "stroke-opacity": 1,
+                    "marker-symbol": "elevator",
+                    "marker-size": "small",
+                    "marker-color": "#0080ff"
+                },
+                "level": "88736209-7778-11f1-9f7e-255798ecef5a",
+                "building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
+                "@id": "033e8b81-1bcd-45b9-bfe9-726382173db2"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            106.641546,
+                            -6.324269
+                        ],
+                        [
+                            106.641526,
+                            -6.324279
+                        ],
+                        [
+                            106.6415359,
+                            -6.324298
+                        ],
+                        [
+                            106.641556,
+                            -6.324288
+                        ],
+                        [
+                            106.641546,
+                            -6.324269
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "feature_type": "unit",
+            "properties": {
+                "category": "lift",
+                "access": "public",
+                "name": {
+                    "id": "Lift",
+                    "en": "Lift",
+                    "alts": []
+                },
+                "direction": null,
+                "display_point": {
+                    "coordinates": [
+                        106.641541,
+                        -6.324284
+                    ],
+                    "type": "Point"
+                },
+                "style": {
+                    "fill": "#00ffe1",
+                    "stroke": "#24c2b5",
+                    "fill-opacity": 1,
+                    "stroke-opacity": 1,
+                    "marker-symbol": "elevator",
+                    "marker-size": "small",
+                    "marker-color": "#0080ff"
+                },
+                "level": "88736200-7778-11f1-9f7e-255798ecef5a",
+                "building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
+                "@id": "07bad151-54de-4a47-a1f4-b1dce5943a13"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            106.641546,
+                            -6.324269
+                        ],
+                        [
+                            106.641526,
+                            -6.324279
+                        ],
+                        [
+                            106.6415359,
+                            -6.324298
+                        ],
+                        [
+                            106.641556,
+                            -6.324288
+                        ],
+                        [
+                            106.641546,
+                            -6.324269
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "feature_type": "unit",
+            "properties": {
+                "category": "escalator",
+                "access": "public",
+                "name": {
+                    "id": "Eskalator",
+                    "en": "Escalator",
+                    "alts": []
+                },
+                "direction": null,
+                "display_point": {
+                    "coordinates": [
+                        106.6416049,
+                        -6.3242325
+                    ],
+                    "type": "Point"
+                },
+                "style": {
+                    "fill": "#00ffe1",
+                    "stroke": "#24c2b5",
+                    "fill-opacity": 1,
+                    "stroke-opacity": 1,
+                    "marker-symbol": "elevator",
+                    "marker-size": "small",
+                    "marker-color": "#0080ff"
+                },
+                "level": "88736209-7778-11f1-9f7e-255798ecef5a",
+                "building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
+                "@id": "615689af-1b90-4908-8d4d-183f957b08e8"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            106.6415759,
+                            -6.32426
+                        ],
+                        [
+                            106.6415656,
+                            -6.3242399
+                        ],
+                        [
+                            106.6416341,
+                            -6.3242054
+                        ],
+                        [
+                            106.6416436,
+                            -6.3242254
+                        ],
+                        [
+                            106.6415759,
+                            -6.32426
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "feature_type": "unit",
+            "properties": {
+                "category": "escalator",
+                "access": "public",
+                "name": {
+                    "id": "Eskalator",
+                    "en": "Escalator",
+                    "alts": []
+                },
+                "direction": null,
+                "display_point": {
+                    "coordinates": [
+                        106.6416049,
+                        -6.3242325
+                    ],
+                    "type": "Point"
+                },
+                "style": {
+                    "fill": "#00ffe1",
+                    "stroke": "#24c2b5",
+                    "fill-opacity": 1,
+                    "stroke-opacity": 1,
+                    "marker-symbol": "elevator",
+                    "marker-size": "small",
+                    "marker-color": "#0080ff"
+                },
+                "level": "88736200-7778-11f1-9f7e-255798ecef5a",
+                "building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
+                "@id": "3180c6d2-2455-40b2-b933-bdb1bdee1402"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            106.6415759,
+                            -6.32426
+                        ],
+                        [
+                            106.6415656,
+                            -6.3242399
+                        ],
+                        [
+                            106.6416341,
+                            -6.3242054
+                        ],
+                        [
+                            106.6416436,
+                            -6.3242254
+                        ],
+                        [
+                            106.6415759,
+                            -6.32426
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "feature_type": "unit",
+            "properties": {
+                "category": "stairs",
+                "access": "public",
+                "name": {
+                    "id": "Tangga",
+                    "en": "Stairs",
+                    "alts": []
+                },
+                "direction": null,
+                "display_point": {
+                    "coordinates": [
+                        106.643118,
+                        -6.323398
+                    ],
+                    "type": "Point"
+                },
+                "style": {
+                    "fill": "#00ffe1",
+                    "stroke": "#24c2b5",
+                    "fill-opacity": 1,
+                    "stroke-opacity": 1,
+                    "marker-symbol": "elevator",
+                    "marker-size": "small",
+                    "marker-color": "#0080ff"
+                },
+                "level": "88736200-7778-11f1-9f7e-255798ecef5a",
+                "building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
+                "@id": "7c316adb-71d3-4191-957d-ddd537570d59"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            106.6431637,
+                            -6.3233487
+                        ],
+                        [
+                            106.643144,
+                            -6.323336
+                        ],
+                        [
+                            106.6430705,
+                            -6.323447
+                        ],
+                        [
+                            106.643091,
+                            -6.32346
+                        ],
+                        [
+                            106.6431637,
+                            -6.3233487
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "feature_type": "unit",
+            "properties": {
+                "category": "stairs",
+                "access": "public",
+                "name": {
+                    "id": "Tangga",
+                    "en": "Stairs",
+                    "alts": []
+                },
+                "direction": null,
+                "display_point": {
+                    "coordinates": [
+                        106.643118,
+                        -6.323398
+                    ],
+                    "type": "Point"
+                },
+                "style": {
+                    "fill": "#00ffe1",
+                    "stroke": "#24c2b5",
+                    "fill-opacity": 1,
+                    "stroke-opacity": 1,
+                    "marker-symbol": "elevator",
+                    "marker-size": "small",
+                    "marker-color": "#0080ff"
+                },
+                "level": "88736209-7778-11f1-9f7e-255798ecef5a",
+                "building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
+                "@id": "7ff9a6e1-a035-4646-bffa-63b389ca5e6d"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            106.6431637,
+                            -6.3233487
+                        ],
+                        [
+                            106.643144,
+                            -6.323336
+                        ],
+                        [
+                            106.6430705,
+                            -6.323447
+                        ],
+                        [
+                            106.643091,
+                            -6.32346
+                        ],
+                        [
+                            106.6431637,
+                            -6.3233487
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "feature_type": "unit",
+            "properties": {
+                "category": "stairs",
+                "access": "public",
+                "name": {
+                    "id": "Tangga",
+                    "en": "Stairs",
+                    "alts": []
+                },
+                "direction": null,
+                "display_point": {
+                    "coordinates": [
+                        106.643546,
+                        -6.322924
+                    ],
+                    "type": "Point"
+                },
+                "style": {
+                    "fill": "#00ffe1",
+                    "stroke": "#24c2b5",
+                    "fill-opacity": 1,
+                    "stroke-opacity": 1,
+                    "marker-symbol": "elevator",
+                    "marker-size": "small",
+                    "marker-color": "#0080ff"
+                },
+                "level": "88736200-7778-11f1-9f7e-255798ecef5a",
+                "building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
+                "@id": "5040edc1-dcb8-419a-a112-df89df098605"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            106.643547,
+                            -6.322875
+                        ],
+                        [
+                            106.6435266,
+                            -6.3228797
+                        ],
+                        [
+                            106.643545,
+                            -6.322971
+                        ],
+                        [
+                            106.643565,
+                            -6.322967
+                        ],
+                        [
+                            106.643547,
+                            -6.322875
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "feature_type": "unit",
+            "properties": {
+                "category": "stairs",
+                "access": "public",
+                "name": {
+                    "id": "Tangga",
+                    "en": "Stairs",
+                    "alts": []
+                },
+                "direction": null,
+                "display_point": {
+                    "coordinates": [
+                        106.643546,
+                        -6.322924
+                    ],
+                    "type": "Point"
+                },
+                "style": {
+                    "fill": "#00ffe1",
+                    "stroke": "#24c2b5",
+                    "fill-opacity": 1,
+                    "stroke-opacity": 1,
+                    "marker-symbol": "elevator",
+                    "marker-size": "small",
+                    "marker-color": "#0080ff"
+                },
+                "level": "88736209-7778-11f1-9f7e-255798ecef5a",
+                "building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
+                "@id": "cb464a13-5479-407c-a602-4c5b855a83fb"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            106.643547,
+                            -6.322875
+                        ],
+                        [
+                            106.6435266,
+                            -6.3228797
+                        ],
+                        [
+                            106.643545,
+                            -6.322971
+                        ],
+                        [
+                            106.643565,
+                            -6.322967
+                        ],
+                        [
+                            106.643547,
+                            -6.322875
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "feature_type": "unit",
+            "properties": {
+                "category": "stairs",
+                "access": "public",
+                "name": {
+                    "id": "Tangga",
+                    "en": "Stairs",
+                    "alts": []
+                },
+                "direction": null,
+                "display_point": {
+                    "coordinates": [
+                        106.640342475,
+                        -6.325450125
+                    ],
+                    "type": "Point"
+                },
+                "style": {
+                    "fill": "#00ffe1",
+                    "stroke": "#24c2b5",
+                    "fill-opacity": 1,
+                    "stroke-opacity": 1,
+                    "marker-symbol": "elevator",
+                    "marker-size": "small",
+                    "marker-color": "#0080ff"
+                },
+                "level": "88736209-7778-11f1-9f7e-255798ecef5a",
+                "building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
+                "@id": "1fc9bf3a-9db8-408f-b82b-d4bdabab24e0"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            106.6403763,
+                            -6.3254166
+                        ],
+                        [
+                            106.6402944,
+                            -6.325455
+                        ],
+                        [
+                            106.6403086,
+                            -6.3254843
+                        ],
+                        [
+                            106.6403906,
+                            -6.3254446
+                        ],
+                        [
+                            106.6403763,
+                            -6.3254166
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "feature_type": "unit",
+            "properties": {
+                "category": "stairs",
+                "access": "public",
+                "name": {
+                    "id": "Tangga",
+                    "en": "Stairs",
+                    "alts": []
+                },
+                "direction": null,
+                "display_point": {
+                    "coordinates": [
+                        106.640342475,
+                        -6.325450125
+                    ],
+                    "type": "Point"
+                },
+                "style": {
+                    "fill": "#00ffe1",
+                    "stroke": "#24c2b5",
+                    "fill-opacity": 1,
+                    "stroke-opacity": 1,
+                    "marker-symbol": "elevator",
+                    "marker-size": "small",
+                    "marker-color": "#0080ff"
+                },
+                "level": "88736200-7778-11f1-9f7e-255798ecef5a",
+                "building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
+                "@id": "cd9675b0-e0b6-40c5-8c66-a32d292adc25"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            106.6403763,
+                            -6.3254166
+                        ],
+                        [
+                            106.6402944,
+                            -6.325455
+                        ],
+                        [
+                            106.6403086,
+                            -6.3254843
+                        ],
+                        [
+                            106.6403906,
+                            -6.3254446
+                        ],
+                        [
+                            106.6403763,
+                            -6.3254166
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "feature_type": "unit",
+            "properties": {
+                "category": "escalator",
+                "access": "public",
+                "name": {
+                    "id": "Eskalator",
+                    "en": "Escalator",
+                    "alts": []
+                },
+                "direction": null,
+                "display_point": {
+                    "coordinates": [
+                        106.640332075,
+                        -6.325428924999999
+                    ],
+                    "type": "Point"
+                },
+                "style": {
+                    "fill": "#00ffe1",
+                    "stroke": "#24c2b5",
+                    "fill-opacity": 1,
+                    "stroke-opacity": 1,
+                    "marker-symbol": "elevator",
+                    "marker-size": "small",
+                    "marker-color": "#0080ff"
+                },
+                "level": "88736209-7778-11f1-9f7e-255798ecef5a",
+                "building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
+                "@id": "a2e56556-da71-4388-ad01-1d9b9f91efeb"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            106.6403763,
+                            -6.3254169
+                        ],
+                        [
+                            106.6403695,
+                            -6.3254027
+                        ],
+                        [
+                            106.640288,
+                            -6.3254411
+                        ],
+                        [
+                            106.6402945,
+                            -6.325455
+                        ],
+                        [
+                            106.6403763,
+                            -6.3254169
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "feature_type": "unit",
+            "properties": {
+                "category": "escalator",
+                "access": "public",
+                "name": {
+                    "id": "Eskalator",
+                    "en": "Escalator",
+                    "alts": []
+                },
+                "direction": null,
+                "display_point": {
+                    "coordinates": [
+                        106.640332075,
+                        -6.325428924999999
+                    ],
+                    "type": "Point"
+                },
+                "style": {
+                    "fill": "#00ffe1",
+                    "stroke": "#24c2b5",
+                    "fill-opacity": 1,
+                    "stroke-opacity": 1,
+                    "marker-symbol": "elevator",
+                    "marker-size": "small",
+                    "marker-color": "#0080ff"
+                },
+                "level": "88736200-7778-11f1-9f7e-255798ecef5a",
+                "building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
+                "@id": "9a689807-00e2-40a8-bfff-d9b684d40c78"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            106.6403763,
+                            -6.3254169
+                        ],
+                        [
+                            106.6403695,
+                            -6.3254027
+                        ],
+                        [
+                            106.640288,
+                            -6.3254411
+                        ],
+                        [
+                            106.6402945,
+                            -6.325455
+                        ],
+                        [
+                            106.6403763,
+                            -6.3254169
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "feature_type": "unit",
+            "properties": {
+                "category": "escalator",
+                "access": "public",
+                "name": {
+                    "id": "Eskalator",
+                    "en": "Escalator",
+                    "alts": []
+                },
+                "direction": null,
+                "display_point": {
+                    "coordinates": [
+                        106.6403526,
+                        -6.325470475
+                    ],
+                    "type": "Point"
+                },
+                "style": {
+                    "fill": "#00ffe1",
+                    "stroke": "#24c2b5",
+                    "fill-opacity": 1,
+                    "stroke-opacity": 1,
+                    "marker-symbol": "elevator",
+                    "marker-size": "small",
+                    "marker-color": "#0080ff"
+                },
+                "level": "88736209-7778-11f1-9f7e-255798ecef5a",
+                "building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
+                "@id": "929a5aae-2045-4398-824c-223c7644fa09"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            106.6403903,
+                            -6.3254446
+                        ],
+                        [
+                            106.6403088,
+                            -6.3254843
+                        ],
+                        [
+                            106.6403143,
+                            -6.325496
+                        ],
+                        [
+                            106.640397,
+                            -6.325457
+                        ],
+                        [
+                            106.6403903,
+                            -6.3254446
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "feature_type": "unit",
+            "properties": {
+                "category": "escalator",
+                "access": "public",
+                "name": {
+                    "id": "Eskalator",
+                    "en": "Escalator",
+                    "alts": []
+                },
+                "direction": null,
+                "display_point": {
+                    "coordinates": [
+                        106.6403526,
+                        -6.325470475
+                    ],
+                    "type": "Point"
+                },
+                "style": {
+                    "fill": "#00ffe1",
+                    "stroke": "#24c2b5",
+                    "fill-opacity": 1,
+                    "stroke-opacity": 1,
+                    "marker-symbol": "elevator",
+                    "marker-size": "small",
+                    "marker-color": "#0080ff"
+                },
+                "level": "88736200-7778-11f1-9f7e-255798ecef5a",
+                "building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
+                "@id": "bd940067-04e2-4f03-8e3a-b4e2ca128747"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            106.6403903,
+                            -6.3254446
+                        ],
+                        [
+                            106.6403088,
+                            -6.3254843
+                        ],
+                        [
+                            106.6403143,
+                            -6.325496
+                        ],
+                        [
+                            106.640397,
+                            -6.325457
+                        ],
+                        [
+                            106.6403903,
+                            -6.3254446
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "feature_type": "unit",
+            "properties": {
+                "category": "lift",
+                "access": "public",
+                "name": {
+                    "id": "Lift",
+                    "en": "Lift",
+                    "alts": []
+                },
+                "direction": null,
+                "display_point": {
+                    "coordinates": [
+                        106.640334,
+                        -6.3255
+                    ],
+                    "type": "Point"
+                },
+                "style": {
+                    "fill": "#00ffe1",
+                    "stroke": "#24c2b5",
+                    "fill-opacity": 1,
+                    "stroke-opacity": 1,
+                    "marker-symbol": "elevator",
+                    "marker-size": "small",
+                    "marker-color": "#0080ff"
+                },
+                "level": "88736209-7778-11f1-9f7e-255798ecef5a",
+                "building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
+                "@id": "e03c7ea0-433b-464a-8c98-497db45dcf1b"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            106.6403385,
+                            -6.3254848
+                        ],
+                        [
+                            106.6403202,
+                            -6.3254934
+                        ],
+                        [
+                            106.64033,
+                            -6.325513
+                        ],
+                        [
+                            106.6403479,
+                            -6.3255042
+                        ],
+                        [
+                            106.6403385,
+                            -6.3254848
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "feature_type": "unit",
+            "properties": {
+                "category": "lift",
+                "access": "public",
+                "name": {
+                    "id": "Lift",
+                    "en": "Lift",
+                    "alts": []
+                },
+                "direction": null,
+                "display_point": {
+                    "coordinates": [
+                        106.640334,
+                        -6.3255
+                    ],
+                    "type": "Point"
+                },
+                "style": {
+                    "fill": "#00ffe1",
+                    "stroke": "#24c2b5",
+                    "fill-opacity": 1,
+                    "stroke-opacity": 1,
+                    "marker-symbol": "elevator",
+                    "marker-size": "small",
+                    "marker-color": "#0080ff"
+                },
+                "level": "88736200-7778-11f1-9f7e-255798ecef5a",
+                "building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
+                "@id": "87dcaa8c-1404-40c4-89cc-bdf37cd90d46"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            106.6403385,
+                            -6.3254848
+                        ],
+                        [
+                            106.6403202,
+                            -6.3254934
+                        ],
+                        [
+                            106.64033,
+                            -6.325513
+                        ],
+                        [
+                            106.6403479,
+                            -6.3255042
+                        ],
+                        [
+                            106.6403385,
+                            -6.3254848
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "feature_type": "unit",
+            "properties": {
+                "category": "lift",
+                "access": "public",
+                "name": {
+                    "id": "Lift",
+                    "en": "Lift",
+                    "alts": []
+                },
+                "direction": null,
+                "display_point": {
+                    "coordinates": [
+                        106.643574,
+                        -6.321616
+                    ],
+                    "type": "Point"
+                },
+                "style": {
+                    "fill": "#00ffe1",
+                    "stroke": "#24c2b5",
+                    "fill-opacity": 1,
+                    "stroke-opacity": 1,
+                    "marker-symbol": "elevator",
+                    "marker-size": "small",
+                    "marker-color": "#0080ff"
+                },
+                "level": "88736200-7778-11f1-9f7e-255798ecef5a",
+                "building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
+                "@id": "8023d76d-db4e-4635-9718-7d50003986da"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            106.643588,
+                            -6.321605
+                        ],
+                        [
+                            106.643565,
+                            -6.321599
+                        ],
+                        [
+                            106.643559,
+                            -6.321627
+                        ],
+                        [
+                            106.643582,
+                            -6.321633
+                        ],
+                        [
+                            106.643588,
+                            -6.321605
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "feature_type": "unit",
+            "properties": {
+                "category": "lift",
+                "access": "public",
+                "name": {
+                    "id": "Lift",
+                    "en": "Lift",
+                    "alts": []
+                },
+                "direction": null,
+                "display_point": {
+                    "coordinates": [
+                        106.643574,
+                        -6.321616
+                    ],
+                    "type": "Point"
+                },
+                "style": {
+                    "fill": "#00ffe1",
+                    "stroke": "#24c2b5",
+                    "fill-opacity": 1,
+                    "stroke-opacity": 1,
+                    "marker-symbol": "elevator",
+                    "marker-size": "small",
+                    "marker-color": "#0080ff"
+                },
+                "level": "88736209-7778-11f1-9f7e-255798ecef5a",
+                "building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
+                "@id": "845383f7-97ee-411b-ab67-4af8b75593ee"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            106.643588,
+                            -6.321605
+                        ],
+                        [
+                            106.643565,
+                            -6.321599
+                        ],
+                        [
+                            106.643559,
+                            -6.321627
+                        ],
+                        [
+                            106.643582,
+                            -6.321633
+                        ],
+                        [
+                            106.643588,
+                            -6.321605
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "feature_type": "unit",
+            "properties": {
+                "category": "stairs",
+                "access": "public",
+                "name": {
+                    "id": "Tangga",
+                    "en": "Stairs",
+                    "alts": []
+                },
+                "direction": null,
+                "display_point": {
+                    "coordinates": [
+                        106.64359400000001,
+                        -6.32152
+                    ],
+                    "type": "Point"
+                },
+                "style": {
+                    "fill": "#00ffe1",
+                    "stroke": "#24c2b5",
+                    "fill-opacity": 1,
+                    "stroke-opacity": 1,
+                    "marker-symbol": "elevator",
+                    "marker-size": "small",
+                    "marker-color": "#0080ff"
+                },
+                "level": "88736209-7778-11f1-9f7e-255798ecef5a",
+                "building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
+                "@id": "63d57dc0-7818-11f1-8699-4f6680c2446b"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            106.643592,
+                            -6.321472
+                        ],
+                        [
+                            106.643575,
+                            -6.321563
+                        ],
+                        [
+                            106.643595,
+                            -6.321568
+                        ],
+                        [
+                            106.643614,
+                            -6.321477
+                        ],
+                        [
+                            106.643592,
+                            -6.321472
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "feature_type": "unit",
+            "properties": {
+                "category": "stairs",
+                "access": "public",
+                "name": {
+                    "id": "Tangga",
+                    "en": "Stairs",
+                    "alts": []
+                },
+                "direction": null,
+                "display_point": {
+                    "coordinates": [
+                        106.64359400000001,
+                        -6.32152
+                    ],
+                    "type": "Point"
+                },
+                "style": {
+                    "fill": "#00ffe1",
+                    "stroke": "#24c2b5",
+                    "fill-opacity": 1,
+                    "stroke-opacity": 1,
+                    "marker-symbol": "elevator",
+                    "marker-size": "small",
+                    "marker-color": "#0080ff"
+                },
+                "level": "88736200-7778-11f1-9f7e-255798ecef5a",
+                "building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
+                "@id": "eaa955b6-a62c-47d6-95a0-c8ada16a74ad"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            106.643592,
+                            -6.321472
+                        ],
+                        [
+                            106.643575,
+                            -6.321563
+                        ],
+                        [
+                            106.643595,
+                            -6.321568
+                        ],
+                        [
+                            106.643614,
+                            -6.321477
+                        ],
+                        [
+                            106.643592,
+                            -6.321472
+                        ]
+                    ]
+                ]
+            }
+        }
+    ]
 }
