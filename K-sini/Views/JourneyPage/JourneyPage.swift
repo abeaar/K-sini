@@ -56,9 +56,9 @@ struct JourneyPage: View {
                 hapticVM.headingService.setTargetCoordinate(coordinate)
             }
         }
-		.onChange(of: journeyVM.currentStepIndex) { _, _ in
-			updateTargetCheckpoint()
-		}
+//		.onChange(of: journeyVM.currentStepIndex) { _, _ in
+//			updateTargetCheckpoint()
+//		}
 		.onDisappear{
 			hapticVM.stop()
 		}

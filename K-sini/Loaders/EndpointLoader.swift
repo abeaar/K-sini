@@ -120,13 +120,7 @@ struct EndpointLoader {
 
                         levelID: levelID,
 
-<<<<<<< HEAD
-						buildingID: buildingID,
-
-						coordinate: coordinate,
-=======
                         buildingID: buildingID,
->>>>>>> devlocal
 
                         coordinate: coordinate,
 
