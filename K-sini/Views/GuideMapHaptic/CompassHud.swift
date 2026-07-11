@@ -1,35 +1,30 @@
 //
-//  CompassHUD.swift
-//  K-sini
-//
-//  Created by Tiko Aqsa Alif Nugroho on 08/07/26.
-//
 
 import SwiftUI
 
 struct CompassHUD: View {
-	let heading: Double
-	let targetBearing: Double?
-	var body: some View {
-		ZStack {
-//			CompassTicks()
-			NorthMarker()
-			Circle()
-				.stroke(.white.opacity(0.15), lineWidth: 2)
-			if let targetBearing {
-				TargetMarker(angle: targetBearing - heading)
-			}
-			PlayerArrow()
-		}
-	}
+    let heading: Double
+    let targetBearing: Double?
+    var body: some View {
+        ZStack {
+//            CompassTicks()
+            NorthMarker()
+            Circle()
+                .stroke(.white.opacity(0.15), lineWidth: 2)
+            if let targetBearing {
+                TargetMarker(angle: targetBearing - heading)
+            }
+            PlayerArrow()
+        }
+    }
 }
 
 private struct PlayerArrow: View {
-	var body: some View {
-		Image(systemName: "location.north.fill")
-			.font(.title2)
-			.foregroundStyle(.blue)
-	}
+    var body: some View {
+        Image(systemName: "location.north.fill")
+            .font(.title2)
+            .foregroundStyle(.blue)
+    }
 }
 
 private struct NorthMarker: View {

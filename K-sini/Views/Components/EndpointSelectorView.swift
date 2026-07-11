@@ -9,7 +9,8 @@ import SwiftUI
 
 struct EndpointSelectorView: View {
 
-	@Bindable var viewModel: MapViewModel
+	@Bindable
+	var viewModel: MapViewModel
 	var body: some View {
 		VStack(
 			spacing: 8
@@ -38,7 +39,7 @@ struct EndpointSelectorView: View {
 				Text("Pilih Tujuan")
 				.tag("")
 				ForEach(
-					viewModel.endpoints.sorted {
+					viewModel.destination.sorted {
 						$0.name < $1.name
 					}
 				) {

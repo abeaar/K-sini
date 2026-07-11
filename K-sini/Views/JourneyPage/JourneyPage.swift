@@ -2,8 +2,8 @@ import MapKit
 import SwiftUI
 
 struct JourneyPage: View {
-	/// Called when the user has tapped through all directions — signals return to root.
-	let onFinished: () -> Void
+    /// Called when the user has tapped through all directions — signals return to root.
+    let onFinished: () -> Void
 
     @Environment(NavigationState.self) var points: NavigationState
     @State private var journeyVM = JourneyViewModel()
@@ -56,12 +56,6 @@ struct JourneyPage: View {
                 hapticVM.headingService.setTargetCoordinate(coordinate)
             }
         }
-//		.onChange(of: journeyVM.currentStepIndex) { _, _ in
-//			updateTargetCheckpoint()
-//		}
-		.onDisappear{
-			hapticVM.stop()
-		}
     }
     
 

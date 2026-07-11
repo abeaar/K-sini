@@ -30,7 +30,7 @@ struct ConfirmPointsView: View {
 
         }
         .task {
-            mapVM.loadData(near: points.start?.coordinate)
+            mapVM.loadData()
             seedRoute()
         }
         .onChange(of: points.start) { _, _ in

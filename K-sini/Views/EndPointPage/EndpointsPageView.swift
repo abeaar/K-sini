@@ -11,6 +11,8 @@ struct EndpointsPageView: View {
     @State private var showSheet = true   // starts true, never set to false
     @State private var searchText = ""
     @State private var currentDetent: PresentationDetent = .height(600)
+    @State private var endpoints: [Endpoint] = []
+    @State private var destinations: [Destination] = []
     
     @Environment(NavigationState.self) var points: NavigationState
     
@@ -19,14 +21,6 @@ struct EndpointsPageView: View {
     
     let onSelect: (Endpoint) -> Void
 
-    var endpoints: [Endpoint] {
-        points.endpoints
-    }
-    
-    var destinations: [Destination] {
-        points.destinations
-    }
-    
     //harusnya viewmodel i think
     var filteredEndpoints: [Endpoint] {
         guard !searchText.isEmpty else { return endpoints }
@@ -129,6 +123,10 @@ struct EndpointsPageView: View {
                 .interactiveDismissDisabled(true)
                 .presentationBackground(Color(.systemGroupedBackground))
                 .presentationBackgroundInteraction(.enabled)
+        }
+        .task {
+            endpoints = EndpointLoader().load()
+            destinations = DestinationLoader().load()
         }
         .onAppear {
             showSheet = true

@@ -1,6 +1,5 @@
 import MapKit
 import SwiftUI
-import MapKit
 
 struct JourneyHeaderView: View {
     let direction: PathDirection?
