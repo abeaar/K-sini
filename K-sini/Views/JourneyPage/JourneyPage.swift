@@ -6,26 +6,29 @@ struct JourneyPage: View {
     let onFinished: () -> Void
 
     @Environment(NavigationState.self) var points: NavigationState
-    @State private var vm = JourneyViewModel()
+    @State private var journeyVM = JourneyViewModel()
     @State private var showFullMap = false
+    @Bindable private var mapVM = MapViewModel()
 
     var body: some View {
         VStack(spacing: 0) {
             JourneyHeaderView(
-                direction: vm.currentDirection,
-                stepIndex: vm.currentStepIndex,
-                totalSteps: vm.totalSteps,
-                route: vm.route,
-                currentPathwayIndex: vm.currentPathwayIndex ?? 0,
-                levelPolygons: currentLevelPolygons,
-                onMiniMapTap: { showFullMap = true }
+                direction: journeyVM.currentDirection,
+                stepIndex: journeyVM.currentStepIndex,
+                totalSteps: journeyVM.totalSteps,
+                
+//                route: journeyVM.route,
+//                currentPathwayIndex: journeyVM.currentPathwayIndex ?? 0,
+//                levelPolygons: currentLevelPolygons,
+                onMiniMapTap: { showFullMap = true },
+                mapVM: mapVM
             )
             Spacer()
             JourneyTabBarView(onArrived: handleArrived)
                 .padding(.horizontal)
         }
         .fullScreenCover(isPresented: $showFullMap) {
-            JourneyFullMapView()
+            MapPreview(viewModel: mapVM)
                 .environment(points)
         }
         .background {
@@ -34,28 +37,28 @@ struct JourneyPage: View {
         }
         .navigationBarBackButtonHidden(true) // back handled by onFinished
         .task {
-            vm.start = points.start
-            vm.destination = points.destination
-            vm.pathways = points.pathways
+            journeyVM.start = points.start
+            journeyVM.destination = points.destination
+            journeyVM.pathways = points.pathways
         }
     }
 
     private var backgroundImageName: String {
-        let i = vm.currentStepIndex
+        let i = journeyVM.currentStepIndex
         guard routeToPlatform1.steps.indices.contains(i) else { return "Cari Eskalator" }
         return routeToPlatform1.steps[i].imageName
     }
 
     private var currentLevelPolygons: [MKPolygon] {
-        guard let levelID = vm.currentCheckpoint?.levelID else { return [] }
+        guard let levelID = journeyVM.currentCheckpoint?.levelID else { return [] }
         return points.levels.first(where: { $0.id == levelID })?.polygons ?? []
     }
 
     private func handleArrived() {
-        if vm.isFinished {
+        if journeyVM.isFinished {
             onFinished()
         } else {
-            vm.advance()
+            journeyVM.advance()
         }
     }
 }
