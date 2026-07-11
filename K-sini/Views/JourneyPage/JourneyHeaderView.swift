@@ -6,14 +6,13 @@ struct JourneyHeaderView: View {
     let direction: PathDirection?
     let stepIndex: Int
     let totalSteps: Int
-    var onMiniMapTap: (() -> Void)?
-    
+
     @Bindable var mapVM: MapViewModel
     //    @Bindable var hapticVM: DirectionalHapticViewModel
-    
-    
+
+
     var body: some View {
-        
+
         ZStack(alignment: .top) {
             HStack {
                 VStack(alignment: .leading, spacing: 4) {
@@ -21,7 +20,7 @@ struct JourneyHeaderView: View {
                         .font(.title)
                         .bold()
                         .foregroundStyle(.primary)
-                    
+
                     //                    Text(progressText)
                     //                        .font(.title2)
                     //                        .foregroundStyle(.primary)
@@ -36,11 +35,8 @@ struct JourneyHeaderView: View {
                 VStack(spacing: 8) {
                     MiniMapView(
                         mapVM: mapVM,
-                        //                        hapticVM: hapticVM
+//                                                hapticVM: hapticVM
                     )
-                    .onTapGesture {
-                        onMiniMapTap?()
-                    }
                     //
                     //                    Button {
                     //                        hapticVM.isVibrationEnabled.toggle()

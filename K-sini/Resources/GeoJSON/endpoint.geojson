@@ -192,40 +192,5 @@
                 ]
             }
         },
-        {
-            "type": "Feature",
-            "feature_type": "endpoint",
-            "properties": {
-                "name": {
-                    "en": "Main Lobby",
-                    "id": "Lobi Utama",
-                    "key": "A",
-                    "alts": [
-                        "Lobi utama",
-                        "Main Lobby",
-                        "Lobby"
-                    ]
-                },
-                "level": "384f4da3-390b-4a54-ba1b-2cf8e971808d",
-                "building_id": "d5daf030-7a25-11f1-842d-e1ddea629893",
-                "category": null,
-                "@id": "43d9ea38-b3cc-43af-b581-20a57b02e73e",
-                "checkpoints": [],
-                "display_point": {
-                    "coordinates": [
-                        106.6521897,
-                        -6.3024237
-                    ],
-                    "type": "Point"
-                }
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    106.6521897,
-                    -6.3024237
-                ]
-            }
-        }
     ]
 }

@@ -7,7 +7,6 @@ struct JourneyPage: View {
 
     @Environment(NavigationState.self) var points: NavigationState
     @State private var journeyVM = JourneyViewModel()
-    @State private var showFullMap = false
     @Bindable private var mapVM = MapViewModel()
 
     var body: some View {
@@ -16,20 +15,15 @@ struct JourneyPage: View {
                 direction: journeyVM.currentDirection,
                 stepIndex: journeyVM.currentStepIndex,
                 totalSteps: journeyVM.totalSteps,
-                
+
 //                route: journeyVM.route,
 //                currentPathwayIndex: journeyVM.currentPathwayIndex ?? 0,
 //                levelPolygons: currentLevelPolygons,
-                onMiniMapTap: { showFullMap = true },
                 mapVM: mapVM
             )
             Spacer()
             JourneyTabBarView(onArrived: handleArrived)
                 .padding(.horizontal)
-        }
-        .fullScreenCover(isPresented: $showFullMap) {
-            MapPreview(viewModel: mapVM)
-                .environment(points)
         }
         .background {
             JourneyBackgroundView(imageName: backgroundImageName)

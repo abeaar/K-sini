@@ -11,9 +11,9 @@ import MapKit
 struct MiniMapView: View {
 
     @Bindable var mapVM: MapViewModel
-//    @Bindable var hapticVM: DirectionalHapticViewModel
     @State private var showFullMap = false
-    
+//    @Bindable var hapticVM: DirectionalHapticViewModel
+
     var body: some View {
         ZStack {
             IndoorMapView(
@@ -21,13 +21,13 @@ struct MiniMapView: View {
                 allowsInteraction: false
             )
             .clipShape(Circle())
-//
+
 //            CompassHUD(
 //                heading: hapticVM.heading,
 //                targetBearing: hapticVM.targetBearing
 //            )
 //            .padding(.bottom, 12)
-
+//
 //            SuccessIndicatorView(isCompleted: $hapticVM.isAligned)
         }
         .frame(width: 110, height: 110)
@@ -40,8 +40,18 @@ struct MiniMapView: View {
         .onTapGesture {
             showFullMap = true
         }
-        .fullScreenCover(isPresented: $showFullMap){
-            MapPreview(viewModel: mapVM)
+        .fullScreenCover(isPresented: $showFullMap) {
+            JourneyFullMapView(viewModel: mapVM)
+                .overlay(alignment: .topLeading) {
+                    Button { showFullMap = false } label: {
+                        Image(systemName: "chevron.left")
+                            .font(.title3.bold())
+                            .padding(10)
+                            .background(.ultraThinMaterial, in: Circle())
+                    }
+                    .padding(.leading, 16)
+                    .padding(.top, 16)
+                }
         }
     }
 }
