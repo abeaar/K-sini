@@ -16,9 +16,7 @@ struct JourneyPage: View {
                 direction: journeyVM.currentDirection,
                 stepIndex: journeyVM.currentStepIndex,
                 totalSteps: journeyVM.totalSteps,
-//                route: journeyVM.route,
-//                currentPathwayIndex: journeyVM.currentPathwayIndex ?? 0,
-//                levelPolygons: currentLevelPolygons,
+
                 mapVM: mapVM,
                 hapticVM: hapticVM
             )
@@ -39,7 +37,10 @@ struct JourneyPage: View {
             mapVM.selectedStartID = points.start?.id ?? ""
             mapVM.selectedDestinationID = points.destination?.id ?? ""
             mapVM.navigate()
+            
             mapVM.focus(on: journeyVM.currentCheckpoint?.coordinate)
+            hapticVM.start()
+//          hapticVM.headingService.setTargetCoordinate(coordinate)
         }
         .onChange(of: points.start) { _, _ in
             mapVM.selectedStartID = points.start?.id ?? ""
@@ -51,8 +52,12 @@ struct JourneyPage: View {
         }
         .onChange(of: journeyVM.currentStepIndex) { _, _ in
             mapVM.focus(on: journeyVM.currentCheckpoint?.coordinate)
+            if let coordinate = journeyVM.currentCheckpoint?.coordinate {
+                hapticVM.headingService.setTargetCoordinate(coordinate)
+            }
         }
     }
+    
 
     private var backgroundImageName: String {
         let i = journeyVM.currentStepIndex
@@ -72,9 +77,4 @@ struct JourneyPage: View {
             journeyVM.advance()
         }
     }
-}
-
-#Preview {
-    JourneyPage(onFinished: {})
-        .environment(NavigationState())
 }

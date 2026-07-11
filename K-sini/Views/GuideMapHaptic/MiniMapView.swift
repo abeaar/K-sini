@@ -12,7 +12,7 @@ struct MiniMapView: View {
 
     @Bindable var mapVM: MapViewModel
     @State private var showFullMap = false
-//    @Bindable var hapticVM: DirectionalHapticViewModel
+    @Bindable var hapticVM: DirectionalHapticViewModel
 
     var body: some View {
         ZStack {
@@ -21,14 +21,13 @@ struct MiniMapView: View {
                 allowsInteraction: false
             )
             .clipShape(Circle())
+            CompassHUD(
+                heading: hapticVM.heading,
+                targetBearing: hapticVM.targetBearing
+            )
+            .padding(.bottom, 12)
 
-//            CompassHUD(
-//                heading: hapticVM.heading,
-//                targetBearing: hapticVM.targetBearing
-//            )
-//            .padding(.bottom, 12)
-//
-//            SuccessIndicatorView(isCompleted: $hapticVM.isAligned)
+            SuccessIndicatorView(isCompleted: $hapticVM.isAligned)
         }
         .frame(width: 110, height: 110)
         .background(.ultraThinMaterial)
@@ -56,11 +55,11 @@ struct MiniMapView: View {
     }
 }
 
-//private struct IntensityIndicator: View {
-//    let intensity: Float
-//    var body: some View {
-//        Capsule()
-//            .fill(LinearGradient(colors: [.green, .yellow, .orange, .red], startPoint: .leading, endPoint: .trailing))
-//            .frame(width: CGFloat(intensity)*80, height: 80)
-//    }
-//}
+private struct IntensityIndicator: View {
+    let intensity: Float
+    var body: some View {
+        Capsule()
+            .fill(LinearGradient(colors: [.green, .yellow, .orange, .red], startPoint: .leading, endPoint: .trailing))
+            .frame(width: CGFloat(intensity)*80, height: 80)
+    }
+}
