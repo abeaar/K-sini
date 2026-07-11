@@ -40,6 +40,22 @@ struct JourneyPage: View {
             journeyVM.start = points.start
             journeyVM.destination = points.destination
             journeyVM.pathways = points.pathways
+            mapVM.loadData()
+            mapVM.selectedStartID = points.start?.id ?? ""
+            mapVM.selectedDestinationID = points.destination?.id ?? ""
+            mapVM.navigate()
+            mapVM.focus(on: journeyVM.currentCheckpoint?.coordinate)
+        }
+        .onChange(of: points.start) { _, _ in
+            mapVM.selectedStartID = points.start?.id ?? ""
+            mapVM.navigate()
+        }
+        .onChange(of: points.destination) { _, _ in
+            mapVM.selectedDestinationID = points.destination?.id ?? ""
+            mapVM.navigate()
+        }
+        .onChange(of: journeyVM.currentStepIndex) { _, _ in
+            mapVM.focus(on: journeyVM.currentCheckpoint?.coordinate)
         }
     }
 
