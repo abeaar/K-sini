@@ -2,9 +2,7 @@ import MapKit
 import SwiftUI
 
 struct JourneyHeaderView: View {
-    let direction: PathDirection?
-    let stepIndex: Int
-    let totalSteps: Int
+    @Bindable var journeyVM: JourneyViewModel
     
     @Bindable var mapVM: MapViewModel
     @Bindable var hapticVM: DirectionalHapticViewModel
@@ -15,7 +13,7 @@ struct JourneyHeaderView: View {
         ZStack(alignment: .top) {
             HStack {
                 VStack(alignment: .leading, spacing: 4) {
-                    Text(direction?.instructionID ?? direction?.instructionEN ?? "—")
+                    Text(journeyVM.currentDirection?.instructionID ?? journeyVM.currentDirection?.instructionEN ?? "—")
                         .font(.title)
                         .bold()
                         .foregroundStyle(.primary)
@@ -28,11 +26,12 @@ struct JourneyHeaderView: View {
             .padding(.top)
             .padding(.horizontal, 24)
             .padding(.bottom, 24)
-            .background(Color(.systemBackground))
+            .background(Color(.systemBackground).ignoresSafeArea(.container, edges: .top))
             .overlay(alignment: .bottomTrailing) {
                 VStack(spacing: 8) {
                     MiniMapView(
                         mapVM: mapVM,
+                        journeyVM: journeyVM,
                         hapticVM: hapticVM
                     )
                     
@@ -58,9 +57,9 @@ struct JourneyHeaderView: View {
     }
     
     private var progressText: String {
-        guard totalSteps > 0 else { return "" }
-        let shown = min(stepIndex + 1, totalSteps)
-        return "Langkah \(shown) dari \(totalSteps)"
+        guard journeyVM.totalSteps > 0 else { return "" }
+        let shown = min(journeyVM.currentStepIndex + 1, journeyVM.totalSteps)
+        return "Langkah \(shown) dari \(journeyVM.totalSteps)"
     }
 }
 

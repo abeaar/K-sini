@@ -19,8 +19,8 @@ struct LevelLayer: MapContent {
                 MapPolygon(
                     coordinates: level.polygons[index].coordinates
                 )
-                .foregroundStyle(.blue.opacity(0.08))
-                .stroke(.blue, lineWidth: 2)
+				.foregroundStyle(.green.opacity(0.08))
+                .stroke(.green, lineWidth: 2)
             }
         }
     }

@@ -28,9 +28,16 @@ struct ConfirmPointsSheet: View {
                 .fontWeight(.bold)
                 .padding(.top, 25)
             
+            if let dist = getRouteDistance(), dist > 0 {
+                let mins = Int(ceil(dist / 1.1 / 60))
+				Text("Estimasi ke pintu keluar: \(Int(dist)) m • \(mins) mnt jalan kaki")
+					.font(.subheadline)
+					.foregroundStyle(.blue)
+            }
+            
             //rows
             
-            if currentDetent != .height(100) {
+            if currentDetent != .height(120) {
                 List {
                     //lokasi saat ini
                     Button {
@@ -106,13 +113,22 @@ struct ConfirmPointsSheet: View {
                 .frame(maxWidth: .infinity)
                 .foregroundColor(.white)
                 .padding(15)
-                .background(Color.blue)
+                .background(Color("BlueMain"))
                 .cornerRadius(50)
                 .padding(.horizontal, 15)
             }
             
         }
         .padding(.horizontal, 5)
+    }
+    
+    private func getRouteDistance() -> Double? {
+        if let target = points.selectedDestination {
+            return points.getDistance(to: target)
+        } else if let endpoint = points.destination {
+            return points.getDistance(to: endpoint)
+        }
+        return nil
     }
 }
 

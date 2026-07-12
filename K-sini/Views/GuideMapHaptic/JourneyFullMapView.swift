@@ -4,6 +4,7 @@ import SwiftUI
 struct JourneyFullMapView: View {
 
     @Bindable var viewModel: MapViewModel
+    var journeyVM: JourneyViewModel?
     @State private var coverPosition: MapCameraPosition = .automatic
     @State private var hasInitiallyFitted = false
 
@@ -12,32 +13,38 @@ struct JourneyFullMapView: View {
     }
 
     var body: some View {
-        Map(position: $coverPosition) {
-            BuildingLayer(buildings: viewModel.buildings)
+        ZStack(alignment: .topTrailing) {
+            Map(position: $coverPosition) {
+                BuildingLayer(buildings: viewModel.buildings)
 
-            ForEach(allLevelIDs, id: \.self) { levelID in
                 LevelLayer(
                     levels: viewModel.levels,
-                    selectedLevelID: levelID
+                    selectedLevelID: viewModel.selectedLevelID
+                )
+
+                EndpointLayer(
+                    endpoints: viewModel.endpoints,
+                    selectedLevelID: viewModel.selectedLevelID,
+                    showAllLevels: false
+                )
+
+                GuidanceLayer(
+                    pathways: viewModel.routeSegments,
+                    levelID: viewModel.selectedLevelID,
+                    currentPathwayIndex: journeyVM?.currentPathwayIndex
                 )
             }
-
-            EndpointLayer(
-                endpoints: viewModel.endpoints,
-                selectedLevelID: "",
-                showAllLevels: true
-            )
-
-            GuidanceLayer(segments: viewModel.currentSegments())
-        }
-        .mapStyle(.standard(elevation: .flat))
-        .ignoresSafeArea()
-        .onAppear { fitWideShotIfNeeded() }
-        .onChange(of: viewModel.buildings.count) { _, _ in
-            fitWideShotIfNeeded()
-        }
-        .onChange(of: viewModel.routeSegments.count) { _, _ in
-            fitToRouteIfReady()
+            .mapStyle(.standard(elevation: .flat))
+            .ignoresSafeArea()
+            .onAppear { fitWideShotIfNeeded() }
+            .onChange(of: viewModel.buildings.count) { _, _ in
+                fitWideShotIfNeeded()
+            }
+            .onChange(of: viewModel.routeSegments.count) { _, _ in
+                fitToRouteIfReady()
+            }
+            
+            FloorSelectorView(viewModel: viewModel)
         }
     }
 

@@ -74,8 +74,13 @@ final class NavigationState {
             self.destinations = repository.loadDestinations()
         }
         
-        let nearest = EndpointDetector.nearestEndpoints(current: location, endpoints: endpoints)
-        start = nearest.first?.endpoint
+        // Temporary default for initial stage
+        if let peron1 = endpoints.first(where: { $0.name.contains("Peron 1") }) {
+            start = peron1
+        } else {
+            let nearest = EndpointDetector.nearestEndpoints(current: location, endpoints: endpoints)
+            start = nearest.first?.endpoint
+        }
     }
 
     /// Resolves an external destination to the nearest station endpoint.
@@ -87,4 +92,30 @@ final class NavigationState {
         )
     }
 
+    private var distanceCache: [String: Double] = [:]
+    private let routeService = RouteService()
+
+    func getDistance(to target: Endpoint) -> Double? {
+        guard let start = self.start else { return nil }
+        if start.id == target.id { return 0 }
+        
+        let cacheKey = "\(start.id)-\(target.id)"
+        if let cached = distanceCache[cacheKey] {
+            return cached
+        }
+        let route = routeService.findRoute(from: start, to: target, pathways: pathways)
+        guard !route.isEmpty else {
+            return nil
+        }
+        let distance = routeService.calculateDistance(route: route)
+        distanceCache[cacheKey] = distance
+        return distance
+    }
+
+    func getDistance(to target: Destination) -> Double? {
+        guard let endpoint = DestinationResolver.nearestEndpoint(to: target, from: endpoints) else {
+            return nil
+        }
+        return getDistance(to: endpoint)
+    }
 }

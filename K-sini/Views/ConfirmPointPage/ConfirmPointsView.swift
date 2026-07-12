@@ -23,12 +23,29 @@ struct ConfirmPointsView: View {
     @State private var editTarget: EditingTarget?
     @State private var mapVM = MapViewModel()
     @State private var currentDetent: PresentationDetent = .height(325)
+    
+    @Environment(\.dismiss) var dismiss
+    
     var body: some View {
 
-        ZStack{
+        ZStack(alignment: .topLeading){
             MapPreview(viewModel: mapVM)
-
+            
+            Button {
+                dismiss()
+            } label: {
+                Image(systemName: "chevron.left")
+                    .font(.title3.bold())
+                    .foregroundStyle(.primary)
+                    .frame(width: 42, height: 42)
+                    .clipShape(Circle())
+                    .glassEffect()
+            }
+            .padding(.leading, 16)
+            .padding(.top, 16)
         }
+        .navigationBarBackButtonHidden(true)
+        .toolbar(.hidden, for: .navigationBar)
         .task {
             mapVM.loadData()
             seedRoute()
@@ -67,7 +84,6 @@ struct ConfirmPointsView: View {
             }
             .presentationDetents([.height(325), .height(100)], selection: $currentDetent)
             .interactiveDismissDisabled(true)
-            .presentationBackground(Color(.systemGroupedBackground))
             .presentationBackgroundInteraction(.enabled)
         }
 
@@ -75,6 +91,9 @@ struct ConfirmPointsView: View {
     private func seedRoute() {
         mapVM.selectedStartID = points.start?.id ?? ""
         mapVM.selectedDestinationID = points.destination?.id ?? ""
+        if let startLevel = points.start?.levelID {
+            mapVM.selectedLevelID = startLevel
+        }
         mapVM.navigate()
     }
 }

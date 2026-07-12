@@ -46,7 +46,7 @@ private struct TargetMarker: View {
         VStack {
             Circle()
                 .fill(
-                    .orange
+                    .blue
                 )
                 .frame(
                     width: 12,

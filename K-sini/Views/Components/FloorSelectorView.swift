@@ -14,7 +14,7 @@ struct FloorSelectorView: View {
 		VStack(spacing: 8) {
 			ForEach(
 				viewModel.levels.sorted {
-					$0.number > $1.number
+					$0.number < $1.number
 				}
 			) { level in
 				Button {
@@ -30,14 +30,13 @@ struct FloorSelectorView: View {
 							height: 42
 						)
 						.background(
-							viewModel.selectedLevelID == level.id ? .blue : .white
+							viewModel.selectedLevelID == level.id ? Color("BlueMain") : .white
 						)
 						.foregroundStyle(
 							viewModel.selectedLevelID == level.id ? .white : .black
 						)
-						.clipShape(
-							RoundedRectangle(cornerRadius: 12)
-						)
+						.clipShape(.circle)
+						.glassEffect()
 						.shadow(radius: 2)
 				}
 			}
