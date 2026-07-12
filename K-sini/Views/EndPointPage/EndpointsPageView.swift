@@ -39,7 +39,7 @@ struct EndpointsPageView: View {
     
     var body: some View {
         ZStack {
-            Color.blue.ignoresSafeArea()
+            Color("primaryColor").ignoresSafeArea()
             
             VStack(){
                 // content
@@ -85,7 +85,8 @@ struct EndpointsPageView: View {
                         Spacer()
                     }
                     .padding(10)
-                    .background(RoundedRectangle(cornerRadius: 20).fill(searchBG))
+                    .background(RoundedRectangle(cornerRadius: 20).fill(Color("primaryColor")))
+					.glassEffect()
                     .padding(.horizontal, 15)
                     .padding(.top, 10)
                 }

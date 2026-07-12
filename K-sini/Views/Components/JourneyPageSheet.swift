@@ -38,7 +38,7 @@ struct JourneyPageSheet: View {
                 .frame(maxWidth: 80)
                 .foregroundColor(.white)
                 .padding(15)
-                .background(Color.blue)
+                .background(Color("primaryColor"))
                 .cornerRadius(50)
                 
             }
@@ -76,7 +76,7 @@ struct JourneyPageSheet: View {
                     .frame(maxWidth: .infinity)
                     .foregroundColor(.white)
                     .padding(15)
-                    .background(Color.blue)
+                    .background(Color("primaryColor"))
                     .cornerRadius(50)
                 
                 Button {
