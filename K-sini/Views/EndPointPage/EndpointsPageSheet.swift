@@ -18,6 +18,7 @@ struct EndpointsPageSheet: View {
     
     @Binding var currentDetent: PresentationDetent
     @Binding var searchText : String
+    @Environment(NavigationState.self) var points: NavigationState
     
     var body: some View {
         
@@ -70,7 +71,10 @@ struct EndpointsPageSheet: View {
                     DestinationList(
                         title: "Terdekat dari Lokasimu",
                         destinations: destinations,
-                        onSelect: onSelectDestination
+                        onSelect: onSelectDestination,
+                        distanceFor: { destination in
+                            points.getDistance(to: destination)
+                        }
                     )
                 }
             }

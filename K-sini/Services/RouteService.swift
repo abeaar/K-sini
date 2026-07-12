@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import CoreLocation
 
 final class RouteService {
 
@@ -80,5 +81,23 @@ final class RouteService {
 			}
 		}
 		return []
+	}
+
+	func calculateDistance(route: [Pathway]) -> Double {
+		var distance: Double = 0
+		guard route.count > 1 else { return 0 }
+		for i in 0..<route.count - 1 {
+			let p1 = route[i]
+			let p2 = route[i+1]
+			let loc1 = CLLocation(latitude: p1.coordinate.latitude, longitude: p1.coordinate.longitude)
+			let loc2 = CLLocation(latitude: p2.coordinate.latitude, longitude: p2.coordinate.longitude)
+			distance += loc1.distance(from: loc2)
+		}
+		return distance
+	}
+
+	func calculateTime(distance: Double) -> Double {
+		// Assuming average walking speed of 1.4 m/s
+		return distance / 1.4
 	}
 }

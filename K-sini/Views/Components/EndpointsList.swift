@@ -11,6 +11,7 @@ struct EndpointList: View {
     let title: String
     let endpoints: [Endpoint]
     let onSelect: (Endpoint) -> Void
+    var distanceFor: ((Endpoint) -> Double?)? = nil
 
     var headerFont: Font = .subheadline
     var headerFontWeight: Font.Weight = .regular
@@ -37,6 +38,21 @@ struct EndpointList: View {
                         }
 
                         Spacer()
+
+                        if let dist = distanceFor?(endpoint), dist > 0 {
+                            VStack(alignment: .trailing, spacing: 2) {
+                                Text("\(Int(dist)) m")
+                                    .font(.subheadline)
+                                    .fontWeight(.semibold)
+                                    .foregroundStyle(.blue)
+                                
+                                let mins = Int(ceil(dist / 1.4 / 60))
+                                Text("\(mins) min")
+                                    .font(.caption2)
+                                    .foregroundStyle(.secondary)
+                            }
+                            .padding(.trailing, 4)
+                        }
 
                         Image(systemName: "chevron.right")
                             .foregroundStyle(.tertiary)

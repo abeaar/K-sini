@@ -4,6 +4,22 @@
     "" : {
 
     },
+    "%lld m" : {
+
+    },
+    "%lld m • %lld mnt jalan kaki" : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$lld m • %2$lld mnt jalan kaki"
+          }
+        }
+      }
+    },
+    "%lld min" : {
+
+    },
     "Akhiri Perjalanan" : {
 
     },

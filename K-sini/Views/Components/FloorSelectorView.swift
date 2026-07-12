@@ -14,7 +14,7 @@ struct FloorSelectorView: View {
 		VStack(spacing: 8) {
 			ForEach(
 				viewModel.levels.sorted {
-					$0.number > $1.number
+					$0.number < $1.number
 				}
 			) { level in
 				Button {

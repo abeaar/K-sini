@@ -75,6 +75,9 @@ struct ConfirmPointsView: View {
     private func seedRoute() {
         mapVM.selectedStartID = points.start?.id ?? ""
         mapVM.selectedDestinationID = points.destination?.id ?? ""
+        if let startLevel = points.start?.levelID {
+            mapVM.selectedLevelID = startLevel
+        }
         mapVM.navigate()
     }
 }
