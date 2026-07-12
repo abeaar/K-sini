@@ -40,7 +40,6 @@ struct JourneyFullMapView: View {
             }
             
             FloorSelectorView(viewModel: viewModel)
-                .padding(.top, 16)
         }
     }
 

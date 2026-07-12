@@ -50,11 +50,16 @@ final class RouteService {
 
 			let (route, node) = queue.removeFirst()
 
-			if destinationSet.contains(
-				node.id
-			) {
+			if destinationSet.contains(node.id) {
 				return route
 			}
+            
+            // Or if any of the node's directions point to the destination endpoint
+            for direction in node.directions {
+                if direction.endpoints.contains(destination.id) {
+                    return route
+                }
+            }
 
 			for direction in node.directions {
 

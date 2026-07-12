@@ -41,7 +41,6 @@ struct MapPreview: View {
             }
             
             FloorSelectorView(viewModel: viewModel)
-                .padding(.top, 16)
         }
     }
 

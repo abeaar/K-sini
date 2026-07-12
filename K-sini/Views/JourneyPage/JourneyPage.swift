@@ -71,7 +71,7 @@ struct JourneyPage: View {
     }
 
     private func handleArrived() {
-        if journeyVM.isFinished {
+        if journeyVM.currentStepIndex >= journeyVM.totalSteps - 1 {
             onFinished()
         } else {
             journeyVM.advance()

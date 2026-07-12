@@ -74,8 +74,13 @@ final class NavigationState {
             self.destinations = repository.loadDestinations()
         }
         
-        let nearest = EndpointDetector.nearestEndpoints(current: location, endpoints: endpoints)
-        start = nearest.first?.endpoint
+        // Temporary default for initial stage
+        if let peron1 = endpoints.first(where: { $0.name.contains("Peron 1") }) {
+            start = peron1
+        } else {
+            let nearest = EndpointDetector.nearestEndpoints(current: location, endpoints: endpoints)
+            start = nearest.first?.endpoint
+        }
     }
 
     /// Resolves an external destination to the nearest station endpoint.
@@ -99,6 +104,9 @@ final class NavigationState {
             return cached
         }
         let route = routeService.findRoute(from: start, to: target, pathways: pathways)
+        guard !route.isEmpty else {
+            return nil
+        }
         let distance = routeService.calculateDistance(route: route)
         distanceCache[cacheKey] = distance
         return distance

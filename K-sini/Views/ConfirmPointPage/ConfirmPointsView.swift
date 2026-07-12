@@ -67,7 +67,6 @@ struct ConfirmPointsView: View {
             }
             .presentationDetents([.height(325), .height(100)], selection: $currentDetent)
             .interactiveDismissDisabled(true)
-            .presentationBackground(Color(.systemGroupedBackground))
             .presentationBackgroundInteraction(.enabled)
         }
 

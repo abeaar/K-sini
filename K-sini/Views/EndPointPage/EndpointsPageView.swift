@@ -39,7 +39,7 @@ struct EndpointsPageView: View {
     
     var body: some View {
         ZStack {
-            Color("primaryColor").ignoresSafeArea()
+            Color("PrimaryColor").ignoresSafeArea()
             
             VStack(){
                 // content
@@ -57,14 +57,14 @@ struct EndpointsPageView: View {
                         
                         // bottom content
                         Text("Pilih tujuanmu, kami tunjukkan pintu keluar yang tepat.")
-                            .font(.caption2)
+							.font(.default)
                             .fontWeight(.regular)
                             .foregroundStyle(Color.white)
                     }//.padding
                     
                     
                     //right image
-                    Image("map_with_pin")
+                    Image("header-icon")
                         .resizable()
                         .frame(width: 105, height: 105)
                         .padding(.trailing, 20)
@@ -85,7 +85,7 @@ struct EndpointsPageView: View {
                         Spacer()
                     }
                     .padding(10)
-                    .background(RoundedRectangle(cornerRadius: 20).fill(Color("primaryColor")))
+                    .background(RoundedRectangle(cornerRadius: 20).fill(Color("PrimaryColor")))
 					.glassEffect()
                     .padding(.horizontal, 15)
                     .padding(.top, 10)
@@ -121,7 +121,6 @@ struct EndpointsPageView: View {
             .presentationDetents([.height(600), .large], selection: $currentDetent)
             .presentationDragIndicator(.hidden)
             .interactiveDismissDisabled(true)
-            .presentationBackground(Color(.systemGroupedBackground))
             .presentationBackgroundInteraction(.enabled)
         }
         .onAppear {

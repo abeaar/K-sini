@@ -30,14 +30,13 @@ struct FloorSelectorView: View {
 							height: 42
 						)
 						.background(
-							viewModel.selectedLevelID == level.id ? .blue : .white
+							viewModel.selectedLevelID == level.id ? Color("PrimaryColor") : .white
 						)
 						.foregroundStyle(
 							viewModel.selectedLevelID == level.id ? .white : .black
 						)
-						.clipShape(
-							RoundedRectangle(cornerRadius: 12)
-						)
+						.clipShape(.circle)
+						.glassEffect()
 						.shadow(radius: 2)
 				}
 			}

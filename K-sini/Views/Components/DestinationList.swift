@@ -15,7 +15,9 @@ struct DestinationList: View {
         Section {
             ForEach(destinations) { destination in
                 Button {
-                    onSelect(destination)
+					if let dist = distanceFor?(destination), dist > 0 {
+						onSelect(destination)
+					}
                 } label: {
                     HStack(spacing: 10) {
                         Image(systemName: destination.icon)
@@ -33,23 +35,32 @@ struct DestinationList: View {
 
                         Spacer()
 
-                        if let dist = distanceFor?(destination), dist > 0 {
-                            VStack(alignment: .trailing, spacing: 2) {
-                                Text("\(Int(dist)) m")
-                                    .font(.subheadline)
-                                    .fontWeight(.semibold)
+                        if let dist = distanceFor?(destination) {
+                            if dist > 0 {
+                                VStack(alignment: .trailing, spacing: 2) {
+                                    Text("\(Int(dist)) m")
+                                        .font(.subheadline)
+                                        .fontWeight(.semibold)
+                                        .foregroundStyle(.blue)
+                                    
+                                    let mins = Int(ceil(dist / 1.4 / 60))
+                                    Text("\(mins) min")
+                                        .font(.caption2)
+                                        .foregroundStyle(.secondary)
+                                }
+                                .padding(.trailing, 4)
+								
+								Image(systemName: "chevron.right")
+									.foregroundStyle(.tertiary)
+                            } else {
+                                Text("Anda sudah di titik terdekat ke destinasi ini")
+									.multilineTextAlignment(.trailing)
+                                    .font(.caption)
+                                    .fontWeight(.medium)
                                     .foregroundStyle(.blue)
-                                
-                                let mins = Int(ceil(dist / 1.4 / 60))
-                                Text("\(mins) min")
-                                    .font(.caption2)
-                                    .foregroundStyle(.secondary)
+                                    .padding(.trailing, 4)
                             }
-                            .padding(.trailing, 4)
                         }
-
-                        Image(systemName: "chevron.right")
-                            .foregroundStyle(.tertiary)
                     }
                     .padding(.vertical, 4)
                 }

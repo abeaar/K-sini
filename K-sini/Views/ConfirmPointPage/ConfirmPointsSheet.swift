@@ -113,7 +113,7 @@ struct ConfirmPointsSheet: View {
                 .frame(maxWidth: .infinity)
                 .foregroundColor(.white)
                 .padding(15)
-                .background(Color("primaryColor"))
+                .background(Color("PrimaryColor"))
                 .cornerRadius(50)
                 .padding(.horizontal, 15)
             }

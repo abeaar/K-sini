@@ -9,17 +9,18 @@
           "en": "AEON Mall BSD City",
           "id": "AEON Mall BSD",
           "alts": [
+            "Shopping Mall",
             "AEON",
             "AEON Mall"
           ]
         },
-        "marker-symbol": "cart.fill"
+        "marker-symbol": "cart.circle.fill"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          106.6447372,
-          -6.3183057
+          106.6405074,
+          -6.322541
         ]
       }
     },
@@ -28,15 +29,16 @@
       "properties": {
         "@id": "icon-bsd",
         "name": {
-          "en": "Intermoda BSD City",
+          "en": "ICON BSD",
           "id": "ICON BSD",
           "alts": [
+            "Town City",
             "ICON",
-            "Intermoda",
-            "Terminal Intermoda"
+            "ICON BSD",
+            "BSD"
           ]
         },
-        "marker-symbol": "bus.fill"
+        "marker-symbol": "building.2.crop.circle.fill"
       },
       "geometry": {
         "type": "Point",
