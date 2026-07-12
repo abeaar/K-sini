@@ -39,28 +39,38 @@ struct GuidanceLayer: MapContent {
             let isPassed = currentPathwayIndex != nil && indexInRoute < currentPathwayIndex!
             let isCurrent = currentPathwayIndex != nil && indexInRoute == currentPathwayIndex!
             
+            let isFirst = indexInRoute == 0
+            let isLast = indexInRoute == pathways.count - 1
+            let isPreviewMode = currentPathwayIndex == nil
+            
+            // "Titik Akhir" (isLast) always prominent, "Titik Awal" (isFirst) only in preview
+            let isProminent = isCurrent || isLast || (isPreviewMode && isFirst)
+            
             Annotation("", coordinate: pathway.coordinate) {
                 ZStack {
                     Circle()
                         .fill(isPassed ? Color.gray : (isFinal ? Color.red : Color.blue))
-                        .frame(width: isCurrent ? 36 : 24, height: isCurrent ? 36 : 24)
+                        .frame(width: isProminent ? 36 : 24, height: isProminent ? 36 : 24)
                         .overlay(
-                            Circle().stroke(Color.white, lineWidth: isCurrent ? 3 : 0)
+                            Circle().stroke(Color.white, lineWidth: isProminent ? 3 : 0)
                         )
                     
                     Image(systemName: iconName(for: pathway.category))
-                        .font(.system(size: isCurrent ? 16 : 12, weight: .bold))
+                        .font(.system(size: isProminent ? 16 : 12, weight: .bold))
                         .foregroundColor(.white)
                 }
                 .overlay(alignment: .top) {
-                    if isCurrent {
-                        Text("You are here")
+                    if isProminent {
+                        let labelText = isCurrent ? "You are here" : (isFirst ? "Titik Awal" : "Titik Akhir")
+                        let labelColor = (isFinal || (isPreviewMode && isLast)) ? Color.red : Color.blue
+                        
+                        Text(labelText)
                             .font(.caption)
                             .bold()
                             .fixedSize()
                             .padding(.horizontal, 8)
                             .padding(.vertical, 4)
-                            .background(Color.blue)
+                            .background(labelColor)
                             .foregroundColor(.white)
                             .clipShape(Capsule())
                             .offset(y: -30)
