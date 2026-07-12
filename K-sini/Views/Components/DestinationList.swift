@@ -38,12 +38,17 @@ struct DestinationList: View {
                         if let dist = distanceFor?(destination) {
                             if dist > 0 {
                                 VStack(alignment: .trailing, spacing: 2) {
+									Text("Estimasi ke pintu keluar")
+										.font(.caption)
+										.fontWeight(.light)
+										.foregroundStyle(.primary)
                                     Text("\(Int(dist)) m")
                                         .font(.subheadline)
                                         .fontWeight(.semibold)
                                         .foregroundStyle(.blue)
                                     
-                                    let mins = Int(ceil(dist / 1.4 / 60))
+                                    // Menggunakan rata-rata kecepatan berjalan orang Indonesia (sekitar 1.1 m/s)
+                                    let mins = Int(ceil(dist / 1.1 / 60))
                                     Text("\(mins) min")
                                         .font(.caption2)
                                         .foregroundStyle(.secondary)

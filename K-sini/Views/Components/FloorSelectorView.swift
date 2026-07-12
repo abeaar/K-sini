@@ -30,7 +30,7 @@ struct FloorSelectorView: View {
 							height: 42
 						)
 						.background(
-							viewModel.selectedLevelID == level.id ? Color("PrimaryColor") : .white
+							viewModel.selectedLevelID == level.id ? Color("BlueMain") : .white
 						)
 						.foregroundStyle(
 							viewModel.selectedLevelID == level.id ? .white : .black

@@ -28,7 +28,10 @@ struct MapPreview: View {
                     showAllLevels: false
                 )
 
-                GuidanceLayer(segments: viewModel.currentSegments())
+                GuidanceLayer(
+                    pathways: viewModel.routeSegments,
+                    levelID: viewModel.selectedLevelID
+                )
             }
             .mapStyle(.standard(elevation: .flat))
             .ignoresSafeArea()

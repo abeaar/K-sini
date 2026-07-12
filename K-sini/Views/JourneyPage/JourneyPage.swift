@@ -13,9 +13,7 @@ struct JourneyPage: View {
     var body: some View {
         VStack(spacing: 0) {
             JourneyHeaderView(
-                direction: journeyVM.currentDirection,
-                stepIndex: journeyVM.currentStepIndex,
-                totalSteps: journeyVM.totalSteps,
+                journeyVM: journeyVM,
 
                 mapVM: mapVM,
                 hapticVM: hapticVM
@@ -29,6 +27,7 @@ struct JourneyPage: View {
                 .ignoresSafeArea()
         }
         .navigationBarBackButtonHidden(true) // back handled by onFinished
+        .toolbar(.hidden, for: .navigationBar)
         .task {
             journeyVM.start = points.start
             journeyVM.destination = points.destination

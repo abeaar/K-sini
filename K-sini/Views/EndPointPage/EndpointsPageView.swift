@@ -39,7 +39,7 @@ struct EndpointsPageView: View {
     
     var body: some View {
         ZStack {
-            Color("PrimaryColor").ignoresSafeArea()
+            Color("BlueMain").ignoresSafeArea()
             
             VStack(){
                 // content
@@ -77,16 +77,16 @@ struct EndpointsPageView: View {
                 } label: {
                     HStack(spacing: 8) {
                         Image(systemName: "magnifyingglass")
-                            .foregroundStyle(.white)
+							.foregroundStyle(.gray)
                         
                         Text("Mau ke mana?")
-                            .foregroundStyle(searchFont)
+							.foregroundStyle(.gray)
                             
                         Spacer()
                     }
                     .padding(10)
-                    .background(RoundedRectangle(cornerRadius: 20).fill(Color("PrimaryColor")))
-					.glassEffect()
+					.background(RoundedRectangle(cornerRadius: 20).fill(Color.gray.opacity(0.1)))
+                    .glassEffect()
                     .padding(.horizontal, 15)
                     .padding(.top, 10)
                 }

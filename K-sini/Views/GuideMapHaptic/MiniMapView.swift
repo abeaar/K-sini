@@ -11,6 +11,7 @@ import MapKit
 struct MiniMapView: View {
 
     @Bindable var mapVM: MapViewModel
+    @Bindable var journeyVM: JourneyViewModel
     @State private var showFullMap = false
     @Bindable var hapticVM: DirectionalHapticViewModel
 
@@ -37,16 +38,21 @@ struct MiniMapView: View {
                 .stroke(.white.opacity(0.2), lineWidth: 2)
         )
         .onTapGesture {
+            // Set full map level to current checkpoint's level
+            if let currentLevelID = journeyVM.currentCheckpoint?.levelID {
+                mapVM.selectedLevelID = currentLevelID
+            }
             showFullMap = true
         }
         .fullScreenCover(isPresented: $showFullMap) {
-            JourneyFullMapView(viewModel: mapVM)
+            JourneyFullMapView(viewModel: mapVM, journeyVM: journeyVM)
                 .overlay(alignment: .topLeading) {
                     Button { showFullMap = false } label: {
                         Image(systemName: "chevron.left")
                             .font(.title3.bold())
-                            .padding(10)
-                            .background(.ultraThinMaterial, in: Circle())
+                            .frame(width: 42, height: 42)
+                            .clipShape(Circle())
+                            .glassEffect()
                     }
                     .padding(.leading, 16)
                     .padding(.top, 16)

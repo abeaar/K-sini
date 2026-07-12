@@ -18,16 +18,19 @@ struct IndoorMapView: View {
         Map(position: $mapVM.position) {
             ForEach(GeoJSONLoader.polygons(named: "level"), id: \.self) { polygon in
                 MapPolygon(polygon)
-                    .foregroundStyle(.blue.opacity(0.08))
-                    .stroke(.blue, lineWidth: 2)
+					.foregroundStyle(.blue.opacity(0.08))
+					.stroke(.blue, lineWidth: 2)
             }
             ForEach(GeoJSONLoader.polygons(named: "unit"), id: \.self) { polygon in
                 MapPolygon(polygon)
-                    .foregroundStyle(.blue.opacity(0.08))
+					.foregroundStyle(.blue.opacity(0.08))
                     .stroke(.blue, lineWidth: 2)
             }
             
-//            GuidanceLayer(segments: mapVM.currentSegments())
+//            GuidanceLayer(
+//                pathways: mapVM.routeSegments,
+//                levelID: mapVM.selectedLevelID
+//            )
 //            
 //            if let userLoc = mapVM.userLocation {
 //                Annotation("Lokasi Anda", coordinate: userLoc) {

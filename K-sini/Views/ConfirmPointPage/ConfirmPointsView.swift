@@ -23,12 +23,29 @@ struct ConfirmPointsView: View {
     @State private var editTarget: EditingTarget?
     @State private var mapVM = MapViewModel()
     @State private var currentDetent: PresentationDetent = .height(325)
+    
+    @Environment(\.dismiss) var dismiss
+    
     var body: some View {
 
-        ZStack{
+        ZStack(alignment: .topLeading){
             MapPreview(viewModel: mapVM)
-
+            
+            Button {
+                dismiss()
+            } label: {
+                Image(systemName: "chevron.left")
+                    .font(.title3.bold())
+                    .foregroundStyle(.primary)
+                    .frame(width: 42, height: 42)
+                    .clipShape(Circle())
+                    .glassEffect()
+            }
+            .padding(.leading, 16)
+            .padding(.top, 16)
         }
+        .navigationBarBackButtonHidden(true)
+        .toolbar(.hidden, for: .navigationBar)
         .task {
             mapVM.loadData()
             seedRoute()

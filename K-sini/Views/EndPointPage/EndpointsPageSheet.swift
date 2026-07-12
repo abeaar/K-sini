@@ -18,7 +18,10 @@ struct EndpointsPageSheet: View {
     
     @Binding var currentDetent: PresentationDetent
     @Binding var searchText : String
+	@Environment(\.colorScheme) var colorScheme
     @Environment(NavigationState.self) var points: NavigationState
+    
+    @FocusState private var isSearchFocused: Bool
     
     var body: some View {
         
@@ -30,19 +33,26 @@ struct EndpointsPageSheet: View {
                     // search bar
                     HStack(spacing: 8) {
                         Image(systemName: "magnifyingglass")
-                            .foregroundStyle(.secondary)
+							.foregroundStyle(.primary)
                         
                         TextField(
                             "",
                             text: $searchText,
                             prompt: Text("Mau ke mana?")
-                                .foregroundStyle(.secondary)
+								.foregroundStyle(.white.opacity(0.3))
                         )
-                        .foregroundStyle(.secondary)
+						.foregroundStyle(.primary)
+                        .focused($isSearchFocused)
+                        .onAppear {
+                            isSearchFocused = true
+                        }
                         
                     }
-                    .padding(10)
-                    .background(RoundedRectangle(cornerRadius: 20).fill(Color(.systemGray4)))
+                    .padding()
+					.glassEffect()
+					.background(
+						RoundedRectangle(cornerRadius: 24).fill(Color(.clear))
+					)
                     .padding(.leading, 15)
                     .padding(.top, 10)
                     
@@ -51,12 +61,12 @@ struct EndpointsPageSheet: View {
                         currentDetent = .height(600)
                         searchText = ""
                     }) {
-                        Label("", systemImage: "xmark")
-                            .padding(7)
+						Image(systemName: "xmark")
+							.padding()
                     }
                     .foregroundStyle(.primary)
                     .labelStyle(.iconOnly)
-                    .buttonStyle(.glassProminent)
+					.glassEffect()
                     .tint(Color(.systemGray4))
                     .buttonBorderShape(.circle)
                     .padding(.top, 8)
@@ -76,11 +86,26 @@ struct EndpointsPageSheet: View {
                             points.getDistance(to: destination)
                         }
                     )
+					.listRowBackground(
+						currentDetent == .large ?
+						Color.gray.opacity(0.1) :
+						colorScheme == .dark ?
+						Color.gray.opacity(0.1) :
+						Color.white.opacity(0.3)
+					)
+                } else {
+                    Text("No data found")
+                        .foregroundStyle(.secondary)
+                        .listRowBackground(Color.clear)
+                        .frame(maxWidth: .infinity, alignment: .center)
+                        .padding(.top, 40)
                 }
             }
+            .scrollContentBackground(.hidden)
             .contentMargins(.top, 0)
             
             
-        }.padding(.top, 15)
+        }
+        .padding(.top, 15)
     }
 }

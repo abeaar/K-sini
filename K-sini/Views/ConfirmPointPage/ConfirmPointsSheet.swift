@@ -29,15 +29,15 @@ struct ConfirmPointsSheet: View {
                 .padding(.top, 25)
             
             if let dist = getRouteDistance(), dist > 0 {
-                let mins = Int(ceil(dist / 1.4 / 60))
-                Text("\(Int(dist)) m • \(mins) mnt jalan kaki")
-                    .font(.subheadline)
-                    .foregroundStyle(.blue)
+                let mins = Int(ceil(dist / 1.1 / 60))
+				Text("Estimasi ke pintu keluar: \(Int(dist)) m • \(mins) mnt jalan kaki")
+					.font(.subheadline)
+					.foregroundStyle(.blue)
             }
             
             //rows
             
-            if currentDetent != .height(100) {
+            if currentDetent != .height(120) {
                 List {
                     //lokasi saat ini
                     Button {
@@ -113,7 +113,7 @@ struct ConfirmPointsSheet: View {
                 .frame(maxWidth: .infinity)
                 .foregroundColor(.white)
                 .padding(15)
-                .background(Color("PrimaryColor"))
+                .background(Color("BlueMain"))
                 .cornerRadius(50)
                 .padding(.horizontal, 15)
             }

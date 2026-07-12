@@ -4,6 +4,7 @@ import SwiftUI
 struct JourneyFullMapView: View {
 
     @Bindable var viewModel: MapViewModel
+    var journeyVM: JourneyViewModel?
     @State private var coverPosition: MapCameraPosition = .automatic
     @State private var hasInitiallyFitted = false
 
@@ -27,7 +28,11 @@ struct JourneyFullMapView: View {
                     showAllLevels: false
                 )
 
-                GuidanceLayer(segments: viewModel.currentSegments())
+                GuidanceLayer(
+                    pathways: viewModel.routeSegments,
+                    levelID: viewModel.selectedLevelID,
+                    currentPathwayIndex: journeyVM?.currentPathwayIndex
+                )
             }
             .mapStyle(.standard(elevation: .flat))
             .ignoresSafeArea()
