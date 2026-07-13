@@ -15,9 +15,9 @@ struct DestinationList: View {
         Section {
             ForEach(destinations) { destination in
                 Button {
-					if let dist = distanceFor?(destination), dist > 0 {
+//					if let dist = distanceFor?(destination), dist > 0 {
 						onSelect(destination)
-					}
+//					}
                 } label: {
                     HStack(spacing: 10) {
                         Image(systemName: destination.icon)
@@ -36,7 +36,7 @@ struct DestinationList: View {
                         Spacer()
 
                         if let dist = distanceFor?(destination) {
-                            if dist > 0 {
+//                            if dist > 0 {
                                 VStack(alignment: .trailing, spacing: 2) {
 									Text("Estimasi ke pintu keluar")
 										.font(.caption)
@@ -57,14 +57,15 @@ struct DestinationList: View {
 								
 								Image(systemName: "chevron.right")
 									.foregroundStyle(.tertiary)
-                            } else {
-                                Text("Anda sudah di titik terdekat ke destinasi ini")
-									.multilineTextAlignment(.trailing)
-                                    .font(.caption)
-                                    .fontWeight(.medium)
-                                    .foregroundStyle(.blue)
-                                    .padding(.trailing, 4)
-                            }
+//                            }
+//							else {
+//                                Text("Anda sudah di titik terdekat ke destinasi ini")
+//									.multilineTextAlignment(.trailing)
+//                                    .font(.caption)
+//                                    .fontWeight(.medium)
+//                                    .foregroundStyle(.blue)
+//                                    .padding(.trailing, 4)
+//                            }
                         }
                     }
                     .padding(.vertical, 4)

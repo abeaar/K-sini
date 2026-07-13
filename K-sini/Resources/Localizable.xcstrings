@@ -16,9 +16,6 @@
     "Akhiri Perjalanan" : {
 
     },
-    "Anda sudah di titik terdekat ke destinasi ini" : {
-
-    },
     "Apakah Anda yakin ingin mengakhiri perjalanan ini?" : {
 
     },
@@ -78,6 +75,9 @@
 
     },
     "No data found" : {
+
+    },
+    "No Image Available" : {
 
     },
     "Pilih Titik Awal" : {

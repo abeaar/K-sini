@@ -73,10 +73,9 @@ struct JourneyPage: View {
     }
     
 
-    private var backgroundImageName: String {
-        let i = journeyVM.currentStepIndex
-        guard routeToPlatform1.steps.indices.contains(i) else { return "Cari Eskalator" }
-        return routeToPlatform1.steps[i].imageName
+    private var backgroundImageName: String? {
+        let image = journeyVM.currentDirection?.image ?? ""
+        return image.isEmpty ? nil : image
     }
 
     private var currentLevelPolygons: [MKPolygon] {

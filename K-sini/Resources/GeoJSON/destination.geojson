@@ -9,7 +9,7 @@
           "en": "AEON Mall BSD City",
           "id": "AEON Mall BSD",
           "alts": [
-            "Shopping Mall",
+            "Pusat Perbelanjaan",
             "AEON",
             "AEON Mall"
           ]
@@ -19,8 +19,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          106.6405074,
-          -6.322541
+			106.6435744,
+			-6.3223673
         ]
       }
     },
@@ -32,7 +32,7 @@
           "en": "ICON BSD",
           "id": "ICON BSD",
           "alts": [
-            "Town City",
+            "Kota Mandiri",
             "ICON",
             "ICON BSD",
             "BSD"
