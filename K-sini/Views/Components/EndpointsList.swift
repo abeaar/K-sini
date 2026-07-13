@@ -12,6 +12,8 @@ struct EndpointList: View {
     let endpoints: [Endpoint]
     let onSelect: (Endpoint) -> Void
     var distanceFor: ((Endpoint) -> Double?)? = nil
+    var currentStartID: String? = nil
+    var currentDestinationID: String? = nil
 
     var headerFont: Font = .subheadline
     var headerFontWeight: Font.Weight = .regular
@@ -21,7 +23,9 @@ struct EndpointList: View {
         Section {
             ForEach(endpoints) { endpoint in
                 Button {
-                    onSelect(endpoint)
+					if distanceFor?(endpoint) != nil && endpoint.id != currentStartID && endpoint.id != currentDestinationID {
+						onSelect(endpoint)
+					}
                 } label: {
                     HStack(spacing: 10) {
                         Image(systemName: endpoint.icon)
@@ -39,20 +43,24 @@ struct EndpointList: View {
 
                         Spacer()
 
-                        if let dist = distanceFor?(endpoint), dist > 0 {
-                                VStack(alignment: .trailing, spacing: 2) {
-                                    Text("\(Int(dist)) m")
-                                        .font(.subheadline)
-                                        .fontWeight(.semibold)
-                                        .foregroundStyle(.blue)
-                                    
-                                    let mins = Int(ceil(dist / 1.4 / 60))
-                                    Text("\(mins) min")
-                                        .font(.caption2)
-                                        .foregroundStyle(.secondary)
-                                }
-                                .padding(.trailing, 4)
+                        if endpoint.id == currentStartID {
+                            Text("Lokasi sekarang")
+                                .font(.caption)
+                                .foregroundStyle(.blue)
+                        } else if endpoint.id == currentDestinationID {
+                            Text("Lokasi tujuanmu")
+                                .font(.caption)
+                                .foregroundStyle(.blue)
+                        } else if distanceFor?(endpoint) == nil {
+                            Text("Rute akan segera hadir")
+                                .font(.caption2)
+                                .italic()
+                                .foregroundStyle(.secondary)
                         }
+						if distanceFor?(endpoint) != nil && endpoint.id != currentStartID && endpoint.id != currentDestinationID {
+							Image(systemName: "chevron.right")
+								.foregroundStyle(.tertiary)
+						}
                     }
                     .contentShape(Rectangle())
                     .padding(.vertical, 4)

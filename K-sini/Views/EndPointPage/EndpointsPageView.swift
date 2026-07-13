@@ -7,10 +7,20 @@
 
 import SwiftUI
 
+struct DynamicSheetHeight: CustomPresentationDetent {
+    static func height(in context: Context) -> CGFloat? {
+        return max(context.maxDetentValue - 176, 400)
+    }
+}
+
+extension PresentationDetent {
+    static let dynamic = Self.custom(DynamicSheetHeight.self)
+}
+
 struct EndpointsPageView: View {
     @State private var showSheet = true   // starts true, never set to false
     @State private var searchText = ""
-    @State private var currentDetent: PresentationDetent = .height(600)
+    @State private var currentDetent: PresentationDetent = .dynamic
     
     @Environment(NavigationState.self) var points: NavigationState
     
@@ -57,7 +67,7 @@ struct EndpointsPageView: View {
                         
                         // bottom content
                         Text("Pilih tujuanmu, kami tunjukkan pintu keluar yang tepat.")
-							.font(.default)
+                            .font(.default)
                             .fontWeight(.regular)
                             .foregroundStyle(Color.white)
                     }//.padding
@@ -77,17 +87,17 @@ struct EndpointsPageView: View {
                 } label: {
                     HStack(spacing: 8) {
                         Image(systemName: "magnifyingglass")
-							.foregroundStyle(.gray)
+                            .foregroundStyle(.gray)
                         
                         Text("Mau ke mana?")
-							.foregroundStyle(.gray)
+                            .foregroundStyle(.gray)
                             
                         Spacer()
                     }
                     .padding(10)
-					.background(RoundedRectangle(cornerRadius: 20).fill(Color.gray.opacity(0.1)))
+                    .background(RoundedRectangle(cornerRadius: 20).fill(Color.gray.opacity(0.1)))
                     .glassEffect()
-                    .padding(.horizontal, 15)
+                    .padding(.horizontal, 8)
                     .padding(.top, 10)
                 }
                 
@@ -118,7 +128,7 @@ struct EndpointsPageView: View {
                 searchText: $searchText
             )
             .environment(points)
-            .presentationDetents([.height(600), .large], selection: $currentDetent)
+            .presentationDetents([.dynamic, .large], selection: $currentDetent)
             .presentationDragIndicator(.hidden)
             .interactiveDismissDisabled(true)
             .presentationBackgroundInteraction(.enabled)

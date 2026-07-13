@@ -79,6 +79,18 @@ struct ConfirmPointsSheet: View {
                 }
                 .padding(.horizontal)
                 .padding(.bottom,4)
+                .overlay(alignment: .leading) {
+                    VStack(spacing: 4) {
+                        Circle().frame(width: 4, height: 4)
+                        Circle().frame(width: 4, height: 4)
+                        Circle().frame(width: 4, height: 4)
+                        Image(systemName: "arrowtriangle.down.fill")
+                            .resizable()
+                            .frame(width: 8, height: 8)
+                    }
+                    .foregroundStyle(Color.gray.opacity(0.5))
+                    .padding(.leading, 43)
+                }
 
                 //button
                 Button("Mulai Navigasi"){

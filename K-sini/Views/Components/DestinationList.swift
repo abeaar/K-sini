@@ -6,6 +6,8 @@ struct DestinationList: View {
     let onSelect: (Destination) -> Void
 
     var distanceFor: ((Destination) -> Double?)? = nil
+    var currentStartID: String? = nil
+    var currentDestinationID: String? = nil
 
     var headerFont: Font = .title3
     var headerFontWeight: Font.Weight = .bold
@@ -35,35 +37,20 @@ struct DestinationList: View {
 
                         Spacer()
                         
-//                        if let dist = distanceFor?(destination) {
-//                            if dist > 0 {
-//                                VStack(alignment: .trailing, spacing: 2) {
-//                                    Text("Estimasi ke pintu keluar")
-//                                        .font(.caption)
-//                                        .fontWeight(.light)
-//                                        .foregroundStyle(.primary)
-//                                    Text("\(Int(dist)) m")
-//                                        .font(.subheadline)
-//                                        .fontWeight(.semibold)
-//                                        .foregroundStyle(.blue)
-//                                    
-//                                    // Menggunakan rata-rata kecepatan berjalan orang Indonesia (sekitar 1.1 m/s)
-//                                    let mins = Int(ceil(dist / 1.1 / 60))
-//                                    Text("\(mins) min")
-//                                        .font(.caption2)
-//                                        .foregroundStyle(.secondary)
-//                                }
-//                                .padding(.trailing, 4)
-//                                
-//                            } else {
-//                                Text("Anda sudah di titik terdekat ke destinasi ini")
-//                                    .multilineTextAlignment(.trailing)
-//                                    .font(.caption)
-//                                    .fontWeight(.medium)
-//                                    .foregroundStyle(.blue)
-//                                    .padding(.trailing, 4)
-//                            }
-//                        }
+                        if destination.id == currentStartID {
+                            Text("Lokasi sekarang")
+                                .font(.caption)
+                                .foregroundStyle(.blue)
+                        } else if destination.id == currentDestinationID {
+                            Text("Lokasi tujuanmu")
+                                .font(.caption)
+                                .foregroundStyle(.blue)
+                        } else if distanceFor?(destination) == nil {
+                            Text("Rute akan segera hadir")
+                                .font(.caption2)
+                                .italic()
+                                .foregroundStyle(.secondary)
+                        }
                         
                         Image(systemName: "chevron.right")
                             .foregroundStyle(.tertiary)

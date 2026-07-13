@@ -39,7 +39,10 @@ struct EndpointsPageSheet: View {
                             "",
                             text: $searchText,
                             prompt: Text("Mau ke mana?")
-								.foregroundStyle(.white.opacity(0.3))
+								.foregroundStyle(
+									colorScheme == .dark ?
+										.white.opacity(0.3) : .primary.opacity(0.3)
+								)
                         )
 						.foregroundStyle(.primary)
                         .focused($isSearchFocused)
@@ -56,9 +59,8 @@ struct EndpointsPageSheet: View {
                     .padding(.leading, 15)
                     .padding(.top, 10)
                     
-                    // button xmark
                     Button(action: {
-                        currentDetent = .height(600)
+                        currentDetent = .dynamic
                         searchText = ""
                     }) {
 						Image(systemName: "xmark")
@@ -84,7 +86,9 @@ struct EndpointsPageSheet: View {
                         onSelect: onSelectDestination,
                         distanceFor: { destination in
                             points.getDistance(to: destination)
-                        }
+                        },
+                        currentStartID: points.start?.id,
+                        currentDestinationID: points.destination?.id
                     )
 					.listRowBackground(
 						currentDetent == .large ?
