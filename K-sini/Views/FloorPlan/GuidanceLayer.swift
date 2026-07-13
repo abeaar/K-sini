@@ -12,17 +12,22 @@ struct GuidanceLayer: MapContent {
 
     var pathways: [Pathway] = []
     var levelID: String = ""
+    var showAllLevels: Bool = false
     var currentPathwayIndex: Int? = nil
 
     var body: some MapContent {
+        let matches: (Pathway) -> Bool = showAllLevels
+            ? { _ in true }
+            : { $0.levelID == levelID }
+
         if pathways.count > 1 {
             ForEach(0..<(pathways.count - 1), id: \.self) { index in
                 let from = pathways[index]
                 let to = pathways[index + 1]
-                
-                if from.levelID == levelID && to.levelID == levelID {
+
+                if matches(from) && matches(to) {
                     let isPassed = currentPathwayIndex != nil && index < currentPathwayIndex!
-                    
+
                     MapPolyline(coordinates: [from.coordinate, to.coordinate])
                     .stroke(
                         isPassed ? .gray : .blue,
@@ -32,7 +37,7 @@ struct GuidanceLayer: MapContent {
             }
         }
 
-        ForEach(pathways.filter({ $0.levelID == levelID }), id: \.id) { pathway in
+        ForEach(pathways.filter(matches), id: \.id) { pathway in
             let isFinal = pathway.directions.contains { $0.to.isEmpty }
             let indexInRoute = pathways.firstIndex(where: { $0.id == pathway.id }) ?? 0
             

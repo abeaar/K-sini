@@ -8,42 +8,34 @@ struct MapPreview: View {
     @Bindable var viewModel: MapViewModel
     @State private var hasInitiallyFitted = false
 
-    private var allLevelIDs: [String] {
-        viewModel.levels.map(\.id)
-    }
-
     var body: some View {
-        ZStack(alignment: .topTrailing) {
-            Map(position: $viewModel.position) {
-                BuildingLayer(buildings: viewModel.buildings)
+        Map(position: $viewModel.position) {
+            BuildingLayer(buildings: viewModel.buildings)
 
-                LevelLayer(
-                    levels: viewModel.levels,
-                    selectedLevelID: viewModel.selectedLevelID
-                )
+            LevelLayer(
+                levels: viewModel.levels,
+                showAllLevels: true
+            )
 
-                EndpointLayer(
-                    endpoints: viewModel.endpoints,
-                    selectedLevelID: viewModel.selectedLevelID,
-                    showAllLevels: false
-                )
+            EndpointLayer(
+                endpoints: viewModel.endpoints,
+                selectedLevelID: viewModel.selectedLevelID,
+                showAllLevels: true
+            )
 
-                GuidanceLayer(
-                    pathways: viewModel.routeSegments,
-                    levelID: viewModel.selectedLevelID
-                )
-            }
-            .mapStyle(.standard(elevation: .flat))
-            .ignoresSafeArea()
-            .onAppear { fitWideShotIfNeeded() }
-            .onChange(of: viewModel.buildings.count) { _, _ in
-                fitWideShotIfNeeded()
-            }
-            .onChange(of: viewModel.routeSegments.count) { _, _ in
-                fitToRouteIfReady()
-            }
-            
-            FloorSelectorView(viewModel: viewModel)
+            GuidanceLayer(
+                pathways: viewModel.routeSegments,
+                showAllLevels: true
+            )
+        }
+        .mapStyle(.standard(elevation: .flat))
+        .ignoresSafeArea()
+        .onAppear { fitWideShotIfNeeded() }
+        .onChange(of: viewModel.buildings.count) { _, _ in
+            fitWideShotIfNeeded()
+        }
+        .onChange(of: viewModel.routeSegments.count) { _, _ in
+            fitToRouteIfReady()
         }
     }
 

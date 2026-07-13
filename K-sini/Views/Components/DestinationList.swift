@@ -34,31 +34,30 @@ struct DestinationList: View {
                         }
 
                         Spacer()
-
-                        if let dist = distanceFor?(destination) {
+                        
+//                        if let dist = distanceFor?(destination) {
 //                            if dist > 0 {
-                                VStack(alignment: .trailing, spacing: 2) {
-									Text("Estimasi ke pintu keluar")
-										.font(.caption)
-										.fontWeight(.light)
-										.foregroundStyle(.primary)
-                                    Text("\(Int(dist)) m")
-                                        .font(.subheadline)
-                                        .fontWeight(.semibold)
-                                        .foregroundStyle(.blue)
-                                    
-                                    // Menggunakan rata-rata kecepatan berjalan orang Indonesia (sekitar 1.1 m/s)
-                                    let mins = Int(ceil(dist / 1.1 / 60))
-                                    Text("\(mins) min")
-                                        .font(.caption2)
-                                        .foregroundStyle(.secondary)
-                                }
-                                .padding(.trailing, 4)
-								
-								Image(systemName: "chevron.right")
-									.foregroundStyle(.tertiary)
-//                            }
-//							else {
+//                                VStack(alignment: .trailing, spacing: 2) {
+//									Text("Estimasi ke pintu keluar")
+//										.font(.caption)
+//										.fontWeight(.light)
+//										.foregroundStyle(.primary)
+//                                    Text("\(Int(dist)) m")
+//                                        .font(.subheadline)
+//                                        .fontWeight(.semibold)
+//                                        .foregroundStyle(.blue)
+//                                    
+//                                    // Menggunakan rata-rata kecepatan berjalan orang Indonesia (sekitar 1.1 m/s)
+//                                    let mins = Int(ceil(dist / 1.1 / 60))
+//                                    Text("\(mins) min")
+//                                        .font(.caption2)
+//                                        .foregroundStyle(.secondary)
+//                                }
+//                                .padding(.trailing, 4)
+//								
+//								Image(systemName: "chevron.right")
+//									.foregroundStyle(.tertiary)
+//                            } else {
 //                                Text("Anda sudah di titik terdekat ke destinasi ini")
 //									.multilineTextAlignment(.trailing)
 //                                    .font(.caption)
@@ -66,8 +65,10 @@ struct DestinationList: View {
 //                                    .foregroundStyle(.blue)
 //                                    .padding(.trailing, 4)
 //                            }
-                        }
+//                        }
                     }
+//                    Image(systemName: "chevron.right").foregroundStyle(.tertiary)
+                    .contentShape(Rectangle())
                     .padding(.vertical, 4)
                 }
                 .buttonStyle(.plain)
