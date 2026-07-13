@@ -22,7 +22,7 @@ struct JourneyBottomCardView: View {
                                 .font(.subheadline)
                                 .foregroundStyle(.secondary)
                             Text(journeyVM.distanceToNextString)
-                                .font(.headline)
+								.font(.title)
                                 .fontWeight(.bold)
                                 .foregroundStyle(.primary)
                         }
@@ -61,7 +61,7 @@ struct JourneyBottomCardView: View {
                                 .font(.subheadline)
                                 .foregroundStyle(.secondary)
                             Text(journeyVM.distanceToNextString)
-                                .font(.headline)
+								.font(.title)
                                 .fontWeight(.bold)
                                 .foregroundStyle(.primary)
                         }

@@ -6,8 +6,7 @@ struct JourneyHeaderView: View {
     
     @Bindable var mapVM: MapViewModel
     @Bindable var hapticVM: DirectionalHapticViewModel
-    
-    
+    @Binding var showFullMap: Bool
     var body: some View {
         
         ZStack(alignment: .top) {
@@ -32,6 +31,7 @@ struct JourneyHeaderView: View {
                     MiniMapView(
                         mapVM: mapVM,
                         journeyVM: journeyVM,
+                        showFullMap: $showFullMap,
                         hapticVM: hapticVM
                     )
                     
