@@ -15,9 +15,9 @@ struct DestinationList: View {
         Section {
             ForEach(destinations) { destination in
                 Button {
-					if let dist = distanceFor?(destination), dist > 0 {
-						onSelect(destination)
-					}
+                    if let dist = distanceFor?(destination), dist > 0 {
+                        onSelect(destination)
+                    }
                 } label: {
                     HStack(spacing: 10) {
                         Image(systemName: destination.icon)
@@ -38,10 +38,10 @@ struct DestinationList: View {
 //                        if let dist = distanceFor?(destination) {
 //                            if dist > 0 {
 //                                VStack(alignment: .trailing, spacing: 2) {
-//									Text("Estimasi ke pintu keluar")
-//										.font(.caption)
-//										.fontWeight(.light)
-//										.foregroundStyle(.primary)
+//                                    Text("Estimasi ke pintu keluar")
+//                                        .font(.caption)
+//                                        .fontWeight(.light)
+//                                        .foregroundStyle(.primary)
 //                                    Text("\(Int(dist)) m")
 //                                        .font(.subheadline)
 //                                        .fontWeight(.semibold)
@@ -54,20 +54,20 @@ struct DestinationList: View {
 //                                        .foregroundStyle(.secondary)
 //                                }
 //                                .padding(.trailing, 4)
-//								
-//								Image(systemName: "chevron.right")
-//									.foregroundStyle(.tertiary)
+//                                
 //                            } else {
 //                                Text("Anda sudah di titik terdekat ke destinasi ini")
-//									.multilineTextAlignment(.trailing)
+//                                    .multilineTextAlignment(.trailing)
 //                                    .font(.caption)
 //                                    .fontWeight(.medium)
 //                                    .foregroundStyle(.blue)
 //                                    .padding(.trailing, 4)
 //                            }
 //                        }
+                        
+                        Image(systemName: "chevron.right")
+                            .foregroundStyle(.tertiary)
                     }
-//                    Image(systemName: "chevron.right").foregroundStyle(.tertiary)
                     .contentShape(Rectangle())
                     .padding(.vertical, 4)
                 }

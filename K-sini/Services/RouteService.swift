@@ -54,20 +54,16 @@ final class RouteService {
 				return route
 			}
             
-            // Or if any of the node's directions point to the destination endpoint
-            for direction in node.directions {
-                if direction.endpoints.contains(destination.id) {
-                    return route
-                }
-            }
+
 
 			for direction in node.directions {
 
-				guard
-					!direction.to.isEmpty
-				else {
-					continue
-				}
+                if direction.to.isEmpty {
+                    if direction.endpoints.contains(destination.id) {
+                        return route
+                    }
+                    continue
+                }
 
 				guard
 					let next =

@@ -12,14 +12,15 @@ struct JourneyPage: View {
     
     @State private var showCardSheet = true
     @State private var currentDetent: PresentationDetent = .height(120)
+    @State private var showFullMap = false
 
     var body: some View {
         VStack(spacing: 0) {
             JourneyHeaderView(
                 journeyVM: journeyVM,
-
                 mapVM: mapVM,
-                hapticVM: hapticVM
+                hapticVM: hapticVM,
+                showFullMap: $showFullMap
             )
             Spacer()
         }
@@ -35,6 +36,20 @@ struct JourneyPage: View {
                 onLanjut: handleArrived,
                 onAkhiri: { onFinished() }
             )
+            .fullScreenCover(isPresented: $showFullMap) {
+                JourneyFullMapView(viewModel: mapVM, journeyVM: journeyVM)
+                    .overlay(alignment: .topLeading) {
+                        Button { showFullMap = false } label: {
+                            Image(systemName: "chevron.left")
+                                .font(.title3.bold())
+                                .frame(width: 42, height: 42)
+                                .clipShape(Circle())
+                                .glassEffect()
+                        }
+                        .padding(.leading, 16)
+                        .padding(.top, 16)
+                    }
+            }
             .presentationDetents([.height(100), .height(290)])
             .presentationDragIndicator(.visible)
             .interactiveDismissDisabled(true)
@@ -73,10 +88,9 @@ struct JourneyPage: View {
     }
     
 
-    private var backgroundImageName: String {
-        let i = journeyVM.currentStepIndex
-        guard routeToPlatform1.steps.indices.contains(i) else { return "Cari Eskalator" }
-        return routeToPlatform1.steps[i].imageName
+    private var backgroundImageName: String? {
+        let image = journeyVM.currentDirection?.image ?? ""
+        return image.isEmpty ? nil : image
     }
 
     private var currentLevelPolygons: [MKPolygon] {

@@ -39,6 +39,7 @@ struct SuccessIndicatorView: View {
 				scale = 1
 				opacity = 1
 			}
+			
 		}
 	}
 }
