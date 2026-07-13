@@ -30,21 +30,18 @@ struct ConfirmPointsView: View {
 
         ZStack(alignment: .topLeading){
             MapPreview(viewModel: mapVM)
-            
-            Button {
-                dismiss()
-            } label: {
-                Image(systemName: "chevron.left")
-                    .font(.title3.bold())
-                    .foregroundStyle(.primary)
-            }
-            .frame(width: 44, height: 44)
-            .glassEffect(.regular.tint(.white).interactive())
-            .padding(.leading, 16)
-            .padding(.top, 16)
+//            Button {
+//                dismiss()
+//            } label: {
+//                Image(systemName: "chevron.left")
+//                    .font(.title3.bold())
+//                    .foregroundStyle(.primary)
+//            }
+//            .frame(width: 44, height: 44)
+//            .glassEffect(.regular.tint(.white).interactive())
+//            .padding(.leading, 16)
+//            .padding(.top, 16)
         }
-        .navigationBarBackButtonHidden(true)
-        .toolbar(.hidden, for: .navigationBar)
         .task {
             mapVM.loadData()
             seedRoute()
