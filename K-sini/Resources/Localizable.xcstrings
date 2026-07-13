@@ -1,0 +1,78 @@
+{
+  "sourceLanguage" : "id",
+  "strings" : {
+    "" : {
+
+    },
+    "%lld m" : {
+
+    },
+    "%lld min" : {
+
+    },
+    "Akhiri" : {
+
+    },
+    "Akhiri Perjalanan" : {
+
+    },
+    "Apakah Anda yakin ingin mengakhiri perjalanan ini?" : {
+
+    },
+    "Batal" : {
+
+    },
+    "Destination" : {
+
+    },
+    "Detail Perjalanan" : {
+
+    },
+    "Dismiss" : {
+
+    },
+    "K-SINI" : {
+
+    },
+    "Lanjut" : {
+
+    },
+    "lorem ipsum" : {
+
+    },
+    "Mau ke mana?" : {
+
+    },
+    "Mulai Navigasi" : {
+
+    },
+    "N" : {
+
+    },
+    "No data found" : {
+
+    },
+    "Pilih Titik Awal" : {
+
+    },
+    "Pilih Tujuan" : {
+
+    },
+    "Pilih tujuanmu, kami tunjukkan pintu keluar yang tepat." : {
+
+    },
+    "placeholder" : {
+
+    },
+    "Pratinjau Arah" : {
+
+    },
+    "Start" : {
+
+    },
+    "Titik Berikutnya" : {
+
+    }
+  },
+  "version" : "1.2"
+}
