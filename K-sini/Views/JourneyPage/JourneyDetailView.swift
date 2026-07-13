@@ -50,7 +50,7 @@ struct JourneyDetailView: View {
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button(action: { dismiss() }) {
-                        Image(systemName: "xmark.circle.fill")
+                        Image(systemName: "xmark")
                             .font(.title2)
                             .foregroundStyle(Color(UIColor.systemGray3))
                     }

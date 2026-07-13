@@ -7,6 +7,7 @@ struct JourneyBottomCardView: View {
     let onAkhiri: () -> Void
     
     @State private var showEndAlert = false
+    @State private var showCancelAlert = false
     @State private var showDetailSheet = false
     
     var body: some View {
@@ -51,13 +52,12 @@ struct JourneyBottomCardView: View {
                             }
                             .glassEffect(.regular.tint(.white).interactive(), in: Capsule())
                             
-                            Button(action: { showEndAlert = true }) {
+                            Button(action: { showCancelAlert = true }) {
                                 Text("Akhiri Perjalanan")
                                     .font(.headline)
                                     .foregroundStyle(.red)
                                     .frame(maxWidth: .infinity, minHeight: 52)
                             }
-                            .glassEffect(.regular.tint(.white).interactive(), in: Capsule())
                         }
                     }
                 } else {
@@ -97,15 +97,20 @@ struct JourneyBottomCardView: View {
             
             Spacer()
         }
-        .fullScreenCover(isPresented: $showEndAlert) {
-            ZStack {
-                Color.black.opacity(0.6).ignoresSafeArea()
-                JourneyEndAlertView(onAkhiri: {
-                    showEndAlert = false
-                    onAkhiri()
-                })
+        .alert("Selesai", isPresented: $showEndAlert) {
+            Button("Akhiri Perjalanan", role: .cancel) {
+                onAkhiri()
             }
-            .presentationBackground(.clear)
+        } message: {
+            Text("Anda telah tiba di tujuan!")
+        }
+        .alert("Batalkan Perjalanan?", isPresented: $showCancelAlert) {
+            Button("Batal", role: .cancel) { }
+            Button("Akhiri", role: .destructive) {
+                onAkhiri()
+            }
+        } message: {
+            Text("Navigasi akan dihentikan jika Anda membatalkan perjalanan ini.")
         }
         .sheet(isPresented: $showDetailSheet) {
             JourneyDetailView(

@@ -13,6 +13,12 @@
     "Anda telah tiba di tujuan!" : {
 
     },
+    "Batal" : {
+
+    },
+    "Batalkan Perjalanan?" : {
+
+    },
     "Destination" : {
 
     },
@@ -20,6 +26,9 @@
 
     },
     "Dismiss" : {
+
+    },
+    "Haptic Feedback" : {
 
     },
     "K-SINI" : {
@@ -46,6 +55,9 @@
     "N" : {
 
     },
+    "Navigasi akan dihentikan jika Anda membatalkan perjalanan ini." : {
+
+    },
     "No data found" : {
 
     },
@@ -70,10 +82,16 @@
     "Rute akan segera hadir" : {
 
     },
+    "Selesai" : {
+
+    },
     "Start" : {
 
     },
     "Titik Berikutnya" : {
+
+    },
+    "Turn vibration on or off during navigation." : {
 
     }
   },
