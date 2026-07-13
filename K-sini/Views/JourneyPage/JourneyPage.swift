@@ -9,6 +9,9 @@ struct JourneyPage: View {
     @State private var journeyVM = JourneyViewModel()
     @Bindable private var mapVM = MapViewModel()
     @Bindable private var hapticVM = DirectionalHapticViewModel()
+    
+    @State private var showCardSheet = true
+    @State private var currentDetent: PresentationDetent = .height(120)
 
     var body: some View {
         VStack(spacing: 0) {
@@ -19,8 +22,6 @@ struct JourneyPage: View {
                 hapticVM: hapticVM
             )
             Spacer()
-            JourneyTabBarView(onArrived: handleArrived)
-                .padding(.horizontal)
         }
         .background {
             JourneyBackgroundView(imageName: backgroundImageName)
@@ -28,6 +29,17 @@ struct JourneyPage: View {
         }
         .navigationBarBackButtonHidden(true) // back handled by onFinished
         .toolbar(.hidden, for: .navigationBar)
+        .sheet(isPresented: $showCardSheet) {
+            JourneyBottomCardView(
+                journeyVM: journeyVM,
+                onLanjut: handleArrived,
+                onAkhiri: { onFinished() }
+            )
+            .presentationDetents([.height(100), .height(290)])
+            .presentationDragIndicator(.visible)
+            .interactiveDismissDisabled(true)
+            .presentationBackgroundInteraction(.enabled)
+        }
         .task {
             journeyVM.start = points.start
             journeyVM.destination = points.destination
@@ -54,6 +66,9 @@ struct JourneyPage: View {
             if let coordinate = journeyVM.currentCheckpoint?.coordinate {
                 hapticVM.headingService.setTargetCoordinate(coordinate)
             }
+        }
+        .onAppear {
+            showCardSheet = true
         }
     }
     
