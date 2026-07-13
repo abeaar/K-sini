@@ -37,10 +37,9 @@ struct ConfirmPointsView: View {
                 Image(systemName: "chevron.left")
                     .font(.title3.bold())
                     .foregroundStyle(.primary)
-                    .frame(width: 42, height: 42)
-                    .clipShape(Circle())
-                    .glassEffect()
             }
+            .frame(width: 44, height: 44)
+            .glassEffect(.regular.tint(.white).interactive())
             .padding(.leading, 16)
             .padding(.top, 16)
         }

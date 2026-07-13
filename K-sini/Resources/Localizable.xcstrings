@@ -16,9 +16,6 @@
     "Akhiri Perjalanan" : {
 
     },
-    "Anda sudah di titik terdekat ke destinasi ini" : {
-
-    },
     "Apakah Anda yakin ingin mengakhiri perjalanan ini?" : {
 
     },
@@ -36,19 +33,6 @@
     },
     "Dismiss" : {
 
-    },
-    "Estimasi ke pintu keluar" : {
-
-    },
-    "Estimasi ke pintu keluar: %lld m • %lld mnt jalan kaki" : {
-      "localizations" : {
-        "id" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Estimasi ke pintu keluar: %1$lld m • %2$lld mnt jalan kaki"
-          }
-        }
-      }
     },
     "I'm arrived" : {
 

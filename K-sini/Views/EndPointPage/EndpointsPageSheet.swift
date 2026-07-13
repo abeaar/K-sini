@@ -101,6 +101,7 @@ struct EndpointsPageSheet: View {
                         .padding(.top, 40)
                 }
             }
+
             .scrollContentBackground(.hidden)
             .contentMargins(.top, 0)
             

@@ -57,6 +57,7 @@ struct EndpointList: View {
                         Image(systemName: "chevron.right")
                             .foregroundStyle(.tertiary)
                     }
+                    .contentShape(Rectangle())
                     .padding(.vertical, 4)
                 }
                 .buttonStyle(.plain)
