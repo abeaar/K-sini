@@ -1,4 +1,5 @@
 {
+  "type": "FeatureCollection",
   "features": [
     {
       "type": "Feature",
@@ -17,6 +18,8 @@
           "stroke-opacity": 1
         },
         "@id": "88736200-7778-11f1-9f7e-255798ecef5a",
+        "building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
+		"order_id": 2,
         "level": "2",
         "category": null,
         "display_point": {
@@ -276,7 +279,9 @@
           "fill-opacity": 1,
           "stroke-opacity": 1
         },
+		"order_id": 1,
         "level": "1",
+        "building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
         "@id": "88736209-7778-11f1-9f7e-255798ecef5a"
       },
       "geometry": {
@@ -439,7 +444,5 @@
         -6.324071
       ]
     }
-  ],
-  "name": "level",
-  "type": "FeatureCollection"
+  ]
 }

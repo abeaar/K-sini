@@ -19,9 +19,8 @@ struct ChangePointsSheet: View {
     let onSelectDestination: (Destination) -> Void
     var sheetTitle: String = ""
 
-    @State private var endpoints: [Endpoint] = []
-    @State private var destinations: [Destination] = []
     @Environment(\.dismiss) private var dismiss
+    @Environment(NavigationState.self) var points: NavigationState
 
     var body: some View {
 
@@ -32,14 +31,20 @@ struct ChangePointsSheet: View {
                     case .start:
                         EndpointList(
                             title: "",
-                            endpoints: endpoints,
-                            onSelect: onSelect
+                            endpoints: points.endpoints,
+                            onSelect: onSelect,
+                            distanceFor: { endpoint in
+                                points.getDistance(to: endpoint)
+                            }
                         )
                     case .destination:
                         DestinationList(
                             title: "",
-                            destinations: destinations,
-                            onSelect: onSelectDestination
+                            destinations: points.destinations,
+                            onSelect: onSelectDestination,
+                            distanceFor: { destination in
+                                points.getDistance(to: destination)
+                            }
                         )
                     }
                 }.padding(.top, -30)
@@ -58,14 +63,6 @@ struct ChangePointsSheet: View {
                     .tint(.blue)
                 }
 
-            }
-        }
-        .task {
-            switch mode {
-            case .start:
-                endpoints = EndpointLoader().load()
-            case .destination:
-                destinations = DestinationLoader().load()
             }
         }
     }

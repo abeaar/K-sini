@@ -16,7 +16,8 @@
 					]
 				},
 				"level": "88736209-7778-11f1-9f7e-255798ecef5a",
-				"category": null,
+				"building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
+				"category": "gate",
 				"@id": "f3e7c8d0-7778-11f1-9f7e-255798ecef5a",
 				"checkpoints": [],
 				"display_point": {
@@ -49,9 +50,12 @@
 					]
 				},
 				"level": "88736200-7778-11f1-9f7e-255798ecef5a",
-				"category": null,
+				"building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
+				"category": "gate",
 				"@id": "093318d0-790f-11f1-8064-b5d569ec4cf5",
-				"checkpoints": ["093318d0-790f-11f1-8064-b5d569ec4cf5"],
+				"checkpoints": [
+					"093318d0-790f-11f1-8064-b5d569ec4cf5"
+				],
 				"display_point": {
 					"coordinates": [
 						106.6435744,
@@ -82,7 +86,8 @@
 					]
 				},
 				"level": "88736209-7778-11f1-9f7e-255798ecef5a",
-				"category": null,
+				"building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
+				"category": "gate",
 				"@id": "f9a7a3a0-7886-11f1-90a1-7d7918fdf504",
 				"checkpoints": [
 					"f9a7a3a0-7886-11f1-90a1-7d7918fdf504"
@@ -119,7 +124,8 @@
 					]
 				},
 				"level": "88736209-7778-11f1-9f7e-255798ecef5a",
-				"category": null,
+				"building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
+				"category": "platform",
 				"@id": "122b37ae-3477-41b1-a269-54f68fa34942",
 				"checkpoints": [
 					"57b4aca1-b3a7-4005-872f-11b3681f1f5c"
@@ -160,7 +166,8 @@
 					]
 				},
 				"level": "88736209-7778-11f1-9f7e-255798ecef5a",
-				"category": null,
+				"building_id": "8bfcb3c5-b05b-4470-92b4-cc1e47d81e42",
+				"category": "platform",
 				"@id": "3ad2672d-35ac-478a-a6a2-aa5472096744",
 				"checkpoints": [],
 				"display_point": {

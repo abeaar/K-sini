@@ -1,102 +1,52 @@
 {
-    "type": "FeatureCollection",
-    "features": [
-        {
-            "type": "Feature",
-            "properties": {
-                "@id": "aeon-mall-bsd",
-                "name": {
-                    "en": "AEON Mall BSD City",
-                    "id": "AEON Mall BSD",
-                    "alts": ["AEON", "AEON Mall"]
-                },
-                "marker-symbol": "cart.fill"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [106.6437751, -6.3047067]
-            }
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "aeon-mall-bsd",
+        "name": {
+          "en": "AEON Mall BSD City",
+          "id": "AEON Mall BSD",
+          "alts": [
+            "Pusat Perbelanjaan",
+            "AEON",
+            "AEON Mall"
+          ]
         },
-        {
-            "type": "Feature",
-            "properties": {
-                "@id": "icon-bsd",
-                "name": {
-                    "en": "Intermoda BSD City",
-                    "id": "ICON BSD",
-                    "alts": ["ICON", "Intermoda", "Terminal Intermoda"]
-                },
-                "marker-symbol": "bus.fill"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [106.6405074,
-                -6.322541]
-            }
+        "marker-symbol": "cart.circle.fill"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+			106.6435744,
+			-6.3223673
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "icon-bsd",
+        "name": {
+          "en": "ICON BSD",
+          "id": "ICON BSD",
+          "alts": [
+            "Kota Mandiri",
+            "ICON",
+            "ICON BSD",
+            "BSD"
+          ]
         },
-        {
-            "type": "Feature",
-            "properties": {
-                "@id": "ice-bsd",
-                "name": {
-                    "en": "Indonesia Convention Exhibition",
-                    "id": "ICE BSD",
-                    "alts": ["ICE", "Convention", "Exhibition"]
-                },
-                "marker-symbol": "building.2.fill"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [106.6365443, -6.3003505]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "@id": "The breeze",
-                "name": {
-                    "en": "Indonesia Convention Exhibition",
-                    "id": "ICE BSD",
-                    "alts": ["ICE", "Convention", "Exhibition"]
-                },
-                "marker-symbol": "building.2.fill"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [106.6365443, -6.3003505]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "@id": "the mozia",
-                "name": {
-                    "en": "Indonesia Convention Exhibition",
-                    "id": "ICE BSD",
-                    "alts": ["ICE", "Convention", "Exhibition"]
-                },
-                "marker-symbol": "building.2.fill"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [106.6365443, -6.3003505]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "@id": "Anggrek loka",
-                "name": {
-                    "en": "Indonesia Convention Exhibition",
-                    "id": "ICE BSD",
-                    "alts": ["ICE", "Convention", "Exhibition"]
-                },
-                "marker-symbol": "building.2.fill"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [106.6365443, -6.3003505]
-            }
-        }
-    ]
+        "marker-symbol": "building.2.crop.circle.fill"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.6405074,
+          -6.322541
+        ]
+      }
+    }
+  ]
 }

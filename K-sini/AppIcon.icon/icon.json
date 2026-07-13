@@ -1,0 +1,73 @@
+{
+  "fill" : "system-light",
+  "groups" : [
+    {
+      "layers" : [
+        {
+          "image-name" : "panah.png",
+          "name" : "panah",
+          "position" : {
+            "scale" : 1.59,
+            "translation-in-points" : [
+              -75.7386547792346,
+              0
+            ]
+          }
+        }
+      ],
+      "shadow" : {
+        "kind" : "neutral",
+        "opacity" : 0.5
+      },
+      "translucency" : {
+        "enabled" : true,
+        "value" : 0.5
+      }
+    },
+    {
+      "layers" : [
+        {
+          "hidden" : false,
+          "image-name" : "MAXYELLOW.png",
+          "name" : "MAXYELLOW",
+          "position" : {
+            "scale" : 2.2,
+            "translation-in-points" : [
+              -491.4000000000001,
+              -230.03691529184982
+            ]
+          }
+        },
+        {
+          "blend-mode" : "normal",
+          "fill" : "automatic",
+          "glass" : true,
+          "hidden" : false,
+          "image-name" : "papanbiru.png",
+          "name" : "papanbiru",
+          "position" : {
+            "scale" : 4,
+            "translation-in-points" : [
+              -344.44865477923463,
+              -322.9822277918498
+            ]
+          }
+        }
+      ],
+      "shadow" : {
+        "kind" : "neutral",
+        "opacity" : 0.5
+      },
+      "translucency" : {
+        "enabled" : true,
+        "value" : 0.5
+      }
+    }
+  ],
+  "supported-platforms" : {
+    "squares" : [
+      "iOS",
+      "macOS"
+    ]
+  }
+}

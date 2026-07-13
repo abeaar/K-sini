@@ -11,8 +11,6 @@ struct EndpointsPageView: View {
     @State private var showSheet = true   // starts true, never set to false
     @State private var searchText = ""
     @State private var currentDetent: PresentationDetent = .height(600)
-    @State private var endpoints: [Endpoint] = []
-    @State private var destinations: [Destination] = []
     
     @Environment(NavigationState.self) var points: NavigationState
     
@@ -23,16 +21,16 @@ struct EndpointsPageView: View {
 
     //harusnya viewmodel i think
     var filteredEndpoints: [Endpoint] {
-        guard !searchText.isEmpty else { return endpoints }
-        return endpoints.filter { endpoint in
-            endpoint.name.localizedCaseInsensitiveContains(searchText) ||
-            endpoint.alts.contains { $0.localizedCaseInsensitiveContains(searchText) }
+        guard !searchText.isEmpty else { return points.endpoints }
+        return points.endpoints.filter { endp in
+            endp.name.localizedCaseInsensitiveContains(searchText) ||
+            endp.alts.contains { $0.localizedCaseInsensitiveContains(searchText) }
         }
     }
     
     var filteredDestinations: [Destination] {
-        guard !searchText.isEmpty else { return destinations }
-        return destinations.filter { dest in
+        guard !searchText.isEmpty else { return points.destinations }
+        return points.destinations.filter { dest in
             dest.name.localizedCaseInsensitiveContains(searchText) ||
             dest.alts.contains { $0.localizedCaseInsensitiveContains(searchText) }
         }
@@ -41,7 +39,7 @@ struct EndpointsPageView: View {
     
     var body: some View {
         ZStack {
-            Color.blue.ignoresSafeArea()
+            Color("BlueMain").ignoresSafeArea()
             
             VStack(){
                 // content
@@ -59,14 +57,14 @@ struct EndpointsPageView: View {
                         
                         // bottom content
                         Text("Pilih tujuanmu, kami tunjukkan pintu keluar yang tepat.")
-                            .font(.caption2)
+							.font(.default)
                             .fontWeight(.regular)
                             .foregroundStyle(Color.white)
                     }//.padding
                     
                     
                     //right image
-                    Image("map_with_pin")
+                    Image("header-icon")
                         .resizable()
                         .frame(width: 105, height: 105)
                         .padding(.trailing, 20)
@@ -79,15 +77,16 @@ struct EndpointsPageView: View {
                 } label: {
                     HStack(spacing: 8) {
                         Image(systemName: "magnifyingglass")
-                            .foregroundStyle(.white)
+							.foregroundStyle(.gray)
                         
                         Text("Mau ke mana?")
-                            .foregroundStyle(searchFont)
+							.foregroundStyle(.gray)
                             
                         Spacer()
                     }
                     .padding(10)
-                    .background(RoundedRectangle(cornerRadius: 20).fill(searchBG))
+					.background(RoundedRectangle(cornerRadius: 20).fill(Color.gray.opacity(0.1)))
+                    .glassEffect()
                     .padding(.horizontal, 15)
                     .padding(.top, 10)
                 }
@@ -118,15 +117,11 @@ struct EndpointsPageView: View {
                 currentDetent: $currentDetent,
                 searchText: $searchText
             )
-                .presentationDetents([.height(600), .large], selection: $currentDetent)
-                .presentationDragIndicator(.hidden)
-                .interactiveDismissDisabled(true)
-                .presentationBackground(Color(.systemGroupedBackground))
-                .presentationBackgroundInteraction(.enabled)
-        }
-        .task {
-            endpoints = EndpointLoader().load()
-            destinations = DestinationLoader().load()
+            .environment(points)
+            .presentationDetents([.height(600), .large], selection: $currentDetent)
+            .presentationDragIndicator(.hidden)
+            .interactiveDismissDisabled(true)
+            .presentationBackgroundInteraction(.enabled)
         }
         .onAppear {
             showSheet = true

@@ -25,95 +25,126 @@ struct ConfirmPointsSheet: View {
             
             Text("Pratinjau Arah")
                 .font(.title3)
-                .fontWeight(.bold)
+                .fontWeight(.semibold)
                 .padding(.top, 25)
+//            
+//            if let dist = getRouteDistance(), dist > 0 {
+//                let mins = Int(ceil(dist / 1.1 / 60))
+//				Text("Estimasi ke pintu keluar: \(Int(dist)) m • \(mins) mnt jalan kaki")
+//					.font(.subheadline)
+//					.foregroundStyle(.blue)
+//            }
             
             //rows
             
             if currentDetent != .height(100) {
-                List {
+                VStack(spacing: 12) {
                     //lokasi saat ini
                     Button {
                         editTarget = .start
                     } label: {
-                        VStack(alignment: .leading){
-                            // start
-                            Text("Lokasi Saat Ini")
-                                .font(.footnote)
-                                .foregroundColor(.primary)
-                            
-                            // chosen location
-                            Text(points.start?.name ?? "Titik Awal")
-                                .font(.title3)
-                                .foregroundStyle(Color.primary)
-                                .fontWeight(.bold)
-                         
-                            // description
-                            Text(points.start?.alts.first ?? "")
-                                .font(.body)
-                                .foregroundStyle(Color.secondary)
-                        }
-                        
+                        pointRow(
+                            color: .blue,
+                            icon: "location.north.fill",
+                            label: "Lokasi Kamu",
+                            title: points.start?.name ?? "Titik Awal",
+                            subtitle: points.start?.alts.first ?? ""
+                        )
                     }
-                    
+                    .buttonStyle(.plain)
+
                     //destinasi
                     Button {
                         editTarget = .destination
                     } label: {
-                        VStack(alignment: .leading){
-                            // label
-                            Text("Destinasi")
-                                .font(.footnote)
-                                .foregroundColor(.primary)
-                            
-                            // chosen location — show destination name if available
-                            if let dest = points.selectedDestination {
-                                Text(dest.name)
-                                    .font(.title3)
-                                    .foregroundStyle(Color.primary)
-                                    .fontWeight(.bold)
-                             
-                                // via which endpoint
-                                Text("via \(points.destination?.name ?? "")")
-                                    .font(.body)
-                                    .foregroundStyle(Color.secondary)
-                            } else {
-                                Text(points.destination?.name ?? "Titik Akhir")
-                                    .font(.title3)
-                                    .foregroundStyle(Color.primary)
-                                    .fontWeight(.bold)
-                             
-                                Text(points.destination?.alts.first ?? "")
-                                    .font(.body)
-                                    .foregroundStyle(Color.secondary)
-                            }
-                            
+                        if let dest = points.selectedDestination {
+                            pointRow(
+                                color: .green,
+                                icon: "figure.walk",
+                                label: "Destinasi",
+                                title: dest.name,
+                                subtitle: "via \(points.destination?.name ?? "")"
+                            )
+                        } else {
+                            pointRow(
+                                color: .green,
+                                icon: "figure.walk",
+                                label: "Destinasi",
+                                title: points.destination?.name ?? "Titik Akhir",
+                                subtitle: points.destination?.alts.first ?? ""
+                            )
                         }
-                        
                     }
-                    
+                    .buttonStyle(.plain)
                 }
-                .contentMargins(.top, 10)
-                .listStyle(.insetGrouped)
-                .scrollDisabled(true)
-                .padding(.bottom, 15)
-                
+                .padding(.horizontal)
+                .padding(.bottom,4)
+
                 //button
                 Button("Mulai Navigasi"){
                     dismiss()  // close the sheet first, then navigate
                     onStart()  // push .journey onto the NavigationStack path
                 }
                 .frame(maxWidth: .infinity)
+                .font(.title3)
+                .fontWeight(.bold)
                 .foregroundColor(.white)
                 .padding(15)
-                .background(Color.blue)
+                .background(Color("BlueMain"))
                 .cornerRadius(50)
                 .padding(.horizontal, 15)
             }
             
-            
         }
         .padding(.horizontal, 5)
+    }
+    
+    @ViewBuilder
+    private func pointRow(color: Color, icon: String, label: String, title: String, subtitle: String) -> some View {
+        HStack(spacing: 14) {
+            ZStack {
+                Circle().fill(color.opacity(0.2))
+                Image(systemName: icon)
+                    .font(.subheadline)
+                    .foregroundStyle(color)
+            }
+            .frame(width: 30, height: 30)
+
+            VStack(alignment: .leading, spacing: 2) {
+                Text(label)
+                    .font(.footnote)
+                    .foregroundStyle(.primary)
+                Text(title)
+                    .font(.title3)
+                    .fontWeight(.semibold)
+                    .foregroundStyle(.primary)
+                Text(subtitle)
+                    .font(.body)
+                    .foregroundStyle(.secondary)
+            }
+
+            Spacer()
+
+            Image(systemName: "chevron.right")
+                .foregroundStyle(.tertiary)
+        }
+        .padding(.vertical, 14)
+        .padding(.horizontal, 16)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .background(
+            RoundedRectangle(cornerRadius: 18, style: .continuous)
+                .fill(Color(.systemBackground))
+        )
+        .contentShape(RoundedRectangle(cornerRadius: 18, style: .continuous))
+    }
+
+    private func getRouteDistance() -> Double? {
+        if let target = points.selectedDestination {
+            return points.getDistance(to: target)
+        } else if let endpoint = points.destination {
+            return points.getDistance(to: endpoint)
+        }
+        return nil
     }
 }
 

@@ -18,6 +18,10 @@ struct EndpointsPageSheet: View {
     
     @Binding var currentDetent: PresentationDetent
     @Binding var searchText : String
+	@Environment(\.colorScheme) var colorScheme
+    @Environment(NavigationState.self) var points: NavigationState
+    
+    @FocusState private var isSearchFocused: Bool
     
     var body: some View {
         
@@ -29,19 +33,26 @@ struct EndpointsPageSheet: View {
                     // search bar
                     HStack(spacing: 8) {
                         Image(systemName: "magnifyingglass")
-                            .foregroundStyle(.secondary)
+							.foregroundStyle(.primary)
                         
                         TextField(
                             "",
                             text: $searchText,
                             prompt: Text("Mau ke mana?")
-                                .foregroundStyle(.secondary)
+								.foregroundStyle(.white.opacity(0.3))
                         )
-                        .foregroundStyle(.secondary)
+						.foregroundStyle(.primary)
+                        .focused($isSearchFocused)
+                        .onAppear {
+                            isSearchFocused = true
+                        }
                         
                     }
-                    .padding(10)
-                    .background(RoundedRectangle(cornerRadius: 20).fill(Color(.systemGray4)))
+                    .padding()
+					.glassEffect()
+					.background(
+						RoundedRectangle(cornerRadius: 24).fill(Color(.clear))
+					)
                     .padding(.leading, 15)
                     .padding(.top, 10)
                     
@@ -50,12 +61,12 @@ struct EndpointsPageSheet: View {
                         currentDetent = .height(600)
                         searchText = ""
                     }) {
-                        Label("", systemImage: "xmark")
-                            .padding(7)
+						Image(systemName: "xmark")
+							.padding()
                     }
                     .foregroundStyle(.primary)
                     .labelStyle(.iconOnly)
-                    .buttonStyle(.glassProminent)
+					.glassEffect()
                     .tint(Color(.systemGray4))
                     .buttonBorderShape(.circle)
                     .padding(.top, 8)
@@ -70,40 +81,32 @@ struct EndpointsPageSheet: View {
                     DestinationList(
                         title: "Terdekat dari Lokasimu",
                         destinations: destinations,
-                        onSelect: onSelectDestination
+                        onSelect: onSelectDestination,
+                        distanceFor: { destination in
+                            points.getDistance(to: destination)
+                        }
                     )
+					.listRowBackground(
+						currentDetent == .large ?
+						Color.gray.opacity(0.1) :
+						colorScheme == .dark ?
+						Color.gray.opacity(0.1) :
+						Color.white.opacity(0.3)
+					)
+                } else {
+                    Text("No data found")
+                        .foregroundStyle(.secondary)
+                        .listRowBackground(Color.clear)
+                        .frame(maxWidth: .infinity, alignment: .center)
+                        .padding(.top, 40)
                 }
             }
+
+            .scrollContentBackground(.hidden)
             .contentMargins(.top, 0)
             
             
-        }.padding(.top, 15)
+        }
+        .padding(.top, 15)
     }
-}
-
-#Preview {
-    EndpointsPageSheet(
-        endpoints: [
-            Endpoint(
-                id: "preview-1",
-                name: "Hallway (Start)",
-                icon: "arrowshape.left",
-                alts: [],
-                levelID: "",
-                coordinate: CLLocationCoordinate2D(latitude: 0.0, longitude: 0.0),
-                checkpoints: [])
-        ],
-        destinations: [
-            Destination(
-                id: "preview-dest-1",
-                name: "AEON Mall BSD",
-                icon: "cart.fill",
-                alts: ["AEON"],
-                coordinate: CLLocationCoordinate2D(latitude: 0.0, longitude: 0.0))
-        ],
-        onSelect: { _ in },
-        onSelectDestination: { _ in },
-        currentDetent: .constant(.height(600)),
-        searchText: .constant("")
-    )
 }

@@ -1,13 +1,4 @@
-//
-//  MapPreview.swift
-//  K-sini
-//
-//  Created by on 07/07/26.
-//
 
-// ponytail: two-level floor plan in one map; platforms and units are
-// intentionally omitted from the overview — add when the route needs to
-// thread through named rooms.
 
 import MapKit
 import SwiftUI
@@ -17,42 +8,41 @@ struct MapPreview: View {
     @Bindable var viewModel: MapViewModel
     @State private var hasInitiallyFitted = false
 
-    private var allLevelIDs: [String] {
-        viewModel.levels.map(\.id)
-    }
-
     var body: some View {
         Map(position: $viewModel.position) {
             BuildingLayer(buildings: viewModel.buildings)
 
-            ForEach(allLevelIDs, id: \.self) { levelID in
-                LevelLayer(
-                    levels: viewModel.levels,
-                    selectedLevelID: levelID
-                )
-            }
-
-            EndpointLayer(
-                endpoints: viewModel.endpoints,
-                selectedLevelID: "",
+            LevelLayer(
+                levels: viewModel.levels,
                 showAllLevels: true
             )
 
-            GuidanceLayer(segments: viewModel.currentSegments())
+            EndpointLayer(
+                endpoints: viewModel.endpoints,
+                selectedLevelID: viewModel.selectedLevelID,
+                showAllLevels: true
+            )
+
+            GuidanceLayer(
+                pathways: viewModel.routeSegments,
+                showAllLevels: true
+            )
         }
         .mapStyle(.standard(elevation: .flat))
         .ignoresSafeArea()
         .onAppear { fitWideShotIfNeeded() }
+        .onChange(of: viewModel.buildings.count) { _, _ in
+            fitWideShotIfNeeded()
+        }
         .onChange(of: viewModel.routeSegments.count) { _, _ in
             fitToRouteIfReady()
         }
     }
 
     private func fitWideShotIfNeeded() {
-        guard !hasInitiallyFitted else { return }
-        if let region = BuildingRegionService.region(from: viewModel.buildings) {
-            viewModel.position = .region(region)
-        }
+        guard !hasInitiallyFitted, !viewModel.buildings.isEmpty else { return }
+        guard let region = BuildingRegionService.region(from: viewModel.buildings) else { return }
+        viewModel.position = .region(region)
         hasInitiallyFitted = true
     }
 

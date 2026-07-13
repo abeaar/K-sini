@@ -10,232 +10,236 @@ import MapKit
 
 struct PathwayLoader {
 
-	func load() -> [Pathway] {
-		
-		guard let url = Bundle.main.url(
-			
-			forResource: "pathway",
-			
-			withExtension: "geojson"
-			
-		)
-				
-		else {
-			
-			return []
-			
-		}
-		
-		do {
-			
-			let data = try Data(contentsOf: url)
-			
-			let objects = try MKGeoJSONDecoder()
-			
-				.decode(data)
-			
-			var result:[Pathway] = []
-			
-			for object in objects {
-				
-				guard let feature =
-						
-						object as? MKGeoJSONFeature
-						
-				else {
-					
-					continue
-					
-				}
-				
-				guard let geometry = feature.geometry.first as? MKPointAnnotation
-				else {
-					continue
-				}
-				
-				guard let properties =
-						
-						feature.properties
-						
-				else {
-					
-					continue
-					
-				}
-				
-				let json = try JSONSerialization
-				
-					.jsonObject(
-						
-						with: properties
-						
-					)
-				
-				as? [String:Any]
-				
-				let id =
-				
-				json?["@id"]
-				
-				as? String
-				
-				?? UUID().uuidString
-				
-				let category =
-				
-				json?["category"]
-				
-				as? String
-				
-				?? ""
-				
-				let levelID =
-				
-				json?["level"]
-				
-				as? String
-				
-				?? ""
-				
-				var directions:
-				
-				[PathDirection]
-				
-				= []
-				
-				if let rawDirections =
-					
-					json?["directions"]
-					
-					as? [[String:Any]]
-					
-				{
-					
-					directions = rawDirections.map {
-						
-						item in
-						
-						PathDirection(
-							
-							key:
-								
-								item["key"]
-							
-							as? String
-							
-							?? "",
-							
-							instructionID:
-								
-								item["id"]
-							
-							as? String,
-							
-							instructionEN:
-								
-								item["en"]
-							
-							as? String,
-							
-							to:
-								
-								item["to"]
-							
-							as? String
-							
-							?? "",
-							
-							endpoints:
-								
-								item["endpoints"]
-							
-							as? [String]
-							
-							?? []
-							
-						)
-						
-					}
-					
-				}
-				
-				result.append(
-					
-					Pathway(
-						
-						id:id,
-						
-						levelID:levelID,
-						
-						category:category,
-						
-						coordinate: geometry.coordinate,
-						
-						directions:
-							
-							directions
-						
-					)
-					
-				)
-				
-			}
-			let ids = Set(
+    func load() -> [Pathway] {
+        
+        guard let url = Bundle.main.url(
+            
+            forResource: "pathway",
+            
+            withExtension: "geojson"
+            
+        )
+                
+        else {
+            
+            return []
+            
+        }
+        
+        do {
+            
+            let data = try Data(contentsOf: url)
+            
+            let objects = try MKGeoJSONDecoder()
+            
+                .decode(data)
+            
+            var result:[Pathway] = []
+            
+            for object in objects {
+                
+                guard let feature =
+                        
+                        object as? MKGeoJSONFeature
+                        
+                else {
+                    
+                    continue
+                    
+                }
+                
+                guard let geometry = feature.geometry.first as? MKPointAnnotation
+                else {
+                    continue
+                }
+                
+                guard let properties =
+                        
+                        feature.properties
+                        
+                else {
+                    
+                    continue
+                    
+                }
+                
+                let json = try JSONSerialization
+                
+                    .jsonObject(
+                        
+                        with: properties
+                        
+                    )
+                
+                as? [String:Any]
+                
+                let id =
+                
+                json?["@id"]
+                
+                as? String
+                
+                ?? UUID().uuidString
+                
+                let category =
+                
+                json?["category"]
+                
+                as? String
+                
+                ?? ""
+                
+                let levelID =
+                
+                json?["level"]
+                
+                as? String
+                
+                ?? ""
+                
+                var directions:
+                
+                [PathDirection]
+                
+                = []
+                
+                if let rawDirections =
+                    
+                    json?["directions"]
+                    
+                    as? [[String:Any]]
+                    
+                {
+                    
+                    directions = rawDirections.map {
+                        
+                        item in
+                        
+                        PathDirection(
+                            
+                            key:
+                                
+                                item["key"]
+                            
+                            as? String
+                            ?? "",
+                            
+                            instructionID:
+                                
+                                item["id"]
+                            
+                            as? String,
+                            
+                            instructionEN:
+                                
+                                item["en"]
+                            
+                            as? String,
+                            
+                            to:
+                                
+                                item["to"]
+                            
+                            as? String
+                            ?? "",
+                            
+                            endpoints:
+                                
+                                item["endpoints"]
+                            
+                            as? [String]
+                            ?? [],
+                            
+                            image:
+                                
+                                item["image"]
+                            
+                            as? String
+                            ?? ""
+                            
+                        )
+                        
+                    }
+                    
+                }
+                
+                result.append(
+                    
+                    Pathway(
+                        
+                        id:id,
+                        
+                        levelID:levelID,
+                        
+                        category:category,
+                        
+                        coordinate: geometry.coordinate,
+                        
+                        directions:
+                            
+                            directions
+                        
+                    )
+                    
+                )
+                
+            }
+            let ids = Set(
 
-				result.map {
+                result.map {
 
-					$0.id
+                    $0.id
 
-				}
+                }
 
-			)
+            )
 
-			for pathway in result {
+            for pathway in result {
 
-				for direction in pathway.directions {
+                for direction in pathway.directions {
 
-					if direction.to.isEmpty {
+                    if direction.to.isEmpty {
 
-						continue
+                        continue
 
-					}
+                    }
 
-					if !ids.contains(
+                    if !ids.contains(
 
-						direction.to
+                        direction.to
 
-					){
+                    ){
 
-						print(
+                        print(
 
-							"BROKEN",
+                            "BROKEN",
 
-							pathway.id,
+                            pathway.id,
 
-							"->",
+                            "->",
 
-							direction.to
+                            direction.to
 
-						)
+                        )
 
-					}
+                    }
 
-				}
+                }
 
-			}
-			
-			return result
-			
-		}
-		
-		catch {
-			
-			print(error)
-			
-		}
-		
-		return []
-		
-	}
+            }
+            
+            return result
+            
+        }
+        
+        catch {
+            
+            print(error)
+            
+        }
+        
+        return []
+        
+    }
 
 }

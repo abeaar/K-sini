@@ -4,31 +4,55 @@
     "" : {
 
     },
-    "Destinasi" : {
+    "%lld m" : {
+
+    },
+    "%lld min" : {
+
+    },
+    "Akhiri" : {
+
+    },
+    "Akhiri Perjalanan" : {
+
+    },
+    "Apakah Anda yakin ingin mengakhiri perjalanan ini?" : {
+
+    },
+    "Batal" : {
 
     },
     "Destination" : {
 
     },
-    "Dismiss" : {
+    "Detail Perjalanan" : {
 
     },
-    "I'm arrived" : {
+    "Dismiss" : {
 
     },
     "K-SINI" : {
 
     },
-    "Lokasi Saat Ini" : {
+    "Lanjut" : {
+
+    },
+    "lorem ipsum" : {
 
     },
     "Mau ke mana?" : {
 
     },
-    "More options" : {
+    "Mulai Navigasi" : {
 
     },
-    "Mulai Navigasi" : {
+    "N" : {
+
+    },
+    "No data found" : {
+
+    },
+    "No Image Available" : {
 
     },
     "Pilih Titik Awal" : {
@@ -40,16 +64,16 @@
     "Pilih tujuanmu, kami tunjukkan pintu keluar yang tepat." : {
 
     },
+    "placeholder" : {
+
+    },
     "Pratinjau Arah" : {
 
     },
     "Start" : {
 
     },
-    "Tutup" : {
-
-    },
-    "via %@" : {
+    "Titik Berikutnya" : {
 
     }
   },

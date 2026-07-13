@@ -16,7 +16,7 @@ enum UnitIconProvider {
 		switch category {
 
 		case "stairs":
-			return "figure.stairs"
+			return "stairs"
 
 		case "escalator":
 			return "arrow.up.right"

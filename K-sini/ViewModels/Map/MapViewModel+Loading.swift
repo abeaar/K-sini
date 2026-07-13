@@ -56,7 +56,7 @@ extension MapViewModel {
 
 			selectedLevelID =
 
-				levels.first?.id
+				endpoints.first(where: { $0.id == selectedStartID })?.levelID ?? levels.first?.id
 
 				?? ""
 

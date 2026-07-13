@@ -6,61 +6,103 @@ struct JourneyPage: View {
     let onFinished: () -> Void
 
     @Environment(NavigationState.self) var points: NavigationState
-    @State private var vm = JourneyViewModel()
+    @State private var journeyVM = JourneyViewModel()
+    @Bindable private var mapVM = MapViewModel()
+    @Bindable private var hapticVM = DirectionalHapticViewModel()
+    
+    @State private var showCardSheet = true
+    @State private var currentDetent: PresentationDetent = .height(120)
     @State private var showFullMap = false
 
     var body: some View {
         VStack(spacing: 0) {
             JourneyHeaderView(
-                direction: vm.currentDirection,
-                stepIndex: vm.currentStepIndex,
-                totalSteps: vm.totalSteps,
-                route: vm.route,
-                currentPathwayIndex: vm.currentPathwayIndex ?? 0,
-                levelPolygons: currentLevelPolygons,
-                onMiniMapTap: { showFullMap = true }
+                journeyVM: journeyVM,
+                mapVM: mapVM,
+                hapticVM: hapticVM,
+                showFullMap: $showFullMap
             )
             Spacer()
-            JourneyTabBarView(onArrived: handleArrived)
-                .padding(.horizontal)
-        }
-        .fullScreenCover(isPresented: $showFullMap) {
-            JourneyFullMapView()
-                .environment(points)
         }
         .background {
             JourneyBackgroundView(imageName: backgroundImageName)
                 .ignoresSafeArea()
         }
         .navigationBarBackButtonHidden(true) // back handled by onFinished
+        .toolbar(.hidden, for: .navigationBar)
+        .sheet(isPresented: $showCardSheet) {
+            JourneyBottomCardView(
+                journeyVM: journeyVM,
+                onLanjut: handleArrived,
+                onAkhiri: { onFinished() }
+            )
+            .fullScreenCover(isPresented: $showFullMap) {
+                JourneyFullMapView(viewModel: mapVM, journeyVM: journeyVM)
+                    .overlay(alignment: .topLeading) {
+                        Button { showFullMap = false } label: {
+                            Image(systemName: "chevron.left")
+                                .font(.title3.bold())
+                                .frame(width: 42, height: 42)
+                                .clipShape(Circle())
+                                .glassEffect()
+                        }
+                        .padding(.leading, 16)
+                        .padding(.top, 16)
+                    }
+            }
+            .presentationDetents([.height(100), .height(290)])
+            .presentationDragIndicator(.visible)
+            .interactiveDismissDisabled(true)
+            .presentationBackgroundInteraction(.enabled)
+        }
         .task {
-            vm.start = points.start
-            vm.destination = points.destination
-            vm.pathways = points.pathways
+            journeyVM.start = points.start
+            journeyVM.destination = points.destination
+            journeyVM.pathways = points.pathways
+            mapVM.loadData()
+            mapVM.selectedStartID = points.start?.id ?? ""
+            mapVM.selectedDestinationID = points.destination?.id ?? ""
+            mapVM.navigate()
+            
+            mapVM.focus(on: journeyVM.currentCheckpoint?.coordinate)
+            hapticVM.start()
+//          hapticVM.headingService.setTargetCoordinate(coordinate)
+        }
+        .onChange(of: points.start) { _, _ in
+            mapVM.selectedStartID = points.start?.id ?? ""
+            mapVM.navigate()
+        }
+        .onChange(of: points.destination) { _, _ in
+            mapVM.selectedDestinationID = points.destination?.id ?? ""
+            mapVM.navigate()
+        }
+        .onChange(of: journeyVM.currentStepIndex) { _, _ in
+            mapVM.focus(on: journeyVM.currentCheckpoint?.coordinate)
+            if let coordinate = journeyVM.currentCheckpoint?.coordinate {
+                hapticVM.headingService.setTargetCoordinate(coordinate)
+            }
+        }
+        .onAppear {
+            showCardSheet = true
         }
     }
+    
 
-    private var backgroundImageName: String {
-        let i = vm.currentStepIndex
-        guard routeToPlatform1.steps.indices.contains(i) else { return "Cari Eskalator" }
-        return routeToPlatform1.steps[i].imageName
+    private var backgroundImageName: String? {
+        let image = journeyVM.currentDirection?.image ?? ""
+        return image.isEmpty ? nil : image
     }
 
     private var currentLevelPolygons: [MKPolygon] {
-        guard let levelID = vm.currentCheckpoint?.levelID else { return [] }
+        guard let levelID = journeyVM.currentCheckpoint?.levelID else { return [] }
         return points.levels.first(where: { $0.id == levelID })?.polygons ?? []
     }
 
     private func handleArrived() {
-        if vm.isFinished {
+        if journeyVM.currentStepIndex >= journeyVM.totalSteps - 1 {
             onFinished()
         } else {
-            vm.advance()
+            journeyVM.advance()
         }
     }
-}
-
-#Preview {
-    JourneyPage(onFinished: {})
-        .environment(NavigationState())
 }

@@ -9,178 +9,188 @@ import Foundation
 import MapKit
 
 struct PlatformLoader {
-	func load() -> [Platform] {
-		
-		guard let url = Bundle.main.url(
-			forResource: "platform",
-			withExtension: "geojson"
-		) else {
-			return []
-		}
+    func load() -> [Platform] {
+        
+        guard let url = Bundle.main.url(
+            forResource: "platform",
+            withExtension: "geojson"
+        ) else {
+            return []
+        }
 
-		do {
-			let data = try Data(contentsOf: url)
-			let objects = try MKGeoJSONDecoder().decode(data)
-			var result:[Platform] = []
-			for object in objects {
-				guard
-					let feature = object
-						as? MKGeoJSONFeature
-				else {
-					continue
-				}
-				guard
-					let polygon =
-					feature.geometry.first
-					as? MKPolygon
-				else {
-					continue
-				}
+        do {
+            let data = try Data(contentsOf: url)
+            let objects = try MKGeoJSONDecoder().decode(data)
+            var result:[Platform] = []
+            for object in objects {
+                guard
+                    let feature = object
+                        as? MKGeoJSONFeature
+                else {
+                    continue
+                }
+                guard
+                    let polygon =
+                    feature.geometry.first
+                    as? MKPolygon
+                else {
+                    continue
+                }
 
-				guard
-					let properties =
-					feature.properties
-				else {
-					continue
-				}
+                guard
+                    let properties =
+                    feature.properties
+                else {
+                    continue
+                }
 
-				let json = try JSONSerialization
-					.jsonObject(
-						with: properties
-					)
+                let json = try JSONSerialization
+                    .jsonObject(
+                        with: properties
+                    )
 
-				as? [String:Any]
-				let id = json?["@id"]
+                as? [String:Any]
+                let id = json?["@id"]
 
-					as? String
+                    as? String
 
-					?? UUID().uuidString
+                    ?? UUID().uuidString
 
-				let levelID =
+                let levelID =
 
-					json?["level"]
+                    json?["level"]
 
-					as? String
+                    as? String
 
-					?? ""
+                    ?? ""
 
-				var name = ""
+                let buildingID =
 
-				if let names =
+                    json?["building_id"]
 
-					json?["name"]
+                    as? String
 
-					as? [String:Any] {
+                    ?? ""
 
-					name =
+                var name = ""
 
-						names["id"]
+                if let names =
 
-						as? String
+                    json?["name"]
 
-						??
+                    as? [String:Any] {
 
-						names["en"]
+                    name =
 
-						as? String
+                        names["id"]
 
-						?? ""
+                        as? String
 
-				}
+                        ??
 
-				var fill = "#ffeeee"
+                        names["en"]
 
-				var stroke = "#cf3030"
+                        as? String
 
-				if let style =
+                        ?? ""
 
-					json?["style"]
+                }
 
-					as? [String:Any] {
+                var fill = "#ffeeee"
 
-					fill =
+                var stroke = "#cf3030"
 
-						style["fill"]
+                if let style =
 
-						as? String
+                    json?["style"]
 
-						?? fill
+                    as? [String:Any] {
 
-					stroke =
+                    fill =
 
-						style["stroke"]
+                        style["fill"]
 
-						as? String
+                        as? String
 
-						?? stroke
+                        ?? fill
 
-				}
+                    stroke =
 
-				var point:
+                        style["stroke"]
 
-				CLLocationCoordinate2D?
+                        as? String
 
-				if let display =
+                        ?? stroke
 
-					json?["display_point"]
+                }
 
-					as? [String:Any],
+                var point:
 
-				   let coords =
+                CLLocationCoordinate2D?
 
-					display["coordinates"]
+                if let display =
 
-					as? [Double],
+                    json?["display_point"]
 
-				   coords.count == 2 {
+                    as? [String:Any],
 
-					point =
+                   let coords =
 
-						CLLocationCoordinate2D(
+                    display["coordinates"]
 
-							latitude: coords[1],
+                    as? [Double],
 
-							longitude: coords[0]
+                   coords.count == 2 {
 
-						)
+                    point =
 
-				}
+                        CLLocationCoordinate2D(
 
-				result.append(
+                            latitude: coords[1],
 
-					Platform(
+                            longitude: coords[0]
 
-						id: id,
+                        )
 
-						levelID: levelID,
+                }
 
-						name: name,
+                result.append(
 
-						polygon: polygon,
+                    Platform(
 
-						fillColor: fill,
+                        id: id,
 
-						strokeColor: stroke,
+                        levelID: levelID,
 
-						displayPoint: point
+                        buildingID: buildingID,
 
-					)
+                        name: name,
 
-				)
+                        polygon: polygon,
 
-			}
+                        fillColor: fill,
 
-			return result
+                        strokeColor: stroke,
 
-		}
+                        displayPoint: point
 
-		catch {
+                    )
 
-			print(error)
+                )
 
-		}
+            }
 
-		return []
+            return result
 
-	}
+        }
+
+        catch {
+
+            print(error)
+
+        }
+
+        return []
+
+    }
 }
