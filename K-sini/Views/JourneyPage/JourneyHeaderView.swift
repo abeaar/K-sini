@@ -11,14 +11,22 @@ struct JourneyHeaderView: View {
         
         ZStack(alignment: .top) {
             HStack {
-                VStack(alignment: .leading, spacing: 4) {
-                    Text(journeyVM.currentDirection?.instructionID ?? journeyVM.currentDirection?.instructionEN ?? "—")
-                        .font(.title)
-                        .bold()
-                        .foregroundStyle(.primary)
-                    Text(progressText)
-                        .font(.title2)
-                        .foregroundStyle(.primary)
+                HStack(alignment: .top, spacing: 12) {
+                    if let icon = journeyVM.currentDetailStep?.iconName {
+                        Image(systemName: icon)
+                            .font(.title)
+                            .foregroundStyle(.primary)
+                            .padding(.top, 2)
+                    }
+                    VStack(alignment: .leading, spacing: 4) {
+                        Text(journeyVM.currentDirection?.instructionID ?? journeyVM.currentDirection?.instructionEN ?? "—")
+                            .font(.title)
+                            .bold()
+                            .foregroundStyle(.primary)
+                        Text(progressText)
+                            .font(.title2)
+                            .foregroundStyle(.primary)
+                    }
                 }
                 Spacer()
             }
@@ -40,7 +48,6 @@ struct JourneyHeaderView: View {
                     } label: {
                         HStack(spacing: 6) {
                             Image(systemName: hapticVM.isVibrationEnabled ? "iphone.radiowaves.left.and.right" : "iphone.slash")
-                            
                                 .font(.caption)
                                 .bold()
                         }
@@ -48,7 +55,7 @@ struct JourneyHeaderView: View {
                         .padding(.horizontal, 12)
                         .clipShape(Capsule())
                     }
-                    .glassEffect(.regular.tint(.white).interactive())
+					.glassEffect()
                     .foregroundStyle(hapticVM.isVibrationEnabled ? .blue : .secondary)
                 }
                 .offset(x: -24, y: 95)

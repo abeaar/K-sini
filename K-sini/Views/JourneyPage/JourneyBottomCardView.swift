@@ -108,7 +108,10 @@ struct JourneyBottomCardView: View {
             .presentationBackground(.clear)
         }
         .sheet(isPresented: $showDetailSheet) {
-            JourneyDetailView(steps: journeyVM.detailSteps)
+            JourneyDetailView(
+                currentIndex: journeyVM.currentStepIndex,
+                steps: journeyVM.detailSteps
+            )
                 .presentationDetents([.medium, .large])
                 .presentationDragIndicator(.visible)
         }

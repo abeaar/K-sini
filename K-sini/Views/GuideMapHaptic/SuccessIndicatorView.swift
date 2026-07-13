@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SuccessIndicatorView: View {
 
-	@Binding var isCompleted: Bool
+	let isCompleted: Bool
 	@State private var scale: CGFloat = 0
 	@State private var opacity: Double = 0
 

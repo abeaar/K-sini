@@ -13,6 +13,28 @@ struct DestinationList: View {
     var headerFontWeight: Font.Weight = .bold
     var headerColor: Color = .primary
 
+    init(
+        title: String,
+        destinations: [Destination],
+        onSelect: @escaping (Destination) -> Void,
+        distanceFor: ((Destination) -> Double?)? = nil,
+        currentStartID: String? = nil,
+        currentDestinationID: String? = nil,
+        headerFont: Font = .title3,
+        headerFontWeight: Font.Weight = .bold,
+        headerColor: Color = .primary
+    ) {
+        self.title = title
+        self.destinations = destinations
+        self.onSelect = onSelect
+        self.distanceFor = distanceFor
+        self.currentStartID = currentStartID
+        self.currentDestinationID = currentDestinationID
+        self.headerFont = headerFont
+        self.headerFontWeight = headerFontWeight
+        self.headerColor = headerColor
+    }
+
     var body: some View {
         Section {
             ForEach(destinations) { destination in
