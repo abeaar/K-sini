@@ -53,9 +53,6 @@ struct EndpointList: View {
                                 }
                                 .padding(.trailing, 4)
                         }
-
-                        Image(systemName: "chevron.right")
-                            .foregroundStyle(.tertiary)
                     }
                     .contentShape(Rectangle())
                     .padding(.vertical, 4)
