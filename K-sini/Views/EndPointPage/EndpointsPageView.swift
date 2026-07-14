@@ -131,6 +131,7 @@ struct EndpointsPageView: View {
             .presentationDetents([.dynamic, .large], selection: $currentDetent)
             .presentationDragIndicator(.hidden)
             .interactiveDismissDisabled(true)
+            .presentationBackground(Color(.systemGray5))
             .presentationBackgroundInteraction(.enabled)
         }
         .onAppear {

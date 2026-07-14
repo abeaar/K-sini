@@ -89,14 +89,9 @@ struct EndpointsPageSheet: View {
                         },
                         currentStartID: points.start?.id,
                         currentDestinationID: points.destination?.id
+                    ).listRowBackground(
+                        Color(.systemGray6)
                     )
-					.listRowBackground(
-						currentDetent == .large ?
-						Color.gray.opacity(0.1) :
-						colorScheme == .dark ?
-						Color.gray.opacity(0.1) :
-						Color.white.opacity(0.3)
-					)
                 } else {
                     Text("No data found")
                         .foregroundStyle(.secondary)
