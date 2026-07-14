@@ -140,18 +140,41 @@ final class JourneyViewModel {
         let subtitle: String?
     }
 
+    var currentDetailStep: JourneyDetailStep? {
+        let steps = detailSteps
+        guard currentStepIndex >= 0, currentStepIndex < steps.count else { return nil }
+        return steps[currentStepIndex]
+    }
+
     var detailSteps: [JourneyDetailStep] {
         var steps = [JourneyDetailStep]()
         for dir in activeDirections {
             let text = (dir.instructionID ?? dir.instructionEN ?? "").lowercased()
             
-            // Determine icon based on text
+            // Determine icon based on dir.key
             var icon = "arrow.up"
-            if text.contains("peron") { icon = "figure.walk.circle.fill" }
-            else if text.contains("naik") || text.contains("eskalator") || text.contains("tangga") { icon = "stairs" }
-            else if text.contains("kiri") { icon = "arrow.turn.up.left" }
-            else if text.contains("kanan") { icon = "arrow.turn.up.right" }
-            else if text.contains("keluar") { icon = "a.circle" }
+            switch dir.key {
+            case "turn-left":
+                icon = "arrow.turn.up.left"
+            case "turn-right":
+                icon = "arrow.turn.up.right"
+            case "level-up", "level-down":
+                icon = "stairs"
+            case "tap-out", "go-straight":
+                icon = "arrow.up"
+            default:
+                icon = "arrow.up"
+            }
+            
+            // Special case for Exit gates
+            if text.contains("keluar") || text.contains("tiba") { 
+                icon = "a.circle" 
+                if let destName = destination?.name.lowercased(), destName.contains("pintu keluar") {
+                    if let lastChar = destName.components(separatedBy: .whitespaces).last, lastChar.count == 1 {
+                        icon = "\(lastChar).circle"
+                    }
+                }
+            }
             
             // Determine title and subtitle
             let title = dir.instructionID ?? dir.instructionEN ?? "Lanjutkan"

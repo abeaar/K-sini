@@ -28,7 +28,7 @@ struct MiniMapView: View {
             )
             .padding(.bottom, 12)
 
-            SuccessIndicatorView(isCompleted: $hapticVM.isAligned)
+            SuccessIndicatorView(isCompleted: hapticVM.isAligned)
         }
         .frame(width: 110, height: 110)
         .background(.ultraThinMaterial)

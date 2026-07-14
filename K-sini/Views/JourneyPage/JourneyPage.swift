@@ -66,7 +66,9 @@ struct JourneyPage: View {
             
             mapVM.focus(on: journeyVM.currentCheckpoint?.coordinate)
             hapticVM.start()
-//          hapticVM.headingService.setTargetCoordinate(coordinate)
+            if let targetCoord = journeyVM.nextCheckpoint ?? journeyVM.currentCheckpoint?.coordinate {
+                hapticVM.headingService.setTargetCoordinate(targetCoord)
+            }
         }
         .onChange(of: points.start) { _, _ in
             mapVM.selectedStartID = points.start?.id ?? ""
@@ -78,8 +80,8 @@ struct JourneyPage: View {
         }
         .onChange(of: journeyVM.currentStepIndex) { _, _ in
             mapVM.focus(on: journeyVM.currentCheckpoint?.coordinate)
-            if let coordinate = journeyVM.currentCheckpoint?.coordinate {
-                hapticVM.headingService.setTargetCoordinate(coordinate)
+            if let targetCoord = journeyVM.nextCheckpoint ?? journeyVM.currentCheckpoint?.coordinate {
+                hapticVM.headingService.setTargetCoordinate(targetCoord)
             }
         }
         .onAppear {

@@ -4,22 +4,19 @@
     "" : {
 
     },
-    "%lld m" : {
-
-    },
-    "%lld min" : {
-
-    },
     "Akhiri" : {
 
     },
     "Akhiri Perjalanan" : {
 
     },
-    "Apakah Anda yakin ingin mengakhiri perjalanan ini?" : {
+    "Anda telah tiba di tujuan!" : {
 
     },
     "Batal" : {
+
+    },
+    "Batalkan Perjalanan?" : {
 
     },
     "Destination" : {
@@ -31,10 +28,19 @@
     "Dismiss" : {
 
     },
+    "Haptic Feedback" : {
+
+    },
     "K-SINI" : {
 
     },
     "Lanjut" : {
+
+    },
+    "Lokasi sekarang" : {
+
+    },
+    "Lokasi tujuanmu" : {
 
     },
     "lorem ipsum" : {
@@ -47,6 +53,9 @@
 
     },
     "N" : {
+
+    },
+    "Navigasi akan dihentikan jika Anda membatalkan perjalanan ini." : {
 
     },
     "No data found" : {
@@ -70,10 +79,19 @@
     "Pratinjau Arah" : {
 
     },
+    "Rute akan segera hadir" : {
+
+    },
+    "Selesai" : {
+
+    },
     "Start" : {
 
     },
     "Titik Berikutnya" : {
+
+    },
+    "Turn vibration on or off during navigation." : {
 
     }
   },

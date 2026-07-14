@@ -1,5 +1,3 @@
-
-
 import Foundation
 import Observation
 import CoreLocation
@@ -18,10 +16,23 @@ final class DirectionalHapticViewModel {
     var heading: Double = 0
     var targetBearing: Double?
     var onLocationChanged: ((CLLocationCoordinate2D) -> Void)?
-    var intensity: Float = 0
-    var isAligned = false
+    
+    // UI state driven directly by the haptic service for true sync with the pulse
+    var intensity: Float {
+        return hapticService.currentIntensity
+    }
+    var isAligned: Bool {
+        return hapticService.isTargetAligned
+    }
     var isEnabled = false
-    var isVibrationEnabled = true
+    
+    var isVibrationEnabled = true {
+        didSet {
+            if isEnabled {
+                hapticService.setEnabled(isVibrationEnabled)
+            }
+        }
+    }
 
     init(
         headingService: HeadingService = HeadingService(),
@@ -37,9 +48,8 @@ final class DirectionalHapticViewModel {
     func start() {
         isEnabled = true
         headingService.start()
-        if isVibrationEnabled {
-            hapticService.start()
-        }
+        hapticService.start()
+        hapticService.setEnabled(isVibrationEnabled)
         update()
     }
 
@@ -60,26 +70,10 @@ final class DirectionalHapticViewModel {
         heading = headingService.heading
         targetBearing = headingService.targetBearing
 
-        guard let bearing = targetBearing else {
-            intensity = 0
-            isAligned = false
-            return
-        }
-
-        let delta = headingDifference(current: heading, target: bearing)
-
-        intensity = max(0, min(1, Float(abs(delta) / 180)))
-        isAligned = abs(delta) <= 10
-
-        if isVibrationEnabled {
-            hapticService.isEnabled = true
-            hapticService.start()
-            hapticService.update(
-                heading: heading,
-                targetBearing: bearing
-            )
+        if let bearing = targetBearing {
+            hapticService.update(heading: heading, targetBearing: bearing)
         } else {
-            hapticService.stop()
+            // When no bearing, we could clear it, but wait for the next bearing.
         }
     }
 
@@ -100,25 +94,5 @@ final class DirectionalHapticViewModel {
         headingService.onLocationChanged = { [weak self] coordinate in
             self?.onLocationChanged?(coordinate)
         }
-    }
-
-    // MARK: - Helpers
-
-    private func headingDifference(
-        current: Double,
-        target: Double
-    ) -> Double {
-
-        var diff = target - current
-
-        while diff > 180 {
-            diff -= 360
-        }
-
-        while diff < -180 {
-            diff += 360
-        }
-
-        return diff
     }
 }
