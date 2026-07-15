@@ -28,17 +28,49 @@ final class JourneyViewModel {
         self.routeService = routeService
     }
 
+    /// The filtered, active directions for the current route. One per pathway.
+    private var activeDirections: [PathDirection] {
+        guard let destID = destination?.id else { return [] }
+        var result = [PathDirection]()
+        
+        for (i, pathway) in route.enumerated() {
+            var matchedDir: PathDirection?
+            
+            // Try to match the direction pointing to the next pathway in the route
+            if i < route.count - 1 {
+                let nextPathway = route[i + 1]
+                matchedDir = pathway.directions.first(where: { $0.to == nextPathway.id })
+            }
+            
+            // If it's the last pathway (or if next-pathway match failed), look for the endpoint
+            if matchedDir == nil {
+                matchedDir = pathway.directions.first(where: { $0.endpoints.contains(destID) })
+            }
+            
+            // Fallback to the first direction if all else fails
+            if matchedDir == nil {
+                matchedDir = pathway.directions.first
+            }
+            
+            if let dir = matchedDir {
+                result.append(dir)
+            }
+        }
+        
+        return result
+    }
+
     /// Total number of `PathDirection` steps across the route's pathways.
     var totalSteps: Int {
-        route.reduce(0) { $0 + $1.directions.count }
+        activeDirections.count
     }
 
     /// The direction the user is currently on. nil if the route is empty
     /// or the user has finished all steps.
     var currentDirection: PathDirection? {
-        let steps = totalSteps
-        guard steps > 0, currentStepIndex < steps else { return nil }
-        return direction(at: currentStepIndex)
+        let directions = activeDirections
+        guard currentStepIndex >= 0, currentStepIndex < directions.count else { return nil }
+        return directions[currentStepIndex]
     }
 
     var isFinished: Bool {
@@ -49,15 +81,8 @@ final class JourneyViewModel {
     /// Index in `route` of the pathway that contains the current step.
     /// nil when the route is empty or the user has finished.
     var currentPathwayIndex: Int? {
-        guard !route.isEmpty, currentStepIndex < totalSteps else { return nil }
-        var remaining = currentStepIndex
-        for (index, pathway) in route.enumerated() {
-            if remaining < pathway.directions.count {
-                return index
-            }
-            remaining -= pathway.directions.count
-        }
-        return nil
+        guard !route.isEmpty, currentStepIndex < route.count else { return nil }
+        return currentStepIndex
     }
 
     /// The pathway coordinate the user is currently on, with the level it belongs to.
@@ -71,13 +96,10 @@ final class JourneyViewModel {
     /// nil on the last step or when `to` is empty.
     var nextCheckpoint: CLLocationCoordinate2D? {
         guard let i = currentPathwayIndex else { return nil }
-        let pathway = route[i]
-        var remaining = currentStepIndex
-        for prior in route.prefix(i) {
-            remaining -= prior.directions.count
-        }
-        guard pathway.directions.indices.contains(remaining) else { return nil }
-        let toID = pathway.directions[remaining].to
+        let directions = activeDirections
+        guard i < directions.count else { return nil }
+        
+        let toID = directions[i].to
         guard !toID.isEmpty else { return nil }
         return pathways.first(where: { $0.id == toID })?.coordinate
     }
@@ -85,17 +107,6 @@ final class JourneyViewModel {
     func advance() {
         guard !isFinished else { return }
         currentStepIndex += 1
-    }
-
-    private func direction(at flatIndex: Int) -> PathDirection? {
-        var remaining = flatIndex
-        for pathway in route {
-            if remaining < pathway.directions.count {
-                return pathway.directions[remaining]
-            }
-            remaining -= pathway.directions.count
-        }
-        return nil
     }
 
     private func recompute() {
@@ -129,45 +140,66 @@ final class JourneyViewModel {
         let subtitle: String?
     }
 
+    var currentDetailStep: JourneyDetailStep? {
+        let steps = detailSteps
+        guard currentStepIndex >= 0, currentStepIndex < steps.count else { return nil }
+        return steps[currentStepIndex]
+    }
+
     var detailSteps: [JourneyDetailStep] {
         var steps = [JourneyDetailStep]()
-        for pathway in route {
-            for dir in pathway.directions {
-                let text = (dir.instructionID ?? dir.instructionEN ?? "").lowercased()
-                
-                // Determine icon based on text
-                var icon = "arrow.up"
-                if text.contains("peron") { icon = "figure.walk.circle.fill" }
-                else if text.contains("naik") || text.contains("eskalator") || text.contains("tangga") { icon = "stairs" }
-                else if text.contains("kiri") { icon = "arrow.turn.up.left" }
-                else if text.contains("kanan") { icon = "arrow.turn.up.right" }
-                else if text.contains("keluar") { icon = "a.circle" }
-                
-                // Determine title and subtitle
-				let title = dir.instructionID ?? dir.instructionEN ?? "Lanjutkan"
-                var subtitle: String? = nil
-                
-                // Hardcode logic similar to mockups for a better UI experience
-                if title.lowercased().contains("keluar dari peron 1") {
-                    subtitle = "Ikuti jalur menuju area concourse."
-                } else if title.lowercased().contains("menuju eskalator") {
-                    subtitle = "Cari eskalator terdekat di depan Anda."
-                } else if title.lowercased().contains("naik ke lantai 1") {
-                    subtitle = "Gunakan eskalator menuju lantai 1."
-                } else if title.lowercased().contains("belok kiri") {
-                    subtitle = "Ikuti arah menuju plang keluar."
-                } else if title.lowercased().contains("jalan lurus") {
-                    subtitle = "Menuju gate keluar dengan lampu panah hijau."
-                } else if title.lowercased().contains("lurus lalu belok kiri") {
-                    subtitle = "Ikuti arah menuju Pintu Keluar A."
-                } else if title.lowercased().contains("turuni tangga") {
-                    subtitle = "Lanjutkan hingga mencapai area luar stasiun."
-                } else if title.lowercased().contains("keluar melalui pintu") {
-                    subtitle = "Anda telah tiba di area luar stasiun."
-                }
-                
-                steps.append(JourneyDetailStep(iconName: icon, title: title, subtitle: subtitle))
+        for dir in activeDirections {
+            let text = (dir.instructionID ?? dir.instructionEN ?? "").lowercased()
+            
+            // Determine icon based on dir.key
+            var icon = "arrow.up"
+            switch dir.key {
+            case "turn-left":
+                icon = "arrow.turn.up.left"
+            case "turn-right":
+                icon = "arrow.turn.up.right"
+            case "level-up", "level-down":
+                icon = "stairs"
+            case "tap-out", "go-straight":
+                icon = "arrow.up"
+            default:
+                icon = "arrow.up"
             }
+            
+            // Special case for Exit gates
+            if text.contains("keluar") || text.contains("tiba") { 
+                icon = "a.circle" 
+                if let destName = destination?.name.lowercased(), destName.contains("pintu keluar") {
+                    if let lastChar = destName.components(separatedBy: .whitespaces).last, lastChar.count == 1 {
+                        icon = "\(lastChar).circle"
+                    }
+                }
+            }
+            
+            // Determine title and subtitle
+            let title = dir.instructionID ?? dir.instructionEN ?? "Lanjutkan"
+            var subtitle: String? = nil
+            
+            // Hardcode logic similar to mockups for a better UI experience
+            if title.lowercased().contains("keluar dari peron 1") {
+                subtitle = "Ikuti jalur menuju area concourse."
+            } else if title.lowercased().contains("menuju eskalator") {
+                subtitle = "Cari eskalator terdekat di depan Anda."
+            } else if title.lowercased().contains("naik ke lantai 1") {
+                subtitle = "Gunakan eskalator menuju lantai 1."
+            } else if title.lowercased().contains("belok kiri") {
+                subtitle = "Ikuti arah menuju plang keluar."
+            } else if title.lowercased().contains("jalan lurus") {
+                subtitle = "Menuju gate keluar dengan lampu panah hijau."
+            } else if title.lowercased().contains("lurus lalu belok kiri") {
+                subtitle = "Ikuti arah menuju Pintu Keluar A."
+            } else if title.lowercased().contains("turuni tangga") {
+                subtitle = "Lanjutkan hingga mencapai area luar stasiun."
+            } else if title.lowercased().contains("keluar melalui pintu") {
+                subtitle = "Anda telah tiba di area luar stasiun."
+            }
+            
+            steps.append(JourneyDetailStep(iconName: icon, title: title, subtitle: subtitle))
         }
         return steps
     }

@@ -3,12 +3,13 @@ import SwiftUI
 struct JourneyDetailView: View {
     @Environment(\.dismiss) var dismiss
     
+    let currentIndex: Int
     let steps: [JourneyViewModel.JourneyDetailStep]
     
     var body: some View {
         NavigationStack {
             ZStack {
-                Color(UIColor.systemGroupedBackground).ignoresSafeArea()
+                Color(UIColor.systemBackground).ignoresSafeArea()
                 
                 ScrollView {
                     VStack(alignment: .leading, spacing: 0) {
@@ -17,13 +18,13 @@ struct JourneyDetailView: View {
                                 // Icon
                                 Image(systemName: step.iconName)
                                     .font(.title2)
-                                    .foregroundStyle(index == 0 ? .blue : .primary)
+                                    .foregroundStyle(index == currentIndex ? .blue : .primary)
                                     .frame(width: 32, alignment: .center)
                                 
                                 VStack(alignment: .leading, spacing: 4) {
                                     Text(step.title)
                                         .font(.headline)
-                                        .foregroundStyle(.primary)
+                                        .foregroundStyle(index == currentIndex ? .blue : .primary)
                                     
                                     if let subtitle = step.subtitle {
                                         Text(subtitle)
@@ -41,10 +42,7 @@ struct JourneyDetailView: View {
                             }
                         }
                     }
-                    .padding()
-                    .background(Color(UIColor.systemBackground))
-                    .clipShape(RoundedRectangle(cornerRadius: 24))
-                    .padding()
+                    .padding(.horizontal)
                 }
             }
             .navigationTitle("Detail Perjalanan")
@@ -52,7 +50,7 @@ struct JourneyDetailView: View {
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button(action: { dismiss() }) {
-                        Image(systemName: "xmark.circle.fill")
+                        Image(systemName: "xmark")
                             .font(.title2)
                             .foregroundStyle(Color(UIColor.systemGray3))
                     }

@@ -35,7 +35,9 @@ struct ChangePointsSheet: View {
                             onSelect: onSelect,
                             distanceFor: { endpoint in
                                 points.getDistance(to: endpoint)
-                            }
+                            },
+                            currentStartID: points.start?.id,
+                            currentDestinationID: points.destination?.id
                         )
                     case .destination:
                         DestinationList(
@@ -44,7 +46,9 @@ struct ChangePointsSheet: View {
                             onSelect: onSelectDestination,
                             distanceFor: { destination in
                                 points.getDistance(to: destination)
-                            }
+                            },
+                            currentStartID: points.start?.id,
+                            currentDestinationID: points.destination?.id
                         )
                     }
                 }.padding(.top, -30)

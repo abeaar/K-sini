@@ -7,11 +7,13 @@ struct JourneyBottomCardView: View {
     let onAkhiri: () -> Void
     
     @State private var showEndAlert = false
+    @State private var showCancelAlert = false
     @State private var showDetailSheet = false
     
     var body: some View {
         GeometryReader { geo in
             let isExpanded = geo.size.height > 150
+            let isLastStep = journeyVM.currentStepIndex >= journeyVM.totalSteps - 1
             
             VStack(spacing: 16) {
                 if isExpanded {
@@ -21,15 +23,21 @@ struct JourneyBottomCardView: View {
                             Text("Titik Berikutnya")
                                 .font(.subheadline)
                                 .foregroundStyle(.secondary)
-                            Text(journeyVM.distanceToNextString)
-                                .font(.headline)
+                            Text(isLastStep ? "Akhir Perjalanan" : journeyVM.distanceToNextString)
+                                .font(.title)
                                 .fontWeight(.bold)
                                 .foregroundStyle(.primary)
                         }
                         
                         VStack(spacing: 12) {
-                            Button(action: onLanjut) {
-                                Text("Lanjut")
+                            Button(action: {
+                                if isLastStep {
+                                    showEndAlert = true
+                                } else {
+                                    onLanjut()
+                                }
+                            }) {
+                                Text(isLastStep ? "Akhiri" : "Lanjut")
                                     .font(.headline)
                                     .foregroundStyle(.white)
                                     .frame(maxWidth: .infinity, minHeight: 52)
@@ -44,13 +52,12 @@ struct JourneyBottomCardView: View {
                             }
                             .glassEffect(.regular.tint(.white).interactive(), in: Capsule())
                             
-                            Button(action: { showEndAlert = true }) {
+                            Button(action: { showCancelAlert = true }) {
                                 Text("Akhiri Perjalanan")
                                     .font(.headline)
                                     .foregroundStyle(.red)
                                     .frame(maxWidth: .infinity, minHeight: 52)
                             }
-                            .glassEffect(.regular.tint(.white).interactive(), in: Capsule())
                         }
                     }
                 } else {
@@ -60,16 +67,22 @@ struct JourneyBottomCardView: View {
                             Text("Titik Berikutnya")
                                 .font(.subheadline)
                                 .foregroundStyle(.secondary)
-                            Text(journeyVM.distanceToNextString)
-                                .font(.headline)
+                            Text(isLastStep ? "Akhir Perjalanan" : journeyVM.distanceToNextString)
+                                .font(.title)
                                 .fontWeight(.bold)
                                 .foregroundStyle(.primary)
                         }
                         
                         Spacer()
                         
-                        Button(action: onLanjut) {
-                            Text("Lanjut")
+                        Button(action: {
+                            if isLastStep {
+                                showEndAlert = true
+                            } else {
+                                onLanjut()
+                            }
+                        }) {
+                            Text(isLastStep ? "Akhiri" : "Lanjut")
                                 .font(.headline)
                                 .foregroundStyle(.white)
                                 .padding(.horizontal, 32)
@@ -84,16 +97,26 @@ struct JourneyBottomCardView: View {
             
             Spacer()
         }
-        .alert("Akhiri Perjalanan", isPresented: $showEndAlert) {
+        .alert("Selesai", isPresented: $showEndAlert) {
+            Button("Akhiri Perjalanan", role: .cancel) {
+                onAkhiri()
+            }
+        } message: {
+            Text("Anda telah tiba di tujuan!")
+        }
+        .alert("Batalkan Perjalanan?", isPresented: $showCancelAlert) {
+            Button("Batal", role: .cancel) { }
             Button("Akhiri", role: .destructive) {
                 onAkhiri()
             }
-            Button("Batal", role: .cancel) {}
         } message: {
-            Text("Apakah Anda yakin ingin mengakhiri perjalanan ini?")
+            Text("Navigasi akan dihentikan jika Anda membatalkan perjalanan ini.")
         }
         .sheet(isPresented: $showDetailSheet) {
-            JourneyDetailView(steps: journeyVM.detailSteps)
+            JourneyDetailView(
+                currentIndex: journeyVM.currentStepIndex,
+                steps: journeyVM.detailSteps
+            )
                 .presentationDetents([.medium, .large])
                 .presentationDragIndicator(.visible)
         }

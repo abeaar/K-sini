@@ -12,7 +12,7 @@ struct MiniMapView: View {
 
     @Bindable var mapVM: MapViewModel
     @Bindable var journeyVM: JourneyViewModel
-    @State private var showFullMap = false
+    @Binding var showFullMap: Bool
     @Bindable var hapticVM: DirectionalHapticViewModel
 
     var body: some View {
@@ -28,7 +28,7 @@ struct MiniMapView: View {
             )
             .padding(.bottom, 12)
 
-            SuccessIndicatorView(isCompleted: $hapticVM.isAligned)
+            SuccessIndicatorView(isCompleted: hapticVM.isAligned)
         }
         .frame(width: 110, height: 110)
         .background(.ultraThinMaterial)
@@ -43,20 +43,6 @@ struct MiniMapView: View {
                 mapVM.selectedLevelID = currentLevelID
             }
             showFullMap = true
-        }
-        .fullScreenCover(isPresented: $showFullMap) {
-            JourneyFullMapView(viewModel: mapVM, journeyVM: journeyVM)
-                .overlay(alignment: .topLeading) {
-                    Button { showFullMap = false } label: {
-                        Image(systemName: "chevron.left")
-                            .font(.title3.bold())
-                            .frame(width: 42, height: 42)
-                            .clipShape(Circle())
-                            .glassEffect()
-                    }
-                    .padding(.leading, 16)
-                    .padding(.top, 16)
-                }
         }
     }
 }
